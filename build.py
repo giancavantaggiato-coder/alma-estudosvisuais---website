@@ -5,7 +5,7 @@ import os, shutil, html, json
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 SAIDA = os.path.join(RAIZ, "site")
-LOJA = "https://loja.almaestudosvisuais.com.br"
+LOJA = "https://almamateriaisartisticos.com.br"
 APP = "https://app.almaestudosvisuais.com.br"
 LOGO = open(os.path.join(RAIZ, "img", "logo.svg")).read().strip()
 LOGO = LOGO.replace('class="marca"', 'class="logo"').replace('aria-label="Alma"', 'aria-hidden="true"')
@@ -222,7 +222,7 @@ def build():
 </section>
 <section class="secao" id="trabalhos" style="padding-top:clamp(56px,4.4vw,84px)">
   <h2 class="t2 wrap rev">Trabalhos de Alunos</h2>
-  <div class="trilho" tabindex="0" aria-label="Trabalhos de alunos (role para o lado)">
+  <div class="tres trabalhos wrap">
     <figure><img src="img/trabalho-1.jpg" alt="Trabalho de aluno" loading="lazy"></figure>
     <figure><img src="img/trabalho-2.jpg" alt="Trabalho de aluno" loading="lazy"></figure>
     <figure><img src="img/trabalho-3.jpg" alt="Trabalho de aluno" loading="lazy"></figure>

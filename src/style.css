@@ -82,10 +82,10 @@ button,input,textarea{font:inherit;color:inherit}
 .abertura.curta{padding-bottom:clamp(80px,7.5vw,144px)}
 
 /* ---------- Faixa preta "Três frentes" ---------- */
-.faixa{background:var(--preto);padding-top:clamp(56px,5vw,96px);padding-bottom:clamp(56px,5vw,96px)}
+.faixa{background:var(--preto);padding-top:clamp(56px,5.5729vw,107px);padding-bottom:clamp(56px,5vw,96px)}
 .faixa .lin{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--gap)}
-.faixa .txt{max-width:896px}
-.faixa h2{color:var(--claro);margin-bottom:clamp(24px,2.6vw,50px)}
+.faixa .txt{max-width:calc(50% - var(--gap) / 2)}
+.faixa h2{color:var(--claro);margin-bottom:clamp(20px,1.5104vw,29px)}
 
 /* ---------- Intro em duas colunas ---------- */
 .duas{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
@@ -116,8 +116,9 @@ button,input,textarea{font:inherit;color:inherit}
 /* ---------- Como começar ---------- */
 .comecar{background:var(--claro2);padding-top:clamp(56px,4.1667vw,80px);padding-bottom:clamp(56px,4.1667vw,80px)}
 .comecar p.corpo{color:var(--cinza-baixo);max-width:880px;margin-top:24px}
-.form-linha{display:flex;gap:40px;margin-top:54px;align-items:center}
-.campo{height:52px;border:1px solid var(--cinza-baixo);background:transparent;padding:0 16px;font-size:15px;line-height:20px;width:min(880px,100%);border-radius:0;outline:none}
+/* Campo na coluna da esquerda, botão no início da coluna da direita (mesma linha guia das seções em duas colunas) */
+.form-linha{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:54px;align-items:center;justify-items:start}
+.campo{height:52px;border:1px solid var(--cinza-baixo);background:transparent;padding:0 16px;font-size:15px;line-height:20px;width:100%;border-radius:0;outline:none}
 .campo::placeholder{color:var(--cinza)}
 .campo:focus{border-color:var(--preto)}
 .comecar .btn{background:var(--preto);color:var(--claro)}
@@ -129,9 +130,9 @@ button,input,textarea{font:inherit;color:inherit}
 .rodape .campo{border-color:var(--claro);color:var(--claro)}
 .rodape .campo::placeholder{color:var(--claro3)}
 .rodape .campo:focus{border-color:#fff}
-.rodape .form-linha{margin-top:0;gap:32px}
+.rodape .form-linha{margin-top:0}
 .rodape .termos{font-size:15px;line-height:20px;margin-top:8px}
-.rodape .contatos{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:128px;font-size:var(--corpo);line-height:1.5}
+.rodape .contatos{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:128px;font-size:var(--corpo);line-height:1.5}
 .rodape .contatos > div{display:flex;flex-direction:column;gap:24px}
 .rodape strong{font-weight:500}
 .rodape .links{display:flex;flex-wrap:wrap;gap:16px 40px;margin-top:128px;font-size:15px;line-height:20px}
@@ -155,6 +156,9 @@ button,input,textarea{font:inherit;color:inherit}
 .acordeao .resp{padding:0 0 22px;max-width:1744px;font-size:var(--corpo);line-height:1.5;color:var(--cinza)}
 
 /* ---------- Trabalhos de alunos ---------- */
+.trabalhos{margin-top:clamp(28px,2.6vw,50px)}
+.trabalhos figure{margin:0;aspect-ratio:576/800;overflow:hidden;background:var(--claro2)}
+.trabalhos img{width:100%;height:100%;object-fit:cover}
 .trilho{display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--px);scrollbar-width:none;scroll-padding-inline:var(--px);margin-top:clamp(28px,2.6vw,50px)}
 .trilho::-webkit-scrollbar{display:none}
 .trilho figure{margin:0;flex:0 0 clamp(260px,32.6vw,626px);aspect-ratio:626/800;scroll-snap-align:start;overflow:hidden;background:var(--claro2)}
@@ -183,8 +187,8 @@ button,input,textarea{font:inherit;color:inherit}
 .vazio{text-align:center;color:var(--cinza);margin-top:40px}
 
 /* ---------- Faça Parte ---------- */
-.formulario{max-width:1184px;margin:0 auto;padding-bottom:clamp(64px,5vw,96px)}
-.formulario .grade{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.formulario{padding-bottom:clamp(64px,5vw,96px)}
+.formulario .grade{display:grid;grid-template-columns:1fr 1fr;gap:28px var(--gap)}
 .formulario label{display:flex;flex-direction:column;gap:12px;font-size:var(--corpo);line-height:1.5;font-weight:500}
 .formulario input,.formulario textarea{height:52px;border:1px solid var(--claro2);background:transparent;padding:0 16px;font-size:16px;font-weight:400;border-radius:0;outline:none}
 .formulario textarea{height:420px;padding:14px 16px;resize:vertical}
@@ -219,7 +223,7 @@ button,input,textarea{font:inherit;color:inherit}
   .tres,.posts{grid-template-columns:1fr;gap:40px}
   .frente .foto{aspect-ratio:4/5}
   .larga{aspect-ratio:4/3}
-  .form-linha{flex-direction:column;align-items:stretch;gap:16px}
+  .form-linha{grid-template-columns:1fr;justify-items:stretch;gap:16px}
   .campo{width:100%}
   .botoes{gap:16px}
   .btn{min-width:0;flex:1 1 auto}
