@@ -94,7 +94,7 @@ def pagina(arquivo, titulo, descricao, corpo, atual=None, solida=False, comecar=
 <link rel="icon" type="image/png" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -133,26 +133,26 @@ def frentes(qual):
         f'''<a class="frente rev" href="{FRENTE_LINK[t]}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
 <div class="txt"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div></a>''' for img, t, d in FRENTES_TXT[qual]) + '</div>'
 
-EDUCACAO = f'''<section class="secao wrap" id="educacao" style="padding-bottom:36px">
+EDUCACAO = f'''<section class="secao wrap" id="educacao">
   {intro("Educação", "<p>A formação no Alma acontece em estrutura de atelier, com acompanhamento individualizado e convivência entre estudantes de diferentes idades, repertórios e níveis de experiência. O percurso de cada aluno é construído a partir de um currículo básico, desenvolvendo o domínio técnico e abertura gradual de sua percepção para explorar sua própria Forma.</p>")}
-  <div style="margin-top:60px">{frentes("inicio")}</div>
-  <hr class="filete" style="margin-top:60px">
+  <div class="apos-cab">{frentes("inicio")}</div>
+  <hr class="filete">
 </section>'''
 
-LOJA_SEC = f'''<section class="secao wrap" id="loja" style="padding-bottom:30px">
+LOJA_SEC = f'''<section class="secao wrap" id="loja">
   {intro("Loja", "<p>Curadoria de materiais artísticos feita a partir da prática de atelier. A loja do Alma reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.</p>",
          f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>')}
-  <a class="larga rev" href="{LOJA}" target="_blank" rel="noopener" style="display:block;margin-top:40px" aria-label="Ir para a loja"><img src="img/loja.jpg" alt="Pintura de natureza-morta com frascos e potes de tinta" loading="lazy"></a>
-  <hr class="filete" style="margin-top:60px">
+  <a class="larga rev apos-cab" href="{LOJA}" target="_blank" rel="noopener" style="display:block" aria-label="Ir para a loja"><img src="img/loja.jpg" alt="Pintura de natureza-morta com frascos e potes de tinta" loading="lazy"></a>
+  <hr class="filete">
 </section>'''
 
 NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "04 ago 2026", "A construção do valor tonal na pintura a óleo"),
          ("nota-velatura.jpg", "Técnica", "2026-07-28", "28 jul 2026", "Velatura e opacidade: dois modos de construir a cor"),
          ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta")]
-NOTAS_SEC = f'''<section class="secao wrap" id="notas" style="padding-bottom:clamp(64px,5vw,96px)">
+NOTAS_SEC = f'''<section class="secao wrap" id="notas">
   {intro("Notas e Ensaios", "<p>Textos sobre percepção visual, processos de criação, técnica e história da arte. Textos sobre percepção visual, processos de criação, técnica e história da arte. Textos sobre percepção visual, processos de criação, técnica e história da arte.</p>",
          '<a class="btn btn-preto" href="blog.html">Ver todos</a>')}
-  <div class="tres" style="margin-top:60px">''' + "".join(
+  <div class="tres apos-cab">''' + "".join(
     f'''<a class="cartao rev" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
 <div class="meta"><span class="cat">{cat}</span><time datetime="{dt}">{data}</time></div><h3 class="t3">{t}</h3></a>''' for img, cat, dt, data, t in NOTAS) + '''</div>
 </section>'''
@@ -192,9 +192,9 @@ def build():
     pagina("sobre.html", "Sobre · Alma", "O ver tem gramática, e essa gramática se ensina. Conheça a história e o manifesto do Alma.",
       f'''<section class="abertura escura wrap"><h1 class="t1">História</h1>
   <p>Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes que partem da mesma convicção: o ver tem gramática, e essa gramática se ensina.</p></section>
-<section class="wrap" style="padding-bottom:clamp(48px,3.125vw,60px)">
+<section class="wrap sobre-topo">
   <div class="larga sobre-foto rev"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" loading="lazy"></div>
-  <div class="secao" style="padding-top:clamp(48px,4.9vw,96px)">{intro("Manifesto", LOREM1, '<a class="btn btn-preto" href="#historia">Saiba mais</a>')}</div>
+  <div class="secao">{intro("Manifesto", LOREM1, '<a class="btn btn-preto" href="#historia">Saiba mais</a>')}</div>
 </section>
 <section class="historia wrap" id="historia"><img src="img/sobre-historia-fundo.jpg" alt="">
   {intro("Nossa história", LOREM2, '<a class="btn btn-claro" href="nossas-aulas.html">Saiba mais</a>').replace('class="t2"','class="t2 claro"')}
@@ -215,21 +215,21 @@ def build():
     pagina("nossas-aulas.html", "Nossas aulas · Alma", "Atelier, Jovens Artistas e Extensão: como funcionam as aulas do Alma.",
       f'''<section class="abertura escura wrap"><h1 class="t1">Nossas aulas</h1>
   <p>Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes que partem da mesma convicção: o ver tem gramática, e essa gramática se ensina.</p></section>
-<section class="wrap" id="frentes" style="padding-top:36px;padding-bottom:36px">{frentes("aulas")}<hr class="filete" style="margin-top:60px"></section>
+<section class="secao wrap" id="frentes">{frentes("aulas")}<hr class="filete"></section>
 <section class="secao wrap" id="ensino">
   {intro("Sobre o ensino", f"<p>{TOD}</p><p>{TOD}</p>")}
   {acordeao(ENSINO)}
 </section>
-<section class="secao" id="trabalhos" style="padding-top:clamp(56px,4.4vw,84px)">
+<section class="secao" id="trabalhos">
   <h2 class="t2 wrap rev">Trabalhos de Alunos</h2>
   <div class="tres trabalhos wrap">
     <figure><img src="img/trabalho-1.jpg" alt="Trabalho de aluno" loading="lazy"></figure>
     <figure><img src="img/trabalho-2.jpg" alt="Trabalho de aluno" loading="lazy"></figure>
     <figure><img src="img/trabalho-3.jpg" alt="Trabalho de aluno" loading="lazy"></figure>
   </div>
-  <div class="wrap"><hr class="filete" style="margin-top:36px"></div>
+  <div class="wrap"><hr class="filete"></div>
 </section>
-<section class="secao wrap" id="faq" style="padding-bottom:clamp(40px,3vw,60px)">
+<section class="secao wrap" id="faq">
   {intro("FAQ", "<p>Um espaço para textos sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Nas Notas e Ensaios, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>")}
   {acordeao(FAQ)}
 </section>''')
@@ -248,20 +248,20 @@ def build():
     pagina("blog.html", "Blog · Alma", "Notas e Ensaios: textos sobre percepção visual, processos de criação, técnica e história da arte.",
       f'''<section class="abertura curta wrap"><h1 class="t1">Blog</h1>
   <p>Textos sobre percepção visual, processos de criação, técnica e história da arte. Reunimos aqui as reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>
-  <div class="busca" style="margin-top:clamp(40px,3.75vw,72px)">
+  <div class="busca">
     <label for="q">O que você procura?</label>
     <div class="barra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
       <input id="q" type="search" placeholder="Cores complementares" autocomplete="off"></div>
   </div>
   <div class="tags" role="group" aria-label="Filtrar por tema">{"".join(f'<button type="button" aria-pressed="false" data-tag="{t}">{t}</button>' for t in TAGS)}</div>
 </section>
-<section class="wrap" style="padding-bottom:clamp(64px,5vw,96px)">
+<section class="secao wrap">
   <h2 class="t2 contagem" data-total="23">23 textos publicados</h2>
   <div class="posts">''' + "".join(
         f'''<a class="post rev" href="#" data-tag="{tag}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
 <div class="cab"><h3 class="t3">{t}</h3><span class="pill">{tag}</span></div><p class="corpo">{d}</p><span class="ler">Ler texto</span></a>''' for img, tag, t, d in POSTS) + f'''</div>
   <p class="vazio" hidden>Nenhum texto encontrado com esses termos.</p>
-  <hr class="filete" style="margin-top:clamp(48px,3.125vw,60px)">
+  <hr class="filete">
 </section>
 {LOJA_SEC}''', solida=True)
 
@@ -300,9 +300,9 @@ def build():
     <iframe class="mapa rev" title="Mapa: Rua São Paulo, 864, São Caetano do Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=Rua%20S%C3%A3o%20Paulo%2C%20864%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP&output=embed"></iframe>
   </div>
-  <hr class="filete" style="margin-top:clamp(48px,3.125vw,60px)">
+  <hr class="filete">
 </section>
-<section class="wrap" style="padding-bottom:clamp(48px,3.125vw,60px)">
+<section class="secao wrap">
   ''' + intro("Parcerias", "<p>Trabalhamos com escolas, instituições culturais e coletivos interessados em formação visual continuada. Propostas de residência, oficina fechada, curadoria de material para turmas e projetos de extensão podem ser apresentadas por e-mail ou WhatsApp.</p>",
       '<div class="botoes"><a class="btn btn-preto" href="mailto:contato@almaestudosvisuais.com.br?subject=Parcerias">E-mail</a><a class="btn btn-preto" href="#" data-whatsapp>Whatsapp</a></div>') + '''
 </section>''', solida=True)
