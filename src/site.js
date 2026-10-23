@@ -50,6 +50,24 @@
   window.addEventListener('resize', rolou);
   rolou();
 
+  // Carrosséis: contador e setas
+  document.querySelectorAll('[data-carr]').forEach(function (c) {
+    var t = c.querySelector('.carr__trilho'), itens = t.querySelectorAll('.carr__item'), num = c.querySelector('.carr-num'),
+        ant = c.querySelector('.carr-ant'), prox = c.querySelector('.carr-prox');
+    function atual() { return Math.round(t.scrollLeft / Math.max(t.clientWidth, 1)); }
+    function marcar() {
+      var i = Math.min(atual(), itens.length - 1);
+      if (num) num.textContent = (i + 1) + ' / ' + itens.length;
+      if (ant) ant.disabled = i <= 0;
+      if (prox) prox.disabled = i >= itens.length - 1;
+    }
+    function ir(d) { var i = Math.max(0, Math.min(itens.length - 1, atual() + d)); t.scrollTo({ left: itens[i].offsetLeft - t.offsetLeft, behavior: 'smooth' }); }
+    ant && ant.addEventListener('click', function () { ir(-1); });
+    prox && prox.addEventListener('click', function () { ir(1); });
+    t.addEventListener('scroll', function () { window.requestAnimationFrame(marcar); }, { passive: true });
+    window.addEventListener('resize', marcar); marcar();
+  });
+
   // Formulários → Supabase (tabela site_contatos, só inserção)
   function enviar(dados) {
     return fetch(C.url + '/rest/v1/site_contatos', {

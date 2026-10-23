@@ -206,20 +206,30 @@ FATOS = [("4 a 9", "pessoas por aula, com acompanhamento individual de cada trab
 def fatos():
     return '<dl class="fatos">' + "".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in FATOS) + '</dl>'
 
-TRABALHOS = '''<div class="trabalhos">
-    <figure class="rev"><img src="img/trabalho-1.jpg" alt="Trabalho de aluno do Alma" loading="lazy"></figure>
-    <figure class="rev"><img src="img/trabalho-2.jpg" alt="Trabalho de aluno do Alma" loading="lazy"></figure>
-    <figure class="rev"><img src="img/trabalho-3.jpg" alt="Trabalho de aluno do Alma" loading="lazy"></figure>
-  </div>'''
+SETA_E = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>'
+SETA_D = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>'
+def controles(n, rotulo):
+    return f'''<div class="carr-ctl" aria-label="{rotulo}"><button type="button" class="carr-ant" aria-label="Anterior">{SETA_E}</button><span class="carr-num" aria-live="polite">1 / {n}</span><button type="button" class="carr-prox" aria-label="Próximo">{SETA_D}</button></div>'''
+
+TRAB = ["trabalho-1.jpg", "trabalho-2.jpg", "trabalho-3.jpg"]
+TRABALHOS = (f'<div class="carr carr--trab" data-carr><div class="carr__trilho trabalhos">'
+    + "".join(f'<figure class="carr__item"><img src="img/{i}" alt="Trabalho de aluno do Alma" loading="lazy"></figure>' for i in TRAB)
+    + '</div>' + controles(len(TRAB), "Trabalhos de alunos") + '</div>')
 
 NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A construção do valor tonal na pintura a óleo"),
          ("nota-velatura.jpg", "Técnica", "2026-07-28", "28 jul 2026", "Velatura e opacidade: dois modos de construir a cor"),
-         ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta")]
+         ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta"),
+         ("blog-6.jpg", "Materiais", "2026-07-02", "2 jul 2026", "História dos pigmentos e do meio que os carrega"),
+         ("blog-4.jpg", "História da arte", "2026-06-18", "18 jun 2026", "<i>Chiaroscuro</i> e o peso construtivo da sombra"),
+         ("blog-7.jpg", "Cor", "2026-06-04", "4 jun 2026", "Albers e a interação entre cores vizinhas")]
 
 def cartoes_notas():
-    return '<div class="tres lista-m">' + "".join(
-        f'''<a class="cartao rev" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="t3">{t}</h3></a>''' for img, cat, dt, data, t in NOTAS) + '</div>'
+    cart = lambda img, cat, dt, data, t: f'''<a class="cartao" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
+<p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="t3">{t}</h3></a>'''
+    paginas = [NOTAS[k:k+3] for k in range(0, len(NOTAS), 3)]
+    return ('<div class="carr carr--notas" data-carr><div class="carr__trilho notas">'
+        + "".join('<div class="carr__item notas__pag lista-m">' + "".join(cart(*n) for n in pg) + '</div>' for pg in paginas)
+        + '</div>' + controles(len(paginas), "Notas e Ensaios") + '</div>')
 
 DIRECAO = duas("Direção pedagógica", "Giancarlo Avantaggiato, pintor a óleo e escultor, fundador do Alma.",
     corpo("Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
@@ -294,7 +304,6 @@ def build():
   {duas("O atelier", "Turmas pequenas, um começo comum e o tempo de cada um.",
         corpo("A formação acontece em estrutura de atelier, na convivência entre estudantes de diferentes idades, repertórios e níveis de experiência. Cada percurso começa pelo mesmo currículo básico e se abre, aos poucos, para a linguagem de cada um.")
         + botoes('<a class="btn" href="nossas-aulas.html#percurso">Como funciona</a>'))}
-  <div class="apos">{fatos()}</div>
 </section>
 <section class="bloco tom wrap">
   {duas("Trabalhos de alunos", "Estudos e trabalhos feitos no atelier, em diferentes técnicas e momentos do percurso.")}
