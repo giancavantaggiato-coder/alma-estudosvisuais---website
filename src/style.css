@@ -242,15 +242,7 @@ button,input,textarea{font:inherit;color:inherit}
   .duas{row-gap:16px}
   .tres,.posts{grid-template-columns:repeat(2,minmax(0,1fr))}
 
-  /* Celular e tablet: textos centralizados */
-  .hero .chamada,.faixa .lin,.intro,.comecar,.historia,.frente,.cartao,.post,
-  .rodape .novidades,.rodape .contatos,.contatos-sec .lista,.vazio{text-align:center}
-  .corpo,.faixa .corpo,.intro .corpo,.comecar p.corpo{margin-inline:auto}
-  .intro .direita{align-items:center}
-  .botoes,.hero .botoes,.faixa .botoes,.rodape .links{justify-content:center}
-  .meta,.post .cab{justify-content:center}
-  .post .cab{flex-direction:column;align-items:center;gap:6px}
-  .rodape .contatos > div{align-items:center}
+  .hero .botoes,.faixa .botoes{justify-content:flex-start}
 
   /* Respiros iguais em cima e embaixo */
   .faixa,.secao,.comecar,.historia{padding-top:var(--r)}
