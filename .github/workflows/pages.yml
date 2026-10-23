@@ -1,7 +1,7 @@
 name: Publicar site
 on:
   push:
-    branches: [main]
+    branches: [main, previa]
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,8 +17,25 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      # Site oficial: sempre a partir da main
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - run: python3 build.py
+      # Prévia de edições: ramo "previa", publicado em /previa/ (fora do Google)
+      - name: Montar prévia
+        run: |
+          if git ls-remote --exit-code --heads origin previa >/dev/null; then
+            git fetch --depth 1 origin previa
+            git worktree add ../prev FETCH_HEAD
+            (cd ../prev && python3 build.py)
+            rm -f ../prev/site/CNAME
+            for f in ../prev/site/*.html; do
+              sed -i 's|<head>|<head>\n<meta name="robots" content="noindex, nofollow">|' "$f"
+            done
+            cp -r ../prev/site site/previa
+          fi
+          printf 'User-agent: *\nDisallow: /previa/\n' > site/robots.txt
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
