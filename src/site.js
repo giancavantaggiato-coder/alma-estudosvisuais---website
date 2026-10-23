@@ -50,23 +50,29 @@
   window.addEventListener('resize', rolou);
   rolou();
 
-  // Carrosséis: contador e setas
+  // Carrosséis: só rolagem, com pontos indicando a posição
   document.querySelectorAll('[data-carr]').forEach(function (c) {
-    var t = c.querySelector('.carr__trilho'), itens = t.querySelectorAll('.carr__item'), num = c.querySelector('.carr-num'),
-        ant = c.querySelector('.carr-ant'), prox = c.querySelector('.carr-prox');
-    function atual() { return Math.round(t.scrollLeft / Math.max(t.clientWidth, 1)); }
+    var t = c.querySelector('.carr__trilho'), itens = t.querySelectorAll('.carr__item'), pts = c.querySelectorAll('.carr-ponto');
     function marcar() {
-      var i = Math.min(atual(), itens.length - 1);
-      if (num) num.textContent = (i + 1) + ' / ' + itens.length;
-      if (ant) ant.disabled = i <= 0;
-      if (prox) prox.disabled = i >= itens.length - 1;
+      var i = Math.min(Math.round(t.scrollLeft / Math.max(t.clientWidth, 1)), itens.length - 1);
+      pts.forEach(function (p, k) { if (k === i) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current'); });
     }
-    function ir(d) { var i = Math.max(0, Math.min(itens.length - 1, atual() + d)); t.scrollTo({ left: itens[i].offsetLeft - t.offsetLeft, behavior: 'smooth' }); }
-    ant && ant.addEventListener('click', function () { ir(-1); });
-    prox && prox.addEventListener('click', function () { ir(1); });
+    pts.forEach(function (p, k) { p.addEventListener('click', function () { t.scrollTo({ left: itens[k].offsetLeft - t.offsetLeft, behavior: 'smooth' }); }); });
     t.addEventListener('scroll', function () { window.requestAnimationFrame(marcar); }, { passive: true });
     window.addEventListener('resize', marcar); marcar();
   });
+
+  // Visitas: página, origem e aparelho. Sem cookies e sem dados pessoais. Não conta a prévia.
+  (function () {
+    if (!C.url || /\/previa\//.test(location.pathname) || location.protocol === 'file:' || !/almaestudosvisuais\.com\.br$/.test(location.hostname)) return;
+    var ref = ''; try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+    if (ref === location.hostname) ref = 'interno';
+    var camp = new URLSearchParams(location.search).get('utm_source') || null;
+    fetch(C.url + '/rest/v1/site_visitas', { method: 'POST', keepalive: true,
+      headers: { apikey: C.key, Authorization: 'Bearer ' + C.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+      body: JSON.stringify({ pagina: location.pathname.slice(0, 200) || '/', origem: ref ? ref.slice(0, 200) : null, aparelho: matchMedia('(max-width: 749px)').matches ? 'celular' : 'computador', campanha: camp }) })
+      .catch(function () {});
+  })();
 
   // Formulários → Supabase (tabela site_contatos, só inserção)
   function enviar(dados) {
@@ -121,9 +127,15 @@
         var ja = b.getAttribute('aria-pressed') === 'true';
         var alvo = (ja || !b.dataset.tag) ? document.querySelector('.tags button[data-tag=""]') : b;
         document.querySelectorAll('.tags button').forEach(function (x) { x.setAttribute('aria-pressed', x === alvo ? 'true' : 'false'); });
-        tag = alvo.dataset.tag || null; filtrar();
+        tag = alvo.dataset.tag || null; var sl = document.getElementById('tema'); if (sl) sl.value = alvo.dataset.tag || ''; filtrar();
       });
     });
     q && q.addEventListener('input', filtrar);
+    var sel = document.getElementById('tema');
+    sel && sel.addEventListener('change', function () {
+      tag = sel.value || null;
+      document.querySelectorAll('.tags button').forEach(function (x) { x.setAttribute('aria-pressed', (x.dataset.tag || '') === sel.value ? 'true' : 'false'); });
+      filtrar();
+    });
   }
 })();

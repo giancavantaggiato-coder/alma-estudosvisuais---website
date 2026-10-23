@@ -8,7 +8,7 @@ SAIDA = os.path.join(RAIZ, "site")
 DOMINIO = "https://almaestudosvisuais.com.br"
 LOJA = "https://almamateriaisartisticos.com.br"
 APP = "https://app.almaestudosvisuais.com.br"
-INSTAGRAM = "https://www.instagram.com/almaestudosvisuais/"
+INSTAGRAM = "https://www.instagram.com/alma.estudosvisuais/"
 ENDERECO = "Rua São Paulo, 864, São Caetano do Sul, SP"
 MAPA = "https://www.google.com/maps/search/?api=1&query=" + "Rua+S%C3%A3o+Paulo%2C+864%2C+S%C3%A3o+Caetano+do+Sul+-+SP"
 EMAIL = "contato@almaestudosvisuais.com.br"
@@ -114,6 +114,7 @@ RODAPE = f'''<footer class="rodape wrap">
   <div class="rod-base">
     <p>© {ANO} {NOME}</p>
     <p>CNPJ 66.843.784/0001-28</p>
+    <a href="privacidade.html">Privacidade</a>
   </div>
 </footer>'''
 
@@ -145,7 +146,9 @@ def pagina(arquivo, titulo, descricao, corpo, fecho_html=None, sobre_foto=False,
 <meta property="og:title" content="{a(titulo_doc)}">
 <meta property="og:description" content="{a(descricao)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{DOMINIO}/img/hero-inicio.jpg">
+<meta property="og:image" content="{DOMINIO}/img/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" href="img/favicon-32.png">
@@ -209,7 +212,7 @@ def fatos():
 SETA_E = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>'
 SETA_D = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>'
 def controles(n, rotulo):
-    return f'''<div class="carr-ctl" aria-label="{rotulo}"><button type="button" class="carr-ant" aria-label="Anterior">{SETA_E}</button><span class="carr-num" aria-live="polite">1 / {n}</span><button type="button" class="carr-prox" aria-label="Próximo">{SETA_D}</button></div>'''
+    return f'''<div class="carr-pontos" role="group" aria-label="{rotulo}">''' + "".join(f'<button type="button" class="carr-ponto" aria-label="{i+1} de {n}"{" aria-current=\"true\"" if i == 0 else ""}></button>' for i in range(n)) + '</div>'
 
 TRAB = ["trabalho-1.jpg", "trabalho-2.jpg", "trabalho-3.jpg"]
 TRABALHOS = (f'<div class="carr carr--trab" data-carr><div class="carr__trilho trabalhos">'
@@ -221,7 +224,10 @@ NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A 
          ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta"),
          ("blog-6.jpg", "Materiais", "2026-07-02", "2 jul 2026", "História dos pigmentos e do meio que os carrega"),
          ("blog-4.jpg", "História da arte", "2026-06-18", "18 jun 2026", "<i>Chiaroscuro</i> e o peso construtivo da sombra"),
-         ("blog-7.jpg", "Cor", "2026-06-04", "4 jun 2026", "Albers e a interação entre cores vizinhas")]
+         ("blog-7.jpg", "Cor", "2026-06-04", "4 jun 2026", "Albers e a interação entre cores vizinhas"),
+         ("blog-2.jpg", "Percepção", "2026-05-21", "21 mai 2026", "Movimento e ritmo na percepção da forma"),
+         ("blog-3.jpg", "Teoria", "2026-05-07", "7 mai 2026", "Grisaille e a construção do valor tonal"),
+         ("blog-8.jpg", "Fotografia", "2026-04-23", "23 abr 2026", "Frontalidade e obliquidade no enquadramento")]
 
 def cartoes_notas():
     cart = lambda img, cat, dt, data, t: f'''<a class="cartao" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
@@ -242,6 +248,7 @@ def acordeao(itens):
 FAQ = [("Preciso saber desenhar para começar?", "<p>Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.</p>"),
        ("Para quem são as aulas?", "<p>As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.</p>"),
        ("Quanto tempo dura o curso?", "<p>Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
+       ("Quais são os horários?", "<p>As turmas acontecem no período noturno durante a semana e à tarde aos sábados. O dia da aula experimental é combinado pelo WhatsApp.</p>"),
        ("E se eu precisar faltar?", "<p>Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.</p>")]
 
 REFERENCIAS = [("Josef Albers", "A interação da cor e o ensino pela experiência."),
@@ -310,7 +317,7 @@ def build():
   <div class="apos">{TRABALHOS}</div>
 </section>
 <section class="bloco wrap">
-  {duas("Notas e Ensaios", "Textos sobre ver, fazer e pensar a imagem.", botoes('<a class="btn" href="blog.html">Ver todos</a>'))}
+  {duas("Últimos textos", "Notas e ensaios sobre ver, fazer e pensar a imagem.", botoes('<a class="btn" href="blog.html">Ver todos</a>'))}
   <div class="apos">{cartoes_notas()}</div>
 </section>
 <section class="bloco tom wrap">
@@ -336,7 +343,7 @@ def build():
     # Nossas aulas
     BASES = [("blog-8.jpg", "Desenho", "Grafite, carvão, sanguínea e nanquim. Estudo de proporção, valor tonal, construção do espaço e articulação de cheios e vazios no campo."),
              ("hero-inicio.jpg", "Plástica", "Gesso, madeira, plastilina e argila. Estudo do volume, do peso e da relação entre matéria e forma no espaço tridimensional.")]
-    MEIOS = ["Aquarela", "Guache", "Acrílica", "Óleo", "Escultura", "Gravura"]
+    MEIOS = [("Pintura", ["Aquarela", "Guache", "Acrílica", "Óleo"]), ("Matéria", ["Escultura", "Cerâmica", "Gravura"]), ("Imagem e projeto", ["Fotografia", "Cinema", "Design", "Arquitetura"])]
     PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada."),
                 ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência."),
                 ("O seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar."),
@@ -344,8 +351,8 @@ def build():
     PRINCIPIOS = [("Ver se aprende.", "O progresso vem do trabalho contínuo e acompanhado."),
                   ("O Desenho é o fundamento.", "É nele que se aprende a ver, e é a ele que todas as técnicas voltam."),
                   ("Técnica e sensibilidade andam juntas.", "A técnica é o meio pelo qual a intenção ganha forma.")]
-    NO_ATELIER = [("Turma", "4 a 9 pessoas, cada uma no seu projeto"), ("Acompanhamento", "Individual, em cada trabalho"),
-                  ("Frequência", "Dias fixos na semana, escolhidos por você"), ("Faltas", "Reposição pelo app, avisando até 4 horas antes"),
+    NO_ATELIER = [("Turma", "Até 8 pessoas por aula, cada uma no seu projeto"), ("Acompanhamento", "Individual, em cada trabalho"),
+                  ("Horários", "Noites durante a semana e tardes de sábado"), ("Frequência", "Dias fixos na semana, escolhidos por você"), ("Faltas", "Reposição pelo app, avisando até 4 horas antes"),
                   ("Além das aulas", "Modelo vivo, história da arte, projetos especiais e visitas a exposições")]
     pagina("nossas-aulas.html", "Nossas aulas",
       "Como funcionam as aulas do Alma: o percurso a partir do Desenho, as técnicas do atelier e o dia a dia das turmas.",
@@ -364,11 +371,11 @@ def build():
   <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
 <section class="bloco escuro wrap" id="formacao">
-  {duas("Formação", "Duas disciplinas de base e seis linhas de aprofundamento.", corpo("O percurso começa no currículo comum a todos e se abre conforme a decisão de cada aluno, sempre com acompanhamento individual dentro da turma."))}
+  {duas("Formação", "Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("O percurso começa no currículo comum a todos e se abre conforme a decisão de cada aluno, sempre com acompanhamento individual dentro da turma."))}
   <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">{d}</p></article>' for img, t, d in BASES)}</div>
   <div class="duas cab continua">
     <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">Concluído o currículo básico, o aluno escolhe a linguagem em que quer se aprofundar.</p></div>
-    <ul class="meios lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
+    <div class="grupos lado">{"".join(f'<div class="grupo rev"><p class="grupo__rot">{g}</p><ul class="meios">' + "".join(f"<li>{m}</li>" for m in ms) + "</ul></div>" for g, ms in MEIOS)}</div>
   </div>
 </section>
 <section class="bloco wrap" id="no-atelier">
@@ -406,10 +413,18 @@ def build():
     pagina("blog.html", "Notas e Ensaios",
       "Notas e Ensaios do Alma: textos sobre percepção visual, processos de criação, técnica e história da arte.",
       abertura("Notas e Ensaios", "Textos sobre percepção visual, processos de criação, técnica e história da arte, escritos a partir da prática do atelier.") + f'''
-<section class="bloco wrap">
-  <div class="filtros rev">
+<section class="bloco wrap" id="ultimas">
+  <div class="duas cab rev"><h2 class="cab__rot">Últimas publicações</h2><div class="lado"></div></div>
+  <div class="destaques apos">
+    {"".join(f'''<a class="destaque{" destaque--1" if k == 0 else ""} rev" href="#todos"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div><div class="destaque__txt"><p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="{"destaque__tit" if k == 0 else "t3"}">{t}</h3></div></a>''' for k, (img, cat, dt, data, t) in enumerate(NOTAS[:3]))}
+  </div>
+</section>
+<section class="bloco tom wrap" id="todos">
+  <div class="duas cab rev"><h2 class="cab__rot">Todos os textos</h2><div class="lado"></div></div>
+  <div class="filtros rev apos">
     <label class="busca" for="q"><span class="sr">Buscar textos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
       <input id="q" type="search" placeholder="Buscar textos" autocomplete="off"></label>
+    <label class="tema-m"><span class="sr">Tema</span><select id="tema">{"".join(f'<option value="{v}">{t}</option>' for v, t in [("", "Todos os temas")] + [(t, t) for t in TAGS])}</select></label>
     <div class="tags" role="group" aria-label="Filtrar por tema"><button type="button" aria-pressed="true" data-tag="">Todos</button>{"".join(f'<button type="button" aria-pressed="false" data-tag="{t}">{t}</button>' for t in TAGS)}</div>
   </div>
   <p class="contagem pequeno" data-total="{len(POSTS)}" aria-live="polite">{len(POSTS)} textos publicados</p>
@@ -420,7 +435,7 @@ def build():
 </section>''')
 
     # Aula experimental
-    INTERESSES = ["Ainda não sei", "Desenho", "Plástica", "Aquarela", "Guache", "Acrílica", "Óleo", "Escultura", "Gravura"]
+    INTERESSES = ["Ainda não sei", "Desenho", "Plástica", "Pintura", "Escultura e cerâmica", "Gravura", "Fotografia e cinema", "Design e arquitetura"]
     pagina("faca-parte.html", "Aula experimental",
       "Agende uma aula experimental no Alma Centro de Estudos Visuais, em São Caetano do Sul.",
       abertura("Aula experimental", "A entrada no Alma começa por uma aula experimental. Deixe seu contato e combinamos pelo WhatsApp o dia da sua visita ao atelier.") + f'''
@@ -439,8 +454,8 @@ def build():
       <label>WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000" required></label>
       <label><span>E-mail <span class="opcional">opcional</span></span><input name="email" type="email" autocomplete="email"></label>
       <label>Técnica de interesse<select name="interesse">{"".join(f'<option>{t}</option>' for t in INTERESSES)}</select></label>
-      <label><span>Conte um pouco sobre você <span class="opcional">opcional</span></span><textarea name="mensagem" rows="4" placeholder="Sua experiência com arte, o que procura, dias de preferência"></textarea></label>
-      <p class="pequeno">Usamos seus dados apenas para combinar a aula experimental.</p>
+      <label><span>Conte um pouco sobre você <span class="opcional">opcional</span></span><textarea name="mensagem" rows="4" placeholder="Sua experiência com arte, o que procura, período de preferência"></textarea></label>
+      <p class="pequeno">Usamos seus dados apenas para combinar a aula experimental. <a href="privacidade.html">Privacidade</a></p>
       <button class="btn btn-largo" type="submit">Enviar pedido</button>
       <p class="aviso" role="status"></p>
     </form>
@@ -456,14 +471,19 @@ def build():
 <section class="bloco wrap">
   <div class="duas">
     <dl class="contatos rev">
-      <div><dt class="t3">Endereço</dt><dd class="corpo">Rua São Paulo, 864<br>São Caetano do Sul, SP<br>Entrada pelo portão lateral.</dd>
-        <dd><a class="btn btn-linha-escura" href="{MAPA}" {EXTERNO}>Abrir no mapa</a></dd></div>
       {zap}
       <div><dt class="t3">E-mail</dt><dd class="corpo"><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
-      <div><dt class="t3">Instagram</dt><dd class="corpo"><a href="{INSTAGRAM}" {EXTERNO}>@almaestudosvisuais</a></dd></div>
+      <div><dt class="t3">Instagram</dt><dd class="corpo"><a href="{INSTAGRAM}" {EXTERNO}>@alma.estudosvisuais</a></dd></div>
     </dl>
-    <iframe class="mapa lado rev" title="Mapa: {ENDERECO}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=Rua%20S%C3%A3o%20Paulo%2C%20864%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP&output=embed"></iframe>
+    <div class="endereco lado rev">
+      <p class="endereco__rot">Atelier</p>
+      <p class="endereco__txt">Rua São Paulo, 864<br>São Caetano do Sul, SP</p>
+      <div class="endereco__apps">
+        <a class="ext" href="{MAPA}" {EXTERNO}>Google Maps{SETA}{EXT_SR}</a>
+        <a class="ext" href="https://maps.apple.com/?q=Alma%20Centro%20de%20Estudos%20Visuais&address=Rua%20S%C3%A3o%20Paulo%2C%20864%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP" {EXTERNO}>Apple Maps{SETA}{EXT_SR}</a>
+        <a class="ext" href="https://waze.com/ul?q=Rua%20S%C3%A3o%20Paulo%20864%20S%C3%A3o%20Caetano%20do%20Sul&navigate=yes" {EXTERNO}>Waze{SETA}{EXT_SR}</a>
+      </div>
+    </div>
   </div>
 </section>
 <section class="bloco tom wrap">
@@ -473,12 +493,44 @@ def build():
 </section>''')
 
     # 404 (servida em qualquer endereço: caminhos a partir da raiz)
+    TELA = '''<svg class="tela404" viewBox="0 0 600 420" fill="none" stroke="currentColor" aria-hidden="true">
+  <g stroke-width="1" opacity=".35"><path d="M0 250H600"/><path d="M300 250 40 420M300 250 560 420M300 250 150 420M300 250 450 420"/></g>
+  <rect class="tela404__quadro" x="170" y="40" width="260" height="300" stroke-width="1.5"/>
+  <g class="tela404__linhas" stroke-width="1" opacity=".6"><path d="M170 40 430 340M430 40 170 340M300 40V340M170 190H430"/></g>
+  <circle cx="300" cy="250" r="3" fill="currentColor" stroke="none"/>
+</svg>'''
     pagina("404.html", "Página não encontrada", "Página não encontrada.",
-      '''<section class="abertura wrap nao-achei">
-  <div class="duas"><h1 class="t1">Esta página não existe.</h1>
-    <div class="lado"><p class="corpo">O endereço pode ter mudado ou estar incompleto. Siga por uma das páginas abaixo.</p>
-      <div class="botoes"><a class="btn" href="index.html">Início</a><a class="btn btn-linha" href="nossas-aulas.html">Nossas aulas</a></div></div></div>
+      f'''<section class="nao-achei wrap">
+  <div class="nao-achei__arte">{TELA}<span class="nao-achei__num">404</span></div>
+  <div class="nao-achei__txt">
+    <h1 class="t1">Fora do enquadramento.</h1>
+    <p class="corpo">Esta página não existe ou mudou de lugar. O ponto de fuga continua o mesmo: volte ao início ou conheça as aulas do atelier.</p>
+    <div class="botoes"><a class="btn btn-claro" href="index.html">Início</a><a class="btn btn-linha" href="nossas-aulas.html">Nossas aulas</a></div>
+  </div>
 </section>''', fecho_html="", base="/")
+
+    # Privacidade
+    pagina("privacidade.html", "Privacidade",
+      "Como o Alma Centro de Estudos Visuais trata os dados enviados pelo site.",
+      abertura("Privacidade", "Como tratamos os dados que você envia pelo site. Última atualização: outubro de 2026.") + f'''
+<section class="bloco wrap">
+  <div class="duas cab">
+    <h2 class="cab__rot">Política de privacidade</h2>
+    <div class="lado"><div class="corpo texto-longo">
+      <h3>Quem trata os dados</h3>
+      <p>{NOME}, CNPJ 66.843.784/0001-28, Rua São Paulo, 864, São Caetano do Sul, SP. Contato: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+      <h3>O que coletamos</h3>
+      <p>Apenas o que você escreve nos formulários: nome, WhatsApp, e-mail, a linguagem de interesse e a mensagem opcional, no pedido de aula experimental; e o e-mail, na inscrição de novidades e nos avisos de novas turmas.</p>
+      <p>Também registramos visitas de forma anônima: a página vista, o site de origem e se o acesso foi por celular ou computador. Não usamos cookies, não identificamos quem visita e não compartilhamos esses dados com plataformas de publicidade.</p>
+      <h3>Para que usamos</h3>
+      <p>Para responder ao seu pedido, combinar a aula experimental, enviar as novidades que você pediu e entender quais páginas do site são mais úteis. Não vendemos nem cedemos seus dados.</p>
+      <h3>Onde ficam e por quanto tempo</h3>
+      <p>Os dados ficam em um banco de dados com acesso restrito à equipe do Alma. Pedidos de contato são guardados enquanto forem necessários para o atendimento, e o e-mail de novidades, até você pedir a remoção.</p>
+      <h3>Seus direitos</h3>
+      <p>Pela Lei Geral de Proteção de Dados (Lei 13.709/2018), você pode pedir acesso, correção ou exclusão dos seus dados e cancelar o envio de novidades a qualquer momento. Basta escrever para <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+    </div></div>
+  </div>
+</section>''', fecho_html="")
 
     # Mapa do site
     open(os.path.join(SAIDA, "sitemap.xml"), "w").write(

@@ -487,3 +487,116 @@ html{overscroll-behavior-x:none}
 /* Aberturas claras (Blog, Contato, Aula experimental): respiro equilibrado até o primeiro filete */
 .abertura:not(.escura){padding-top:calc(var(--b-base) * .75);padding-bottom:var(--b-texto)}
 .abertura:not(.escura) + .bloco{padding-top:var(--b-texto)}
+
+/* =====================================================================
+   Revisão 23/10
+   ===================================================================== */
+/* Menu do celular: Loja ocupa a linha inteira, seta alinhada ao texto */
+.menu-tela__itens a.ext{display:flex;width:100%;align-items:center}
+.menu-tela__itens a.ext .seta-ext{width:.5em;height:.5em;margin:0 0 0 .3em;align-self:center}
+.menu-tela .fechar:focus{outline:none}
+.menu-tela .fechar:focus-visible{background:rgb(254 252 230 / .08)}
+
+/* Botões: mesma altura e largura mínima; crescem com o texto. Em dupla no celular, dividem a linha em partes iguais */
+.btn{width:auto;min-width:168px;padding:0 20px}
+.btn-ext{gap:16px}
+@media (max-width:749px){
+  .botoes .btn{flex:1 1 0;min-width:0;padding:0 16px}
+  .botoes .btn:only-child{flex:0 1 auto;min-width:168px}
+}
+
+/* Rodapé: duas colunas no celular */
+@media (max-width:989px){ .rod-colunas{grid-template-columns:1fr 1fr;row-gap:32px} }
+@media (max-width:479px){ .rod-colunas{grid-template-columns:1fr 1fr} .rod-colunas a{overflow-wrap:anywhere;font-size:.8125rem} }
+
+/* Contato: cartão de endereço no lugar do mapa embutido */
+.endereco{display:flex;flex-direction:column;gap:20px;padding:28px;background:var(--preto);color:var(--claro);min-height:320px;justify-content:space-between}
+.endereco__rot{font-size:.75rem;color:var(--texto-claro2)}
+.endereco__txt{font-size:1.625rem;line-height:1.15;letter-spacing:-.015em}
+@media (min-width:990px){ .endereco__txt{font-size:2.5rem;line-height:1.08} }
+.endereco__apps{display:flex;flex-wrap:wrap;border-top:1px solid var(--linha-escura)}
+.endereco__apps a{flex:1 1 auto;min-height:52px;justify-content:space-between;padding-right:16px;font-size:.875rem;text-decoration:none;border-bottom:1px solid var(--linha-escura)}
+.endereco__apps a + a{padding-left:16px;border-left:1px solid var(--linha-escura)}
+@media (max-width:749px){ .endereco{min-height:0;padding:24px 20px;margin-top:8px} .endereco__apps a{flex-basis:100%;border-left:0 !important;padding-left:0 !important} }
+
+/* Formação contínua: linguagens agrupadas */
+.duas .grupos.lado{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px var(--gap);align-items:start}
+.grupo__rot{font-size:.75rem;color:var(--texto-claro2);padding-bottom:10px;border-bottom:1px solid var(--claro)}
+.grupo .meios{border-top:0}
+.grupo .meios li{min-height:48px;font-size:1.25rem;padding-block:10px}
+@media (min-width:990px){ .grupo .meios li{font-size:1.5rem;min-height:56px} }
+@media (max-width:749px){ .duas .grupos.lado{grid-template-columns:1fr;gap:28px} }
+
+/* Blog: no celular, seletor de tema no lugar dos botões */
+.tema-m{display:none}
+@media (max-width:749px){
+  .tags{display:none}
+  .tema-m{display:block}
+  .tema-m select{width:100%;height:48px;padding:0 40px 0 14px;border:1px solid var(--linha);border-radius:0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23000'%3E%3Cpath d='m1 1 5 5 5-5'/%3E%3C/svg%3E") right 16px center no-repeat;font-size:.875rem;appearance:none;color:var(--preto)}
+}
+
+/* Rodapé: link de privacidade na linha final */
+.rod-base a{color:inherit;text-decoration:none}
+.rod-base a:hover{color:var(--claro);text-decoration:underline;text-underline-offset:4px}
+
+/* Texto longo (Privacidade) */
+.texto-longo h3{font-size:1rem;line-height:1.3;font-weight:500;color:var(--preto);margin-top:1.8em}
+.texto-longo h3:first-child{margin-top:0}
+.texto-longo h3 + p{margin-top:.4em}
+
+/* 404: tela em branco com linhas de construção */
+.nao-achei{background:var(--preto);color:var(--claro);min-height:calc(100svh - var(--nav));display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);row-gap:40px;align-items:center;padding-top:var(--b-midia);padding-bottom:var(--b-base)}
+.nao-achei__arte{grid-column:1 / span 6;position:relative;color:var(--claro)}
+.nao-achei__txt{grid-column:8 / -1;display:flex;flex-direction:column;gap:var(--b-texto)}
+.nao-achei__txt .corpo{color:var(--texto-claro);max-width:40ch}
+.tela404{width:100%;height:auto;display:block}
+.nao-achei__num{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:clamp(2.5rem,7vw,5rem);line-height:1;letter-spacing:-.03em;background:var(--preto);padding:0 .2em}
+.tela404__quadro{stroke-dasharray:1200;stroke-dashoffset:1200;animation:traco 1.4s cubic-bezier(.33,1,.68,1) forwards}
+.tela404__linhas path{stroke-dasharray:500;stroke-dashoffset:500;animation:traco 1.2s .6s ease forwards}
+@keyframes traco{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){ .tela404__quadro,.tela404__linhas path{animation:none;stroke-dashoffset:0} }
+@media (max-width:989px){ .nao-achei__arte,.nao-achei__txt{grid-column:1 / -1} .nao-achei{align-content:center} }
+
+/* Carrossel: três pontos no lugar de setas e contador */
+.carr-ctl{display:none !important}
+.carr-pontos{display:none;justify-content:center;gap:2px;margin-top:16px}
+.carr-ponto{width:24px;height:24px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.carr-ponto::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.25;transition:opacity .2s ease,transform .2s ease}
+.carr-ponto[aria-current="true"]::before{opacity:1;transform:scale(1.15)}
+@media (max-width:749px){ .carr-pontos{display:flex} }
+
+/* Notas na home: 9 textos, só os 6 primeiros no computador */
+@media (min-width:750px){ .notas .notas__pag:nth-child(n+3){display:none} }
+
+/* Blog: últimas publicações (uma em destaque e duas ao lado) */
+.destaques{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px var(--gap)}
+.destaque{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;grid-column:span 6}
+.destaque .foto{aspect-ratio:4/3;overflow:hidden;background:var(--claro2)}
+.destaque img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.destaque:hover img{transform:scale(1.02)}
+.destaque__txt{display:flex;flex-direction:column;gap:6px}
+.destaque__tit{font-size:1.625rem;line-height:1.15;font-weight:400;letter-spacing:-.015em;text-wrap:balance}
+@media (min-width:990px){
+  .destaque--1{grid-column:1 / span 7;grid-row:span 2}
+  .destaque:not(.destaque--1){grid-column:8 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+  .destaque__tit{font-size:2rem}
+}
+@media (max-width:749px){
+  .destaques{display:block;border-top:1px solid var(--preto)}
+  .destaque--1{padding-block:16px 20px;border-bottom:1px solid var(--linha)}
+  .destaque:not(.destaque--1){display:grid;grid-template-columns:1fr 88px;column-gap:16px;padding-block:16px;border-bottom:1px solid var(--linha)}
+  .destaque:not(.destaque--1) .foto{grid-column:2;grid-row:1;aspect-ratio:4/5}
+  .destaque:not(.destaque--1) .destaque__txt{grid-column:1;grid-row:1}
+}
+
+/* Formação contínua no celular: linguagens em duas colunas por grupo */
+@media (max-width:749px){
+  .grupo .meios{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--gap)}
+  .grupo .meios li{font-size:1.125rem;min-height:44px}
+}
+
+/* Rodapé no celular: coluna de contato na largura toda */
+@media (max-width:479px){ .rod-colunas > div:last-child{grid-column:1 / -1} }
+.cab > .lado:empty{display:none}
+.cab:has(> .lado:empty) + .apos{margin-top:var(--b-texto)}
+@media (min-width:990px){ .destaques{align-items:start;grid-auto-rows:min-content} .destaque:not(.destaque--1){padding-bottom:20px;border-bottom:1px solid var(--linha)} }
