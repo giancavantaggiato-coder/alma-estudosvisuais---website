@@ -334,7 +334,7 @@ def build():
       abertura("Sobre o Alma", "Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho constrói a imagem que recebe. O Alma ensina o domínio dessa construção a partir de uma convicção: o ver tem gramática, e essa gramática se ensina.", escura=True) + f'''
 <section class="video-sec wrap" aria-label="Vídeo institucional">
   <figure class="video">
-    <!-- Quando o vídeo estiver pronto, trocar este bloco por <video controls playsinline poster="img/..."><source src="..."></video> ou pelo player do Vimeo/YouTube -->
+    <!-- Quando o vídeo estiver pronto, trocar este bloco por <video controls playsinline poster="(foto de capa)"><source src="..."></video> ou pelo player do Vimeo/YouTube -->
     <div class="video__quadro" role="img" aria-label="Vídeo institucional do Alma, em produção">
       <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
     </div>
