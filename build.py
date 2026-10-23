@@ -50,7 +50,7 @@ def nav(atual, sobre_foto):
     <a class="link-aluno" href="{APP}" {EXTERNO}>Área do aluno</a>
     <a class="btn btn-nav" href="faca-parte.html">Aula experimental</a>
   </div>
-  <button class="abrir" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta">{HAMBURGUER}</button>
+  <button class="abrir" type="button" aria-expanded="false" aria-controls="gaveta">Menu</button>
 </header>
 <div class="menu-tela" id="gaveta" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
   <div class="menu-tela__topo"><span class="menu-tela__rot wrap">Menu</span>
