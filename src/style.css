@@ -655,3 +655,4 @@ html{overscroll-behavior-x:none}
 /* Botão do menu: a palavra "Menu", sem filete vertical */
 .nav .abrir,.nav.sobre-foto .abrir,.nav.sobre-foto.rolou .abrir{border-left:0;width:auto;margin-right:0;padding:0 2px;font-size:.875rem;line-height:1;letter-spacing:.01em}
 .menu-tela .fechar{border-left:0}
+.nav .abrir,.nav.sobre-foto .abrir,.nav.sobre-foto.rolou .abrir{width:44px;margin-right:-10px;padding:0}
