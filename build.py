@@ -352,7 +352,7 @@ def build():
     # Nossas aulas
     BASES = [("blog-8.jpg", "Desenho", "Grafite, carvão, sanguínea e nanquim. Estudo de proporção, valor tonal, construção do espaço e articulação de cheios e vazios no campo."),
              ("hero-inicio.jpg", "Plástica", "Gesso, madeira, plastilina e argila. Estudo do volume, do peso e da relação entre matéria e forma no espaço tridimensional.")]
-    MEIOS = [("Pintura", ["Aquarela", "Guache", "Acrílica", "Óleo"]), ("Matéria", ["Escultura", "Cerâmica", "Gravura"]), ("Imagem e projeto", ["Fotografia", "Cinema", "Design", "Arquitetura"])]
+    MEIOS = ["Aquarela", "Guache", "Acrílica", "Óleo", "Escultura", "Gravura"]
     PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada."),
                 ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência."),
                 ("O seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar."),
@@ -383,8 +383,8 @@ def build():
   {duas("Formação", "Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("O percurso começa no currículo comum a todos e se abre conforme a decisão de cada aluno, sempre com acompanhamento individual dentro da turma."))}
   <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">{d}</p></article>' for img, t, d in BASES)}</div>
   <div class="duas cab continua">
-    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">Concluído o currículo básico, o aluno escolhe a linguagem em que quer se aprofundar.</p></div>
-    <div class="grupos lado">{"".join(f'<div class="grupo rev"><p class="grupo__rot">{g}</p><ul class="meios">' + "".join(f"<li>{m}</li>" for m in ms) + "</ul></div>" for g, ms in MEIOS)}</div>
+    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">Concluído o currículo básico, o aluno escolhe o meio em que quer se aprofundar.</p></div>
+    <ul class="meios meios--lista lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
   </div>
 </section>
 <section class="bloco wrap" id="no-atelier">
