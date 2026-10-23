@@ -286,33 +286,71 @@ def build():
 <section class="bloco tom wrap" id="direcao">{DOCENTE}</section>''')
 
     # Nossas aulas
+    TECNICAS = [("blog-3.jpg", "Desenho", "A base de tudo: luz, valor, proporção e composição."),
+                ("blog-6.jpg", "Pintura a óleo", "Camadas, velaturas e a construção da cor pela luz."),
+                ("blog-5.jpg", "Aquarela", "Transparência, água e a decisão de cada mancha."),
+                ("hero-inicio.jpg", "Escultura", "A forma no espaço, do volume ao detalhe."),
+                ("blog-2.jpg", "Gravura", "Matriz, traço e a lógica da impressão.")]
+    PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada."),
+                ("Ciclo básico de Desenho", "Luz, valor e composição. O mesmo começo para todos, com ou sem experiência."),
+                ("A sua técnica", "Concluído o ciclo, você segue na técnica que escolher."),
+                ("A própria luz", "Sem prazo de conclusão: o trabalho avança até a sua linguagem.")]
+    PRINCIPIOS = [("Ver se aprende.", "Não partimos de dom. Partimos de trabalho contínuo e acompanhado."),
+                  ("O Desenho é o fundamento.", "É nele que se aprende a ver, e é a ele que todas as técnicas voltam."),
+                  ("Técnica e sensibilidade andam juntas.", "A técnica é o meio pelo qual a intenção ganha forma.")]
+    NO_ATELIER = [("4 a 9 pessoas", "por aula, cada uma no seu projeto"), ("Acompanhamento individual", "durante toda a aula"),
+                  ("Dias fixos na semana", "escolhidos por você"), ("Reposições pelo app", "avisando até 4 horas antes")]
+    FAQ_CURTA = FAQ[:4]
     pagina("nossas-aulas.html", "Nossas aulas",
-      "Como funcionam as aulas do Alma: aula experimental, ciclo básico de Desenho, técnicas, rotina do atelier e perguntas frequentes.",
-      abertura("Nossas aulas", "No Alma, a formação acontece em atelier: turmas pequenas, acompanhamento individual e um percurso que começa pelo Desenho e segue até a linguagem de cada aluno.", escura=True) + f'''
-<section class="bloco wrap" id="frentes">
-  {duas("Frentes", "<p>O Atelier é a formação regular para adultos. Jovens Artistas e Extensão completam o trabalho do Alma com outros públicos e formatos.</p>")}
-  <div class="apos">{frentes()}</div>
+      "Como funcionam as aulas do Alma: o percurso a partir do Desenho, as técnicas do atelier e o dia a dia das turmas.",
+      f'''<section class="ab-foto wrap">
+  <img src="img/frente-atelier.jpg" alt="Alunos trabalhando lado a lado num atelier" fetchpriority="high">
+  <div class="ab-foto__txt">
+    <h1 class="t1">Nossas aulas</h1>
+    <p class="corpo">Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
+    <nav class="atalhos" aria-label="Nesta página"><a href="#percurso">O percurso</a><a href="#tecnicas">Técnicas</a><a href="#no-atelier">No atelier</a><a href="#faq">Perguntas</a></nav>
+  </div>
 </section>
-<section class="bloco tom wrap" id="como-funciona">
-  {duas("Como funciona", "<p>Todo aluno passa pelo mesmo começo. Depois dele, o percurso é individual.</p>")}
-  <ol class="passos apos">{"".join(f'<li class="rev"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></li>' for t, d in PASSOS)}</ol>
+<section class="frase wrap">
+  <p class="frase__txt rev">Todo aluno começa pelo Desenho. A partir dele, cada um encontra a sua técnica e, com o tempo, a <em>própria luz</em>.</p>
 </section>
-<section class="bloco wrap" id="rotina">
-  {duas("Rotina do atelier", "<p>O atelier funciona como um grupo único: cada aluno tem seus dias fixos e encontra, em cada aula, pessoas em momentos diferentes do percurso.</p>")}
-  <dl class="rotina apos">{"".join(f'<div class="rev"><dt class="t3">{t}</dt><dd class="corpo">{d}</dd></div>' for t, d in ROTINA)}</dl>
+<section class="bloco tom wrap" id="percurso">
+  {duas("O percurso", "<p>Um começo comum e, depois dele, um caminho individual.</p>")}
+  <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1:02d}</span><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
-<section class="bloco tom wrap" id="ensino">
-  {duas("Sobre o ensino", "<p>Os princípios que orientam o trabalho em sala.</p>")}
-  <div class="apos">{acordeao(ENSINO)}</div>
+<section class="bloco wrap" id="tecnicas">
+  {duas("Técnicas", "<p>Cinco linguagens convivem na mesma sala. Na mesma aula, cada aluno trabalha na sua.</p>")}
+  <div class="tecnicas carrossel apos">{"".join(f'<figure class="tecnica rev"><div class="tecnica__img"><img src="img/{img}" alt="" loading="lazy"></div><figcaption><span class="t3">{t}</span><span class="texto-cartao">{d}</span></figcaption></figure>' for img, t, d in TECNICAS)}</div>
 </section>
-<section class="bloco wrap" id="trabalhos">
-  {duas("Trabalhos de alunos", "<p>Estudos e trabalhos desenvolvidos no atelier.</p>")}
+<section class="bloco escuro wrap" id="no-atelier">
+  <div class="dividido">
+    <div class="dividido__img rev"><img src="img/blog-8.jpg" alt="Estudo de Desenho feito no atelier" loading="lazy"></div>
+    <div class="dividido__txt">
+      <h2 class="t2 rev">No atelier</h2>
+      <p class="corpo rev">O atelier funciona como um grupo único. Em cada aula você encontra pessoas em momentos diferentes do percurso, e é dessa convivência que nasce boa parte do aprendizado.</p>
+      <dl class="numeros">{"".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
+      <p class="pequeno rev">Além das aulas: modelo vivo, encontros de história da arte, projetos especiais e visitas a exposições.</p>
+    </div>
+  </div>
+</section>
+<section class="bloco wrap" id="principios">
+  {duas("O que buscamos", "<p>Três ideias guiam o trabalho em sala.</p>")}
+  <ul class="principios apos">{"".join(f'<li class="rev"><p class="principios__t">{t}</p><p class="texto-cartao">{d}</p></li>' for t, d in PRINCIPIOS)}</ul>
+</section>
+<section class="bloco tom wrap" id="trabalhos">
+  {duas("Do atelier", "<p>Estudos e trabalhos de alunos, em diferentes técnicas e momentos do percurso.</p>")}
   <div class="apos">{TRABALHOS}</div>
 </section>
-<section class="bloco tom wrap" id="direcao">{DOCENTE}</section>
-<section class="bloco wrap" id="faq">
-  {duas("Perguntas frequentes", "<p>Não encontrou sua dúvida? Escreva para <a href=\"mailto:" + EMAIL + "\">" + EMAIL + "</a>.</p>")}
-  <div class="apos">{acordeao(FAQ)}</div>
+<section class="bloco wrap" id="alem">
+  {duas("Além do atelier", "<p>Outras frentes do Alma, para outros públicos e formatos.</p>")}
+  <div class="alem apos">
+    <div class="alem__item rev"><span class="selo selo--linha">Em breve</span><h3 class="t3">Jovens Artistas</h3><p class="texto-cartao">Iniciação à prática artística e à percepção visual para crianças e adolescentes.</p></div>
+    <a class="alem__item rev" href="contato.html"><h3 class="t3">Extensão</h3><p class="texto-cartao">Workshops e atividades abertas ao longo do ano. Assine as novidades para saber das próximas datas.</p></a>
+  </div>
+</section>
+<section class="bloco tom wrap" id="faq">
+  {duas("Perguntas frequentes", "<p>Outras dúvidas: <a href=\"mailto:" + EMAIL + "\">" + EMAIL + "</a>.</p>")}
+  <div class="apos">{acordeao(FAQ_CURTA)}</div>
 </section>''')
 
     # Blog
