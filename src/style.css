@@ -668,3 +668,13 @@ html{overscroll-behavior-x:none}
   .video__play{width:72px;height:72px}
 }
 .video-sec{padding-bottom:0}.video__quadro{border:0}
+
+/* Sobre: o vídeo abre a página, na altura da tela, com o título por cima */
+.video{position:relative}
+.video__quadro,.video video,.video iframe{aspect-ratio:auto !important;height:calc(100svh - var(--nav));max-height:none;min-height:420px}
+.video__quadro{background:var(--grafite) linear-gradient(to bottom,transparent 55%,rgb(0 0 0 / .55))}
+.video__tit{position:absolute;left:0;right:0;bottom:var(--b-midia);color:var(--claro);pointer-events:none}
+@media (min-width:990px){ .video__quadro,.video video,.video iframe{height:min(calc(100svh - var(--nav)),56.25vw)} }
+.sobre-intro{padding-top:var(--b-midia);padding-bottom:var(--b-base)}
+.sobre-intro .lead{color:var(--claro);max-width:28em}
+@media (max-width:749px){ .sobre-intro .lead{font-size:1.25rem;line-height:1.3} }
