@@ -3,8 +3,8 @@
 
   document.documentElement.classList.add('js');
 
-  // Gaveta (menu no celular), abre pela direita
-  var gav = document.getElementById('gaveta'), veu = document.querySelector('.veu'), abrir = document.querySelector('.nav .abrir');
+  // Menu em tela cheia (celular)
+  var gav = document.getElementById('gaveta'), abrir = document.querySelector('.nav .abrir');
   function menu(on, pelaTecla) {
     if (!gav) return;
     gav.classList.toggle('aberta', on); gav.setAttribute('aria-hidden', on ? 'false' : 'true');
@@ -28,11 +28,17 @@
     rev.forEach(function (el) { io.observe(el); });
   } else rev.forEach(function (el) { el.classList.add('on'); });
 
-  // WhatsApp do atelier: sem número configurado, o botão não aparece
-  document.querySelectorAll('[data-whatsapp]').forEach(function (a) {
-    if (C.whatsapp) { a.href = 'https://wa.me/' + C.whatsapp + '?text=' + encodeURIComponent('Olá! Gostaria de saber mais sobre o Alma.'); a.target = '_blank'; a.rel = 'noopener'; }
-  });
-  if (!C.whatsapp) document.querySelectorAll('[data-so-whatsapp]').forEach(function (el) { el.hidden = true; });
+  // Cabeçalho da home: transparente sobre a foto, sólido depois dela
+  var cab = document.querySelector('.nav');
+  function rolou() {
+    if (!cab || !cab.classList.contains('sobre-foto')) return;
+    var foto = document.querySelector('main:not([hidden]) .hero');
+    var limite = foto ? foto.offsetHeight - cab.offsetHeight : 0;
+    cab.classList.toggle('rolou', window.scrollY > limite - 1);
+  }
+  window.addEventListener('scroll', rolou, { passive: true });
+  window.addEventListener('resize', rolou);
+  rolou();
 
   // Formulários → Supabase (tabela site_contatos, só inserção)
   function enviar(dados) {
@@ -44,8 +50,9 @@
   }
   var OK = {
     whatsapp: 'Recebemos seu número. Vamos chamar você no WhatsApp para combinar a aula experimental.',
-    novidades: 'Inscrição feita. Obrigado!',
-    candidatura: 'Recebemos seu contato. Vamos chamar você no WhatsApp para combinar a aula experimental.'
+    novidades: 'Inscrição feita. Você vai receber as novidades do Alma neste e-mail.',
+    candidatura: 'Recebemos seu pedido. Vamos chamar você no WhatsApp para combinar o dia da aula experimental.',
+    aviso: 'Combinado. Avisamos você quando as inscrições abrirem.'
   };
   document.querySelectorAll('form[data-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
@@ -54,7 +61,7 @@
       var d = { tipo: tipo, pagina: location.pathname };
       new FormData(f).forEach(function (v, k) { d[k] = String(v).trim(); });
       if (d.whatsapp !== undefined && d.whatsapp.replace(/\D/g, '').length < 10) return dizer(aviso, 'Confira o número com DDD.');
-      if ((tipo === 'novidades' || d.email) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email || '')) return dizer(aviso, 'Confira o e-mail.');
+      if ((tipo === 'novidades' || tipo === 'aviso' || d.email) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email || '')) return dizer(aviso, 'Confira o e-mail.');
       if (tipo === 'candidatura' && !d.nome) return dizer(aviso, 'Preencha seu nome.');
       if (d.email === '') delete d.email;
       if (d.interesse !== undefined) { d.mensagem = 'Interesse: ' + d.interesse + (d.mensagem ? '\n' + d.mensagem : ''); delete d.interesse; }
@@ -83,9 +90,10 @@
     }
     document.querySelectorAll('.tags button').forEach(function (b) {
       b.addEventListener('click', function () {
-        var on = b.getAttribute('aria-pressed') !== 'true';
-        document.querySelectorAll('.tags button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-        b.setAttribute('aria-pressed', on ? 'true' : 'false'); tag = on ? b.dataset.tag : null; filtrar();
+        var ja = b.getAttribute('aria-pressed') === 'true';
+        var alvo = (ja || !b.dataset.tag) ? document.querySelector('.tags button[data-tag=""]') : b;
+        document.querySelectorAll('.tags button').forEach(function (x) { x.setAttribute('aria-pressed', x === alvo ? 'true' : 'false'); });
+        tag = alvo.dataset.tag || null; filtrar();
       });
     });
     q && q.addEventListener('input', filtrar);

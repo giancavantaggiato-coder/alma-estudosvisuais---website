@@ -35,7 +35,7 @@ jobs:
             done
             cp -r ../prev/site site/previa
           fi
-          printf 'User-agent: *\nDisallow: /previa/\n' > site/robots.txt
+          printf 'User-agent: *\nDisallow: /previa/\n\nSitemap: https://almaestudosvisuais.com.br/sitemap.xml\n' > site/robots.txt
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
