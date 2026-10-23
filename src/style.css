@@ -243,8 +243,6 @@ button,input,textarea{font:inherit;color:inherit}
   .tres,.posts{grid-template-columns:repeat(2,minmax(0,1fr))}
 
   .hero .botoes,.faixa .botoes{justify-content:flex-start}
-
-}
 }
 @media (max-width:860px){
   .nav{height:56px}
@@ -313,3 +311,4 @@ button,input,textarea{font:inherit;color:inherit}
 .frente .t3,.cartao .t3,.post .t3{font-size:1.0625rem;font-weight:400}
 .frente .corpo,.post .corpo{font-size:.9375rem;line-height:1.4}
 .tres{row-gap:48px}
+@media (max-width:989px){ .contatos-sec .duas > *:first-child{grid-column:1 / -1} }
