@@ -185,7 +185,7 @@ JOVENS = ("frente-jovens.jpg", "Jovens Artistas", "Iniciação à prática artí
 WORKSHOPS = ("frente-extensao.jpg", "Workshops", "Encontros abertos e de curta duração, com inscrição avulsa, para estudar uma técnica ou um tema sem matrícula.")
 
 FRENTES = [
-    ("frente-atelier.jpg", "Atelier", "Formação para adultos: o ciclo básico de Desenho e, depois dele, o percurso de cada aluno na técnica que escolher.", "nossas-aulas.html", None),
+    ("frente-atelier.jpg", "Atelier", "Formação para adultos: o currículo básico de Desenho e Plástica e, depois dele, o percurso de cada aluno no meio que escolher.", "nossas-aulas.html", None),
     (JOVENS[0], JOVENS[1], JOVENS[2], "nossas-aulas.html#em-breve", "Em breve"),
     (WORKSHOPS[0], WORKSHOPS[1], WORKSHOPS[2], "nossas-aulas.html#em-breve", "Em breve"),
 ]
@@ -196,17 +196,17 @@ def frentes():
         s = f'<span class="selo">{selo}</span>' if selo else ""
         out.append(f'''<a class="frente rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy">{s}</div>
 <h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></a>''')
-    return '<div class="tres carrossel">' + "".join(out) + '</div>'
+    return '<div class="tres lista-m">' + "".join(out) + '</div>'
 
 FATOS = [("4 a 9", "pessoas por aula, com acompanhamento individual de cada trabalho"),
-         ("5 técnicas", "na mesma sala: Desenho, pintura a óleo, aquarela, escultura e gravura"),
-         ("Desenho", "como base: todos começam pelo ciclo básico de luz, valor e composição"),
+         ("6 linhas", "de aprofundamento: aquarela, guache, acrílica, óleo, escultura e gravura"),
+         ("2 bases", "Desenho e Plástica: todos começam pelo mesmo currículo básico"),
          ("Sem prazo", "de conclusão: cada aluno permanece o tempo do próprio percurso")]
 
 def fatos():
     return '<dl class="fatos">' + "".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in FATOS) + '</dl>'
 
-TRABALHOS = '''<div class="tres trabalhos carrossel">
+TRABALHOS = '''<div class="trabalhos">
     <figure class="rev"><img src="img/trabalho-1.jpg" alt="Trabalho de aluno do Alma" loading="lazy"></figure>
     <figure class="rev"><img src="img/trabalho-2.jpg" alt="Trabalho de aluno do Alma" loading="lazy"></figure>
     <figure class="rev"><img src="img/trabalho-3.jpg" alt="Trabalho de aluno do Alma" loading="lazy"></figure>
@@ -217,7 +217,7 @@ NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A 
          ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta")]
 
 def cartoes_notas():
-    return '<div class="tres carrossel">' + "".join(
+    return '<div class="tres lista-m">' + "".join(
         f'''<a class="cartao rev" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
 <p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="t3">{t}</h3></a>''' for img, cat, dt, data, t in NOTAS) + '</div>'
 
@@ -229,9 +229,9 @@ def acordeao(itens):
     return '<div class="acordeao">' + "".join(
         f'<details class="rev"><summary>{q}</summary><div class="resp corpo">{r}</div></details>' for q, r in itens) + '</div>'
 
-FAQ = [("Preciso saber desenhar para começar?", "<p>Não. Todos começam pelo ciclo básico de Desenho, com ou sem experiência anterior.</p>"),
+FAQ = [("Preciso saber desenhar para começar?", "<p>Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.</p>"),
        ("Para quem são as aulas?", "<p>As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.</p>"),
-       ("Quanto tempo dura o curso?", "<p>Não há prazo de conclusão. Depois do ciclo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
+       ("Quanto tempo dura o curso?", "<p>Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
        ("E se eu precisar faltar?", "<p>Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.</p>")]
 
 REFERENCIAS = [("Josef Albers", "A interação da cor e o ensino pela experiência."),
@@ -256,7 +256,7 @@ def em_breve():
         <p class="aviso" role="status"></p>
       </form>
     </article>'''
-    return f'''<section class="bloco wrap" id="em-breve">
+    return f'''<section class="bloco tom wrap" id="em-breve">
   {duas("Em breve", "Duas novas frentes estão em preparação.", corpo("Deixe seu e-mail e avisamos quando as inscrições abrirem."))}
   <div class="breve apos">
     {item(*JOVENS, "jovens")}
@@ -276,7 +276,7 @@ def build():
 
     # Início
     pagina("index.html", "Início",
-      "Centro de Estudos Visuais em São Caetano do Sul. Atelier de Desenho, pintura a óleo, aquarela, escultura e gravura para adultos.",
+      "Centro de Estudos Visuais em São Caetano do Sul. Atelier de Desenho, Plástica, pintura, escultura e gravura para adultos.",
       f'''<section class="hero wrap">
   <img src="img/hero-inicio.jpg" alt="Estudantes trabalhando em esculturas num atelier" fetchpriority="high">
   <div class="chamada">
@@ -325,14 +325,12 @@ def build():
 <section class="bloco tom wrap" id="direcao">{DIRECAO}</section>''')
 
     # Nossas aulas
-    TECNICAS = [("blog-3.jpg", "Desenho", "A base de tudo: luz, valor, proporção e composição."),
-                ("blog-6.jpg", "Pintura a óleo", "Camadas, velaturas e a construção da cor pela luz."),
-                ("blog-5.jpg", "Aquarela", "Transparência, água e a decisão de cada mancha."),
-                ("hero-inicio.jpg", "Escultura", "A forma no espaço, do volume ao detalhe."),
-                ("blog-2.jpg", "Gravura", "Matriz, traço e a lógica da impressão.")]
+    BASES = [("blog-8.jpg", "Desenho", "Grafite, carvão, sanguínea e nanquim. Estudo de proporção, valor tonal, construção do espaço e articulação de cheios e vazios no campo."),
+             ("hero-inicio.jpg", "Plástica", "Gesso, madeira, plastilina e argila. Estudo do volume, do peso e da relação entre matéria e forma no espaço tridimensional.")]
+    MEIOS = ["Aquarela", "Guache", "Acrílica", "Óleo", "Escultura", "Gravura"]
     PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada."),
-                ("Ciclo básico de Desenho", "Luz, valor e composição. O mesmo começo para todos, com ou sem experiência."),
-                ("A sua técnica", "Concluído o ciclo, você segue na técnica que escolher."),
+                ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência."),
+                ("O seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar."),
                 ("A própria luz", "Sem prazo de conclusão. O trabalho segue até encontrar a sua linguagem.")]
     PRINCIPIOS = [("Ver se aprende.", "O progresso vem do trabalho contínuo e acompanhado."),
                   ("O Desenho é o fundamento.", "É nele que se aprende a ver, e é a ele que todas as técnicas voltam."),
@@ -348,36 +346,40 @@ def build():
     <h1 class="t1 ab-foto__tit">Nossas aulas</h1>
     <p class="ab-foto__sub">Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
   </div>
-  <nav class="indice" aria-label="Nesta página"><a href="#percurso">O percurso</a><a href="#tecnicas">Técnicas</a><a href="#no-atelier">No atelier</a><a href="#faq">Perguntas</a></nav>
+  <nav class="indice" aria-label="Nesta página"><a href="#percurso">O percurso</a><a href="#formacao">Formação</a><a href="#no-atelier">No atelier</a><a href="#faq">Perguntas</a></nav>
 </section>
 <section class="frase wrap">
-  <p class="frase__txt rev">Todo aluno começa pelo Desenho. A partir dele, cada um encontra a sua técnica e, com o tempo, a <em>própria luz</em>.</p>
+  <p class="frase__txt rev">Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a <em>própria luz</em>.</p>
 </section>
 <section class="bloco tom wrap" id="percurso">
   {duas("O percurso", "Um começo comum e, depois dele, um caminho individual.")}
   <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
-<section class="bloco wrap" id="tecnicas">
-  {duas("Técnicas", "Cinco linguagens dividem a mesma sala, e cada aluno trabalha na sua.")}
-  <ul class="tecnicas apos">{"".join(f'<li class="tecnica rev"><div class="tecnica__img"><img src="img/{img}" alt="" loading="lazy"></div><div class="tecnica__txt"><h3 class="tecnica__nome">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for img, t, d in TECNICAS)}</ul>
+<section class="bloco escuro wrap" id="formacao">
+  {duas("Formação", "Duas disciplinas de base e seis linhas de aprofundamento.", corpo("O percurso começa no currículo comum a todos e se abre conforme a decisão de cada aluno, sempre com acompanhamento individual dentro da turma."))}
+  <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">{d}</p></article>' for img, t, d in BASES)}</div>
+  <div class="duas cab continua">
+    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">Concluído o currículo básico, o aluno escolhe o meio em que quer se aprofundar.</p></div>
+    <ul class="meios lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
+  </div>
 </section>
-<section class="bloco escuro wrap" id="no-atelier">
+<section class="bloco wrap" id="no-atelier">
   {duas("No atelier", "Um grupo único, com pessoas em momentos diferentes do percurso. Boa parte do aprendizado nasce dessa convivência.")}
   <div class="dividido apos">
-    <div class="dividido__img rev"><img src="img/blog-8.jpg" alt="Estudo de Desenho feito no atelier" loading="lazy"></div>
+    <div class="dividido__img rev"><img src="img/nota-desenho.jpg" alt="Estudo feito no atelier" loading="lazy"></div>
     <dl class="ficha dividido__txt">{"".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
   </div>
 </section>
-<section class="bloco wrap" id="principios">
+<section class="bloco tom wrap" id="principios">
   {duas("O que buscamos", "Três ideias que guiam o trabalho em sala.")}
   <ul class="principios apos">{"".join(f'<li class="rev"><p class="principios__t">{t}</p><p class="texto-cartao">{d}</p></li>' for t, d in PRINCIPIOS)}</ul>
 </section>
-<section class="bloco tom wrap" id="trabalhos">
+<section class="bloco wrap" id="trabalhos">
   {duas("Trabalhos de alunos", "Estudos e trabalhos feitos no atelier.")}
   <div class="apos">{TRABALHOS}</div>
 </section>
 {em_breve()}
-<section class="bloco tom wrap" id="faq">
+<section class="bloco wrap" id="faq">
   {duas("Perguntas frequentes", "O que mais nos perguntam antes da primeira aula.", f'<p class="pequeno">Outras dúvidas: <a href="mailto:{EMAIL}">{EMAIL}</a></p>')}
   <div class="apos">{acordeao(FAQ)}</div>
 </section>''', fecho_html=fecho(("Contato", "contato.html")))
@@ -410,7 +412,7 @@ def build():
 </section>''')
 
     # Aula experimental
-    INTERESSES = ["Ainda não sei", "Desenho", "Pintura a óleo", "Aquarela", "Escultura", "Gravura"]
+    INTERESSES = ["Ainda não sei", "Desenho", "Plástica", "Aquarela", "Guache", "Acrílica", "Óleo", "Escultura", "Gravura"]
     pagina("faca-parte.html", "Aula experimental",
       "Agende uma aula experimental no Alma Centro de Estudos Visuais, em São Caetano do Sul.",
       abertura("Aula experimental", "A entrada no Alma começa por uma aula experimental. Deixe seu contato e combinamos pelo WhatsApp o dia da sua visita ao atelier.") + f'''

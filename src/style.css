@@ -147,14 +147,6 @@ a.frente:hover img,a.cartao:hover img{transform:scale(1.02)}
 .meta{display:flex;gap:12px;align-items:baseline;font-size:.75rem;line-height:1.4;color:var(--texto-meta)}
 .meta span{color:var(--preto);font-weight:500}
 
-/* Carrossel no celular: cartões lado a lado com rolagem horizontal */
-@media (max-width:749px){
-  .carrossel{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:80%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
-    margin-inline:calc(var(--px) * -1);padding-inline:var(--px);scroll-padding-inline:var(--px);scrollbar-width:none;overscroll-behavior-x:contain}
-  .carrossel::-webkit-scrollbar{display:none}
-  .carrossel > *{scroll-snap-align:start}
-}
-
 /* ---------- Fatos do atelier ---------- */
 .fatos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px var(--gap)}
 .fatos > div{border-top:1px solid var(--linha);padding-top:16px;display:flex;flex-direction:column;gap:8px}
@@ -181,7 +173,9 @@ a.frente:hover img,a.cartao:hover img{transform:scale(1.02)}
 @media (max-width:749px){ .larga{aspect-ratio:4/3} }
 
 /* ---------- Trabalhos de alunos ---------- */
+.trabalhos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
 .trabalhos figure{aspect-ratio:4/5;overflow:hidden;background:var(--claro2)}
+@media (max-width:749px){ .trabalhos{grid-template-columns:1fr 1fr;gap:10px} .trabalhos figure:first-child{grid-column:1 / -1;aspect-ratio:4/3} }
 .trabalhos img{width:100%;height:100%;object-fit:cover}
 
 /* ---------- Acordeão ---------- */
@@ -211,8 +205,8 @@ a.frente:hover img,a.cartao:hover img{transform:scale(1.02)}
 .post img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .post[hidden]{display:none}
 .vazio{margin-top:32px}
-@media (max-width:989px){ .tres:not(.carrossel),.posts{grid-template-columns:1fr 1fr} }
-@media (max-width:749px){ .tres:not(.carrossel),.posts{grid-template-columns:1fr} }
+@media (max-width:989px){ .tres,.posts{grid-template-columns:1fr 1fr} }
+@media (max-width:749px){ .tres,.posts{grid-template-columns:1fr} }
 
 /* ---------- Formulários ---------- */
 .campo,.formulario input,.formulario select,.formulario textarea{width:100%;height:48px;border:1px solid #8C8B7A;border-radius:0;background:transparent;padding:0 14px;font-size:.875rem;outline:none;appearance:none}
@@ -412,3 +406,36 @@ a.ext:hover .seta-ext,.btn-ext:hover .seta-ext{transform:translate(2px,-2px)}
 .foto-inteira{background:var(--preto);padding-bottom:var(--b-base)}
 .foto-inteira img{width:100%;height:auto}
 .abertura.escura + .foto-inteira{margin-top:0}
+
+/* Celular: cartões em lista, com miniatura à direita (sem rolagem lateral) */
+@media (max-width:749px){
+  .lista-m{display:block;border-top:1px solid currentColor}
+  .lista-m > .frente,.lista-m > .cartao{display:grid;grid-template-columns:1fr 88px;grid-template-rows:auto auto 1fr;column-gap:16px;row-gap:4px;padding-block:16px;border-bottom:1px solid var(--linha)}
+  .escuro .lista-m > *{border-bottom-color:var(--linha-escura)}
+  .lista-m .foto{grid-column:2;grid-row:1 / span 3;margin:0;aspect-ratio:4/5}
+  .lista-m > * > :not(.foto){grid-column:1}
+  .lista-m .selo{top:6px;left:6px;padding:3px 6px;font-size:.625rem}
+}
+
+/* Nossas aulas: Formação (duas bases e meios de aprofundamento) */
+.bases{display:grid;grid-template-columns:1fr 1fr;gap:40px var(--gap)}
+.base{display:flex;flex-direction:column;gap:8px}
+.base__img{aspect-ratio:16/10;overflow:hidden;background:var(--grafite);margin-bottom:8px}
+.base__img img{width:100%;height:100%;object-fit:cover}
+.base__tit{font-size:1.625rem;line-height:1.15;font-weight:400;letter-spacing:-.015em}
+@media (min-width:990px){ .base__tit{font-size:2rem} }
+.base .texto-cartao{max-width:52ch}
+.continua{margin-top:var(--b-midia);padding-top:var(--b-filete);border-top:1px solid var(--linha-escura)}
+.continua__txt{margin-top:12px;max-width:34ch}
+.meios{border-top:1px solid var(--claro)}
+.meios li{display:flex;align-items:center;min-height:60px;border-bottom:1px solid var(--linha-escura);font-size:1.625rem;line-height:1.1;font-weight:400;letter-spacing:-.015em}
+@media (min-width:990px){ .meios li{font-size:2rem;min-height:68px} }
+@media (max-width:749px){ .bases{grid-template-columns:1fr} }
+
+/* No atelier em fundo claro */
+.ficha{border-top-color:var(--preto)}
+.ficha > div{border-bottom-color:var(--linha)}
+.ficha dt{color:var(--texto-meta)}
+.ficha dd{color:var(--preto)}
+.dividido__img{background:var(--claro2)}
+.duas .meios.lado{display:block;gap:0}
