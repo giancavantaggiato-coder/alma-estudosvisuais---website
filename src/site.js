@@ -5,18 +5,19 @@
 
   // Gaveta (menu no celular), abre pela direita
   var gav = document.getElementById('gaveta'), veu = document.querySelector('.veu'), abrir = document.querySelector('.nav .abrir');
-  function menu(on) {
+  function menu(on, pelaTecla) {
     if (!gav) return;
     gav.classList.toggle('aberta', on); gav.setAttribute('aria-hidden', on ? 'false' : 'true');
-    veu.hidden = !on;
     abrir && abrir.setAttribute('aria-expanded', on ? 'true' : 'false');
     document.body.style.overflow = on ? 'hidden' : '';
-    if (on) { var f = gav.querySelector('.fechar'); f && f.focus(); } else abrir && abrir.focus();
+    if (on) { var f = gav.querySelector('.fechar'); f && f.focus({ preventScroll: true }); }
+    else if (pelaTecla && abrir) abrir.focus({ preventScroll: true });
+    else if (document.activeElement && gav.contains(document.activeElement)) document.activeElement.blur();
   }
   abrir && abrir.addEventListener('click', function () { menu(true); });
   document.querySelectorAll('[data-fechar]').forEach(function (b) { b.addEventListener('click', function () { menu(false); }); });
   gav && gav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu(false); }); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && gav && gav.classList.contains('aberta')) menu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && gav && gav.classList.contains('aberta')) menu(false, true); });
 
   // Revelar ao rolar
   var rev = document.querySelectorAll('.rev');

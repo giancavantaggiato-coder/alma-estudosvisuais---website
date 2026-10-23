@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gera o site estático do Alma a partir de modelos simples (sem dependências).
 Saída em ./site — é essa pasta que vai para a hospedagem."""
-import os, shutil, html, json
+import os, re, shutil, html, json
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 SAIDA = os.path.join(RAIZ, "site")
@@ -21,13 +21,14 @@ def a(t): return html.escape(t)
 EXTERNO = 'target="_blank" rel="noopener"'
 MENU = [("sobre.html", "Sobre"), ("nossas-aulas.html", "Nossas aulas"), ("blog.html", "Blog"), ("contato.html", "Contato")]
 X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>'
-HAMBURGUER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>'
+HAMBURGUER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 9h18M3 15h18"/></svg>'
 
 # ------------------------------------------------------------------ Moldura
 def nav(atual, sobre_foto):
-    def item(h, t):
-        return f'<a href="{h}"{" aria-current=\"page\"" if h == atual else ""}>{t}</a>'
+    def item(h, t, cls=""):
+        return f'<a{(" class=" + chr(34) + cls + chr(34)) if cls else ""} href="{h}"{" aria-current=\"page\"" if h == atual else ""}>{t}</a>'
     itens = "".join(item(h, t) for h, t in MENU) + f'<a href="{LOJA}" {EXTERNO}>Loja</a>'
+    tela = "".join(f'<li>{item(h, t, "wrap")}</li>' for h, t in MENU) + f'<li><a class="wrap" href="{LOJA}" {EXTERNO}>Loja</a></li>'
     return f'''<header class="nav wrap{' sobre-foto' if sobre_foto else ''}">
   <a class="marca" href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
   <nav class="menu" aria-label="Principal">{itens}</nav>
@@ -38,19 +39,24 @@ def nav(atual, sobre_foto):
   <button class="abrir" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta">{HAMBURGUER}</button>
 </header>
 <div class="veu" data-fechar hidden></div>
-<aside class="gaveta" id="gaveta" aria-label="Menu" aria-hidden="true">
-  <div class="topo"><a href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
+<div class="menu-tela" id="gaveta" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+  <div class="menu-tela__topo"><span class="menu-tela__rot wrap">Menu</span>
     <button class="fechar" type="button" data-fechar aria-label="Fechar menu">{X}</button></div>
-  <nav aria-label="Menu">{"".join(item(h, t) for h, t in MENU)}<a href="{LOJA}" {EXTERNO}>Loja</a><a href="{APP}" {EXTERNO}>Área do aluno</a></nav>
-  <a class="btn btn-claro btn-largo" href="faca-parte.html">Agendar aula experimental</a>
-</aside>'''
+  <nav aria-label="Menu"><ul class="menu-tela__itens">{tela}</ul></nav>
+  <div class="menu-tela__pe wrap">
+    <a class="btn btn-claro btn-largo" href="faca-parte.html">Agendar aula experimental</a>
+    <div class="menu-tela__links"><a href="{APP}" {EXTERNO}>Área do aluno</a><a href="{MAPA}" {EXTERNO}>Como chegar</a></div>
+    <p class="menu-tela__end">Rua São Paulo, 864<br>São Caetano do Sul, SP</p>
+  </div>
+</div>'''
 
 FECHO = '''<section class="bloco fecho wrap" id="aula-experimental">
-  <div class="duas rev">
-    <h2 class="t2">Aula experimental</h2>
+  <div class="duas cab rev">
+    <h2 class="cab__rot">Aula experimental</h2>
     <div class="lado">
-      <p class="corpo">A entrada no Alma começa por uma aula experimental. Você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
-      <div class="botoes"><a class="btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha" href="nossas-aulas.html#como-funciona">Como funciona</a></div>
+      <p class="lead">Tudo começa por uma aula.</p>
+      <p class="corpo">Você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
+      <div class="botoes"><a class="btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha" href="nossas-aulas.html#percurso">Como funciona</a></div>
     </div>
   </div>
 </section>'''
@@ -142,8 +148,11 @@ def pagina(arquivo, titulo, descricao, corpo, fecho=True, sobre_foto=False):
     open(os.path.join(SAIDA, arquivo), "w").write(doc)
 
 # ------------------------------------------------------------------ Peças
-def duas(titulo, texto_html, extra="", tag="h2", classe=""):
-    return f'''<div class="duas rev{(' ' + classe) if classe else ''}"><{tag} class="t2">{titulo}</{tag}><div class="lado"><div class="corpo">{texto_html}</div>{extra}</div></div>'''
+def duas(titulo, texto_html, extra="", tag="h2", classe="", lead=None):
+    if lead is None:
+        lead = len(re.sub("<[^>]+>", "", texto_html)) <= 170
+    corpo = "lead" if lead else "corpo"
+    return f'''<div class="duas cab rev{(' ' + classe) if classe else ''}"><{tag} class="cab__rot">{titulo}</{tag}><div class="lado"><div class="{corpo}">{texto_html}</div>{extra}</div></div>'''
 
 def abertura(titulo, texto, escura=False, extra=""):
     return f'''<section class="abertura wrap{' escura' if escura else ''}">
@@ -151,7 +160,7 @@ def abertura(titulo, texto, escura=False, extra=""):
 </section>'''
 
 FRENTES = [
-    ("frente-atelier.jpg", "Atelier", "Formação em atelier para adultos: currículo básico de Desenho e, depois dele, o percurso de cada aluno na técnica que escolher.", "nossas-aulas.html#como-funciona", None),
+    ("frente-atelier.jpg", "Atelier", "Formação em atelier para adultos: currículo básico de Desenho e, depois dele, o percurso de cada aluno na técnica que escolher.", "nossas-aulas.html#percurso", None),
     ("frente-jovens.jpg", "Jovens Artistas", "Iniciação à prática artística e à percepção visual para crianças e adolescentes, no tempo de cada idade.", None, "Em breve"),
     ("frente-extensao.jpg", "Extensão", "Workshops e atividades abertas ao longo do ano, que levam a prática do atelier para além das turmas regulares.", "nossas-aulas.html#frentes", None),
 ]
@@ -248,27 +257,23 @@ def build():
   </div>
 </section>
 <section class="bloco escuro wrap">
-  {duas("Três frentes, um pensamento.", "<p>Somos um Centro de Estudos Visuais dedicado à formação, à pesquisa e à experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo, e é desse princípio que partem as três frentes do Alma.</p>",
-        '<div class="botoes"><a class="btn btn-claro" href="sobre.html">Sobre o Alma</a></div>')}
+  {duas("O Alma", "<p>Três frentes, um pensamento.</p>", '<div class="corpo"><p>Somos um Centro de Estudos Visuais dedicado à formação, à pesquisa e à experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo, e é desse princípio que partem as três frentes do Alma.</p></div><div class="botoes"><a class="btn btn-claro" href="sobre.html">Sobre o Alma</a></div>')}
   <div class="apos">{frentes()}</div>
 </section>
 <section class="bloco wrap">
-  {duas("O atelier", "<p>A formação acontece em estrutura de atelier, com turmas pequenas e convivência entre estudantes de diferentes idades, repertórios e níveis de experiência. Cada percurso começa pelo mesmo currículo básico e se abre, aos poucos, para a linguagem de cada um.</p>",
-        '<div class="botoes"><a class="btn" href="nossas-aulas.html#como-funciona">Como funciona</a></div>')}
+  {duas("O atelier", "<p>Turmas pequenas, um começo comum e o tempo de cada um.</p>", '<div class="corpo"><p>A formação acontece em estrutura de atelier, com convivência entre estudantes de diferentes idades, repertórios e níveis de experiência. Cada percurso começa pelo mesmo currículo básico e se abre, aos poucos, para a linguagem de cada um.</p></div><div class="botoes"><a class="btn" href="nossas-aulas.html#percurso">Como funciona</a></div>')}
   <div class="apos">{fatos()}</div>
 </section>
 <section class="bloco tom wrap">
-  {duas("Trabalhos de alunos", "<p>Estudos e trabalhos desenvolvidos no atelier, em diferentes técnicas e momentos do percurso.</p>")}
+  {duas("Trabalhos de alunos", "<p>O que sai do atelier, em diferentes técnicas e momentos do percurso.</p>")}
   <div class="apos">{TRABALHOS}</div>
 </section>
 <section class="bloco wrap">
-  {duas("Notas e Ensaios", "<p>Textos sobre percepção visual, processos de criação, técnica e história da arte, escritos a partir da prática do atelier.</p>",
-        '<div class="botoes"><a class="btn" href="blog.html">Ver todos</a></div>')}
+  {duas("Notas e Ensaios", "<p>Textos sobre ver, fazer e pensar a imagem.</p>", '<div class="botoes"><a class="btn" href="blog.html">Ver todos</a></div>')}
   <div class="apos">{cartoes_notas()}</div>
 </section>
 <section class="bloco tom wrap">
-  {duas("Materiais Artísticos", "<p>A loja do Alma reúne papéis, pincéis, tintas e instrumentos escolhidos pela prática do atelier, pela qualidade técnica e pela consistência de uso.</p>",
-        f'<div class="botoes"><a class="btn" href="{LOJA}" {EXTERNO}>Visitar a loja</a></div>')}
+  {duas("Materiais Artísticos", "<p>Os materiais que usamos no atelier, escolhidos pela prática.</p>", f'<div class="corpo"><p>Papéis, pincéis, tintas e instrumentos selecionados pela qualidade técnica e pela consistência de uso.</p></div><div class="botoes"><a class="btn" href="{LOJA}" {EXTERNO}>Visitar a loja</a></div>')}
   <a class="larga apos rev" href="{LOJA}" {EXTERNO} aria-label="Visitar a loja de materiais"><img src="img/loja.jpg" alt="Pintura de natureza-morta com frascos e potes de tinta" loading="lazy"></a>
 </section>''', sobre_foto=True)
 
@@ -280,7 +285,7 @@ def build():
 <section class="bloco wrap" id="manifesto">{duas("Manifesto", LOREM1)}</section>
 <section class="bloco tom wrap" id="historia">{duas("Nossa história", LOREM1)}</section>
 <section class="bloco wrap" id="referencias">
-  {duas("Referências", "<p>O ensino do Alma se apoia na tradição da Bauhaus e em autores que estudaram a percepção como forma ativa de conhecimento.</p>")}
+  {duas("Referências", "<p>A tradição da Bauhaus e os autores que estudaram a percepção como conhecimento.</p>")}
   <ul class="lista-ref apos">{"".join(f'<li class="rev"><span class="t3">{n}</span><span class="corpo">{d}</span></li>' for n, d in REFERENCIAS)}</ul>
 </section>
 <section class="bloco tom wrap" id="direcao">{DOCENTE}</section>''')
@@ -298,47 +303,44 @@ def build():
     PRINCIPIOS = [("Ver se aprende.", "Não partimos de dom. Partimos de trabalho contínuo e acompanhado."),
                   ("O Desenho é o fundamento.", "É nele que se aprende a ver, e é a ele que todas as técnicas voltam."),
                   ("Técnica e sensibilidade andam juntas.", "A técnica é o meio pelo qual a intenção ganha forma.")]
-    NO_ATELIER = [("4 a 9 pessoas", "por aula, cada uma no seu projeto"), ("Acompanhamento individual", "durante toda a aula"),
-                  ("Dias fixos na semana", "escolhidos por você"), ("Reposições pelo app", "avisando até 4 horas antes")]
+    NO_ATELIER = [("Turma", "4 a 9 pessoas, cada uma no seu projeto"), ("Acompanhamento", "Individual, durante toda a aula"),
+                  ("Frequência", "Dias fixos na semana, escolhidos por você"), ("Faltas", "Reposição pelo app, avisando até 4 horas antes"),
+                  ("Além das aulas", "Modelo vivo, história da arte, projetos especiais e visitas a exposições")]
     FAQ_CURTA = FAQ[:4]
     pagina("nossas-aulas.html", "Nossas aulas",
       "Como funcionam as aulas do Alma: o percurso a partir do Desenho, as técnicas do atelier e o dia a dia das turmas.",
       f'''<section class="ab-foto wrap">
   <img src="img/frente-atelier.jpg" alt="Alunos trabalhando lado a lado num atelier" fetchpriority="high">
   <div class="ab-foto__txt">
-    <h1 class="t1">Nossas aulas</h1>
-    <p class="corpo">Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
-    <nav class="atalhos" aria-label="Nesta página"><a href="#percurso">O percurso</a><a href="#tecnicas">Técnicas</a><a href="#no-atelier">No atelier</a><a href="#faq">Perguntas</a></nav>
+    <h1 class="t1 ab-foto__tit">Nossas aulas</h1>
+    <p class="ab-foto__sub">Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
   </div>
+  <nav class="indice" aria-label="Nesta página"><a href="#percurso">O percurso</a><a href="#tecnicas">Técnicas</a><a href="#no-atelier">No atelier</a><a href="#faq">Perguntas</a></nav>
 </section>
 <section class="frase wrap">
   <p class="frase__txt rev">Todo aluno começa pelo Desenho. A partir dele, cada um encontra a sua técnica e, com o tempo, a <em>própria luz</em>.</p>
 </section>
 <section class="bloco tom wrap" id="percurso">
   {duas("O percurso", "<p>Um começo comum e, depois dele, um caminho individual.</p>")}
-  <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1:02d}</span><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
+  <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
 <section class="bloco wrap" id="tecnicas">
   {duas("Técnicas", "<p>Cinco linguagens convivem na mesma sala. Na mesma aula, cada aluno trabalha na sua.</p>")}
-  <div class="tecnicas carrossel apos">{"".join(f'<figure class="tecnica rev"><div class="tecnica__img"><img src="img/{img}" alt="" loading="lazy"></div><figcaption><span class="t3">{t}</span><span class="texto-cartao">{d}</span></figcaption></figure>' for img, t, d in TECNICAS)}</div>
+  <ul class="tecnicas apos">{"".join(f'<li class="tecnica rev"><div class="tecnica__img"><img src="img/{img}" alt="" loading="lazy"></div><div class="tecnica__txt"><h3 class="tecnica__nome">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for img, t, d in TECNICAS)}</ul>
 </section>
 <section class="bloco escuro wrap" id="no-atelier">
-  <div class="dividido">
+  {duas("No atelier", "<p>Um grupo único, com pessoas em momentos diferentes do percurso. Boa parte do aprendizado nasce dessa convivência.</p>")}
+  <div class="dividido apos">
     <div class="dividido__img rev"><img src="img/blog-8.jpg" alt="Estudo de Desenho feito no atelier" loading="lazy"></div>
-    <div class="dividido__txt">
-      <h2 class="t2 rev">No atelier</h2>
-      <p class="corpo rev">O atelier funciona como um grupo único. Em cada aula você encontra pessoas em momentos diferentes do percurso, e é dessa convivência que nasce boa parte do aprendizado.</p>
-      <dl class="numeros">{"".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
-      <p class="pequeno rev">Além das aulas: modelo vivo, encontros de história da arte, projetos especiais e visitas a exposições.</p>
-    </div>
+    <dl class="ficha dividido__txt">{"".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
   </div>
 </section>
 <section class="bloco wrap" id="principios">
-  {duas("O que buscamos", "<p>Três ideias guiam o trabalho em sala.</p>")}
+  {duas("O que buscamos", "<p>Três ideias que guiam o trabalho em sala.</p>")}
   <ul class="principios apos">{"".join(f'<li class="rev"><p class="principios__t">{t}</p><p class="texto-cartao">{d}</p></li>' for t, d in PRINCIPIOS)}</ul>
 </section>
 <section class="bloco tom wrap" id="trabalhos">
-  {duas("Do atelier", "<p>Estudos e trabalhos de alunos, em diferentes técnicas e momentos do percurso.</p>")}
+  {duas("Do atelier", "<p>Estudos e trabalhos de alunos.</p>")}
   <div class="apos">{TRABALHOS}</div>
 </section>
 <section class="bloco wrap" id="alem">
@@ -349,7 +351,7 @@ def build():
   </div>
 </section>
 <section class="bloco tom wrap" id="faq">
-  {duas("Perguntas frequentes", "<p>Outras dúvidas: <a href=\"mailto:" + EMAIL + "\">" + EMAIL + "</a>.</p>")}
+  {duas("Perguntas frequentes", "<p>O que mais nos perguntam antes da primeira aula.</p>", '<p class="pequeno">Outras dúvidas: <a href="mailto:' + EMAIL + '">' + EMAIL + '</a></p>')}
   <div class="apos">{acordeao(FAQ_CURTA)}</div>
 </section>''')
 
@@ -426,8 +428,7 @@ def build():
   </div>
 </section>
 <section class="bloco tom wrap">
-  {duas("Parcerias", "<p>Trabalhamos com escolas, instituições culturais e coletivos interessados em formação visual continuada: residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.</p>",
-        f'<div class="botoes"><a class="btn" href="mailto:{EMAIL}?subject=Parcerias">Escrever</a></div>')}
+  {duas("Parcerias", "<p>Formação visual com escolas, instituições e coletivos.</p>", f'<div class="corpo"><p>Residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.</p></div><div class="botoes"><a class="btn" href="mailto:{EMAIL}?subject=Parcerias">Escrever</a></div>')}
 </section>''')
 
     print("ok:", sorted(os.listdir(SAIDA)))
