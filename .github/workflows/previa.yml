@@ -1,0 +1,14 @@
+name: Atualizar prévia
+# O ambiente do GitHub Pages só aceita a main; um push na previa pede à main que republique (a main monta /previa/).
+on:
+  push:
+    branches: [previa]
+permissions:
+  actions: write
+jobs:
+  disparar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh workflow run pages.yml --ref main -R "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ github.token }}

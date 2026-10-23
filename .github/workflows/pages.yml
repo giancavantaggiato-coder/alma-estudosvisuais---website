@@ -1,7 +1,7 @@
 name: Publicar site
 on:
   push:
-    branches: [main, previa]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
