@@ -656,3 +656,14 @@ html{overscroll-behavior-x:none}
 .nav .abrir,.nav.sobre-foto .abrir,.nav.sobre-foto.rolou .abrir{border-left:0;width:auto;margin-right:0;padding:0 2px;font-size:.875rem;line-height:1;letter-spacing:.01em}
 .menu-tela .fechar{border-left:0}
 .nav .abrir,.nav.sobre-foto .abrir,.nav.sobre-foto.rolou .abrir{width:44px;margin-right:-10px;padding:0}
+
+/* Vídeo institucional maior: de ponta a ponta; no celular, quadro vertical que ocupa a tela */
+.video-sec{padding-left:0;padding-right:0}
+.video__quadro,.video video,.video iframe{border-left:0;border-right:0}
+.video__quadro{aspect-ratio:16/9;max-height:88svh;width:100%}
+.video video,.video iframe{max-height:88svh;object-fit:cover}
+.video figcaption{padding-left:max(var(--px), calc((100% - var(--largura)) / 2));padding-right:max(var(--px), calc((100% - var(--largura)) / 2))}
+@media (max-width:749px){
+  .video__quadro,.video video,.video iframe{aspect-ratio:4/5}
+  .video__play{width:72px;height:72px}
+}
