@@ -248,6 +248,7 @@ def acordeao(itens):
 FAQ = [("Preciso saber desenhar para começar?", "<p>Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.</p>"),
        ("Para quem são as aulas?", "<p>As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.</p>"),
        ("Quanto tempo dura o curso?", "<p>Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
+       ("Quanto custa?", "<p>As mensalidades começam em R$ 420, conforme a frequência semanal. Os valores completos são apresentados na aula experimental.</p>"),
        ("Quais são os horários?", "<p>As turmas acontecem no período noturno durante a semana e à tarde aos sábados. O dia da aula experimental é combinado pelo WhatsApp.</p>"),
        ("E se eu precisar faltar?", "<p>Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.</p>")]
 
