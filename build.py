@@ -29,6 +29,8 @@ def e(t): return html.escape(t, quote=False)
 def a(t): return html.escape(t)
 
 EXTERNO = 'target="_blank" rel="noopener"'
+SETA = '<svg class="seta-ext" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg>'
+EXT_SR = '<span class="sr"> (abre em outro site)</span>'
 MENU = [("sobre.html", "Sobre"), ("nossas-aulas.html", "Nossas aulas"), ("blog.html", "Blog"), ("contato.html", "Contato")]
 X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>'
 HAMBURGUER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 9h18M3 15h18"/></svg>'
@@ -39,8 +41,8 @@ def nav(atual, sobre_foto):
         c = f' class="{cls}"' if cls else ""
         cur = ' aria-current="page"' if h == atual else ""
         return f'<a{c} href="{h}"{cur}>{t}</a>'
-    itens = "".join(item(h, t) for h, t in MENU) + f'<a href="{LOJA}" {EXTERNO}>Loja</a>'
-    tela = "".join(f'<li>{item(h, t, "wrap")}</li>' for h, t in MENU) + f'<li><a class="wrap" href="{LOJA}" {EXTERNO}>Loja</a></li>'
+    itens = "".join(item(h, t) for h, t in MENU) + f'<a class="ext" href="{LOJA}" {EXTERNO}>Loja{SETA}{EXT_SR}</a>'
+    tela = "".join(f'<li>{item(h, t, "wrap")}</li>' for h, t in MENU) + f'<li><a class="wrap ext" href="{LOJA}" {EXTERNO}>Loja{SETA}{EXT_SR}</a></li>'
     return f'''<header class="nav wrap{' sobre-foto' if sobre_foto else ''}">
   <a class="marca" href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
   <nav class="menu" aria-label="Principal">{itens}</nav>
@@ -99,7 +101,7 @@ RODAPE = f'''<footer class="rodape wrap">
       <h2 class="rotulo">Alunos</h2>
       <a href="{APP}" {EXTERNO}>Área do aluno</a>
       <h2 class="rotulo">Loja</h2>
-      <a href="{LOJA}" {EXTERNO}>Materiais Artísticos</a>
+      <a class="ext" href="{LOJA}" {EXTERNO}>Materiais Artísticos{SETA}{EXT_SR}</a>
       <a href="{LOJA}/policies/shipping-policy" {EXTERNO}>Envio e entrega</a>
       <a href="{LOJA}/policies/terms-of-service" {EXTERNO}>Termos e condições</a>
     </nav>
@@ -305,24 +307,20 @@ def build():
 <section class="bloco tom wrap">
   {duas("Materiais Artísticos", "Os materiais que usamos no atelier, escolhidos pela prática.",
         corpo("Papéis, pincéis, tintas e instrumentos selecionados pela qualidade técnica e pela consistência de uso.")
-        + botoes(f'<a class="btn" href="{LOJA}" {EXTERNO}>Visitar a loja</a>'))}
+        + botoes(f'<a class="btn btn-ext" href="{LOJA}" {EXTERNO}>Visitar a loja{SETA}{EXT_SR}</a>'))}
   <a class="larga apos rev" href="{LOJA}" {EXTERNO} aria-label="Visitar a loja de materiais"><img src="img/loja.jpg" alt="Pintura de natureza-morta com frascos e potes de tinta" loading="lazy"></a>
 </section>''', sobre_foto=True)
 
     # Sobre
     pagina("sobre.html", "Sobre",
-      "O ver tem gramática, e essa gramática se ensina. O manifesto, a história e as referências do Alma.",
+      "O ver tem gramática, e essa gramática se ensina. O manifesto e a história do Alma.",
       abertura("Sobre o Alma", "Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho constrói a imagem que recebe. O Alma ensina o domínio dessa construção a partir de uma convicção: o ver tem gramática, e essa gramática se ensina.", escura=True) + f'''
-<div class="larga"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" loading="lazy"></div>
+<figure class="foto-inteira wrap"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" width="1800" height="804" loading="lazy"></figure>
 <section class="bloco wrap" id="manifesto">
   <div class="duas cab rev"><h2 class="cab__rot">Manifesto</h2><div class="lado"><div class="corpo">{LOREM1}</div></div></div>
 </section>
 <section class="bloco tom wrap" id="historia">
   <div class="duas cab rev"><h2 class="cab__rot">Nossa história</h2><div class="lado"><div class="corpo">{LOREM1}</div></div></div>
-</section>
-<section class="bloco wrap" id="referencias">
-  {duas("Referências", "A tradição da Bauhaus e os autores que estudaram a percepção como conhecimento.")}
-  <ul class="lista-ref apos">{"".join(f'<li class="rev"><span class="t3">{n}</span><span class="corpo">{d}</span></li>' for n, d in REFERENCIAS)}</ul>
 </section>
 <section class="bloco tom wrap" id="direcao">{DIRECAO}</section>''')
 

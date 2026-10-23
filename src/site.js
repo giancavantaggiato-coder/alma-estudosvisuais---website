@@ -30,12 +30,22 @@
 
   // Cabeçalho da home: transparente sobre a foto, sólido depois dela
   var cab = document.querySelector('.nav');
+  // Some ao descer e volta ao subir (como na loja)
+  var ultimo = window.scrollY;
   function rolou() {
-    if (!cab || !cab.classList.contains('sobre-foto')) return;
-    var foto = document.querySelector('main:not([hidden]) .hero');
-    var limite = foto ? foto.offsetHeight - cab.offsetHeight : 0;
-    cab.classList.toggle('rolou', window.scrollY > limite - 1);
+    if (!cab) return;
+    var y = Math.max(window.scrollY, 0), h = cab.offsetHeight;
+    if (cab.classList.contains('sobre-foto')) {
+      var foto = document.querySelector('main:not([hidden]) .hero');
+      cab.classList.toggle('rolou', y > (foto ? foto.offsetHeight - h : 0) - 1);
+    }
+    if (document.body.style.overflow === 'hidden') { ultimo = y; return; }
+    if (y <= h) cab.classList.remove('escondido');
+    else if (y > ultimo + 4) cab.classList.add('escondido');
+    else if (y < ultimo - 4) cab.classList.remove('escondido');
+    ultimo = y;
   }
+  cab && cab.addEventListener('focusin', function () { cab.classList.remove('escondido'); });
   window.addEventListener('scroll', rolou, { passive: true });
   window.addEventListener('resize', rolou);
   rolou();

@@ -384,3 +384,31 @@ a.frente:hover img,a.cartao:hover img{transform:scale(1.02)}
 .nao-achei{padding-top:calc(var(--b-base) * 1.25);padding-bottom:calc(var(--b-base) * 1.25)}
 .nao-achei .lado{gap:var(--b-texto)}
 @media (max-width:989px){ .duas > .formulario{margin-top:16px} }
+
+/* =====================================================================
+   Cabeçalho no desenho da loja (Horizon · Alma): fundo preto, texto creme,
+   sem filete; transparente sobre a foto da home; some ao descer e volta ao subir.
+   ===================================================================== */
+.nav,.nav.sobre-foto.rolou{background:var(--preto);color:var(--claro);border-bottom:0}
+.nav{position:sticky;top:0;transform:translateY(0);transition:transform .3s cubic-bezier(.33,1,.68,1),background-color .25s ease}
+.nav.sobre-foto{position:fixed;inset:0 0 auto 0;background:transparent}
+.nav.escondido{transform:translateY(-100%)}
+.nav .abrir,.nav.sobre-foto .abrir,.nav.sobre-foto.rolou .abrir{border-left-color:var(--linha-escura)}
+.nav .btn-nav,.nav.sobre-foto .btn-nav,.nav.sobre-foto.rolou .btn-nav{background:var(--claro);border-color:var(--claro);color:var(--preto)}
+.nav .menu a[aria-current]{text-decoration:underline;text-underline-offset:6px}
+.nav .marca svg{height:24px}
+@media (min-width:990px){ .nav .marca svg{height:28px} }
+@media (prefers-reduced-motion:reduce){ .nav{transition:none} }
+
+/* Links para outro site: seta fina depois do texto */
+.seta-ext{width:.75em;height:.75em;flex:none;margin-left:.35em;vertical-align:baseline;transition:transform .15s ease}
+a.ext,.btn-ext{display:inline-flex;align-items:center}
+a.ext:hover .seta-ext,.btn-ext:hover .seta-ext{transform:translate(2px,-2px)}
+.btn-ext{justify-content:space-between}
+.btn-ext .seta-ext{width:12px;height:12px}
+.menu-tela__itens a.ext .seta-ext{width:.45em;height:.45em;margin-left:.3em;align-self:flex-start;margin-top:.3em}
+
+/* Sobre: foto da Bauhaus inteira, sem corte, sobre o fundo preto da abertura */
+.foto-inteira{background:var(--preto);padding-bottom:var(--b-base)}
+.foto-inteira img{width:100%;height:auto}
+.abertura.escura + .foto-inteira{margin-top:0}
