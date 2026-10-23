@@ -24,7 +24,7 @@ def nav(atual, solida=False):
     <a class="marca" href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
     <nav class="menu" aria-label="Principal">{itens}</nav>
   </div>
-  <a class="btn loja" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>
+  <a class="btn loja" href="{LOJA}" target="_blank" rel="noopener">Loja</a>
   <button class="abrir" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
 </header>
 <div class="veu" data-fechar></div>
@@ -32,7 +32,7 @@ def nav(atual, solida=False):
   <div class="topo"><a href="index.html" aria-label="Alma, página inicial">{LOGO.replace('class="logo"','class="logo"')}</a>
     <button class="fechar" data-fechar aria-label="Fechar menu"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><path fill-rule="evenodd" d="M14.85 6.525 10.16 11.21l.75.75L16.87 6 10.91.04l-.75.75 4.69 4.69H0v1.05h14.85z"/></svg></button></div>
   <nav>{gav}</nav>
-  <a class="btn btn-claro loja-m" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>
+  <a class="btn btn-claro loja-m" href="{LOJA}" target="_blank" rel="noopener">Loja</a>
 </aside>'''
 
 COMECAR = '''<section class="comecar wrap" id="comecar">
@@ -141,7 +141,7 @@ EDUCACAO = f'''<section class="secao wrap" id="educacao">
 
 LOJA_SEC = f'''<section class="secao wrap" id="loja">
   {intro("Loja", "<p>Curadoria de materiais artísticos feita a partir da prática de atelier. A loja do Alma reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.</p>",
-         f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>')}
+         f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja</a>')}
   <a class="larga rev apos-cab" href="{LOJA}" target="_blank" rel="noopener" style="display:block" aria-label="Ir para a loja"><img src="img/loja.jpg" alt="Pintura de natureza-morta com frascos e potes de tinta" loading="lazy"></a>
   <hr class="filete">
 </section>'''
@@ -172,7 +172,7 @@ def build():
   <img src="img/hero-inicio.jpg" alt="Estudantes trabalhando em esculturas num atelier" fetchpriority="high">
   <div class="chamada">
     <h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.</h1>
-    <div class="botoes"><a class="btn" href="nossas-aulas.html">Nossas aulas</a><a class="btn" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a></div>
+    <div class="botoes"><a class="btn" href="nossas-aulas.html">Nossas aulas</a><a class="btn" href="{LOJA}" target="_blank" rel="noopener">Loja</a></div>
   </div>
 </section>
 <section class="faixa wrap">

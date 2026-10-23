@@ -46,12 +46,11 @@ button,input,textarea{font:inherit;color:inherit}
 .claro{color:var(--claro)}
 
 /* ---------- Botões (alma-btn) ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:144px;min-height:36px;padding:10px 14px;font-size:.75rem;font-weight:400;line-height:1;text-decoration:none;border:1px solid var(--preto);border-radius:0;background:var(--preto);color:var(--claro);cursor:pointer;white-space:nowrap;transition:opacity .15s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:176px;min-height:36px;padding:10px 14px;font-size:.75rem;font-weight:400;line-height:1;text-decoration:none;border:1px solid var(--preto);border-radius:0;background:var(--preto);color:var(--claro);cursor:pointer;white-space:nowrap;transition:opacity .15s ease}
 .btn:hover{opacity:.8}
 .btn-preto{background:var(--preto);border-color:var(--preto);color:var(--claro)}
 .btn-claro{background:var(--claro);border-color:var(--claro);color:var(--preto)}
 .btn-linha{background:transparent;border-color:currentColor;color:var(--claro)}
-.seta{font-size:.75rem;line-height:1}
 .botoes{display:flex;flex-wrap:wrap;gap:20px}
 
 /* ---------- Navegação ---------- */
@@ -241,8 +240,25 @@ button,input,textarea{font:inherit;color:inherit}
   .form-linha .campo,.form-linha .btn,
   .formulario .grade > .col:first-child,.formulario .grade > .col:last-child{grid-column:1 / -1}
   .duas{row-gap:16px}
-  .hero .botoes,.faixa .botoes{justify-content:flex-start}
   .tres,.posts{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  /* Celular e tablet: textos centralizados */
+  .hero .chamada,.faixa .lin,.intro,.comecar,.historia,.frente,.cartao,.post,
+  .rodape .novidades,.rodape .contatos,.contatos-sec .lista,.vazio{text-align:center}
+  .corpo,.faixa .corpo,.intro .corpo,.comecar p.corpo{margin-inline:auto}
+  .intro .direita{align-items:center}
+  .botoes,.hero .botoes,.faixa .botoes,.rodape .links{justify-content:center}
+  .meta,.post .cab{justify-content:center}
+  .post .cab{flex-direction:column;align-items:center;gap:6px}
+  .rodape .contatos > div{align-items:center}
+
+  /* Respiros iguais em cima e embaixo */
+  .faixa,.secao,.comecar,.historia{padding-top:var(--r)}
+  .secao:has(> .filete:last-child),.secao:has(> .wrap:last-child > .filete){padding-bottom:0}
+  .faixa .lin{row-gap:32px}
+  .faixa h2{margin-bottom:20px}
+  .intro .direita{gap:32px}
+  .tres{row-gap:40px}
 }
 @media (max-width:860px){
   .nav{height:56px}
@@ -255,6 +271,10 @@ button,input,textarea{font:inherit;color:inherit}
   .tres,.posts{grid-template-columns:1fr}
   .larga{aspect-ratio:4/3}
   .form-linha .btn{justify-self:stretch}
+  /* Botões do mesmo tamanho: metade da largura; dois lado a lado ocupam a linha toda */
+  .botoes{gap:16px}
+  .botoes .btn{flex:0 0 calc(50% - 8px);min-width:0;min-height:44px}
+  .intro .direita > .btn{flex:none;width:calc(50% - 8px);min-width:0;min-height:44px}
   .btn{white-space:normal;text-align:center}
   .mapa{min-height:300px}
   .formulario textarea{height:200px}
