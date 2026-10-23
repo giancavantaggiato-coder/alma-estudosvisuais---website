@@ -174,8 +174,8 @@ a.frente:hover img,a.cartao:hover img{transform:scale(1.02)}
 
 /* ---------- Trabalhos de alunos ---------- */
 .trabalhos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
-.trabalhos figure{aspect-ratio:4/5;overflow:hidden;background:var(--claro2)}
-@media (max-width:749px){ .trabalhos{grid-template-columns:1fr 1fr;gap:10px} .trabalhos figure:first-child{grid-column:1 / -1;aspect-ratio:4/3} }
+
+
 .trabalhos img{width:100%;height:100%;object-fit:cover}
 
 /* ---------- Acordeão ---------- */
@@ -479,7 +479,6 @@ html{overscroll-behavior-x:none}
   .carr__item{scroll-snap-align:start;scroll-snap-stop:always;min-width:0}
   .carr-ctl{display:flex}
   .trabalhos{row-gap:0}
-  .trabalhos .carr__item{aspect-ratio:4/5}
   .notas{row-gap:0}
   .notas__pag{display:block}
 }
@@ -600,3 +599,29 @@ html{overscroll-behavior-x:none}
 .cab > .lado:empty{display:none}
 .cab:has(> .lado:empty) + .apos{margin-top:var(--b-texto)}
 @media (min-width:990px){ .destaques{align-items:start;grid-auto-rows:min-content} .destaque:not(.destaque--1){padding-bottom:20px;border-bottom:1px solid var(--linha)} }
+
+/* Trabalhos: a obra inteira, sem corte (horizontais e verticais no mesmo quadro) */
+.trabalhos .carr__item{background:var(--claro2);display:grid;place-items:center}
+.trabalhos .carr__item img{width:100%;height:100%;object-fit:contain}
+@media (max-width:749px){ .trabalhos .carr__item{aspect-ratio:1/1} }
+
+/* Pontos do carrossel mais próximos */
+.carr-pontos{gap:0;margin-top:14px}
+.carr-ponto{width:14px;height:24px}
+.carr-ponto::before{width:5px;height:5px}
+
+/* Botões em dupla no celular ocupam a largura toda e dividem igualmente */
+@media (max-width:749px){ .lado > .botoes,.hero .botoes,.botoes{align-self:stretch;width:100%} .botoes .btn{white-space:nowrap} }
+
+/* Sobre: vídeo institucional (quadro 16:9 até o vídeo ficar pronto) */
+.video-sec{background:var(--preto);padding-bottom:var(--b-base)}
+.video{margin:0;display:flex;flex-direction:column;gap:12px;color:var(--claro)}
+.video__quadro{position:relative;aspect-ratio:16/9;background:var(--grafite) linear-gradient(135deg,rgb(254 252 230 / .04),transparent);border:1px solid var(--linha-escura);display:grid;place-items:center}
+.video__play{width:72px;height:72px;border-radius:50%;border:1px solid rgb(254 252 230 / .6);display:grid;place-items:center}
+.video__play svg{width:24px;height:24px;margin-left:3px}
+.video figcaption{display:flex;justify-content:space-between;gap:16px;font-size:.75rem;color:var(--texto-claro2)}
+.video figcaption span:first-child{color:var(--claro)}
+.video video,.video iframe{width:100%;aspect-ratio:16/9;display:block;border:0;background:#000}
+@media (max-width:749px){ .video__play{width:56px;height:56px} }
+.trabalhos .carr__item{position:relative;display:block}
+.trabalhos .carr__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}

@@ -332,7 +332,15 @@ def build():
     pagina("sobre.html", "Sobre",
       "O ver tem gramática, e essa gramática se ensina. O manifesto e a história do Alma.",
       abertura("Sobre o Alma", "Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho constrói a imagem que recebe. O Alma ensina o domínio dessa construção a partir de uma convicção: o ver tem gramática, e essa gramática se ensina.", escura=True) + f'''
-<figure class="foto-inteira wrap"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" width="1658" height="758" loading="lazy"></figure>
+<section class="video-sec wrap" aria-label="Vídeo institucional">
+  <figure class="video">
+    <!-- Quando o vídeo estiver pronto, trocar este bloco por <video controls playsinline poster="img/..."><source src="..."></video> ou pelo player do Vimeo/YouTube -->
+    <div class="video__quadro" role="img" aria-label="Vídeo institucional do Alma, em produção">
+      <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+    </div>
+    <figcaption><span>Manifesto do Alma</span><span>Vídeo em produção</span></figcaption>
+  </figure>
+</section>
 <section class="bloco wrap" id="manifesto">
   <div class="duas cab rev"><h2 class="cab__rot">Manifesto</h2><div class="lado"><div class="corpo">{LOREM1}</div></div></div>
 </section>
