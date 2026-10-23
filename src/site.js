@@ -1,18 +1,21 @@
 (function () {
   var C = window.ALMA_CONFIG || {};
 
-  // Gaveta (menu no celular)
+  document.documentElement.classList.add('js');
+
+  // Gaveta (menu no celular), abre pela direita
   var gav = document.getElementById('gaveta'), veu = document.querySelector('.veu'), abrir = document.querySelector('.nav .abrir');
   function menu(on) {
     if (!gav) return;
-    gav.classList.toggle('aberta', on); veu.classList.toggle('aberto', on);
+    gav.classList.toggle('aberta', on); gav.setAttribute('aria-hidden', on ? 'false' : 'true');
+    veu.hidden = !on;
     abrir && abrir.setAttribute('aria-expanded', on ? 'true' : 'false');
     document.body.style.overflow = on ? 'hidden' : '';
-    if (on) { var f = gav.querySelector('a'); f && f.focus(); } else abrir && abrir.focus();
+    if (on) { var f = gav.querySelector('.fechar'); f && f.focus(); } else abrir && abrir.focus();
   }
   abrir && abrir.addEventListener('click', function () { menu(true); });
   document.querySelectorAll('[data-fechar]').forEach(function (b) { b.addEventListener('click', function () { menu(false); }); });
-  gav && gav.querySelectorAll('nav a').forEach(function (a) { a.addEventListener('click', function () { menu(false); }); });
+  gav && gav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu(false); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && gav && gav.classList.contains('aberta')) menu(false); });
 
   // Revelar ao rolar
@@ -20,15 +23,15 @@
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -8% 0px' });
+    }, { rootMargin: '0px 0px -6% 0px' });
     rev.forEach(function (el) { io.observe(el); });
   } else rev.forEach(function (el) { el.classList.add('on'); });
 
-  // WhatsApp do atelier
+  // WhatsApp do atelier: sem número configurado, o botão não aparece
   document.querySelectorAll('[data-whatsapp]').forEach(function (a) {
-    if (C.whatsapp) { a.href = 'https://wa.me/' + C.whatsapp; a.target = '_blank'; a.rel = 'noopener'; }
-    else a.href = 'contato.html';
+    if (C.whatsapp) { a.href = 'https://wa.me/' + C.whatsapp + '?text=' + encodeURIComponent('Olá! Gostaria de saber mais sobre o Alma.'); a.target = '_blank'; a.rel = 'noopener'; }
   });
+  if (!C.whatsapp) document.querySelectorAll('[data-so-whatsapp]').forEach(function (el) { el.hidden = true; });
 
   // Formulários → Supabase (tabela site_contatos, só inserção)
   function enviar(dados) {
@@ -41,17 +44,19 @@
   var OK = {
     whatsapp: 'Recebemos seu número. Vamos chamar você no WhatsApp para combinar a aula experimental.',
     novidades: 'Inscrição feita. Obrigado!',
-    candidatura: 'Recebemos sua candidatura. Responderemos em breve.'
+    candidatura: 'Recebemos seu contato. Vamos chamar você no WhatsApp para combinar a aula experimental.'
   };
   document.querySelectorAll('form[data-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
-      var tipo = f.dataset.form, aviso = f.parentNode.querySelector('.aviso') || f.querySelector('.aviso');
+      var tipo = f.dataset.form, aviso = f.querySelector('.aviso') || f.parentNode.querySelector('.aviso');
       var d = { tipo: tipo, pagina: location.pathname };
       new FormData(f).forEach(function (v, k) { d[k] = String(v).trim(); });
       if (d.whatsapp !== undefined && d.whatsapp.replace(/\D/g, '').length < 10) return dizer(aviso, 'Confira o número com DDD.');
-      if (d.email !== undefined && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) return dizer(aviso, 'Confira o e-mail.');
-      if (tipo === 'candidatura' && (!d.nome || !d.mensagem)) return dizer(aviso, 'Preencha nome e carta de motivação.');
+      if ((tipo === 'novidades' || d.email) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email || '')) return dizer(aviso, 'Confira o e-mail.');
+      if (tipo === 'candidatura' && !d.nome) return dizer(aviso, 'Preencha seu nome.');
+      if (d.email === '') delete d.email;
+      if (d.interesse !== undefined) { d.mensagem = 'Interesse: ' + d.interesse + (d.mensagem ? '\n' + d.mensagem : ''); delete d.interesse; }
       var b = f.querySelector('button[type=submit]'); b.disabled = true;
       enviar(d).then(function () { f.reset(); dizer(aviso, OK[tipo]); })
         .catch(function () { dizer(aviso, 'Não foi possível enviar agora. Escreva para contato@almaestudosvisuais.com.br.'); })
