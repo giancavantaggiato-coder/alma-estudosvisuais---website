@@ -338,7 +338,6 @@ def build():
     <div class="video__quadro" role="img" aria-label="Vídeo institucional do Alma, em produção">
       <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
     </div>
-    <figcaption><span>Manifesto do Alma</span><span>Vídeo em produção</span></figcaption>
   </figure>
 </section>
 <section class="bloco wrap" id="manifesto">
