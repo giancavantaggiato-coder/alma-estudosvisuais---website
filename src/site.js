@@ -54,7 +54,9 @@
   document.querySelectorAll('[data-carr]').forEach(function (c) {
     var t = c.querySelector('.carr__trilho'), itens = t.querySelectorAll('.carr__item'), pts = c.querySelectorAll('.carr-ponto');
     function marcar() {
-      var i = Math.min(Math.round(t.scrollLeft / Math.max(t.clientWidth, 1)), itens.length - 1);
+      var i = 0, melhor = Infinity, fim = t.scrollLeft > 0 && t.scrollLeft + t.clientWidth >= t.scrollWidth - 2;
+      itens.forEach(function (it, k) { var d = Math.abs(it.offsetLeft - t.offsetLeft - t.scrollLeft); if (d < melhor) { melhor = d; i = k; } });
+      if (fim) i = itens.length - 1;
       pts.forEach(function (p, k) { if (k === i) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current'); });
     }
     pts.forEach(function (p, k) { p.addEventListener('click', function () { t.scrollTo({ left: itens[k].offsetLeft - t.offsetLeft, behavior: 'smooth' }); }); });

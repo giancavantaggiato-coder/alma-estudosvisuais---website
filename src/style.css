@@ -625,3 +625,19 @@ html{overscroll-behavior-x:none}
 @media (max-width:749px){ .video__play{width:56px;height:56px} }
 .trabalhos .carr__item{position:relative;display:block}
 .trabalhos .carr__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+
+/* Trabalhos: imagem inteira, sem fundo; mesma altura, largura pela proporção da obra; a próxima aparece na borda */
+.trabalhos{display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none}
+.trabalhos::-webkit-scrollbar{display:none}
+.trabalhos .carr__item{position:static;display:block;flex:none;height:min(52vw,440px);aspect-ratio:auto;background:none;overflow:visible;scroll-snap-align:start}
+.trabalhos .carr__item img{position:static;width:auto;height:100%;max-width:none;object-fit:initial}
+@media (max-width:749px){
+  .trabalhos{display:flex;column-gap:10px;margin-right:calc(var(--px) * -1);padding-right:var(--px)}
+  .trabalhos .carr__item{height:auto;max-width:84vw}
+  .trabalhos .carr__item img{width:auto;height:auto;max-height:60svh;max-width:84vw}
+}
+@media (max-width:749px){
+  .trabalhos{align-items:flex-start}
+  .trabalhos .carr__item{max-width:78vw}
+  .trabalhos .carr__item img{max-width:78vw;max-height:56svh}
+}
