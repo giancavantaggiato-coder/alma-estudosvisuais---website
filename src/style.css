@@ -439,3 +439,16 @@ a.ext:hover .seta-ext,.btn-ext:hover .seta-ext{transform:translate(2px,-2px)}
 .ficha dd{color:var(--preto)}
 .dividido__img{background:var(--claro2)}
 .duas .meios.lado{display:block;gap:0}
+
+/* Formação contínua: grade compacta de linguagens (cresce sem alongar a página) */
+.duas .meios.lado{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);border-top:1px solid var(--claro)}
+.meios li{min-height:52px;font-size:1.25rem;line-height:1.2;padding-block:12px}
+@media (min-width:990px){ .duas .meios.lado{grid-template-columns:repeat(3,minmax(0,1fr))} .meios li{font-size:1.5rem;min-height:64px} }
+
+/* Sobre: foto da Bauhaus. Inteira no computador; no celular, de ponta a ponta e num recorte 4:3 */
+.foto-inteira img{display:block}
+@media (max-width:749px){
+  .foto-inteira{padding-left:0;padding-right:0}
+  .foto-inteira img{aspect-ratio:4/3;object-fit:cover;object-position:6% 50%}
+}
+.ab-foto{padding-bottom:var(--b-midia)}

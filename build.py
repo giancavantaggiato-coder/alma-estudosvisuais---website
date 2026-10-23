@@ -315,7 +315,7 @@ def build():
     pagina("sobre.html", "Sobre",
       "O ver tem gramática, e essa gramática se ensina. O manifesto e a história do Alma.",
       abertura("Sobre o Alma", "Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho constrói a imagem que recebe. O Alma ensina o domínio dessa construção a partir de uma convicção: o ver tem gramática, e essa gramática se ensina.", escura=True) + f'''
-<figure class="foto-inteira wrap"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" width="1800" height="804" loading="lazy"></figure>
+<figure class="foto-inteira wrap"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" width="1658" height="758" loading="lazy"></figure>
 <section class="bloco wrap" id="manifesto">
   <div class="duas cab rev"><h2 class="cab__rot">Manifesto</h2><div class="lado"><div class="corpo">{LOREM1}</div></div></div>
 </section>
@@ -346,7 +346,6 @@ def build():
     <h1 class="t1 ab-foto__tit">Nossas aulas</h1>
     <p class="ab-foto__sub">Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
   </div>
-  <nav class="indice" aria-label="Nesta página"><a href="#percurso">O percurso</a><a href="#formacao">Formação</a><a href="#no-atelier">No atelier</a><a href="#faq">Perguntas</a></nav>
 </section>
 <section class="frase wrap">
   <p class="frase__txt rev">Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a <em>própria luz</em>.</p>
@@ -359,7 +358,7 @@ def build():
   {duas("Formação", "Duas disciplinas de base e seis linhas de aprofundamento.", corpo("O percurso começa no currículo comum a todos e se abre conforme a decisão de cada aluno, sempre com acompanhamento individual dentro da turma."))}
   <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">{d}</p></article>' for img, t, d in BASES)}</div>
   <div class="duas cab continua">
-    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">Concluído o currículo básico, o aluno escolhe o meio em que quer se aprofundar.</p></div>
+    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">Concluído o currículo básico, o aluno escolhe a linguagem em que quer se aprofundar.</p></div>
     <ul class="meios lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
   </div>
 </section>
