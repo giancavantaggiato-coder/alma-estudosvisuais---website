@@ -53,7 +53,7 @@ def nav(atual, sobre_foto):
   <button class="abrir" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 6.5h18M3 12h18M3 17.5h18"/></svg></button>
 </header>
 <div class="menu-tela" id="gaveta" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
-  <div class="menu-tela__topo"><span class="menu-tela__rot wrap">Menu</span>
+  <div class="menu-tela__topo"><span class="menu-tela__rot wrap"></span>
     <button class="fechar" type="button" data-fechar aria-label="Fechar menu">{X}</button></div>
   <nav aria-label="Menu"><ul class="menu-tela__itens">{tela}</ul></nav>
   <div class="menu-tela__pe wrap">
