@@ -641,3 +641,4 @@ html{overscroll-behavior-x:none}
   .trabalhos .carr__item{max-width:78vw}
   .trabalhos .carr__item img{max-width:78vw;max-height:56svh}
 }
+.cargo{font-size:1rem;line-height:1.4;color:var(--texto);margin-top:calc(var(--b-texto) * -.6)}

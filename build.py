@@ -237,8 +237,8 @@ def cartoes_notas():
         + "".join('<div class="carr__item notas__pag lista-m">' + "".join(cart(*n) for n in pg) + '</div>' for pg in paginas)
         + '</div>' + controles(len(paginas), "Notas e Ensaios") + '</div>')
 
-DIRECAO = duas("Direção pedagógica", "Giancarlo Avantaggiato, pintor a óleo e escultor, fundador do Alma.",
-    corpo("Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
+DIRECAO = duas("Direção pedagógica", "Giancarlo Avantaggiato",
+    '<p class="cargo">Artista Plástico e Diretor</p>' + corpo("Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
           "e integra o coletivo de artistas Matizes."))
 
 def acordeao(itens):
