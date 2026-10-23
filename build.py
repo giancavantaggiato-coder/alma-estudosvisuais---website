@@ -303,9 +303,9 @@ def build():
   </div>
 </section>
 <section class="bloco escuro wrap">
-  {duas("O Alma", "Três frentes, um pensamento.",
+  {duas("Quem somos", "Três frentes, um pensamento.",
         corpo("Somos um Centro de Estudos Visuais dedicado à formação, à pesquisa e à experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo, e é desse princípio que partem as três frentes do Alma.")
-        + botoes('<a class="btn btn-claro" href="sobre.html">Sobre o Alma</a>'))}
+        + botoes('<a class="btn btn-claro" href="sobre.html">Saiba mais</a>'))}
   <div class="apos">{frentes()}</div>
 </section>
 <section class="bloco wrap">
