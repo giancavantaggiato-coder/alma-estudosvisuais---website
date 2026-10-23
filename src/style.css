@@ -244,13 +244,7 @@ button,input,textarea{font:inherit;color:inherit}
 
   .hero .botoes,.faixa .botoes{justify-content:flex-start}
 
-  /* Respiros iguais em cima e embaixo */
-  .faixa,.secao,.comecar,.historia{padding-top:var(--r)}
-  .secao:has(> .filete:last-child),.secao:has(> .wrap:last-child > .filete){padding-bottom:0}
-  .faixa .lin{row-gap:32px}
-  .faixa h2{margin-bottom:20px}
-  .intro .direita{gap:32px}
-  .tres{row-gap:40px}
+}
 }
 @media (max-width:860px){
   .nav{height:56px}
@@ -263,11 +257,59 @@ button,input,textarea{font:inherit;color:inherit}
   .tres,.posts{grid-template-columns:1fr}
   .larga{aspect-ratio:4/3}
   .form-linha .btn{justify-self:stretch}
-  /* Botões do mesmo tamanho: metade da largura; dois lado a lado ocupam a linha toda */
-  .botoes{gap:16px}
-  .botoes .btn{flex:0 0 calc(50% - 8px);min-width:0;min-height:44px}
-  .intro .direita > .btn{flex:none;width:calc(50% - 8px);min-width:0;min-height:44px}
   .btn{white-space:normal;text-align:center}
   .mapa{min-height:300px}
   .formulario textarea{height:200px}
 }
+
+/* =====================================================================
+   Ritmo de blocos (referência: mokcoffee.be)
+   Cada bloco abre com um filete na largura do conteúdo; título, texto e botão
+   seguem uma escala fixa; blocos vizinhos alternam o tom de fundo.
+   ===================================================================== */
+:root{
+  --claro-tom:#F2F0DA;          /* creme um tom abaixo, para alternar blocos */
+  --b-topo:24px;                /* respiro do bloco até o filete */
+  --b-filete:24px;              /* filete até o título */
+  --b-titulo:28px;              /* título até o texto */
+  --b-texto:24px;               /* texto até o botão */
+  --b-midia:56px;               /* botão/texto até imagens e cartões */
+  --b-base:64px;                /* fim do bloco */
+}
+@media (min-width:990px){ :root{ --b-topo:32px; --b-filete:32px; --b-titulo:32px; --b-texto:32px; --b-midia:72px; --b-base:96px } }
+
+/* Blocos */
+.secao,.faixa,.comecar,.historia{padding-top:var(--b-topo);padding-bottom:var(--b-base)}
+.secao:has(> .filete:last-child),.secao:has(> .wrap:last-child > .filete){padding-bottom:var(--b-base)}
+.secao::before,.faixa::before,.comecar::before,.historia::before,.rodape::before{
+  content:"";display:block;position:relative;z-index:1;border-top:1px solid var(--linha);margin-bottom:var(--b-filete)}
+.faixa::before,.historia::before,.rodape::before{border-color:var(--linha-escura)}
+.sobre-topo .secao::before{margin-top:0}
+#trabalhos::before{display:none}
+.filete,.secao .filete{display:none}
+.rodape{padding-top:var(--b-topo)}
+#loja,#ensino{background:var(--claro-tom)}
+
+/* Título, texto e botão */
+.t2{font-size:1.5rem;line-height:1.2;font-weight:400;letter-spacing:-.01em}
+@media (min-width:990px){ .t2{font-size:2rem} }
+.corpo{font-size:1.0625rem;line-height:1.4;color:rgb(0 0 0 / .86)}
+.faixa .corpo,.historia .corpo{color:rgb(254 252 230 / .9)}
+.faixa h2{margin-bottom:var(--b-titulo)}
+.duas{row-gap:var(--b-titulo)}
+.intro .direita{gap:var(--b-texto)}
+.faixa .lin{row-gap:var(--b-texto)}
+.apos-cab,.trabalhos,.acordeao,.posts,.form-linha{margin-top:var(--b-midia)}
+.comecar p.corpo{margin-top:var(--b-titulo)}
+.comecar .form-linha{margin-top:var(--b-texto)}
+
+/* Botões: todos do mesmo tamanho, texto à esquerda */
+.btn{width:160px;min-width:0;height:46px;min-height:46px;padding:0 18px;justify-content:flex-start;font-size:.875rem;letter-spacing:.02em;white-space:nowrap}
+.botoes{gap:16px}
+.form-linha .btn{width:auto;justify-content:center}
+.nav .loja,.gaveta .loja-m{width:auto;height:36px;min-height:36px;padding:0 16px}
+
+/* Cartões */
+.frente .t3,.cartao .t3,.post .t3{font-size:1.0625rem;font-weight:400}
+.frente .corpo,.post .corpo{font-size:.9375rem;line-height:1.4}
+.tres{row-gap:48px}
