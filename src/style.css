@@ -483,3 +483,7 @@ html{overscroll-behavior-x:none}
   .notas{row-gap:0}
   .notas__pag{display:block}
 }
+
+/* Aberturas claras (Blog, Contato, Aula experimental): respiro equilibrado até o primeiro filete */
+.abertura:not(.escura){padding-top:calc(var(--b-base) * .75);padding-bottom:var(--b-texto)}
+.abertura:not(.escura) + .bloco{padding-top:var(--b-texto)}
