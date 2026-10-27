@@ -142,7 +142,7 @@ EDUCACAO = f'''<section class="secao wrap" id="educacao">
 LOJA_SEC = f'''<section class="secao wrap" id="loja">
   {intro("Loja", "<p>Curadoria de materiais artísticos feita a partir da prática de atelier. A loja do Alma reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.</p>",
          f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>')}
-  <a class="larga rev apos-cab" href="{LOJA}" target="_blank" rel="noopener" style="display:block" aria-label="Ir para a loja"><img src="img/loja.jpg" alt="Armários de madeira com pigmentos, tintas e pincéis numa loja tradicional de materiais artísticos" loading="lazy"></a>
+  <a class="larga rev apos-cab" href="{LOJA}" target="_blank" rel="noopener" style="display:block" aria-label="Ir para a loja"><img src="img/loja-armarios.jpg" alt="Armários de madeira com pigmentos, tintas e pincéis numa loja tradicional de materiais artísticos" loading="lazy"></a>
   <hr class="filete">
 </section>'''
 
