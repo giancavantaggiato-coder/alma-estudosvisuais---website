@@ -323,11 +323,6 @@ def build():
         + botoes('<a class="btn btn-claro" href="sobre.html">Sobre o Alma</a>'))}
   <div class="apos">{frentes()}</div>
 </section>
-<section class="bloco wrap">
-  {duas("O atelier", "*Turmas pequenas, um começo comum e o tempo de cada um.",
-        corpo("O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, em diferentes meios e técnicas.")
-        + botoes('<a class="btn" href="nossas-aulas.html#percurso">Como funciona</a>'))}
-</section>
 <section class="bloco tom wrap">
   {duas("Trabalhos de alunos", "*Estudos e trabalhos feitos no atelier, em diferentes técnicas e momentos do percurso.")}
   <div class="apos">{TRABALHOS}</div>
