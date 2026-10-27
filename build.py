@@ -385,7 +385,7 @@ def build():
   {duas("Formação", "*Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("*A formação básica segue quatro princípios, nesta ordem: a percepção visual, base de todo o trabalho; o Desenho, que estrutura o espaço; a luz, que dá plasticidade à forma; e a composição, que dá unidade ao trabalho."))}
   <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">*{d}</p></article>' for img, t, d in BASES)}</div>
   <div class="duas cab continua">
-    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">*A abordagem de materiais é extensa e voltada à expressão de cada aluno, respeitando as características próprias de cada meio. Concluído o ciclo básico, o aluno segue pelo material que mais deseja explorar.</p></div>
+    <div class="rev"><h3 class="base__tit continua__tit">Formação contínua</h3><p class="texto-cartao continua__txt">*A abordagem de materiais é extensa e voltada à expressão de cada aluno, respeitando as características próprias de cada meio. Concluído o ciclo básico, o aluno segue pelo material que mais deseja explorar.</p></div>
     <ul class="meios meios--lista lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
   </div>
 </section>

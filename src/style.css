@@ -716,3 +716,10 @@ html{overscroll-behavior-x:none}
   .frentes .frente:last-child{padding-bottom:0}
   .frentes .frente .foto{aspect-ratio:4/5;width:100%}
 }
+
+/* Formação contínua: título no nível de Desenho e Plástica; meios como lista subordinada */
+.continua__tit{color:var(--claro)}
+.continua__txt{max-width:52ch}
+.meios--lista li{min-height:48px;font-size:1.125rem;line-height:1.2;color:var(--texto-claro)}
+@media (min-width:990px){ .meios--lista li{font-size:1.25rem;min-height:56px} }
+@media (max-width:989px){ .continua .meios--lista{margin-top:24px} }
