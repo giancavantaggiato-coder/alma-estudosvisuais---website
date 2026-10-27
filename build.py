@@ -340,7 +340,7 @@ def build():
   {duas("Materiais Artísticos", "Curadoria de materiais artísticos feita a partir da prática de atelier.",
         corpo("O Alma Materiais Artísticos reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.")
         + botoes(f'<a class="btn btn-ext" href="{LOJA}" {EXTERNO}>Visitar a loja{SETA}{EXT_SR}</a>'))}
-  <a class="larga apos rev" href="{LOJA}" {EXTERNO} aria-label="Visitar a loja de materiais"><img src="img/loja.jpg" alt="Pintura de natureza-morta com frascos e potes de tinta" loading="lazy"></a>
+  <a class="larga apos rev" href="{LOJA}" {EXTERNO} aria-label="Visitar a loja de materiais"><picture><source media="(max-width: 749px)" srcset="img/loja-m.jpg"><img src="img/loja.jpg" alt="Parede de pincéis, trinchas e utensílios de pintura em uma loja de materiais artísticos" loading="lazy"></picture></a>
 </section>''', sobre_foto=True)
 
     # Sobre
