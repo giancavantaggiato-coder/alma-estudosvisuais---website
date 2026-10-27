@@ -1070,3 +1070,42 @@ main:focus{outline:none}
   .cta__dir .botoes{justify-content:flex-end}
 }
 @media (max-width:989px){ .cta__dir,.cta__esq{align-self:stretch} .cta__dir{align-items:stretch} .cta__dir .botoes{width:100%} }
+
+/* =================== Grade única, como a da loja (tema Horizon): ===================
+   conteúdo na largura toda com margem de 40 px no computador (20 px no celular),
+   12 colunas com 20 px de intervalo; a coluna da direita começa na metade da página. */
+@media (min-width:990px){
+  :root{--largura:100%;--px:40px;--gap:20px}
+
+  /* Nossas aulas: foto do topo dentro da grade (colunas 7–12), sem sangrar para a direita */
+  .ab-foto > img{left:calc(50% + var(--gap) / 2);right:var(--px);width:auto;top:var(--nav);bottom:0;height:auto}
+  .ab-foto::after{display:none}
+  .ab-foto__txt{max-width:calc(50% - var(--px) - var(--gap))}
+
+  /* Trabalhos de alunos: começa na margem, alinhado à grade */
+  .trabalhos{justify-content:flex-start}
+
+  /* No atelier: imagem nas colunas 1–6 e ficha nas 7–12, como o texto acima */
+  .dividido__img{grid-column:1 / span 6}
+  .dividido__txt{grid-column:7 / -1}
+
+  /* Fecho: texto e botões na coluna da direita */
+  .cta__dir{grid-column:7 / -1;align-items:flex-start}
+  .cta__dir .botoes{justify-content:flex-start}
+  .cta__esq{grid-column:1 / span 6}
+}
+/* Modo escuro: nos blocos que invertem para o creme, os títulos ficam pretos */
+@media (prefers-color-scheme:dark){
+  .bloco.escuro .cab__rot,.bloco.escuro .frente__tit,.bloco.escuro .base__tit,.bloco.escuro .continua__tit,.bloco.escuro .lead{color:#000 !important}
+  .bloco.escuro .frente__txt,.bloco.escuro .texto-cartao{color:rgb(0 0 0 / .7)}
+}
+@media (min-width:990px){
+  .ab-foto > img{width:calc(50% - var(--gap) / 2 - var(--px));height:calc(100% - var(--nav))}
+  .frentes--uma .frente--principal{align-items:end}
+  .frentes--uma .frente--principal .foto{grid-column:1 / span 6}
+  .frentes--uma .frente--principal .frente__corpo{grid-column:7 / span 5}
+}
+@media (min-width:990px){
+  .ab-foto > img{top:0;height:100%}
+  .frente__mais{align-self:flex-start}
+}
