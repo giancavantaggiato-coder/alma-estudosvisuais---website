@@ -832,3 +832,8 @@ main:focus{outline:none}
   .frentes--uma .frente--principal .foto{grid-column:1 / span 6;margin-bottom:0}
   .frentes--uma .frente--principal .frente__corpo{grid-column:7 / span 5}
 }
+
+/* Em breve (Nossas aulas): selo sobre a imagem */
+.breve__item::before{content:none;display:none}
+.breve__img{position:relative}
+.breve__img .selo{display:block;top:8px;left:8px;font-size:.6875rem;padding:4px 7px}
