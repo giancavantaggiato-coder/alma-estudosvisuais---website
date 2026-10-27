@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gera o site estático do Alma a partir de modelos simples (sem dependências).
 Saída em ./site — é essa pasta que vai para a hospedagem."""
-import os, shutil, html, json
+import os, shutil, html, json, hashlib
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 SAIDA = os.path.join(RAIZ, "site")
@@ -11,6 +11,8 @@ LOGO = open(os.path.join(RAIZ, "img", "logo.svg")).read().strip()
 LOGO = LOGO.replace('class="marca"', 'class="logo"').replace('aria-label="Alma"', 'aria-hidden="true"')
 
 def e(t): return html.escape(t, quote=False)
+
+def _v(f): return hashlib.md5(open(os.path.join(RAIZ, "src", f), "rb").read()).hexdigest()[:8]
 
 MENU = [("sobre.html", "Sobre"), ("nossas-aulas.html", "Nossas Aulas"), ("blog.html", "Blog"),
         ("nossas-aulas.html#faq", "FAQ"), ("contato.html", "Contato")]
@@ -37,7 +39,7 @@ def nav(atual, solida=False):
 
 COMECAR = '''<section class="comecar wrap" id="comecar">
   <h2 class="t2 rev">Sua formação começa onde você está*</h2>
-  <p class="corpo rev">Entre em contato e desenvolva sua percepção, sua técnica e sua produção artística a partir de um percurso acompanhado de forma individual. Deixe seu WhatsApp e combinamos o dia da sua aula experimental.*</p>
+  <p class="corpo rev">Entre em contato e desenvolva sua percepção, sua técnica e sua produção artística a partir de um percurso acompanhado de forma individual. Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir. Deixe seu WhatsApp e combinamos o dia.*</p>
   <form class="form-linha rev" data-form="whatsapp" novalidate>
     <label class="sr" for="wpp">Seu WhatsApp</label>
     <input class="campo" id="wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="00 00000-0000" required>
@@ -49,6 +51,7 @@ COMECAR = '''<section class="comecar wrap" id="comecar">
 RODAPE = f'''<footer class="rodape wrap">
   <div class="novidades">
     <h2 class="t2">Acompanhe as novidades</h2>
+    <p class="novidades__txt">Workshops, textos novos e a agenda do atelier, direto no seu e-mail.*</p>
     <div>
       <form class="form-linha" data-form="novidades" novalidate>
         <label class="sr" for="mail-n">Seu e-mail</label>
@@ -95,7 +98,7 @@ def pagina(arquivo, titulo, descricao, corpo, atual=None, solida=False, comecar=
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={_v("style.css")}">
 </head>
 <body>
 {nav(atual or arquivo, solida)}
@@ -104,8 +107,8 @@ def pagina(arquivo, titulo, descricao, corpo, atual=None, solida=False, comecar=
 {COMECAR if comecar else ''}
 </main>
 {RODAPE}
-<script src="config.js"></script>
-<script src="site.js" defer></script>
+<script src="config.js?v={_v("config.js")}"></script>
+<script src="site.js?v={_v("site.js")}" defer></script>
 </body>
 </html>
 '''
@@ -128,10 +131,22 @@ FRENTES_TXT = {
 }
 FRENTE_LINK = {"Nosso atelier": "nossas-aulas.html#frentes", "Jovens Artistas": "nossas-aulas.html#frentes", "Extensão": "nossas-aulas.html#frentes"}
 
+def passos(itens, classe="quatro"):
+    return f'<ol class="{classe} passos apos-cab">' + "".join(
+        f'<li class="passo rev"><span class="n" aria-hidden="true">{i+1}</span><h3 class="t3">{t}</h3><p class="corpo">{d}</p></li>' for i, (t, d) in enumerate(itens)) + '</ol>'
+
+PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada.*"),
+            ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência.*"),
+            ("Seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar: aquarela, guache, acrílica, óleo, escultura ou gravura.*"),
+            ("Própria luz", "Sem prazo de conclusão. O trabalho segue até encontrar a sua linguagem.*")]
+INGRESSO = [("Agendamento", "Respondemos pelo WhatsApp com os horários que têm vaga e combinamos a data da sua aula.*"),
+            ("Aula no atelier", "Você participa de uma aula regular, junto à turma e com orientação individual. Conversamos sobre seu repertório e sobre o que pretende estudar.*"),
+            ("Matrícula", "Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.*")]
+
 def frentes(qual):
     return '<div class="tres">' + "".join(
         f'''<a class="frente rev" href="{FRENTE_LINK[t]}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="txt"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div></a>''' for img, t, d in FRENTES_TXT[qual]) + '</div>'
+<div class="txt">{'<span class="selo">Em breve*</span>' if t != "Nosso atelier" else ''}<h3 class="t3">{t}</h3><p class="corpo">{d}</p></div></a>''' for img, t, d in FRENTES_TXT[qual]) + '</div>'
 
 EDUCACAO = f'''<section class="secao wrap" id="educacao">
   {intro("Educação", "<p>A formação no Alma acontece em três segmentos: nosso Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, segmento de iniciação da percepção visual para crianças e adolescentes; e Extensão, que leva a prática visual para além do espaço interno do Atelier.</p>")}
@@ -199,6 +214,10 @@ def build():
 <section class="historia wrap" id="historia"><img src="img/sobre-historia-fundo.jpg" alt="">
   {intro("Nossa história", LOREM2, '<a class="btn btn-claro" href="nossas-aulas.html">Saiba mais</a>').replace('class="t2"','class="t2 claro"')}
 </section>
+<section class="secao wrap" id="direcao">
+  {intro("Direção pedagógica", "<p><strong>Giancarlo Avantaggiato</strong><br>Artista Plástico e Diretor</p><p>Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre e integra o coletivo de artistas Matizes.*</p>")}
+  <hr class="filete">
+</section>
 {EDUCACAO}
 {LOJA_SEC}
 {NOTAS_SEC}''')
@@ -216,6 +235,7 @@ def build():
            ("Quanto tempo dura o curso?", "Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso.*"),
            ("Quanto custa?", "As mensalidades começam em R$ 420, conforme a frequência semanal. Os valores completos são apresentados na aula experimental.*"),
            ("Como escolho os dias de aula?", "Você escolhe dias fixos na semana, conforme a frequência do seu plano. O dia da aula experimental é combinado pelo WhatsApp.*"),
+           ("O que acontece além das aulas?", "Sessões de modelo vivo, encontros de história da arte, projetos especiais e visitas a exposições.*"),
            ("E se eu precisar faltar?", "Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.*")]
     def acordeao(itens, abrir_primeiro=True):
         return '<div class="acordeao">' + "".join(
@@ -224,6 +244,11 @@ def build():
       f'''<section class="abertura escura wrap"><h1 class="t1">Nossas aulas</h1>
   <p>O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, através de diferentes meios e técnicas.</p></section>
 <section class="secao wrap" id="frentes">{frentes("aulas")}<hr class="filete"></section>
+<section class="secao wrap" id="percurso">
+  {intro("O percurso", "<p>Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a própria luz.*</p>")}
+  {passos(PERCURSO)}
+  <hr class="filete">
+</section>
 <section class="secao wrap" id="ensino">
   {intro("Sobre o ensino", "<p>O percurso começa por uma base comum, onde os artistas abordam os fundamentos básicos — e é a partir disso que cada artista é conduzido ao aprofundamento de sua prática.</p>")}
   {acordeao(ENSINO)}
@@ -277,6 +302,10 @@ def build():
     pagina("faca-parte.html", "Faça Parte · Alma", "Candidate-se para estudar no Alma: conte quem você é e o que procura.",
       '''<section class="abertura curta wrap"><h1 class="t1">Faça Parte</h1>
   <p>O ingresso no Alma começa por uma aula experimental: um primeiro contato com o atelier, a turma e o método de trabalho. Deixe seus dados e combinamos o dia pelo WhatsApp.*</p></section>
+<section class="secao wrap" id="ingresso">
+  ''' + intro("Como ingressar", "<p>Três passos, da primeira conversa à matrícula.*</p>") + passos(INGRESSO, "tres") + '''
+  <hr class="filete">
+</section>
 <section class="wrap">
   <form class="formulario" data-form="candidatura" novalidate>
     <div class="grade">
@@ -286,7 +315,7 @@ def build():
       </div>
       <div class="col">
         <label>Whatsapp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required></label>
-        <label>Carta de Motivação<textarea name="mensagem" required></textarea></label>
+        <label>Conte um pouco sobre você<textarea name="mensagem" required placeholder="Sua experiência com arte, o que procura, período de preferência"></textarea></label>
       </div>
     </div>
     <div class="enviar"><button class="btn btn-preto" type="submit">Enviar</button></div>

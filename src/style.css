@@ -259,3 +259,14 @@ button,input,textarea{font:inherit;color:inherit}
   .mapa{min-height:300px}
   .formulario textarea{height:200px}
 }
+
+/* ---------- Passos (percurso e ingresso) ---------- */
+.quatro{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px var(--gap)}
+.passos{list-style:none;padding:0;margin-left:0;margin-right:0;margin-bottom:0}
+.passo{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--preto);padding-top:16px}
+.passo .n{font-size:2rem;line-height:1;font-weight:400;letter-spacing:-.02em;margin-bottom:8px}
+.passo .corpo{font-size:.875rem;line-height:1.5;max-width:34ch}
+.selo{font-size:.75rem;line-height:1.4;font-weight:500}
+.rodape .novidades__txt{color:var(--claro3);margin:12px 0 24px}
+@media (max-width:989px){ .quatro{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:749px){ .quatro{grid-template-columns:1fr} }
