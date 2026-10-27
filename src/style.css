@@ -723,3 +723,10 @@ html{overscroll-behavior-x:none}
 .meios--lista li{min-height:48px;font-size:1.125rem;line-height:1.2;color:var(--texto-claro)}
 @media (min-width:990px){ .meios--lista li{font-size:1.25rem;min-height:56px} }
 @media (max-width:989px){ .continua .meios--lista{margin-top:24px} }
+
+/* Trabalhos no celular: todas as obras na mesma altura, inteiras, centralizadas, com as vizinhas nas bordas */
+@media (max-width:749px){
+  .trabalhos{align-items:center;column-gap:12px;margin-inline:calc(var(--px) * -1);padding-inline:0;scroll-snap-type:x mandatory}
+  .trabalhos .carr__item{height:min(54svh,92vw);max-width:none;scroll-snap-align:center}
+  .trabalhos .carr__item img{height:100%;width:auto;max-width:none;max-height:none}
+}

@@ -50,18 +50,50 @@
   window.addEventListener('resize', rolou);
   rolou();
 
-  // Carrosséis: só rolagem, com pontos indicando a posição
+  // Carrosséis: só rolagem, com pontos indicando a posição.
+  // Trabalhos de alunos no celular: carrossel contínuo (depois da última volta para a primeira).
   document.querySelectorAll('[data-carr]').forEach(function (c) {
-    var t = c.querySelector('.carr__trilho'), itens = t.querySelectorAll('.carr__item'), pts = c.querySelectorAll('.carr-ponto');
-    function marcar() {
-      var i = 0, melhor = Infinity, fim = t.scrollLeft > 0 && t.scrollLeft + t.clientWidth >= t.scrollWidth - 2;
-      itens.forEach(function (it, k) { var d = Math.abs(it.offsetLeft - t.offsetLeft - t.scrollLeft); if (d < melhor) { melhor = d; i = k; } });
-      if (fim) i = itens.length - 1;
-      pts.forEach(function (p, k) { if (k === i) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current'); });
+    var t = c.querySelector('.carr__trilho'), orig = Array.prototype.slice.call(t.querySelectorAll('.carr__item')), pts = c.querySelectorAll('.carr-ponto');
+    var n = orig.length, loop = c.classList.contains('carr--trab') && n > 1 && matchMedia('(max-width: 749px)').matches;
+    if (loop) {
+      orig.forEach(function (it) { var a = it.cloneNode(true); a.setAttribute('aria-hidden', 'true'); t.appendChild(a); });
+      orig.slice().reverse().forEach(function (it) { var a = it.cloneNode(true); a.setAttribute('aria-hidden', 'true'); t.insertBefore(a, t.firstChild); });
+      c.classList.add('carr--loop');
     }
-    pts.forEach(function (p, k) { p.addEventListener('click', function () { t.scrollTo({ left: itens[k].offsetLeft - t.offsetLeft, behavior: 'smooth' }); }); });
-    t.addEventListener('scroll', function () { window.requestAnimationFrame(marcar); }, { passive: true });
-    window.addEventListener('resize', marcar); marcar();
+    var itens = t.querySelectorAll('.carr__item');
+    function alvo(it) { return loop ? it.offsetLeft - t.offsetLeft - (t.clientWidth - it.offsetWidth) / 2 : it.offsetLeft - t.offsetLeft; }
+    function atual() {
+      var i = 0, melhor = Infinity;
+      itens.forEach(function (it, k) { var d = Math.abs(alvo(it) - t.scrollLeft); if (d < melhor) { melhor = d; i = k; } });
+      return i;
+    }
+    function marcar() {
+      var i = atual();
+      if (!loop && t.scrollLeft > 0 && t.scrollLeft + t.clientWidth >= t.scrollWidth - 2) i = n - 1;
+      var k0 = ((i % n) + n) % n;
+      pts.forEach(function (p, k) { if (k === k0) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current'); });
+    }
+    var volta = 0;
+    function reposicionar() {
+      if (!loop) return;
+      var i = atual();
+      if (i < n || i >= 2 * n) {
+        var j = i < n ? i + n : i - n;
+        t.style.scrollSnapType = 'none';
+        t.scrollLeft = alvo(itens[j]);
+        t.offsetHeight; t.style.scrollSnapType = '';
+      }
+    }
+    pts.forEach(function (p, k) { p.addEventListener('click', function () { t.scrollTo({ left: alvo(itens[loop ? n + k : k]), behavior: 'smooth' }); }); });
+    t.addEventListener('scroll', function () {
+      window.requestAnimationFrame(marcar);
+      clearTimeout(volta); volta = setTimeout(reposicionar, 140);
+    }, { passive: true });
+    if ('onscrollend' in window) t.addEventListener('scrollend', function () { clearTimeout(volta); reposicionar(); });
+    function inicio() { if (loop) { t.style.scrollSnapType = 'none'; t.scrollLeft = alvo(itens[n]); t.offsetHeight; t.style.scrollSnapType = ''; } marcar(); }
+    window.addEventListener('resize', inicio);
+    if (document.readyState === 'complete') inicio(); else window.addEventListener('load', inicio);
+    inicio();
   });
 
   // Visitas: página, origem e aparelho. Sem cookies e sem dados pessoais. Não conta a prévia.
