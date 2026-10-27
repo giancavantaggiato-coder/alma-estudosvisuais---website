@@ -69,15 +69,14 @@ def nav(atual, sobre_foto):
 </div>'''
 
 def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
+    """Chamada final, separada do conteúdo da página: faixa em contraste, sem filete e sem a grade de duas colunas."""
     rot, href = segundo
-    return f'''<section class="bloco fecho wrap" id="aula-experimental">
-  <div class="duas cab rev">
-    <h2 class="cab__rot">Aula experimental</h2>
-    <div class="lado">
-      <p class="lead">*Tudo começa por uma aula.</p>
-      <p class="corpo">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
-      <div class="botoes"><a class="btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha" href="{href}">{rot}</a></div>
-    </div>
+    return f'''<section class="cta" id="aula-experimental" aria-labelledby="cta-tit">
+  <div class="cta__in wrap rev">
+    <p class="cta__rot">Aula experimental</p>
+    <h2 class="cta__tit" id="cta-tit">*Tudo começa por uma aula.</h2>
+    <p class="cta__txt">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
+    <div class="botoes"><a class="btn cta__btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha cta__linha" href="{href}">{rot}</a></div>
   </div>
 </section>'''
 

@@ -754,3 +754,18 @@ html{overscroll-behavior-x:none}
   .frente--breve .frente__tit{font-size:1.5rem}
   .frente--breve .frente__txt{max-width:44ch}
 }
+
+/* Chamada final (aula experimental): faixa em contraste com a página, separada do conteúdo */
+.cta{--cta-bg:var(--claro2);--cta-fg:var(--preto);--cta-fg2:rgb(0 0 0 / .68);background:var(--cta-bg);color:var(--cta-fg);padding-block:calc(var(--b-base) * 1.1)}
+.cta__in{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.cta__rot{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cta-fg2)}
+.cta__tit{font-size:2.25rem;line-height:1.05;font-weight:500;letter-spacing:-.025em;max-width:14em;text-wrap:balance}
+.cta__txt{font-size:1rem;line-height:1.6;color:var(--cta-fg2);max-width:46ch;text-wrap:pretty}
+.cta .botoes{margin-top:8px}
+.cta .cta__btn{background:var(--cta-fg);border-color:var(--cta-fg);color:var(--cta-bg)}
+.cta .cta__linha{border-color:var(--cta-fg);color:var(--cta-fg)}
+.cta .cta__linha:hover{background:var(--cta-fg);color:var(--cta-bg);border-color:var(--cta-fg)}
+@media (min-width:990px){ .cta__tit{font-size:4rem} .cta__in{gap:24px} }
+@media (prefers-color-scheme:dark){
+  .cta{--cta-bg:#D5D4BF;--cta-fg:var(--preto);--cta-fg2:rgb(0 0 0 / .68)}
+}
