@@ -42,7 +42,7 @@ def nav(atual, sobre_foto):
         cur = ' aria-current="page"' if h == atual else ""
         return f'<a{c} href="{h}"{cur}>{t}</a>'
     itens = "".join(item(h, t) for h, t in MENU) + f'<a class="ext" href="{LOJA}" {EXTERNO}>Loja{SETA}{EXT_SR}</a>'
-    tela = "".join(f'<li>{item(h, t, "wrap")}</li>' for h, t in MENU) + f'<li><a class="wrap ext" href="{LOJA}" {EXTERNO}>Loja{SETA}{EXT_SR}</a></li>'
+    tela = "".join(f'<li>{item(h, t, "wrap")}</li>' for h, t in [("index.html", "Início")] + MENU) + f'<li><a class="wrap ext" href="{LOJA}" {EXTERNO}>Loja{SETA}{EXT_SR}</a></li>'
     return f'''<header class="nav wrap{' sobre-foto' if sobre_foto else ''}">
   <a class="marca" href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
   <nav class="menu" aria-label="Principal">{itens}</nav>
