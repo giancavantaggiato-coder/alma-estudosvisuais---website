@@ -769,3 +769,6 @@ html{overscroll-behavior-x:none}
 @media (prefers-color-scheme:dark){
   .cta{--cta-bg:#D5D4BF;--cta-fg:var(--preto);--cta-fg2:rgb(0 0 0 / .68)}
 }
+
+/* Sem o filete de abertura dos blocos (mantém o respiro) */
+.bloco::before,.bloco.escuro::before,.bloco.fecho::before,.rodape::before{border-top:0 !important}
