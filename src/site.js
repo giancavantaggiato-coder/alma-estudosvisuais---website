@@ -54,7 +54,7 @@
   // Trabalhos de alunos no celular: carrossel contínuo (depois da última volta para a primeira).
   document.querySelectorAll('[data-carr]').forEach(function (c) {
     var t = c.querySelector('.carr__trilho'), orig = Array.prototype.slice.call(t.querySelectorAll('.carr__item')), pts = c.querySelectorAll('.carr-ponto');
-    var n = orig.length, loop = (c.classList.contains('carr--trab') || c.classList.contains('carr--notas')) && n > 1 && matchMedia('(max-width: 749px)').matches;
+    var n = orig.length, loop = n > 1 && (c.classList.contains('carr--trab') || (c.classList.contains('carr--notas') && matchMedia('(max-width: 749px)').matches));
     if (loop) {
       orig.forEach(function (it) { var a = it.cloneNode(true); a.setAttribute('aria-hidden', 'true'); t.appendChild(a); });
       orig.slice().reverse().forEach(function (it) { var a = it.cloneNode(true); a.setAttribute('aria-hidden', 'true'); t.insertBefore(a, t.firstChild); });
@@ -84,6 +84,10 @@
         t.offsetHeight; t.style.scrollSnapType = '';
       }
     }
+    c.querySelectorAll('.carr-seta').forEach(function (b) { b.addEventListener('click', function () {
+      var i = atual() + Number(b.dataset.dir); if (!loop) i = Math.max(0, Math.min(itens.length - 1, i));
+      t.scrollTo({ left: alvo(itens[i]), behavior: 'smooth' });
+    }); });
     pts.forEach(function (p, k) { p.addEventListener('click', function () { t.scrollTo({ left: alvo(itens[loop ? n + k : k]), behavior: 'smooth' }); }); });
     t.addEventListener('scroll', function () {
       window.requestAnimationFrame(marcar);

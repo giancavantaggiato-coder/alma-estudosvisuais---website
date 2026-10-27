@@ -1109,3 +1109,48 @@ main:focus{outline:none}
   .ab-foto > img{top:0;height:100%}
   .frente__mais{align-self:flex-start}
 }
+
+/* Contato: lista de canais dentro da coluna de texto */
+.canais-l{width:100%;border-top:1px solid var(--tinta)}
+.canais-l li{border-bottom:1px solid var(--linha)}
+.canal-l{display:grid;grid-template-columns:96px minmax(0,1fr) auto;align-items:center;column-gap:16px;min-height:60px;padding-block:12px;text-decoration:none;color:inherit}
+.canal-l__rot{font-size:.875rem;color:var(--texto)}
+.canal-l__valor{font-size:1.125rem;line-height:1.3;font-weight:500;overflow-wrap:anywhere}
+.canal-l__acao{display:inline-flex;align-items:center;gap:8px;font-size:.875rem}
+.canal-l__acao svg{width:18px;height:18px;transition:transform .2s ease}
+.canal-l:hover .canal-l__acao svg{transform:translateX(4px)}
+.canal-l:hover .canal-l__valor{opacity:.65}
+@media (max-width:749px){
+  .canal-l{grid-template-columns:minmax(0,1fr) auto;row-gap:2px}
+  .canal-l__rot{grid-column:1 / -1}
+  .canal-l__acao{font-size:0;gap:0}
+  .canal-l__acao svg{width:22px;height:22px}
+}
+.mapa-g{position:relative;aspect-ratio:16/7;background:var(--claro2);overflow:hidden}
+.mapa-g iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1)}
+@media (prefers-color-scheme:dark){ .mapa-g iframe{filter:grayscale(1) invert(.92) contrast(.9)} }
+@media (max-width:749px){ .mapa-g{aspect-ratio:4/3} }
+
+/* Trabalhos de alunos no computador: carrossel contínuo de ponta a ponta, com setas */
+.carr-setas{display:none}
+@media (min-width:750px){
+  .carr--trab .trabalhos{margin-inline:calc(var(--px) * -1);justify-content:flex-start;scroll-snap-type:x mandatory}
+  .carr--trab .trabalhos .carr__item{scroll-snap-align:center}
+  .carr-setas{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+  .carr-seta{width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid var(--linha);background:none;color:var(--tinta);cursor:pointer;transition:border-color .15s ease}
+  .carr-seta:hover{border-color:var(--tinta)}
+  .carr-seta svg{width:20px;height:20px}
+}
+
+/* Nossas aulas no computador: topo no mesmo padrão das outras páginas (título à esquerda, texto à direita) */
+@media (min-width:990px){
+  .ab-foto{min-height:0;background:var(--fundo);color:var(--tinta);padding-top:calc(var(--b-base) * .9);padding-bottom:var(--b-texto);display:block}
+  .ab-foto > img,.ab-foto::after{display:none}
+  .ab-foto__txt{max-width:none;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:end}
+  .ab-foto__tit{grid-column:1 / span 6;color:var(--tinta)}
+  .ab-foto__sub{grid-column:7 / -1;font-size:1.0625rem;line-height:1.6;color:var(--texto);max-width:62ch}
+}
+@media (max-width:749px){
+  .botoes--mapas .btn{flex:1 1 calc(50% - 6px);justify-content:space-between}
+  .botoes--mapas .btn:first-child{flex-basis:100%}
+}

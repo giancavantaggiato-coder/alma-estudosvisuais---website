@@ -216,10 +216,11 @@ SETA_D = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 def controles(n, rotulo):
     return f'''<div class="carr-pontos" role="group" aria-label="{rotulo}">''' + "".join(f'<button type="button" class="carr-ponto" aria-label="{i+1} de {n}"{" aria-current=\"true\"" if i == 0 else ""}></button>' for i in range(n)) + '</div>'
 
-TRAB = [("trabalho-1.jpg", 1252, 1600), ("trabalho-2.jpg", 939, 1200), ("trabalho-3.jpg", 1080, 1600)]
+TRAB = [("trabalho-1.jpg", 1252, 1600), ("trabalho-2.jpg", 939, 1200), ("trabalho-3.jpg", 1080, 1600), ("blog-9.jpg", 1152, 796)]
 TRABALHOS = (f'<div class="carr carr--trab" data-carr><div class="carr__trilho trabalhos">'
     + "".join(f'<figure class="carr__item"><img src="img/{i}" width="{w}" height="{h}" alt="Trabalho de aluno do Alma" decoding="async"></figure>' for i, w, h in TRAB)
-    + '</div>' + controles(len(TRAB), "Trabalhos de alunos") + '</div>')
+    + '</div>' + controles(len(TRAB), "Trabalhos de alunos")
+    + f'<div class="carr-setas"><button type="button" class="carr-seta" data-dir="-1" aria-label="Obra anterior">{SETA_E}</button><button type="button" class="carr-seta" data-dir="1" aria-label="Próxima obra">{SETA_D}</button></div></div>')
 
 NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A construção do valor tonal na pintura a óleo"),
          ("nota-velatura.jpg", "Técnica", "2026-07-28", "28 jul 2026", "Velatura e opacidade: dois modos de construir a cor"),
@@ -470,51 +471,31 @@ def build():
   </div>
 </section>''', fecho_html="")
 
-    # Contato: índice tipográfico de canais (rótulo, valor grande, ação), mapa e parcerias
-    SETA_D2 = '<svg class="canal__seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+    # Contato: mesmo padrão de blocos do site (título da seção à esquerda; conteúdo à direita)
+    SETA_D2 = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
     APPLE = "https://maps.apple.com/?q=Alma%20Centro%20de%20Estudos%20Visuais&address=Rua%20S%C3%A3o%20Paulo%2C%20864%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP"
     WAZE = "https://waze.com/ul?q=Rua%20S%C3%A3o%20Paulo%20864%20S%C3%A3o%20Caetano%20do%20Sul&navigate=yes"
     EMBED = "https://www.google.com/maps?q=Rua+S%C3%A3o+Paulo%2C+864%2C+S%C3%A3o+Caetano+do+Sul+-+SP&z=16&output=embed"
-    def canal(rot, valor, href, acao, nota="", ext=True, cls=""):
-        alvo = EXTERNO if ext else ""
-        return f'''<li class="canal rev{cls}">
-  <a class="canal__link" href="{href}" {alvo}>
-    <span class="canal__rot">{rot}</span>
-    <span class="canal__valor">{valor}</span>
-    <span class="canal__acao">{acao}{SETA_D2}</span>
-  </a>{f'<p class="canal__nota">{nota}</p>' if nota else ''}
-</li>'''
-    canais = (canal("WhatsApp", fone(WHATSAPP), f"https://wa.me/{WHATSAPP}", "Conversar", "*Aula experimental, matrícula e dúvidas sobre o atelier. É o caminho mais rápido.") if WHATSAPP else "") \
-        + canal("E-mail", EMAIL.replace("@", "@<wbr>"), f"mailto:{EMAIL}", "Escrever", "", False, " canal--longo") \
-        + canal("Instagram", "@alma.<wbr>estudosvisuais", INSTAGRAM, "Seguir", "*Trabalhos de alunos, agenda e o dia a dia do atelier.", True, " canal--longo")
+    def linha(rot, valor, href, acao, ext=True):
+        return f'''<li><a class="canal-l" href="{href}" {EXTERNO if ext else ""}><span class="canal-l__rot">{rot}</span><span class="canal-l__valor">{valor}</span><span class="canal-l__acao">{acao}{SETA_D2}</span></a></li>'''
+    canais = (linha("WhatsApp", fone(WHATSAPP), f"https://wa.me/{WHATSAPP}", "Conversar") if WHATSAPP else "") \
+        + linha("E-mail", EMAIL, f"mailto:{EMAIL}", "Escrever", False) \
+        + linha("Instagram", "@alma.estudosvisuais", INSTAGRAM, "Seguir")
     pagina("contato.html", "Contato",
       "WhatsApp, e-mail, Instagram e endereço do Alma Centro de Estudos Visuais, na Rua São Paulo, 864, em São Caetano do Sul.",
       abertura("Contato", "*O Alma fica em São Caetano do Sul, no ABC Paulista. Visitas ao atelier são agendadas previamente.") + f'''
-<section class="ct-canais wrap" aria-label="Canais de contato">
-  <ul class="canais">{canais}</ul>
+<section class="bloco wrap" id="canais">
+  {duas("Fale com o Alma", "*Aula experimental, matrícula e dúvidas sobre o atelier.", corpo("*O WhatsApp é o caminho mais rápido. Respondemos em horário comercial.") + f'<ul class="canais-l">{canais}</ul>')}
 </section>
-<section class="ct-local wrap" aria-labelledby="ct-local-tit">
-  <div class="ct-local__txt rev">
-    <h2 class="canal__rot" id="ct-local-tit">Atelier</h2>
-    <address class="ct-local__end">Rua São Paulo, 864<br>São Caetano do Sul, SP</address>
-    <p class="canal__nota">*Turmas à noite durante a semana e à tarde aos sábados. Visitas com horário marcado.</p>
-    <ul class="ct-local__apps">
-      <li><a href="{MAPA}" {EXTERNO}>Google Maps{SETA}{EXT_SR}</a></li>
-      <li><a href="{APPLE}" {EXTERNO}>Apple Maps{SETA}{EXT_SR}</a></li>
-      <li><a href="{WAZE}" {EXTERNO}>Waze{SETA}{EXT_SR}</a></li>
-    </ul>
-  </div>
-  <div class="ct-local__mapa rev">
-    <iframe src="{EMBED}" title="Mapa: Rua São Paulo, 864, São Caetano do Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+<section class="bloco tom wrap" id="atelier">
+  {duas("Atelier", "Rua São Paulo, 864, São Caetano do Sul, SP", corpo("*Turmas à noite durante a semana e à tarde aos sábados. Visitas com horário marcado.")
+        + '<div class="botoes botoes--mapas">' + "".join([f'<a class="btn" href="{MAPA}" {EXTERNO}>Google Maps{SETA}{EXT_SR}</a>', f'<a class="btn btn-linha" href="{APPLE}" {EXTERNO}>Apple Maps{SETA}{EXT_SR}</a>', f'<a class="btn btn-linha" href="{WAZE}" {EXTERNO}>Waze{SETA}{EXT_SR}</a>']) + '</div>')}
+  <div class="mapa-g apos rev"><iframe src="{EMBED}" title="Mapa: Rua São Paulo, 864, São Caetano do Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 </section>
-<section class="ct-parc wrap" aria-labelledby="ct-parc-tit">
-  <h2 class="canal__rot" id="ct-parc-tit">Parcerias</h2>
-  <div class="ct-parc__corpo rev">
-    <p class="ct-parc__lead">*Formação visual com escolas, instituições e coletivos.</p>
-    <p class="canal__nota">*Residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.</p>
-    <a class="ct-parc__link" href="mailto:{EMAIL}?subject=Parcerias">Propor parceria{SETA_D2}</a>
-  </div>
+<section class="bloco wrap" id="parcerias">
+  {duas("Parcerias", "*Formação visual com escolas, instituições e coletivos.",
+        corpo("*Residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.")
+        + botoes(f'<a class="btn" href="mailto:{EMAIL}?subject=Parcerias">Propor parceria</a>'))}
 </section>''')
 
     # 404 (servida em qualquer endereço: caminhos a partir da raiz)
