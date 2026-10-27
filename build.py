@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gera o site estático do Alma a partir de modelos simples (sem dependências).
 Saída em ./site — é essa pasta que vai para a hospedagem."""
-import os, re, shutil, html, json
+import os, re, shutil, html, json, hashlib
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 SAIDA = os.path.join(RAIZ, "site")
@@ -20,6 +20,11 @@ LOGO = LOGO.replace('class="marca"', 'class="logo"').replace('aria-label="Alma"'
 # WhatsApp do atelier: lido de src/config.js (só dígitos, com DDI). Vazio = o site não mostra WhatsApp.
 _cfg = open(os.path.join(RAIZ, "src", "config.js")).read()
 WHATSAPP = (re.search(r'whatsapp:\s*"(\d*)"', _cfg) or [None, ""])[1]
+
+def _v(f):
+    """Versão do arquivo (hash do conteúdo): o navegador baixa de novo sempre que o arquivo muda."""
+    return hashlib.md5(open(os.path.join(RAIZ, "src", f), "rb").read()).hexdigest()[:8]
+V_CSS, V_JS, V_CFG = _v("style.css"), _v("site.js"), _v("config.js")
 
 def fone(n):
     n = n[2:] if n.startswith("55") else n
@@ -156,7 +161,7 @@ def pagina(arquivo, titulo, descricao, corpo, fecho_html=None, sobre_foto=False,
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={V_CSS}">
 {ld}</head>
 <body>
 {nav(arquivo, sobre_foto)}
@@ -165,8 +170,8 @@ def pagina(arquivo, titulo, descricao, corpo, fecho_html=None, sobre_foto=False,
 {fecho() if fecho_html is None else fecho_html}
 </main>
 {RODAPE}
-<script src="config.js"></script>
-<script src="site.js" defer></script>
+<script src="config.js?v={V_CFG}"></script>
+<script src="site.js?v={V_JS}" defer></script>
 </body>
 </html>
 '''
