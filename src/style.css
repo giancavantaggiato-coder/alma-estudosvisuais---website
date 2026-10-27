@@ -837,3 +837,6 @@ main:focus{outline:none}
 .breve__item::before{content:none;display:none}
 .breve__img{position:relative}
 .breve__img .selo{display:block;top:8px;left:8px;font-size:.6875rem;padding:4px 7px}
+/* Em breve: selo centralizado, em cinza da paleta, e foto apagada (indisponível) */
+.breve__img .selo{top:50%;left:50%;transform:translate(-50%,-50%);background:var(--claro3);color:var(--preto);white-space:nowrap}
+.breve__img img{opacity:.55}
