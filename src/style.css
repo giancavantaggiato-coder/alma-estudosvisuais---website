@@ -701,3 +701,18 @@ html{overscroll-behavior-x:none}
   .frase__txt em{background:linear-gradient(transparent 86%, rgb(250 224 143 / .95) 86%)}
   .selo{background:var(--claro);color:var(--preto)}
 }
+
+/* ---------- Frentes (Atelier, Jovens Artistas, Extensão): bloco de destaque ---------- */
+.frentes .frente{gap:10px}
+.frentes .frente .foto{aspect-ratio:4/5;margin-bottom:14px}
+.frente__tit{font-size:1.625rem;line-height:1.15;font-weight:500;letter-spacing:-.015em}
+.frente__txt{font-size:1rem;line-height:1.6;color:var(--texto);max-width:44ch;text-wrap:pretty}
+.escuro .frente__txt{color:var(--texto-claro)}
+@media (min-width:990px){ .frente__tit{font-size:2rem} }
+@media (max-width:989px){
+  .frentes{display:flex;flex-direction:column;gap:0}
+  .frentes .frente{padding-block:24px 40px;border-top:1px solid var(--linha-escura)}
+  .frentes .frente:first-child{padding-top:0;border-top:0}
+  .frentes .frente:last-child{padding-bottom:0}
+  .frentes .frente .foto{aspect-ratio:4/5;width:100%}
+}
