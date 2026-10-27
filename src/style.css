@@ -961,3 +961,7 @@ main:focus{outline:none}
   .bloco.escuro .btn-claro{background:#000;border-color:#000;color:#FEFCE6}
   .bloco.escuro .lista-m{border-top-color:#000}
 }
+/* Materiais Artísticos: foto termina rente ao bloco seguinte; no celular, quadrada e dentro das margens */
+.bloco--loja{padding-bottom:0}
+.bloco--loja .larga{margin-bottom:0}
+@media (max-width:749px){ .bloco--loja .larga{aspect-ratio:1/1;margin-inline:0} }
