@@ -567,7 +567,7 @@ html{overscroll-behavior-x:none}
 @media (max-width:749px){ .carr-pontos{display:flex} }
 
 /* Notas na home: 9 textos, só os 6 primeiros no computador */
-@media (min-width:750px){ .notas .notas__pag:nth-child(n+3){display:none} }
+@media (min-width:750px){ .notas .notas__pag:nth-child(n+4){display:none} }
 
 /* Blog: últimas publicações (uma em destaque e duas ao lado) */
 .destaques{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px var(--gap)}

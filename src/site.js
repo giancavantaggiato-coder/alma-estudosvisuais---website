@@ -54,7 +54,7 @@
   // Trabalhos de alunos no celular: carrossel contínuo (depois da última volta para a primeira).
   document.querySelectorAll('[data-carr]').forEach(function (c) {
     var t = c.querySelector('.carr__trilho'), orig = Array.prototype.slice.call(t.querySelectorAll('.carr__item')), pts = c.querySelectorAll('.carr-ponto');
-    var n = orig.length, loop = c.classList.contains('carr--trab') && n > 1 && matchMedia('(max-width: 749px)').matches;
+    var n = orig.length, loop = (c.classList.contains('carr--trab') || c.classList.contains('carr--notas')) && n > 1 && matchMedia('(max-width: 749px)').matches;
     if (loop) {
       orig.forEach(function (it) { var a = it.cloneNode(true); a.setAttribute('aria-hidden', 'true'); t.appendChild(a); });
       orig.slice().reverse().forEach(function (it) { var a = it.cloneNode(true); a.setAttribute('aria-hidden', 'true'); t.insertBefore(a, t.firstChild); });

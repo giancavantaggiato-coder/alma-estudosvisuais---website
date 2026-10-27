@@ -240,12 +240,13 @@ NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A 
          ("blog-7.jpg", "Cor", "2026-06-04", "4 jun 2026", "Albers e a interação entre cores vizinhas"),
          ("blog-2.jpg", "Percepção", "2026-05-21", "21 mai 2026", "Movimento e ritmo na percepção da forma"),
          ("blog-3.jpg", "Teoria", "2026-05-07", "7 mai 2026", "Grisaille e a construção do valor tonal"),
-         ("blog-8.jpg", "Fotografia", "2026-04-23", "23 abr 2026", "Frontalidade e obliquidade no enquadramento")]
+         ("blog-8.jpg", "Fotografia", "2026-04-23", "23 abr 2026", "Frontalidade e obliquidade no enquadramento"),
+         ("blog-9.jpg", "Cinema", "2026-04-09", "9 abr 2026", "Kepes e a composição em movimento")]
 
 def cartoes_notas():
     cart = lambda img, cat, dt, data, t: f'''<a class="cartao" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
 <p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="t3">*{t}</h3></a>'''
-    paginas = [NOTAS[k:k+3] for k in range(0, len(NOTAS), 3)]
+    paginas = [NOTAS[k:k+2] for k in range(0, min(len(NOTAS), 10), 2)]  # celular: 2 textos por página, até 5 páginas
     return ('<div class="carr carr--notas" data-carr><div class="carr__trilho notas">'
         + "".join('<div class="carr__item notas__pag lista-m">' + "".join(cart(*n) for n in pg) + '</div>' for pg in paginas)
         + '</div>' + controles(len(paginas), "Notas e Ensaios") + '</div>')
