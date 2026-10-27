@@ -211,7 +211,8 @@ def frentes():
         else:
             out.append(f'''<a class="frente frente--principal rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
 <div class="frente__corpo"><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></div></a>''')
-    return '<div class="frentes">' + "".join(out) + '<div class="frentes__breve">' + "".join(breve) + '</div></div>'
+    # Jovens Artistas e Extensão ficam só no bloco "Em breve" de Nossas aulas (com o Avise-me)
+    return '<div class="frentes frentes--uma">' + "".join(out) + '</div>'
 
 FATOS = [("4 a 9", "pessoas por aula, com acompanhamento individual de cada trabalho"),
          ("6 linhas", "de aprofundamento: aquarela, guache, acrílica, óleo, escultura e gravura"),

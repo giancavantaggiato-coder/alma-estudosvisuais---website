@@ -824,3 +824,11 @@ main:focus{outline:none}
 /* Alternativa ao formulário */
 .form-alt{margin-top:4px}
 .form-alt a{color:inherit}
+
+/* Início: só o Atelier nas frentes; no computador, foto e texto lado a lado */
+@media (min-width:990px){
+  .frentes--uma{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+  .frentes--uma .frente--principal{grid-column:1 / -1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:end}
+  .frentes--uma .frente--principal .foto{grid-column:1 / span 6;margin-bottom:0}
+  .frentes--uma .frente--principal .frente__corpo{grid-column:7 / span 5}
+}
