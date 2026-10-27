@@ -423,20 +423,18 @@ def build():
     pagina("blog.html", "Notas e Ensaios",
       "Notas e Ensaios do Alma: textos sobre percepção visual, processos de criação, técnica e história da arte.",
       abertura("Notas e Ensaios", "Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + f'''
-<section class="bloco wrap" id="ultimas">
-  <div class="duas cab rev"><h2 class="cab__rot">Últimas publicações</h2><div class="lado"></div></div>
-  <div class="destaques apos">
-    {"".join(f'''<a class="destaque{" destaque--1" if k == 0 else ""} rev" href="#todos"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div><div class="destaque__txt"><p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="{"destaque__tit" if k == 0 else "t3"}">*{t}</h3></div></a>''' for k, (img, cat, dt, data, t) in enumerate(NOTAS[:3]))}
-  </div>
-</section>
-<section class="bloco tom wrap" id="todos">
-  <div class="duas cab rev"><h2 class="cab__rot">Todos os textos</h2><div class="lado"></div></div>
-  <div class="filtros rev apos">
+<section class="bloco wrap bloco--blog" id="todos">
+  <h2 class="sr">Todos os textos</h2>
+  <div class="filtros rev">
     <label class="busca" for="q"><span class="sr">Buscar textos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
       <input id="q" type="search" placeholder="Buscar textos" autocomplete="off"></label>
     <label class="tema-m"><span class="sr">Tema</span><select id="tema">{"".join(f'<option value="{v}">{t}</option>' for v, t in [("", "Todos os temas")] + [(t, t) for t in TAGS])}</select></label>
     <div class="tags" role="group" aria-label="Filtrar por tema"><button type="button" aria-pressed="true" data-tag="">Todos</button>{"".join(f'<button type="button" aria-pressed="false" data-tag="{t}">{t}</button>' for t in TAGS)}</div>
   </div>
+  <a class="post-destaque rev" href="#todos"><div class="foto"><img src="img/{NOTAS[0][0]}" alt="" loading="lazy"></div>
+    <div class="post-destaque__txt"><p class="meta"><span>Mais recente</span><span>{NOTAS[0][1]}</span><time datetime="{NOTAS[0][2]}">{NOTAS[0][3]}</time></p>
+    <h3 class="post-destaque__tit">*{NOTAS[0][4]}</h3><p class="corpo">*Como a escala de valores organiza a pintura antes da cor: da chave tonal à construção da luz em camadas.</p>
+    <span class="frente__mais">Ler o texto<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
   <p class="contagem pequeno" data-total="{len(POSTS)}" aria-live="polite">{len(POSTS)} textos publicados</p>
   <div class="posts">''' + "".join(
         f'''<article class="post rev" data-tag="{tag}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>

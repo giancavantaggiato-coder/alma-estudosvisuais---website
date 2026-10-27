@@ -1183,3 +1183,37 @@ main:focus{outline:none}
 .bloco--atelier .frente__sobre{color:var(--texto2)}
 .bloco--atelier .frente__txt{color:var(--texto)}
 @media (prefers-color-scheme:dark){ .bloco--atelier .frente__tit{color:var(--claro)} .bloco--atelier .frente__sobre{color:var(--texto-claro2)} }
+
+/* =================== Blog: busca no topo, um destaque de tamanho contido, depois a grade =================== */
+.bloco--blog{padding-top:var(--b-texto)}
+.bloco--blog .filtros{margin-top:0}
+.post-destaque{display:grid;grid-template-columns:1fr;gap:16px;margin-top:var(--b-midia);padding-bottom:var(--b-midia);border-bottom:1px solid var(--linha);text-decoration:none;color:inherit}
+.post-destaque[hidden]{display:none}
+.post-destaque .foto{aspect-ratio:3/2;overflow:hidden;background:var(--claro2)}
+.post-destaque img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.post-destaque:hover img{transform:scale(1.02)}
+.post-destaque__txt{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.post-destaque .meta{display:flex;gap:12px}
+.post-destaque__tit{font-size:1.625rem;line-height:1.15;font-weight:500;letter-spacing:-.015em;text-wrap:balance}
+.post-destaque .frente__mais{display:inline-flex;align-items:center;gap:10px;padding-bottom:4px;border-bottom:1px solid currentColor;font-size:.875rem}
+.post-destaque .frente__mais svg{width:18px;height:18px}
+.bloco--blog .contagem{margin-top:var(--b-texto)}
+@media (min-width:990px){
+  .post-destaque{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:center}
+  .post-destaque .foto{grid-column:1 / span 6}
+  .post-destaque__txt{grid-column:7 / -1;padding-right:8%}
+  .post-destaque__tit{font-size:2.25rem;line-height:1.1}
+}
+
+/* =================== Início, Atelier: no padrão dos outros blocos (dentro da grade) =================== */
+@media (min-width:990px){
+  .bloco--atelier{padding-top:var(--b-topo);padding-bottom:var(--b-base) !important}
+  .frentes--uma .frente--principal{min-height:0;align-items:start}
+  .frentes--uma .frente--principal .foto{grid-column:1 / span 6;margin:0;aspect-ratio:3/2;min-height:0;height:auto}
+  .frentes--uma .frente--principal .foto img{position:static;width:100%;height:100%}
+  .frentes--uma .frente--principal .frente__corpo{grid-column:7 / -1;align-self:start;padding:0;gap:16px}
+  .frentes--uma .frente__tit{font-size:2.25rem;line-height:1.1;letter-spacing:-.02em}
+  .frentes--uma .frente__txt{font-size:1rem;line-height:1.6;max-width:62ch}
+  .frentes--uma .frente__mais{margin-top:8px;font-size:.875rem}
+}
+.bloco--atelier{padding-top:calc(var(--b-topo) + var(--b-filete)) !important}

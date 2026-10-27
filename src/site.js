@@ -166,6 +166,7 @@
       var filtrando = tag || termo;
       cont.textContent = filtrando ? n + (n === 1 ? ' texto encontrado' : ' textos encontrados') : cont.dataset.total + ' textos publicados';
       vazio.hidden = n > 0;
+      var dq = document.querySelector('.post-destaque'); if (dq) dq.hidden = !!filtrando;
     }
     document.querySelectorAll('.tags button').forEach(function (b) {
       b.addEventListener('click', function () {
