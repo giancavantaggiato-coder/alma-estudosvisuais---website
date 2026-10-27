@@ -74,9 +74,9 @@ def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
     return f'''<section class="cta" id="aula-experimental" aria-labelledby="cta-tit">
   <div class="cta__in wrap rev">
     <div class="cta__esq"><p class="cta__rot">Aula experimental</p>
-    <h2 class="cta__tit" id="cta-tit">*Tudo começa por uma aula.</h2></div>
-    <div class="cta__dir"><p class="cta__txt">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
-    <div class="botoes"><a class="btn cta__btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha cta__linha" href="{href}">{rot}</a></div></div>
+    <h2 class="cta__tit" id="cta-tit">*Tudo começa por uma aula.</h2>
+    <p class="cta__txt">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p></div>
+    <div class="cta__dir"><div class="botoes"><a class="btn cta__btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha cta__linha" href="{href}">{rot}</a></div></div>
   </div>
 </section>'''
 
