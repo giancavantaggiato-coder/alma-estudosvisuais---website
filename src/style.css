@@ -939,3 +939,25 @@ main:focus{outline:none}
 }
 /* Materiais Artísticos no celular: foto de ponta a ponta e mais alta */
 @media (max-width:749px){ .larga{aspect-ratio:4/5;margin-inline:calc(var(--px) * -1)} }
+
+/* Títulos das etapas (percurso e aula experimental) um pouco maiores */
+.percurso .t3,.passos-curtos .t3{font-size:1.25rem;line-height:1.25;letter-spacing:-.01em}
+@media (min-width:990px){ .percurso .t3,.passos-curtos .t3{font-size:1.375rem} }
+
+/* Modo escuro: os blocos escuros invertem para o creme, para que a passagem entre blocos fique nítida
+   (preto, grafite e creme se alternam, sempre dentro da paleta) */
+@media (prefers-color-scheme:dark){
+  .bloco.escuro,.abertura.escura{
+    --claro:#FEFCE6; --preto:#000;
+    background:var(--claro); color:var(--preto);
+    --texto-claro:rgb(0 0 0 / .74); --texto-claro2:rgb(0 0 0 / .62); --linha-escura:rgb(0 0 0 / .16);
+    --tinta:#000; --texto:rgb(0 0 0 / .74); --texto-cartao:rgb(0 0 0 / .62); --linha:rgb(0 0 0 / .16);
+  }
+  .bloco.escuro .corpo,.abertura.escura .corpo{color:rgb(0 0 0 / .74)}
+  .bloco.escuro .lead,.abertura.escura .lead,.bloco.escuro .continua__tit,.bloco.escuro .base__tit,.bloco.escuro .frente__tit{color:#000}
+  .bloco.escuro .meios,.bloco.escuro .duas .meios.lado,.bloco.escuro .duas .meios.meios--lista{border-top-color:#000}
+  .bloco.escuro .meios li{border-bottom-color:rgb(0 0 0 / .16);color:rgb(0 0 0 / .74)}
+  .bloco.escuro .continua{border-top-color:rgb(0 0 0 / .16)}
+  .bloco.escuro .btn-claro{background:#000;border-color:#000;color:#FEFCE6}
+  .bloco.escuro .lista-m{border-top-color:#000}
+}
