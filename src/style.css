@@ -811,3 +811,16 @@ main:focus{outline:none}
 
 /* Contato: cartão do endereço separado do fundo no modo escuro */
 @media (prefers-color-scheme:dark){ .endereco{background:var(--grafite)} .pular{background:var(--claro);color:var(--preto)} }
+
+/* ---------- Revisão geral 2 ---------- */
+/* Início: subtítulo que diz o que é o Alma e onde fica */
+.chamada__txt{display:flex;flex-direction:column;gap:14px;max-width:34em}
+.hero__sub{font-size:1rem;line-height:1.5;color:var(--texto-claro);max-width:32em;text-wrap:pretty}
+@media (min-width:990px){ .hero__sub{font-size:1.125rem} }
+/* Frase de Nossas aulas: destaque só com a cor do texto (sem amarelo fora da paleta) */
+.frase__txt em,.frase__txt em:where(*){background:none !important;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.14em}
+/* Trabalhos no computador: obras centralizadas na faixa */
+@media (min-width:750px){ .trabalhos{justify-content:safe center} }
+/* Alternativa ao formulário */
+.form-alt{margin-top:4px}
+.form-alt a{color:inherit}

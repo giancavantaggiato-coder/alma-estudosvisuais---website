@@ -101,7 +101,7 @@ RODAPE = f'''<footer class="rodape wrap">
     </div>
     <nav aria-label="Site">
       <h2 class="rotulo">Site</h2>
-      <a href="sobre.html">Sobre</a><a href="nossas-aulas.html">Nossas aulas</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a><a href="faca-parte.html">Aula experimental</a>
+      <a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="nossas-aulas.html">Nossas aulas</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a><a href="faca-parte.html">Aula experimental</a>
     </nav>
     <nav aria-label="Alunos e loja">
       <h2 class="rotulo">Alunos</h2>
@@ -127,7 +127,7 @@ RODAPE = f'''<footer class="rodape wrap">
 
 ORG = {
     "@context": "https://schema.org", "@type": "EducationalOrganization", "name": NOME,
-    "url": DOMINIO, "email": EMAIL, "logo": DOMINIO + "/img/apple-touch-icon.png", "sameAs": [INSTAGRAM],
+    "url": DOMINIO, "email": EMAIL, **({"telephone": "+" + WHATSAPP} if WHATSAPP else {}), "logo": DOMINIO + "/img/apple-touch-icon.png", "sameAs": [INSTAGRAM],
     "address": {"@type": "PostalAddress", "streetAddress": "Rua São Paulo, 864", "addressLocality": "São Caetano do Sul",
                 "addressRegion": "SP", "addressCountry": "BR"},
 }
@@ -135,7 +135,7 @@ ORG = {
 PAGINAS_PUBLICAS = []
 
 def pagina(arquivo, titulo, descricao, corpo, fecho_html=None, sobre_foto=False, base=None):
-    titulo_doc = NOME if arquivo == "index.html" else f"{titulo} | {NOME}"
+    titulo_doc = f"{NOME} | Atelier de artes em São Caetano do Sul" if arquivo == "index.html" else f"{titulo} | {NOME}"
     ld = f'<script type="application/ld+json">{json.dumps(ORG, ensure_ascii=False)}</script>\n' if arquivo == "index.html" else ""
     url = DOMINIO + "/" + ("" if arquivo == "index.html" else arquivo)
     if base is None: PAGINAS_PUBLICAS.append(url)
@@ -287,7 +287,7 @@ def em_breve():
         <p class="aviso" role="status"></p>
       </form>
     </article>'''
-    return f'''<section class="bloco tom wrap" id="em-breve">
+    return f'''<section class="bloco wrap" id="em-breve">
   {duas("Em breve", "*Jovens Artistas e Extensão estão em preparação.", corpo("*Deixe seu e-mail e avisamos quando as inscrições abrirem."))}
   <div class="breve apos">
     {item(*JOVENS, "jovens")}
@@ -311,8 +311,9 @@ def build():
       f'''<section class="hero wrap">
   <img src="img/hero-inicio.jpg" alt="Estudantes trabalhando em esculturas num atelier" fetchpriority="high">
   <div class="chamada">
-    <h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.</h1>
-    <div class="botoes"><a class="btn btn-claro" href="nossas-aulas.html">Nossas aulas</a><a class="btn btn-linha" href="faca-parte.html">Aula experimental</a></div>
+    <div class="chamada__txt"><h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.</h1>
+    <p class="hero__sub">*Atelier de Desenho, pintura e escultura para adultos em São Caetano do Sul, com turmas pequenas e acompanhamento individual.</p></div>
+    <div class="botoes"><a class="btn btn-claro" href="faca-parte.html">Aula experimental</a><a class="btn btn-linha" href="nossas-aulas.html">Nossas aulas</a></div>
   </div>
 </section>
 <section class="bloco escuro wrap">
@@ -331,7 +332,7 @@ def build():
   <div class="apos">{TRABALHOS}</div>
 </section>
 <section class="bloco wrap">
-  {duas("Últimos textos", "*Notas e ensaios sobre ver, fazer e pensar a imagem.", corpo("Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + botoes('<a class="btn" href="blog.html">Todos os textos</a>'))}
+  {duas("Notas e Ensaios", "*Notas e ensaios sobre ver, fazer e pensar a imagem.", corpo("Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + botoes('<a class="btn" href="blog.html">Todos os textos</a>'))}
   <div class="apos">{cartoes_notas()}</div>
 </section>
 <section class="bloco tom wrap">
@@ -347,8 +348,7 @@ def build():
       f'''<section class="video-sec" aria-label="Vídeo institucional">
   <figure class="video">
     <!-- Quando o vídeo estiver pronto, trocar o quadro por <video controls playsinline poster="(foto de capa)"><source src="..."></video> ou pelo player do Vimeo/YouTube -->
-    <div class="video__quadro video__quadro--foto">
-      <img src="img/frente-atelier.jpg" alt="Alunos trabalhando lado a lado num atelier" fetchpriority="high">
+    <div class="video__quadro" role="img" aria-label="Espaço do vídeo institucional do Alma, em produção">
     </div>
     <h1 class="t1 video__tit wrap">Sobre o Alma</h1>
   </figure>
@@ -360,7 +360,7 @@ def build():
 <section class="bloco tom wrap" id="historia">
   <div class="duas cab rev"><h2 class="cab__rot">Nossa história</h2><div class="lado"><div class="corpo">{LOREM1}</div></div></div>
 </section>
-<section class="bloco tom wrap" id="direcao">{DIRECAO}</section>''')
+<section class="bloco wrap" id="direcao">{DIRECAO}</section>''')
 
     # Nossas aulas
     BASES = [("blog-8.jpg", "Desenho", "Grafite, carvão, sanguínea e nanquim. Estudo de proporção, valor tonal, construção do espaço e articulação de cheios e vazios no campo."),
@@ -389,7 +389,7 @@ def build():
   <p class="frase__txt rev">*Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a <em>própria luz</em>.</p>
 </section>
 <section class="bloco tom wrap" id="percurso">
-  {duas("O percurso", "*Um começo comum e, depois dele, um caminho individual.", corpo("O percurso começa por uma base comum, em que os alunos abordam os fundamentos, e é a partir dela que cada um é conduzido ao aprofundamento da própria prática."))}
+  {duas("O percurso", "*Quatro etapas, da primeira aula à linguagem própria.", corpo("O percurso começa por uma base comum, em que os alunos abordam os fundamentos, e é a partir dela que cada um é conduzido ao aprofundamento da própria prática."))}
   <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">*{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
 <section class="bloco escuro wrap" id="formacao">
@@ -407,19 +407,19 @@ def build():
     <dl class="ficha dividido__txt">{"".join(f'<div class="rev"><dt>{n}</dt><dd>*{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
   </div>
 </section>
-<section class="bloco tom wrap" id="principios">
-  {duas("Sobre o ensino", "*Quatro ideias que guiam o trabalho em sala.")}
-  <ul class="principios principios--4 apos">{"".join(f'<li class="rev"><p class="principios__t">{t}</p><p class="corpo">{d}</p></li>' for t, d in PRINCIPIOS)}</ul>
-</section>
-<section class="bloco wrap" id="trabalhos">
+<section class="bloco tom wrap" id="trabalhos">
   {duas("Trabalhos de alunos", "*Estudos e trabalhos feitos no atelier.")}
   <div class="apos">{TRABALHOS}</div>
 </section>
-{em_breve()}
-<section class="bloco wrap" id="faq">
-  {duas("Perguntas frequentes", "*O que mais nos perguntam antes da primeira aula.", f'<p class="pequeno">Outras dúvidas: <a href="mailto:{EMAIL}">{EMAIL}</a></p>')}
+<section class="bloco wrap" id="principios">
+  {duas("Sobre o ensino", "*Quatro ideias que guiam o trabalho em sala.")}
+  <ul class="principios principios--4 apos">{"".join(f'<li class="rev"><p class="principios__t">{t}</p><p class="corpo">{d}</p></li>' for t, d in PRINCIPIOS)}</ul>
+</section>
+<section class="bloco tom wrap" id="faq">
+  {duas("Perguntas frequentes", "*O que mais nos perguntam antes da primeira aula.", (f'<p class="pequeno">Outras dúvidas: <a href="https://wa.me/{WHATSAPP}" {EXTERNO}>WhatsApp {fone(WHATSAPP)}</a> ou <a href="mailto:{EMAIL}">{EMAIL}</a></p>' if WHATSAPP else f'<p class="pequeno">Outras dúvidas: <a href="mailto:{EMAIL}">{EMAIL}</a></p>'))}
   <div class="apos">{acordeao(FAQ)}</div>
-</section>''', fecho_html=fecho(("Contato", "contato.html")))
+</section>
+{em_breve()}''', fecho_html=fecho(("Contato", "contato.html")))
 
     # Blog
     POSTS = [("blog-1.jpg", "Materiais", "História dos pigmentos e do meio que os carrega", "Pigmento é matéria seca e inerte. O meio que o carrega decide o brilho, a secagem e a permanência da cor."),
@@ -457,7 +457,7 @@ def build():
 </section>''')
 
     # Aula experimental
-    INTERESSES = ["Ainda não sei", "Desenho", "Plástica", "Pintura", "Escultura e cerâmica", "Gravura", "Fotografia e cinema", "Design e arquitetura"]
+    INTERESSES = ["Ainda não sei", "Desenho", "Pintura (aquarela, guache, acrílica, óleo)", "Escultura", "Gravura", "Outra"]
     pagina("faca-parte.html", "Aula experimental",
       "Agende uma aula experimental no Alma Centro de Estudos Visuais, em São Caetano do Sul.",
       abertura("Aula experimental", "*A entrada no Alma começa por uma aula experimental. Deixe seu contato e combinamos pelo WhatsApp o dia da sua visita ao atelier.") + f'''
@@ -480,6 +480,7 @@ def build():
       <p class="pequeno">Usamos seus dados apenas para combinar a aula experimental. <a href="privacidade.html">Privacidade</a></p>
       <button class="btn btn-largo" type="submit">Enviar pedido</button>
       <p class="aviso" role="status"></p>
+      {f'<p class="pequeno form-alt">Prefere conversar direto? <a href="https://wa.me/{WHATSAPP}" {EXTERNO}>Chame no WhatsApp</a></p>' if WHATSAPP else ''}
     </form>
   </div>
 </section>''', fecho_html="")
@@ -511,7 +512,7 @@ def build():
 <section class="bloco tom wrap">
   {duas("Parcerias", "*Formação visual com escolas, instituições e coletivos.",
         corpo("*Residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.")
-        + botoes(f'<a class="btn" href="mailto:{EMAIL}?subject=Parcerias">Escrever</a>'))}
+        + botoes(f'<a class="btn" href="mailto:{EMAIL}?subject=Parcerias">Propor parceria</a>'))}
 </section>''')
 
     # 404 (servida em qualquer endereço: caminhos a partir da raiz)
