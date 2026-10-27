@@ -978,3 +978,11 @@ main:focus{outline:none}
 
 /* Início: título do topo maior no computador */
 @media (min-width:990px){ .hero h1{font-size:clamp(3rem,4.6vw,4.75rem);line-height:1.02;letter-spacing:-.03em} }
+
+/* Topo de Nossas aulas no computador: a foto (vertical) ocupa a metade direita, sem ampliar; título na metade esquerda */
+@media (min-width:990px){
+  .ab-foto{background:var(--preto)}
+  .ab-foto > img{left:50%;width:50%;object-position:center 30%}
+  .ab-foto::after{left:50%;background:linear-gradient(to right,rgb(0 0 0 / .35),transparent 40%)}
+  .ab-foto__txt{max-width:calc(50% - var(--gap) * 2)}
+}
