@@ -772,3 +772,42 @@ html{overscroll-behavior-x:none}
 
 /* Sem o filete de abertura dos blocos (mantém o respiro) */
 .bloco::before,.bloco.escuro::before,.bloco.fecho::before,.rodape::before{border-top:0 !important}
+
+/* ---------- Revisão de UX/UI ---------- */
+/* Legibilidade: nenhum texto de leitura abaixo de 14 px; botões em 14 px */
+.texto-cartao{font-size:.875rem;line-height:1.55}
+.btn{font-size:.875rem}
+.btn-nav{font-size:.8125rem}
+.fatos dd{font-size:.875rem}
+
+/* Pular para o conteúdo (aparece só com o teclado) */
+.pular{position:absolute;left:16px;top:-60px;z-index:100;padding:12px 16px;background:var(--preto);color:var(--claro);font-size:.875rem;text-decoration:none;transition:top .15s ease}
+.pular:focus{top:12px}
+main:focus{outline:none}
+
+/* Sobre: foto do atelier enquanto o vídeo não fica pronto (sem botão de play que não toca nada) */
+.video__quadro--foto{position:relative;overflow:hidden}
+.video__quadro--foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.video__quadro--foto::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgb(0 0 0 / .1),rgb(0 0 0 / .25) 50%,rgb(0 0 0 / .8))}
+.video__tit{z-index:1}
+
+/* Em breve (Nossas aulas): compacto, como no Início */
+.breve{grid-template-columns:1fr 1fr;gap:0 var(--gap)}
+.breve__item{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:var(--gap);row-gap:8px;align-items:start;padding-block:28px;border-top:1px solid var(--linha)}
+.breve__img{grid-row:1 / span 4;aspect-ratio:4/5;margin:0}
+.breve__img img{opacity:.9}
+.breve__img .selo{display:none}
+.breve__item::before{content:"Em breve";grid-column:2;justify-self:start;font-size:.75rem;line-height:1;padding:5px 8px;border:1px solid var(--linha);color:var(--texto)}
+.breve__tit{grid-column:2;font-size:1.25rem;line-height:1.2;font-weight:500}
+.breve__item .corpo{grid-column:2;font-size:.875rem;line-height:1.55}
+.breve__form{grid-column:2;margin-top:4px}
+@media (min-width:990px){ .breve__tit{font-size:1.5rem} }
+@media (max-width:749px){
+  .breve{grid-template-columns:1fr}
+  .breve__item{grid-template-columns:120px minmax(0,1fr);column-gap:16px;padding-block:24px}
+  .breve__img{grid-row:1 / span 3}
+  .breve__form{grid-column:1 / -1;margin-top:12px}
+}
+
+/* Contato: cartão do endereço separado do fundo no modo escuro */
+@media (prefers-color-scheme:dark){ .endereco{background:var(--grafite)} .pular{background:var(--claro);color:var(--preto)} }

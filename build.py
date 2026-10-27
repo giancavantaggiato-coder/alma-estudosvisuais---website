@@ -80,6 +80,8 @@ def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
   </div>
 </section>'''
 
+ZAP_RODAPE = f'<a href="https://wa.me/{WHATSAPP}" {EXTERNO}>WhatsApp {fone(WHATSAPP)}</a>' if WHATSAPP else ''
+
 RODAPE = f'''<footer class="rodape wrap">
   <div class="novidades">
     <h2 class="t3">Novidades do Alma</h2>
@@ -111,6 +113,7 @@ RODAPE = f'''<footer class="rodape wrap">
     </nav>
     <div>
       <h2 class="rotulo">Contato</h2>
+      {ZAP_RODAPE}
       <a href="mailto:{EMAIL}">{EMAIL}</a>
       <a href="{INSTAGRAM}" {EXTERNO}>Instagram</a>
     </div>
@@ -163,8 +166,9 @@ def pagina(arquivo, titulo, descricao, corpo, fecho_html=None, sobre_foto=False,
 <link rel="stylesheet" href="style.css?v={V_CSS}">
 {ld}</head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 {nav(arquivo, sobre_foto)}
-<main>
+<main id="conteudo" tabindex="-1">
 {corpo}
 {fecho() if fecho_html is None else fecho_html}
 </main>
@@ -257,7 +261,8 @@ FAQ = [("Preciso saber desenhar para começar?", "<p>*Não. Todos começam pelo 
        ("Para quem são as aulas?", "<p>*As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.</p>"),
        ("Quanto tempo dura o curso?", "<p>*Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
        ("Quanto custa?", "<p>*As mensalidades começam em R$ 420, conforme a frequência semanal. Os valores completos são apresentados na aula experimental.</p>"),
-       ("Quais são os horários?", "<p>*As turmas acontecem no período noturno durante a semana e à tarde aos sábados. O dia da aula experimental é combinado pelo WhatsApp.</p>"),
+       ("Como escolho os dias de aula?", "<p>*Você escolhe dias fixos na semana, conforme a frequência do seu plano. O dia da aula experimental é combinado pelo WhatsApp.</p>"),
+       ("O que acontece além das aulas?", "<p>*Sessões de modelo vivo, encontros de história da arte, projetos especiais e visitas a exposições.</p>"),
        ("E se eu precisar faltar?", "<p>*Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.</p>")]
 
 REFERENCIAS = [("Josef Albers", "A interação da cor e o ensino pela experiência."),
@@ -313,7 +318,7 @@ def build():
 <section class="bloco escuro wrap">
   {duas("Quem somos", "*Três frentes, um pensamento.",
         corpo("Somos um Centro de Estudos Visuais dedicado à formação, à pesquisa e à experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo e trabalhamos em três frentes: o Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, iniciação da percepção visual para crianças e adolescentes; e a Extensão, que leva a prática visual para além do Atelier.")
-        + botoes('<a class="btn btn-claro" href="sobre.html">Saiba mais</a>'))}
+        + botoes('<a class="btn btn-claro" href="sobre.html">Sobre o Alma</a>'))}
   <div class="apos">{frentes()}</div>
 </section>
 <section class="bloco wrap">
@@ -326,7 +331,7 @@ def build():
   <div class="apos">{TRABALHOS}</div>
 </section>
 <section class="bloco wrap">
-  {duas("Últimos textos", "*Notas e ensaios sobre ver, fazer e pensar a imagem.", corpo("Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + botoes('<a class="btn" href="blog.html">Ver todos</a>'))}
+  {duas("Últimos textos", "*Notas e ensaios sobre ver, fazer e pensar a imagem.", corpo("Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + botoes('<a class="btn" href="blog.html">Todos os textos</a>'))}
   <div class="apos">{cartoes_notas()}</div>
 </section>
 <section class="bloco tom wrap">
@@ -342,8 +347,8 @@ def build():
       f'''<section class="video-sec" aria-label="Vídeo institucional">
   <figure class="video">
     <!-- Quando o vídeo estiver pronto, trocar o quadro por <video controls playsinline poster="(foto de capa)"><source src="..."></video> ou pelo player do Vimeo/YouTube -->
-    <div class="video__quadro" role="img" aria-label="Vídeo institucional do Alma, em produção">
-      <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+    <div class="video__quadro video__quadro--foto">
+      <img src="img/frente-atelier.jpg" alt="Alunos trabalhando lado a lado num atelier" fetchpriority="high">
     </div>
     <h1 class="t1 video__tit wrap">Sobre o Alma</h1>
   </figure>
@@ -370,8 +375,7 @@ def build():
                   ("Técnica e processo", "A técnica se desenvolve de acordo com cada material e é o meio que conduz o artista da ideia à forma. Ela se ensina como caminho de descoberta, que ganha sentido quando se funde à criação de cada aluno."),
                   ("Composição", "*Composição é a organização das partes de uma obra em relação ao todo, como um sistema de tensões, proporções e direções: a construção de uma unidade que dá corpo visível a um sentido.")]
     NO_ATELIER = [("Turma", "Até 8 pessoas por aula, cada uma no seu projeto"), ("Acompanhamento", "Individual, em cada trabalho"),
-                  ("Horários", "Noites durante a semana e tardes de sábado"), ("Frequência", "Dias fixos na semana, escolhidos por você"), ("Faltas", "Reposição pelo app, avisando até 4 horas antes"),
-                  ("Além das aulas", "Modelo vivo, história da arte, projetos especiais e visitas a exposições")]
+                  ("Horários", "Noites durante a semana e tardes de sábado")]
     pagina("nossas-aulas.html", "Nossas aulas",
       "Como funcionam as aulas do Alma: o percurso a partir do Desenho, as técnicas do atelier e o dia a dia das turmas.",
       f'''<section class="ab-foto wrap">
@@ -482,7 +486,7 @@ def build():
 
     # Contato
     zap = (f'''<div><dt class="t3">WhatsApp</dt><dd class="corpo">{fone(WHATSAPP)}, *para aula experimental e dúvidas sobre o atelier.</dd>
-        <dd><a class="btn btn-linha-escura" href="https://wa.me/{WHATSAPP}" {EXTERNO}>Conversar</a></dd></div>''' if WHATSAPP else "")
+        <dd><a class="btn" href="https://wa.me/{WHATSAPP}" {EXTERNO}>Conversar no WhatsApp</a></dd></div>''' if WHATSAPP else "")
     pagina("contato.html", "Contato",
       "Endereço, e-mail e redes do Alma Centro de Estudos Visuais, em São Caetano do Sul.",
       abertura("Contato", "*O Alma fica em São Caetano do Sul, no ABC Paulista. Visitas ao atelier são agendadas previamente.") + f'''
