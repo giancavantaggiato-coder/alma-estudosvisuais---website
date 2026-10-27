@@ -200,12 +200,15 @@ FRENTES = [
 ]
 
 def frentes():
-    out = []
+    out, breve = [], []
     for img, t, d, href, selo in FRENTES:
-        s = f'<span class="selo">{selo}</span>' if selo else ""
-        out.append(f'''<a class="frente rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy">{s}</div>
-<h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></a>''')
-    return '<div class="tres frentes">' + "".join(out) + '</div>'
+        if selo:
+            breve.append(f'''<a class="frente frente--breve rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
+<div class="frente__corpo"><span class="frente__selo">{selo}</span><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></div></a>''')
+        else:
+            out.append(f'''<a class="frente frente--principal rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
+<div class="frente__corpo"><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></div></a>''')
+    return '<div class="frentes">' + "".join(out) + '<div class="frentes__breve">' + "".join(breve) + '</div></div>'
 
 FATOS = [("4 a 9", "pessoas por aula, com acompanhamento individual de cada trabalho"),
          ("6 linhas", "de aprofundamento: aquarela, guache, acrílica, óleo, escultura e gravura"),

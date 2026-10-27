@@ -730,3 +730,27 @@ html{overscroll-behavior-x:none}
   .trabalhos .carr__item{height:min(54svh,92vw);max-width:none;scroll-snap-align:center}
   .trabalhos .carr__item img{height:100%;width:auto;max-width:none;max-height:none}
 }
+
+/* Frentes com hierarquia: Atelier em destaque; Jovens Artistas e Extensão (em breve) compactas */
+.frente__corpo{display:flex;flex-direction:column;gap:10px}
+.frente__selo{align-self:flex-start;font-size:.75rem;line-height:1;padding:5px 8px;border:1px solid var(--linha-escura);color:var(--texto-claro)}
+.frentes .frente--breve .foto{aspect-ratio:4/5;margin-bottom:0}
+.frente--breve .foto img{filter:grayscale(1);opacity:.85}
+.frente--breve .frente__tit{font-size:1.125rem;line-height:1.2}
+.frente--breve .frente__txt{font-size:.875rem;line-height:1.55;color:var(--texto-claro2)}
+.frente--breve{display:grid;grid-template-columns:120px minmax(0,1fr);column-gap:16px;align-items:start;padding-block:24px;border-top:1px solid var(--linha-escura)}
+.frente--breve .frente__corpo{gap:8px}
+@media (max-width:989px){
+  .frentes{display:flex;flex-direction:column}
+  .frentes__breve{margin-top:0;border-top:1px solid var(--linha-escura)}
+  .frentes .frente--breve:last-child{padding-bottom:0}
+}
+@media (min-width:990px){
+  .frentes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:start}
+  .frente--principal{grid-column:1 / span 6}
+  .frentes__breve{grid-column:7 / span 6;display:flex;flex-direction:column}
+  .frentes .frente--breve{grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:var(--gap);padding-block:32px}
+  .frentes .frente--breve:first-child{padding-top:0;border-top:0}
+  .frente--breve .frente__tit{font-size:1.5rem}
+  .frente--breve .frente__txt{max-width:44ch}
+}
