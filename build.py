@@ -199,7 +199,7 @@ def frentes():
 <div class="frente__corpo"><span class="frente__selo">{selo}</span><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></div></a>''')
         else:
             out.append(f'''<a class="frente frente--principal rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="frente__corpo"><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p><span class="frente__mais">Conheça as aulas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>''')
+<div class="frente__corpo"><span class="frente__sobre">Formação para adultos</span><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p><span class="frente__mais">Conheça as aulas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>''')
     # Jovens Artistas e Extensão ficam só no bloco "Em breve" de Nossas aulas (com o Avise-me)
     return '<div class="frentes frentes--uma">' + "".join(out) + '</div>'
 

@@ -1154,3 +1154,19 @@ main:focus{outline:none}
   .botoes--mapas .btn{flex:1 1 calc(50% - 6px);justify-content:space-between}
   .botoes--mapas .btn:first-child{flex-basis:100%}
 }
+
+/* Início, Atelier no computador: foto cheia, sangrando até a borda esquerda e o fim da faixa; texto em destaque à direita */
+.frente__sobre{display:none}
+@media (min-width:990px){
+  .bloco:has(.frentes--uma){padding-bottom:0}
+  .frentes--uma .frente--principal{align-items:stretch;min-height:min(86vh,820px)}
+  .frentes--uma .frente--principal .foto{grid-column:1 / span 7;margin:0 0 0 calc(var(--px) * -1);aspect-ratio:auto;height:auto;min-height:100%}
+  .frentes--uma .frente--principal .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  .frentes--uma .frente--principal:hover .foto img{transform:scale(1.015)}
+  .frentes--uma .frente--principal .frente__corpo{grid-column:8 / -1;align-self:end;padding:0 0 var(--b-base) 24px;gap:20px}
+  .frente__sobre{display:block;font-size:.875rem;font-weight:500;color:var(--texto-claro2)}
+  .frentes--uma .frente__tit{font-size:clamp(4rem,6.4vw,6.5rem);line-height:.95;letter-spacing:-.04em}
+  .frentes--uma .frente__txt{font-size:1.125rem;line-height:1.55;max-width:34ch}
+  .frentes--uma .frente__mais{margin-top:12px;font-size:1rem}
+}
+@media (min-width:990px) and (prefers-color-scheme:dark){ .bloco.escuro .frente__sobre{color:rgb(0 0 0 / .6)} }
