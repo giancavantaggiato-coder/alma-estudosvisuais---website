@@ -678,3 +678,6 @@ html{overscroll-behavior-x:none}
 .sobre-intro{padding-top:var(--b-midia);padding-bottom:var(--b-base)}
 .sobre-intro .lead{color:var(--claro);max-width:28em}
 @media (max-width:749px){ .sobre-intro .lead{font-size:1.25rem;line-height:1.3} }
+.principios--4{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);row-gap:48px}
+.principios--4 .corpo{max-width:56ch}
+@media (max-width:989px){ .principios--4{grid-template-columns:1fr} }
