@@ -171,7 +171,8 @@ def pagina(arquivo, titulo, descricao, corpo, fecho_html=None, sobre_foto=False,
 # ------------------------------------------------------------------ Peças
 def duas(rotulo, lead, extra="", tag="h2", id_=""):
     """Cabeçalho de bloco: rótulo pequeno sob o filete; frase grande (lead) ao lado; texto e ações em `extra`."""
-    return f'''<div class="duas cab rev"><{tag} class="cab__rot"{f' id="{id_}"' if id_ else ''}>{rotulo}</{tag}><div class="lado"><p class="lead">{lead}</p>{extra}</div></div>'''
+    # Computador: rótulo e frase (título) à esquerda, texto e ações à direita. Celular: tudo empilhado.
+    return f'''<div class="duas cab cab--tit rev"><div class="cab__esq"><{tag} class="cab__rot"{f' id="{id_}"' if id_ else ''}>{rotulo}</{tag}><p class="lead">{lead}</p></div><div class="lado">{extra}</div></div>'''
 
 def corpo(t): return f'<div class="corpo"><p>{t}</p></div>'
 def botoes(*bs): return '<div class="botoes">' + "".join(bs) + '</div>'
