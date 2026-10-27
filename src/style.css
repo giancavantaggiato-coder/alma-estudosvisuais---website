@@ -840,3 +840,7 @@ main:focus{outline:none}
 /* Em breve: selo centralizado, em cinza da paleta, e foto apagada (indisponível) */
 .breve__img .selo{top:50%;left:50%;transform:translate(-50%,-50%);background:var(--claro3);color:var(--preto);white-space:nowrap}
 .breve__img img{opacity:.55}
+/* Em breve: véu escuro sobre a foto e o texto direto sobre ele, sem caixa */
+.breve__img img{opacity:1;filter:grayscale(1)}
+.breve__img::after{content:"";position:absolute;inset:0;background:rgb(0 0 0 / .5)}
+.breve__img .selo{z-index:1;background:none;border:0;border-radius:0;padding:0;color:var(--claro);font-size:.875rem;font-weight:500;letter-spacing:.01em}
