@@ -904,3 +904,36 @@ main:focus{outline:none}
 @media (max-width:989px){ .canal--longo .canal__valor{font-size:1.375rem} }
 .ct-canais{padding-bottom:var(--b-texto)}
 .canal__link{padding-block:20px 18px}
+
+/* =================== Rodapé no padrão da loja =================== */
+.rodape{background:var(--fundo);color:var(--tinta);padding-block:0;font-size:.875rem;line-height:1.5;border-top:1px solid var(--linha)}
+.rod-topo{display:grid;grid-template-columns:1fr;gap:20px;padding-block:30px}
+@media (min-width:750px){ .rod-topo{grid-template-columns:1fr 1fr;align-items:center} }
+.rod-news{display:flex;flex-direction:column;gap:6px}
+.rod-news__tit{font-size:1rem;line-height:1.3;font-weight:500}
+.rod-news__txt{font-size:.875rem;line-height:1.5;color:var(--texto)}
+.rod-form{position:relative;display:flex;flex-wrap:wrap;width:100%}
+.rod-form__campo{flex:1;min-width:0;height:48px;padding:0 52px 0 16px;border:1px solid var(--linha);background:transparent;color:var(--tinta);font-size:.875rem;outline:none;border-radius:0;appearance:none}
+.rod-form__campo::placeholder{color:var(--texto2)}
+.rod-form__campo:focus{border-color:var(--tinta)}
+.rod-form__btn{position:absolute;right:0;top:0;width:48px;height:48px;display:grid;place-items:center;padding:0;border:0;background:none;color:var(--tinta);cursor:pointer}
+.rod-form__btn svg{width:20px;height:20px;transition:transform .2s ease}
+.rod-form__btn:hover svg{transform:translateX(3px)}
+.rod-form .aviso{flex-basis:100%;margin-top:8px;font-size:.8125rem;color:var(--texto)}
+.rod-form .aviso:empty{display:none}
+.rod-util{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:20px max(48px, calc(env(safe-area-inset-bottom) + 24px));border-top:1px solid var(--linha);font-size:.75rem;color:var(--texto)}
+.rod-util a{color:inherit;text-decoration:none}
+.rod-util a:hover{color:var(--tinta);text-decoration:underline;text-underline-offset:3px}
+.rod-util__copy{display:flex;flex-wrap:wrap;gap:4px 16px}
+.rod-util__links{display:flex;flex-wrap:wrap;gap:6px 20px}
+.rod-util__social{display:flex;gap:4px}
+.rod-util__social a{width:40px;height:40px;display:grid;place-items:center;color:var(--tinta)}
+.rod-util__social a:hover{opacity:.6}
+.rod-util__social svg{width:20px;height:20px}
+@media (max-width:749px){
+  .rod-util{flex-direction:column;align-items:flex-start;gap:14px}
+  .rod-util__copy{flex-direction:column;gap:2px}
+  .rod-util__links{flex-direction:column;gap:0}
+  .rod-util__links a{display:inline-flex;min-height:32px;align-items:center}
+  .rod-util__social{order:-1;margin-left:-10px}
+}

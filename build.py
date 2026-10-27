@@ -80,48 +80,36 @@ def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
   </div>
 </section>'''
 
-ZAP_RODAPE = f'<a href="https://wa.me/{WHATSAPP}" {EXTERNO}>WhatsApp {fone(WHATSAPP)}</a>' if WHATSAPP else ''
+ICO_IG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>'
+ICO_ZAP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4.2 19.8l1.1-3.9A8.2 8.2 0 1 1 8.4 19z" stroke-linejoin="round"/><path d="M9.2 8.6c.2-.5.5-.5.8-.5h.4c.2 0 .4.1.5.4l.6 1.4c.1.2 0 .4-.1.6l-.4.5c-.1.1-.1.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5-.1l.5-.6c.1-.2.4-.2.6-.1l1.4.7c.2.1.3.3.3.5 0 .9-.7 1.6-1.6 1.6-2.7-.1-5.6-3-5.7-5.7 0-.4.1-.7.3-1z" fill="currentColor" stroke="none"/></svg>'
+SETA_ENVIAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 
+# Rodapé no padrão da loja (tema Horizon): novidades + campo com seta integrada; linha de utilidades
 RODAPE = f'''<footer class="rodape wrap">
-  <div class="novidades">
-    <h2 class="t3">Novidades do Alma</h2>
-    <p class="pequeno">*Workshops, textos novos e a agenda do atelier, direto no seu e-mail.</p>
-    <form class="form-linha" data-form="novidades" novalidate>
+  <div class="rod-topo">
+    <div class="rod-news">
+      <h2 class="rod-news__tit">Novidades do Alma</h2>
+      <p class="rod-news__txt">*Workshops, textos novos e a agenda do atelier, direto no seu e-mail.</p>
+    </div>
+    <form class="rod-form" data-form="novidades" novalidate>
       <label class="sr" for="mail-n">Seu e-mail</label>
-      <input class="campo" id="mail-n" name="email" type="email" autocomplete="email" placeholder="Seu e-mail" required>
-      <button class="btn btn-claro" type="submit">Assinar</button>
+      <input class="rod-form__campo" id="mail-n" name="email" type="email" autocomplete="email" placeholder="E-mail" required>
+      <button class="rod-form__btn" type="submit" aria-label="Assinar">{SETA_ENVIAR}</button>
       <p class="aviso" role="status"></p>
     </form>
   </div>
-  <div class="rod-colunas">
-    <div>
-      <h2 class="rotulo">Atelier</h2>
-      <p>Rua São Paulo, 864<br>São Caetano do Sul, SP</p>
-      <a href="{MAPA}" {EXTERNO}>Como chegar</a>
-    </div>
-    <nav aria-label="Site">
-      <h2 class="rotulo">Site</h2>
-      <a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="nossas-aulas.html">Nossas aulas</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a><a href="faca-parte.html">Aula experimental</a>
-    </nav>
-    <nav aria-label="Alunos e loja">
-      <h2 class="rotulo">Alunos</h2>
-      <a href="{APP}" {EXTERNO}>Área do aluno</a>
-      <h2 class="rotulo">Loja</h2>
-      <a class="ext" href="{LOJA}" {EXTERNO}>Materiais Artísticos{SETA}{EXT_SR}</a>
-      <a href="{LOJA}/policies/shipping-policy" {EXTERNO}>Envio e entrega</a>
-      <a href="{LOJA}/policies/terms-of-service" {EXTERNO}>Termos e condições</a>
-    </nav>
-    <div>
-      <h2 class="rotulo">Contato</h2>
-      {ZAP_RODAPE}
-      <a href="mailto:{EMAIL}">{EMAIL}</a>
-      <a href="{INSTAGRAM}" {EXTERNO}>Instagram</a>
-    </div>
-  </div>
-  <div class="rod-base">
-    <p>© {ANO} {NOME}</p>
-    <p>CNPJ 66.843.784/0001-28</p>
-    <a href="privacidade.html">Privacidade</a>
+  <div class="rod-util">
+    <p class="rod-util__copy"><span>© {ANO} <a href="index.html">{NOME}</a></span><span class="rod-util__cnpj">CNPJ 66.843.784/0001-28</span></p>
+    <ul class="rod-util__links">
+      <li><a href="{MAPA}" {EXTERNO}>Rua São Paulo, 864, São Caetano do Sul</a></li>
+      <li><a href="{APP}" {EXTERNO}>Área do aluno</a></li>
+      <li><a href="{LOJA}" {EXTERNO}>Materiais Artísticos</a></li>
+      <li><a href="privacidade.html">Privacidade</a></li>
+    </ul>
+    <ul class="rod-util__social">
+      <li><a href="{INSTAGRAM}" {EXTERNO} aria-label="Instagram">{ICO_IG}</a></li>
+      {f'<li><a href="https://wa.me/{WHATSAPP}" {EXTERNO} aria-label="WhatsApp">{ICO_ZAP}</a></li>' if WHATSAPP else ''}
+    </ul>
   </div>
 </footer>'''
 
