@@ -500,10 +500,7 @@ def build():
         + canal("Instagram", "@alma.<wbr>estudosvisuais", INSTAGRAM, "Seguir", "*Trabalhos de alunos, agenda e o dia a dia do atelier.", True, " canal--longo")
     pagina("contato.html", "Contato",
       "WhatsApp, e-mail, Instagram e endereço do Alma Centro de Estudos Visuais, na Rua São Paulo, 864, em São Caetano do Sul.",
-      f'''<section class="ct-topo wrap">
-  <h1 class="ct-topo__tit">Contato</h1>
-  <p class="ct-topo__txt">*O Alma fica em São Caetano do Sul, no ABC Paulista. Visitas ao atelier são agendadas previamente.</p>
-</section>
+      abertura("Contato", "*O Alma fica em São Caetano do Sul, no ABC Paulista. Visitas ao atelier são agendadas previamente.") + f'''
 <section class="ct-canais wrap" aria-label="Canais de contato">
   <ul class="canais">{canais}</ul>
 </section>

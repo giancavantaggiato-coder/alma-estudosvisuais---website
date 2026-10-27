@@ -898,3 +898,9 @@ main:focus{outline:none}
   .canal > .canal__nota{margin-left:0}
   .canal--longo .canal__valor{font-size:clamp(1.375rem,6.6vw,2.25rem)}
 }
+/* Contato no mesmo padrão tipográfico do site: título t1, valores no tamanho das frases de seção (lead) */
+.canal__valor,.canal--longo .canal__valor,.ct-local__end,.ct-parc__lead{font-size:1.625rem;line-height:1.2;font-weight:400;letter-spacing:-.015em}
+@media (min-width:990px){ .canal__valor,.canal--longo .canal__valor,.ct-local__end,.ct-parc__lead{font-size:2rem;line-height:1.15} }
+@media (max-width:989px){ .canal--longo .canal__valor{font-size:1.375rem} }
+.ct-canais{padding-bottom:var(--b-texto)}
+.canal__link{padding-block:20px 18px}
