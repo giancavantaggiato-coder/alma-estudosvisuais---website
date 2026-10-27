@@ -448,15 +448,15 @@ def build():
     INTERESSES = ["Ainda não sei", "Desenho", "Pintura (aquarela, guache, acrílica, óleo)", "Escultura", "Gravura", "Outra"]
     pagina("faca-parte.html", "Aula experimental",
       "Agende uma aula experimental no Alma Centro de Estudos Visuais, em São Caetano do Sul.",
-      abertura("Aula experimental", "*A entrada no Alma começa por uma aula experimental. Deixe seu contato e combinamos pelo WhatsApp o dia da sua visita ao atelier.") + f'''
+      abertura("Aula experimental", "*O ingresso no Alma começa por uma aula experimental: um primeiro contato com o atelier, a turma e o método de trabalho. Deixe seu contato e combinamos o dia pelo WhatsApp.") + f'''
 <section class="bloco wrap">
   <div class="duas">
     <div class="rev">
-      <h2 class="cab__rot">Como funciona</h2>
+      <h2 class="cab__rot">Como ingressar</h2>
       <ol class="passos-curtos">
-        <li><span class="passos-curtos__n" aria-hidden="true">1</span><div><h3 class="t3">Combinamos o dia</h3><p class="texto-cartao">*Respondemos pelo WhatsApp com os dias disponíveis.</p></div></li>
-        <li><span class="passos-curtos__n" aria-hidden="true">2</span><div><h3 class="t3">Você vem ao atelier</h3><p class="texto-cartao">*Faz uma aula com a turma, com orientação individual.</p></div></li>
-        <li><span class="passos-curtos__n" aria-hidden="true">3</span><div><h3 class="t3">Você decide</h3><p class="texto-cartao">*Se quiser continuar, combinamos seus dias fixos e a matrícula.</p></div></li>
+        <li><span class="passos-curtos__n" aria-hidden="true">1</span><div><h3 class="t3">Agendamento</h3><p class="texto-cartao">*Respondemos pelo WhatsApp com os horários das turmas que têm vaga e combinamos a data da sua aula.</p></div></li>
+        <li><span class="passos-curtos__n" aria-hidden="true">2</span><div><h3 class="t3">Aula no atelier</h3><p class="texto-cartao">*Você participa de uma aula regular, junto à turma e com orientação individual. Conversamos sobre seu repertório e sobre o que pretende estudar.</p></div></li>
+        <li><span class="passos-curtos__n" aria-hidden="true">3</span><div><h3 class="t3">Matrícula</h3><p class="texto-cartao">*Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.</p></div></li>
       </ol>
     </div>
     <form class="formulario lado rev" data-form="candidatura" novalidate>
