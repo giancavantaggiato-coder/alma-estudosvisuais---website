@@ -937,3 +937,5 @@ main:focus{outline:none}
   .rod-util__links a{display:inline-flex;min-height:32px;align-items:center}
   .rod-util__social{order:-1;margin-left:-10px}
 }
+/* Materiais Artísticos no celular: foto de ponta a ponta e mais alta */
+@media (max-width:749px){ .larga{aspect-ratio:4/5;margin-inline:calc(var(--px) * -1)} }
