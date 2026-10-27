@@ -143,6 +143,10 @@ INGRESSO = [("Agendamento", "Respondemos pelo WhatsApp com os horários que têm
             ("Aula no atelier", "Você participa de uma aula regular, junto à turma e com orientação individual. Conversamos sobre seu repertório e sobre o que pretende estudar.*"),
             ("Matrícula", "Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.*")]
 
+def topicos(itens, classe):
+    return f'<div class="{classe} topicos apos-cab">' + "".join(
+        f'<div class="topico rev"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div>' for t, d in itens) + '</div>'
+
 def frentes(qual):
     return '<div class="tres">' + "".join(
         f'''<a class="frente rev" href="{FRENTE_LINK[t]}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
@@ -223,13 +227,13 @@ def build():
 {NOTAS_SEC}''')
 
     # ---------------- Nossas aulas ----------------
-    ENSINO = [("Formação Básica e Contínua", "A formação segue princípios básicos como percepção visual, composição do espaço pictórico, e a luz à Forma."),
-              ("Percepção", "Percepção é a operação pela qual a mente organiza o mundo sensível em estruturas reconhecíveis — direções, formas, relações, tensões. A percepção, nesse sentido, opera ao nível dos sentidos o que o raciocínio realiza no nível do pensamento — ela já é, em si, uma forma de inteligência."),
-              ("Formação do Pensamento", "O ver é compreender. O pensamento se forma dentro da atividade perceptiva, desde o primeiro instante em que se organiza o que se vê, constrói repertório, e passa a orientar como a pessoa relaciona parte e todo, reconhece padrão em meio à complexidade, julga tensão e equilíbrio em qualquer experiência, visual ou não."),
-              ("Técnica e Processo", "A técnica se desenvolve de acordo com cada tipo de material, e é o meio que conduz o artista da ideia à forma."),
-              ("Composição", "Composição é a organização das partes de uma obra em relação ao todo, como um sistema de tensões, proporções e direções — a construção de uma unidade que dá corpo visível a um sentido."),
+    FORMACAO = [("Formação Básica e Contínua", "A formação segue princípios básicos como percepção visual, composição do espaço pictórico, e a luz à Forma."),
               ("Diferentes Materiais", "A abordagem de materiais é extensa e direcionada à autoexpressão de cada aluno, ao mesmo tempo que respeita as características intrínsecas do meio. Após um ciclo teórico básico, o aluno é conduzido ao seu trabalho pelo material que mais deseja explorar."),
               ("Diferentes Artistas", "Composto por diferentes artistas, o Alma promove um ambiente de aprendizado horizontal, no qual a mesma turma reúne alunos em materiais, meios e estágios diferentes — cada percurso seguindo sua própria lógica de desenvolvimento. Nesse espaço, a singularidade de cada um não é apagada pela comunidade — pelo contrário, se nutre dela.")]
+    ENSINO = [("Percepção", "Percepção é a operação pela qual a mente organiza o mundo sensível em estruturas reconhecíveis — direções, formas, relações, tensões. A percepção, nesse sentido, opera ao nível dos sentidos o que o raciocínio realiza no nível do pensamento — ela já é, em si, uma forma de inteligência."),
+              ("Formação do Pensamento", "O ver é compreender. O pensamento se forma dentro da atividade perceptiva, desde o primeiro instante em que se organiza o que se vê, constrói repertório, e passa a orientar como a pessoa relaciona parte e todo, reconhece padrão em meio à complexidade, julga tensão e equilíbrio em qualquer experiência, visual ou não."),
+              ("Técnica e Processo", "A técnica se desenvolve de acordo com cada tipo de material, e é o meio que conduz o artista da ideia à forma."),
+              ("Composição", "Composição é a organização das partes de uma obra em relação ao todo, como um sistema de tensões, proporções e direções — a construção de uma unidade que dá corpo visível a um sentido.")]
     FAQ = [("Preciso saber desenhar para começar?", "Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.*"),
            ("Para quem são as aulas?", "As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.*"),
            ("Quanto tempo dura o curso?", "Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso.*"),
@@ -249,9 +253,14 @@ def build():
   {passos(PERCURSO)}
   <hr class="filete">
 </section>
+<section class="secao wrap" id="formacao">
+  {intro("Formação", "<p>Uma base comum para todos e, a partir dela, um percurso próprio, num ambiente que reúne artistas em momentos diferentes.*</p>")}
+  {topicos(FORMACAO, "tres")}
+  <hr class="filete">
+</section>
 <section class="secao wrap" id="ensino">
   {intro("Sobre o ensino", "<p>O percurso começa por uma base comum, onde os artistas abordam os fundamentos básicos — e é a partir disso que cada artista é conduzido ao aprofundamento de sua prática.</p>")}
-  {acordeao(ENSINO)}
+  {topicos(ENSINO, "duas-col")}
 </section>
 <section class="secao" id="trabalhos">
   <h2 class="t2 wrap rev">Trabalhos de Alunos</h2>
