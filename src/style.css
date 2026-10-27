@@ -5,6 +5,7 @@
    blocos vizinhos alternam o tom de fundo. */
 
 :root{
+  color-scheme:only light;
   --claro:#FEFCE6; --tom:#F2F0DA; --claro2:#D5D4BF; --claro3:#ABAA98;
   --preto:#000; --grafite:#141414;
   --texto:rgb(0 0 0 / .74); --texto2:rgb(0 0 0 / .62); --texto-cartao:rgb(0 0 0 / .62); --texto-meta:rgb(0 0 0 / .58);
@@ -19,7 +20,7 @@
 @media (min-width:990px){ :root{ --gap:20px; --nav:76px; --b-topo:32px; --b-filete:32px; --b-titulo:32px; --b-texto:32px; --b-midia:64px; --b-base:104px } }
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--nav)}
+html{color-scheme:only light;background:var(--claro);-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:var(--nav)}
 body{margin:0;background:var(--claro);color:var(--preto);font-family:var(--f);font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
