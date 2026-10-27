@@ -73,10 +73,10 @@ def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
     rot, href = segundo
     return f'''<section class="cta" id="aula-experimental" aria-labelledby="cta-tit">
   <div class="cta__in wrap rev">
-    <p class="cta__rot">Aula experimental</p>
-    <h2 class="cta__tit" id="cta-tit">*Tudo começa por uma aula.</h2>
-    <p class="cta__txt">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
-    <div class="botoes"><a class="btn cta__btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha cta__linha" href="{href}">{rot}</a></div>
+    <div class="cta__esq"><p class="cta__rot">Aula experimental</p>
+    <h2 class="cta__tit" id="cta-tit">*Tudo começa por uma aula.</h2></div>
+    <div class="cta__dir"><p class="cta__txt">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
+    <div class="botoes"><a class="btn cta__btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha cta__linha" href="{href}">{rot}</a></div></div>
   </div>
 </section>'''
 
@@ -199,7 +199,7 @@ def frentes():
 <div class="frente__corpo"><span class="frente__selo">{selo}</span><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></div></a>''')
         else:
             out.append(f'''<a class="frente frente--principal rev" href="{href}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="frente__corpo"><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p></div></a>''')
+<div class="frente__corpo"><h3 class="frente__tit">{t}</h3><p class="frente__txt">{d}</p><span class="frente__mais">Conheça as aulas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>''')
     # Jovens Artistas e Extensão ficam só no bloco "Em breve" de Nossas aulas (com o Avise-me)
     return '<div class="frentes frentes--uma">' + "".join(out) + '</div>'
 
@@ -240,8 +240,8 @@ def cartoes_notas():
         + "".join('<div class="carr__item notas__pag lista-m">' + "".join(cart(*n) for n in pg) + '</div>' for pg in paginas)
         + '</div>' + controles(len(paginas), "Notas e Ensaios") + '</div>')
 
-DIRECAO = duas("Direção pedagógica", "Giancarlo Avantaggiato",
-    '<p class="cargo">Artista Plástico e Diretor</p>' + corpo("*Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
+DIRECAO = duas("Direção pedagógica", 'Giancarlo Avantaggiato</p><p class="cargo">Artista Plástico e Diretor',
+    corpo("*Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
           "e integra o coletivo de artistas Matizes."))
 
 def acordeao(itens):
@@ -386,7 +386,7 @@ def build():
   </div>
 </section>
 <section class="bloco wrap" id="no-atelier">
-  {duas("No atelier", "*Um grupo único, com pessoas em momentos diferentes do percurso. Boa parte do aprendizado nasce dessa convivência.", corpo("Composto por diferentes artistas, o Alma promove um ambiente de aprendizado horizontal: a mesma turma reúne alunos em materiais, meios e estágios diferentes, e cada percurso segue a sua própria lógica de desenvolvimento. Nesse espaço, a singularidade de cada um se nutre da comunidade."))}
+  {duas("No atelier", "*Um grupo único, com pessoas em momentos diferentes do percurso.", corpo("Composto por diferentes artistas, o Alma promove um ambiente de aprendizado horizontal: a mesma turma reúne alunos em materiais, meios e estágios diferentes, e cada percurso segue a sua própria lógica de desenvolvimento. Nesse espaço, a singularidade de cada um se nutre da comunidade."))}
   <div class="dividido apos">
     <div class="dividido__img rev"><img src="img/nota-desenho.jpg" alt="Estudo feito no atelier" loading="lazy"></div>
     <dl class="ficha dividido__txt">{"".join(f'<div class="rev"><dt>{n}</dt><dd>*{t}</dd></div>' for n, t in NO_ATELIER)}</dl>

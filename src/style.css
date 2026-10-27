@@ -986,3 +986,53 @@ main:focus{outline:none}
   .ab-foto::after{left:50%;background:linear-gradient(to right,rgb(0 0 0 / .35),transparent 40%)}
   .ab-foto__txt{max-width:calc(50% - var(--gap) * 2)}
 }
+
+/* =================== Pente fino: computador (≥ 990 px) =================== */
+.frente__mais{display:none}
+.cta__esq,.cta__dir{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+@media (min-width:990px){
+  /* Escala: H1 de página > fecho > títulos de seção (40) > títulos de item (32/24) > texto (16) */
+  .abertura .t1,.ab-foto__tit,.video__tit,.ct-topo__tit{font-size:clamp(3rem,4.6vw,4.75rem);line-height:1.02;letter-spacing:-.03em}
+  .abertura{padding-top:calc(var(--b-base) * .9)}
+  .abertura .duas{align-items:end}
+  .abertura .lado .corpo{font-size:1.0625rem}
+
+  /* Fecho (aula experimental): título à esquerda, texto e botões à direita, como os outros blocos */
+  .cta__in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:end}
+  .cta__esq{grid-column:1 / span 7;gap:16px}
+  .cta__dir{grid-column:8 / -1}
+  .cta__tit{font-size:3.5rem;line-height:1.02;max-width:none}
+
+  /* Início, Atelier: foto 4:3 à esquerda; à direita título, texto e chamada, sem vazio */
+  .frentes--uma .frente--principal{align-items:center}
+  .frentes--uma .frente--principal .foto{grid-column:1 / span 7;aspect-ratio:4/3}
+  .frentes--uma .frente--principal .frente__corpo{grid-column:9 / -1;gap:16px}
+  .frentes--uma .frente__tit{font-size:2.5rem;line-height:1.05;letter-spacing:-.02em}
+  .frentes--uma .frente__txt{font-size:1.0625rem}
+  .frente__mais{display:inline-flex;align-items:center;gap:10px;margin-top:8px;padding-bottom:4px;border-bottom:1px solid currentColor;font-size:.875rem}
+  .frente__mais svg{width:18px;height:18px;transition:transform .25s ease}
+  a.frente:hover .frente__mais svg{transform:translateX(4px)}
+
+  /* Trabalhos de alunos: obras maiores */
+  .trabalhos .carr__item{height:min(36vw,560px)}
+
+  /* Direção: cargo logo abaixo do nome */
+  .cab__esq .cargo{margin-top:-8px;color:var(--texto)}
+
+  /* No atelier: imagem horizontal ao lado da ficha */
+  .dividido{align-items:start}
+  .dividido__img{grid-column:1 / span 6;aspect-ratio:3/2}
+  .dividido__txt{grid-column:8 / -1}
+
+  /* Sobre: abertura no ritmo dos títulos de seção */
+  .sobre-intro .lead{font-size:2.25rem;line-height:1.15;max-width:30em}
+
+  /* Blog: destaque grande à esquerda; duas publicações empilhadas à direita, sem vão */
+  .destaques{grid-template-rows:auto auto;align-items:start}
+  .destaque--1{grid-column:1 / span 8;grid-row:1 / span 2}
+  .destaque:not(.destaque--1){grid-column:9 / -1;display:flex;flex-direction:column;gap:12px;padding-bottom:24px;border-bottom:1px solid var(--linha)}
+  .destaque:not(.destaque--1) + .destaque:not(.destaque--1){padding-top:0}
+  .destaque:not(.destaque--1) .foto{aspect-ratio:3/2}
+  .destaque:not(.destaque--1) .t3{font-size:1.25rem;line-height:1.25}
+  .destaque__tit{font-size:2.5rem;line-height:1.08;letter-spacing:-.02em}
+}
