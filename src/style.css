@@ -758,7 +758,7 @@ html{overscroll-behavior-x:none}
 /* Chamada final (aula experimental): faixa em contraste com a página, separada do conteúdo */
 .cta{--cta-bg:var(--claro2);--cta-fg:var(--preto);--cta-fg2:rgb(0 0 0 / .68);background:var(--cta-bg);color:var(--cta-fg);padding-block:calc(var(--b-base) * 1.1)}
 .cta__in{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
-.cta__rot{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cta-fg2)}
+.cta__rot{font-size:.875rem;line-height:1.4;font-weight:500;letter-spacing:0;color:var(--cta-fg)}
 .cta__tit{font-size:2.25rem;line-height:1.05;font-weight:500;letter-spacing:-.025em;max-width:14em;text-wrap:balance}
 .cta__txt{font-size:1rem;line-height:1.6;color:var(--cta-fg2);max-width:46ch;text-wrap:pretty}
 .cta .botoes{margin-top:8px}
