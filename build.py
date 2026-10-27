@@ -311,7 +311,9 @@ def build():
   {duas("Quem somos", "*Três frentes, um pensamento.",
         corpo("Somos um Centro de Estudos Visuais dedicado à formação, à pesquisa e à experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo e trabalhamos em três frentes: o Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, iniciação da percepção visual para crianças e adolescentes; e a Extensão, que leva a prática visual para além do Atelier.")
         + botoes('<a class="btn btn-claro" href="sobre.html">Sobre o Alma</a>'))}
-  <div class="apos">{frentes()}</div>
+</section>
+<section class="bloco tom wrap bloco--atelier" aria-label="Atelier">
+  {frentes()}
 </section>
 <section class="bloco tom wrap">
   {duas("Trabalhos de alunos", "*Estudos e trabalhos feitos no atelier, em diferentes técnicas e momentos do percurso.")}

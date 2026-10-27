@@ -1170,3 +1170,16 @@ main:focus{outline:none}
   .frentes--uma .frente__mais{margin-top:12px;font-size:1rem}
 }
 @media (min-width:990px) and (prefers-color-scheme:dark){ .bloco.escuro .frente__sobre{color:rgb(0 0 0 / .6)} }
+/* Atelier em bloco próprio, separado de Quem somos; foto mais baixa */
+.bloco--atelier::before{display:none}
+@media (min-width:990px){
+  .bloco:has(.frentes--uma){padding-bottom:0}
+  .bloco--atelier{padding-top:0}
+  .frentes--uma .frente--principal{min-height:min(62vh,560px)}
+  .frentes--uma .frente__tit{font-size:clamp(3.5rem,5.4vw,5.5rem)}
+  .frentes--uma .frente--principal .frente__corpo{padding-bottom:var(--b-midia)}
+}
+@media (max-width:989px){ .bloco--atelier{padding-top:var(--b-topo)} }
+.bloco--atelier .frente__sobre{color:var(--texto2)}
+.bloco--atelier .frente__txt{color:var(--texto)}
+@media (prefers-color-scheme:dark){ .bloco--atelier .frente__tit{color:var(--claro)} .bloco--atelier .frente__sobre{color:var(--texto-claro2)} }
