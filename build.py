@@ -69,8 +69,8 @@ def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
   <div class="duas cab rev">
     <h2 class="cab__rot">Aula experimental</h2>
     <div class="lado">
-      <p class="lead">Tudo começa por uma aula.</p>
-      <p class="corpo">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
+      <p class="lead">*Tudo começa por uma aula.</p>
+      <p class="corpo">Desenvolva sua percepção, sua técnica e sua produção artística em um percurso acompanhado de forma individual. *Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir.</p>
       <div class="botoes"><a class="btn" href="faca-parte.html">Agendar</a><a class="btn btn-linha" href="{href}">{rot}</a></div>
     </div>
   </div>
@@ -79,7 +79,7 @@ def fecho(segundo=("Nossas aulas", "nossas-aulas.html")):
 RODAPE = f'''<footer class="rodape wrap">
   <div class="novidades">
     <h2 class="t3">Novidades do Alma</h2>
-    <p class="pequeno">Workshops, textos novos e a agenda do atelier, direto no seu e-mail.</p>
+    <p class="pequeno">*Workshops, textos novos e a agenda do atelier, direto no seu e-mail.</p>
     <form class="form-linha" data-form="novidades" novalidate>
       <label class="sr" for="mail-n">Seu e-mail</label>
       <input class="campo" id="mail-n" name="email" type="email" autocomplete="email" placeholder="Seu e-mail" required>
@@ -232,26 +232,26 @@ NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A 
 
 def cartoes_notas():
     cart = lambda img, cat, dt, data, t: f'''<a class="cartao" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="t3">{t}</h3></a>'''
+<p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="t3">*{t}</h3></a>'''
     paginas = [NOTAS[k:k+3] for k in range(0, len(NOTAS), 3)]
     return ('<div class="carr carr--notas" data-carr><div class="carr__trilho notas">'
         + "".join('<div class="carr__item notas__pag lista-m">' + "".join(cart(*n) for n in pg) + '</div>' for pg in paginas)
         + '</div>' + controles(len(paginas), "Notas e Ensaios") + '</div>')
 
 DIRECAO = duas("Direção pedagógica", "Giancarlo Avantaggiato",
-    '<p class="cargo">Artista Plástico e Diretor</p>' + corpo("Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
+    '<p class="cargo">Artista Plástico e Diretor</p>' + corpo("*Formado em Design de Produto e em Arquitetura e Urbanismo, fez estudos avançados no Atelier José Paulo de Latorre "
           "e integra o coletivo de artistas Matizes."))
 
 def acordeao(itens):
     return '<div class="acordeao">' + "".join(
         f'<details class="rev"><summary>{q}</summary><div class="resp corpo">{r}</div></details>' for q, r in itens) + '</div>'
 
-FAQ = [("Preciso saber desenhar para começar?", "<p>Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.</p>"),
-       ("Para quem são as aulas?", "<p>As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.</p>"),
-       ("Quanto tempo dura o curso?", "<p>Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
-       ("Quanto custa?", "<p>As mensalidades começam em R$ 420, conforme a frequência semanal. Os valores completos são apresentados na aula experimental.</p>"),
-       ("Quais são os horários?", "<p>As turmas acontecem no período noturno durante a semana e à tarde aos sábados. O dia da aula experimental é combinado pelo WhatsApp.</p>"),
-       ("E se eu precisar faltar?", "<p>Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.</p>")]
+FAQ = [("Preciso saber desenhar para começar?", "<p>*Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.</p>"),
+       ("Para quem são as aulas?", "<p>*As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.</p>"),
+       ("Quanto tempo dura o curso?", "<p>*Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso. Há alunos com poucos meses de atelier e outros com mais de cinco anos.</p>"),
+       ("Quanto custa?", "<p>*As mensalidades começam em R$ 420, conforme a frequência semanal. Os valores completos são apresentados na aula experimental.</p>"),
+       ("Quais são os horários?", "<p>*As turmas acontecem no período noturno durante a semana e à tarde aos sábados. O dia da aula experimental é combinado pelo WhatsApp.</p>"),
+       ("E se eu precisar faltar?", "<p>*Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.</p>")]
 
 REFERENCIAS = [("Josef Albers", "A interação da cor e o ensino pela experiência."),
                ("Rudolf Arnheim", "A percepção visual como forma de pensamento."),
@@ -276,7 +276,7 @@ def em_breve():
       </form>
     </article>'''
     return f'''<section class="bloco tom wrap" id="em-breve">
-  {duas("Em breve", "Jovens Artistas e Extensão estão em preparação.", corpo("Deixe seu e-mail e avisamos quando as inscrições abrirem."))}
+  {duas("Em breve", "*Jovens Artistas e Extensão estão em preparação.", corpo("*Deixe seu e-mail e avisamos quando as inscrições abrirem."))}
   <div class="breve apos">
     {item(*JOVENS, "jovens")}
     {item(*WORKSHOPS, "workshops")}
@@ -304,22 +304,22 @@ def build():
   </div>
 </section>
 <section class="bloco escuro wrap">
-  {duas("Quem somos", "Três frentes, um pensamento.",
+  {duas("Quem somos", "*Três frentes, um pensamento.",
         corpo("Somos um Centro de Estudos Visuais dedicado à formação, à pesquisa e à experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo e trabalhamos em três frentes: o Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, iniciação da percepção visual para crianças e adolescentes; e a Extensão, que leva a prática visual para além do Atelier.")
         + botoes('<a class="btn btn-claro" href="sobre.html">Saiba mais</a>'))}
   <div class="apos">{frentes()}</div>
 </section>
 <section class="bloco wrap">
-  {duas("O atelier", "Turmas pequenas, um começo comum e o tempo de cada um.",
+  {duas("O atelier", "*Turmas pequenas, um começo comum e o tempo de cada um.",
         corpo("O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, em diferentes meios e técnicas.")
         + botoes('<a class="btn" href="nossas-aulas.html#percurso">Como funciona</a>'))}
 </section>
 <section class="bloco tom wrap">
-  {duas("Trabalhos de alunos", "Estudos e trabalhos feitos no atelier, em diferentes técnicas e momentos do percurso.")}
+  {duas("Trabalhos de alunos", "*Estudos e trabalhos feitos no atelier, em diferentes técnicas e momentos do percurso.")}
   <div class="apos">{TRABALHOS}</div>
 </section>
 <section class="bloco wrap">
-  {duas("Últimos textos", "Notas e ensaios sobre ver, fazer e pensar a imagem.", corpo("Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + botoes('<a class="btn" href="blog.html">Ver todos</a>'))}
+  {duas("Últimos textos", "*Notas e ensaios sobre ver, fazer e pensar a imagem.", corpo("Reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.") + botoes('<a class="btn" href="blog.html">Ver todos</a>'))}
   <div class="apos">{cartoes_notas()}</div>
 </section>
 <section class="bloco tom wrap">
@@ -371,42 +371,42 @@ def build():
   <img src="img/frente-atelier.jpg" alt="Alunos trabalhando lado a lado num atelier" fetchpriority="high">
   <div class="ab-foto__txt">
     <h1 class="t1 ab-foto__tit">Nossas aulas</h1>
-    <p class="ab-foto__sub">Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
+    <p class="ab-foto__sub">*Um atelier de formação para adultos, com turmas pequenas e acompanhamento individual.</p>
   </div>
 </section>
 <section class="frase wrap">
-  <p class="frase__txt rev">Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a <em>própria luz</em>.</p>
+  <p class="frase__txt rev">*Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a <em>própria luz</em>.</p>
 </section>
 <section class="bloco tom wrap" id="percurso">
-  {duas("O percurso", "Um começo comum e, depois dele, um caminho individual.", corpo("O percurso começa por uma base comum, em que os alunos abordam os fundamentos, e é a partir dela que cada um é conduzido ao aprofundamento da própria prática."))}
-  <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
+  {duas("O percurso", "*Um começo comum e, depois dele, um caminho individual.", corpo("O percurso começa por uma base comum, em que os alunos abordam os fundamentos, e é a partir dela que cada um é conduzido ao aprofundamento da própria prática."))}
+  <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">*{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
 <section class="bloco escuro wrap" id="formacao">
-  {duas("Formação", "Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("*A formação básica segue quatro princípios, nesta ordem: a percepção visual, base de todo o trabalho; o Desenho, que estrutura o espaço; a luz, que dá plasticidade à forma; e a composição, que dá unidade ao trabalho."))}
-  <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">{d}</p></article>' for img, t, d in BASES)}</div>
+  {duas("Formação", "*Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("*A formação básica segue quatro princípios, nesta ordem: a percepção visual, base de todo o trabalho; o Desenho, que estrutura o espaço; a luz, que dá plasticidade à forma; e a composição, que dá unidade ao trabalho."))}
+  <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">*{d}</p></article>' for img, t, d in BASES)}</div>
   <div class="duas cab continua">
     <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">*A abordagem de materiais é extensa e voltada à expressão de cada aluno, respeitando as características próprias de cada meio. Concluído o ciclo básico, o aluno segue pelo material que mais deseja explorar.</p></div>
     <ul class="meios meios--lista lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
   </div>
 </section>
 <section class="bloco wrap" id="no-atelier">
-  {duas("No atelier", "Um grupo único, com pessoas em momentos diferentes do percurso. Boa parte do aprendizado nasce dessa convivência.", corpo("Composto por diferentes artistas, o Alma promove um ambiente de aprendizado horizontal: a mesma turma reúne alunos em materiais, meios e estágios diferentes, e cada percurso segue a sua própria lógica de desenvolvimento. Nesse espaço, a singularidade de cada um se nutre da comunidade."))}
+  {duas("No atelier", "*Um grupo único, com pessoas em momentos diferentes do percurso. Boa parte do aprendizado nasce dessa convivência.", corpo("Composto por diferentes artistas, o Alma promove um ambiente de aprendizado horizontal: a mesma turma reúne alunos em materiais, meios e estágios diferentes, e cada percurso segue a sua própria lógica de desenvolvimento. Nesse espaço, a singularidade de cada um se nutre da comunidade."))}
   <div class="dividido apos">
     <div class="dividido__img rev"><img src="img/nota-desenho.jpg" alt="Estudo feito no atelier" loading="lazy"></div>
-    <dl class="ficha dividido__txt">{"".join(f'<div class="rev"><dt>{n}</dt><dd>{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
+    <dl class="ficha dividido__txt">{"".join(f'<div class="rev"><dt>{n}</dt><dd>*{t}</dd></div>' for n, t in NO_ATELIER)}</dl>
   </div>
 </section>
 <section class="bloco tom wrap" id="principios">
-  {duas("Sobre o ensino", "Quatro ideias que guiam o trabalho em sala.")}
+  {duas("Sobre o ensino", "*Quatro ideias que guiam o trabalho em sala.")}
   <ul class="principios principios--4 apos">{"".join(f'<li class="rev"><p class="principios__t">{t}</p><p class="corpo">{d}</p></li>' for t, d in PRINCIPIOS)}</ul>
 </section>
 <section class="bloco wrap" id="trabalhos">
-  {duas("Trabalhos de alunos", "Estudos e trabalhos feitos no atelier.")}
+  {duas("Trabalhos de alunos", "*Estudos e trabalhos feitos no atelier.")}
   <div class="apos">{TRABALHOS}</div>
 </section>
 {em_breve()}
 <section class="bloco wrap" id="faq">
-  {duas("Perguntas frequentes", "O que mais nos perguntam antes da primeira aula.", f'<p class="pequeno">Outras dúvidas: <a href="mailto:{EMAIL}">{EMAIL}</a></p>')}
+  {duas("Perguntas frequentes", "*O que mais nos perguntam antes da primeira aula.", f'<p class="pequeno">Outras dúvidas: <a href="mailto:{EMAIL}">{EMAIL}</a></p>')}
   <div class="apos">{acordeao(FAQ)}</div>
 </section>''', fecho_html=fecho(("Contato", "contato.html")))
 
@@ -427,7 +427,7 @@ def build():
 <section class="bloco wrap" id="ultimas">
   <div class="duas cab rev"><h2 class="cab__rot">Últimas publicações</h2><div class="lado"></div></div>
   <div class="destaques apos">
-    {"".join(f'''<a class="destaque{" destaque--1" if k == 0 else ""} rev" href="#todos"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div><div class="destaque__txt"><p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="{"destaque__tit" if k == 0 else "t3"}">{t}</h3></div></a>''' for k, (img, cat, dt, data, t) in enumerate(NOTAS[:3]))}
+    {"".join(f'''<a class="destaque{" destaque--1" if k == 0 else ""} rev" href="#todos"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div><div class="destaque__txt"><p class="meta"><span>{cat}</span><time datetime="{dt}">{data}</time></p><h3 class="{"destaque__tit" if k == 0 else "t3"}">*{t}</h3></div></a>''' for k, (img, cat, dt, data, t) in enumerate(NOTAS[:3]))}
   </div>
 </section>
 <section class="bloco tom wrap" id="todos">
@@ -441,7 +441,7 @@ def build():
   <p class="contagem pequeno" data-total="{len(POSTS)}" aria-live="polite">{len(POSTS)} textos publicados</p>
   <div class="posts">''' + "".join(
         f'''<article class="post rev" data-tag="{tag}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<p class="meta"><span>{tag}</span></p><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></article>''' for img, tag, t, d in POSTS) + '''</div>
+<p class="meta"><span>{tag}</span></p><h3 class="t3">*{t}</h3><p class="texto-cartao">*{d}</p></article>''' for img, tag, t, d in POSTS) + '''</div>
   <p class="vazio corpo" hidden>Nenhum texto encontrado. Tente outro termo ou outro tema.</p>
 </section>''')
 
@@ -449,15 +449,15 @@ def build():
     INTERESSES = ["Ainda não sei", "Desenho", "Plástica", "Pintura", "Escultura e cerâmica", "Gravura", "Fotografia e cinema", "Design e arquitetura"]
     pagina("faca-parte.html", "Aula experimental",
       "Agende uma aula experimental no Alma Centro de Estudos Visuais, em São Caetano do Sul.",
-      abertura("Aula experimental", "A entrada no Alma começa por uma aula experimental. Deixe seu contato e combinamos pelo WhatsApp o dia da sua visita ao atelier.") + f'''
+      abertura("Aula experimental", "*A entrada no Alma começa por uma aula experimental. Deixe seu contato e combinamos pelo WhatsApp o dia da sua visita ao atelier.") + f'''
 <section class="bloco wrap">
   <div class="duas">
     <div class="rev">
       <h2 class="cab__rot">Como funciona</h2>
       <ol class="passos-curtos">
-        <li><span class="passos-curtos__n" aria-hidden="true">1</span><div><h3 class="t3">Combinamos o dia</h3><p class="texto-cartao">Respondemos pelo WhatsApp com os dias disponíveis.</p></div></li>
-        <li><span class="passos-curtos__n" aria-hidden="true">2</span><div><h3 class="t3">Você vem ao atelier</h3><p class="texto-cartao">Faz uma aula com a turma, com orientação individual.</p></div></li>
-        <li><span class="passos-curtos__n" aria-hidden="true">3</span><div><h3 class="t3">Você decide</h3><p class="texto-cartao">Se quiser continuar, combinamos seus dias fixos e a matrícula.</p></div></li>
+        <li><span class="passos-curtos__n" aria-hidden="true">1</span><div><h3 class="t3">Combinamos o dia</h3><p class="texto-cartao">*Respondemos pelo WhatsApp com os dias disponíveis.</p></div></li>
+        <li><span class="passos-curtos__n" aria-hidden="true">2</span><div><h3 class="t3">Você vem ao atelier</h3><p class="texto-cartao">*Faz uma aula com a turma, com orientação individual.</p></div></li>
+        <li><span class="passos-curtos__n" aria-hidden="true">3</span><div><h3 class="t3">Você decide</h3><p class="texto-cartao">*Se quiser continuar, combinamos seus dias fixos e a matrícula.</p></div></li>
       </ol>
     </div>
     <form class="formulario lado rev" data-form="candidatura" novalidate>
@@ -474,11 +474,11 @@ def build():
 </section>''', fecho_html="")
 
     # Contato
-    zap = (f'''<div><dt class="t3">WhatsApp</dt><dd class="corpo">{fone(WHATSAPP)}, para aula experimental e dúvidas sobre o atelier.</dd>
+    zap = (f'''<div><dt class="t3">WhatsApp</dt><dd class="corpo">{fone(WHATSAPP)}, *para aula experimental e dúvidas sobre o atelier.</dd>
         <dd><a class="btn btn-linha-escura" href="https://wa.me/{WHATSAPP}" {EXTERNO}>Conversar</a></dd></div>''' if WHATSAPP else "")
     pagina("contato.html", "Contato",
       "Endereço, e-mail e redes do Alma Centro de Estudos Visuais, em São Caetano do Sul.",
-      abertura("Contato", "O Alma fica em São Caetano do Sul, no ABC Paulista. Visitas ao atelier são agendadas previamente.") + f'''
+      abertura("Contato", "*O Alma fica em São Caetano do Sul, no ABC Paulista. Visitas ao atelier são agendadas previamente.") + f'''
 <section class="bloco wrap">
   <div class="duas">
     <dl class="contatos rev">
@@ -498,8 +498,8 @@ def build():
   </div>
 </section>
 <section class="bloco tom wrap">
-  {duas("Parcerias", "Formação visual com escolas, instituições e coletivos.",
-        corpo("Residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.")
+  {duas("Parcerias", "*Formação visual com escolas, instituições e coletivos.",
+        corpo("*Residências, oficinas fechadas, curadoria de material para turmas e projetos de extensão.")
         + botoes(f'<a class="btn" href="mailto:{EMAIL}?subject=Parcerias">Escrever</a>'))}
 </section>''')
 
@@ -515,7 +515,7 @@ def build():
   <div class="nao-achei__arte">{TELA}<span class="nao-achei__num">404</span></div>
   <div class="nao-achei__txt">
     <h1 class="t1">Fora do enquadramento.</h1>
-    <p class="corpo">Esta página não existe ou mudou de lugar. O ponto de fuga continua o mesmo: volte ao início ou conheça as aulas do atelier.</p>
+    <p class="corpo">*Esta página não existe ou mudou de lugar. O ponto de fuga continua o mesmo: volte ao início ou conheça as aulas do atelier.</p>
     <div class="botoes"><a class="btn btn-claro" href="index.html">Início</a><a class="btn btn-linha" href="nossas-aulas.html">Nossas aulas</a></div>
   </div>
 </section>''', fecho_html="", base="/")
@@ -523,7 +523,7 @@ def build():
     # Privacidade
     pagina("privacidade.html", "Privacidade",
       "Como o Alma Centro de Estudos Visuais trata os dados enviados pelo site.",
-      abertura("Privacidade", "Como tratamos os dados que você envia pelo site. Última atualização: outubro de 2026.") + f'''
+      abertura("Privacidade", "*Como tratamos os dados que você envia pelo site. Última atualização: outubro de 2026.") + f'''
 <section class="bloco wrap">
   <div class="duas cab">
     <h2 class="cab__rot">Política de privacidade</h2>
