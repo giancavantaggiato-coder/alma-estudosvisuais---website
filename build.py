@@ -186,7 +186,7 @@ def abertura(titulo, texto, escura=False):
   <div class="duas"><h1 class="t1">{titulo}</h1><div class="lado"><p class="corpo">{texto}</p></div></div>
 </section>'''
 
-JOVENS = ("frente-jovens.jpg", "Jovens Artistas", "Introdução à prática artística e desenvolvimento da percepção visual para crianças e adolescentes, no tempo de aprendizagem de cada idade, estimulando a observação, a criatividade e a construção de repertório.")
+JOVENS = ("frente-jovens.jpg", "Jovens Artistas", "*Introdução à prática artística e desenvolvimento da percepção visual para crianças e adolescentes, no tempo de aprendizagem de cada idade, estimulando a observação, a criatividade e a construção de repertório.")
 WORKSHOPS = ("frente-extensao.jpg", "Extensão", "Leva a prática artística para além do espaço interno do Alma, com atividades abertas e sazonais que ampliam o contato com as Artes Visuais e com a criação.")
 
 FRENTES = [
@@ -260,7 +260,7 @@ REFERENCIAS = [("Josef Albers", "A interação da cor e o ensino pela experiênc
                ("György Kepes", "A linguagem da visão e o movimento."),
                ("László Moholy-Nagy", "Materiais, sentidos e o curso preliminar da Bauhaus.")]
 
-LOREM1 = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>"
+LOREM1 = "<p>*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>"
 
 def em_breve():
     def item(img, t, d, chave):
@@ -359,10 +359,10 @@ def build():
                 ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência."),
                 ("O seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar."),
                 ("A própria luz", "Sem prazo de conclusão. O trabalho segue até encontrar a sua linguagem.")]
-    PRINCIPIOS = [("Percepção", "Percepção é a operação pela qual a mente organiza o mundo sensível em estruturas reconhecíveis: direções, formas, relações, tensões. Ela realiza no nível dos sentidos o que o raciocínio realiza no nível do pensamento, e já é, em si, uma forma de inteligência."),
+    PRINCIPIOS = [("Percepção", "*Percepção é a operação pela qual a mente organiza o mundo sensível em estruturas reconhecíveis: direções, formas, relações, tensões. Ela realiza no nível dos sentidos o que o raciocínio realiza no nível do pensamento, e já é, em si, uma forma de inteligência."),
                   ("Formação do pensamento", "Ver é compreender. O pensamento se forma dentro da atividade perceptiva: ao organizar o que se vê, constrói repertório e passa a orientar como a pessoa relaciona parte e todo, reconhece padrão em meio à complexidade e julga tensão e equilíbrio em qualquer experiência, visual ou não."),
                   ("Técnica e processo", "A técnica se desenvolve de acordo com cada material e é o meio que conduz o artista da ideia à forma. Ela se ensina como caminho de descoberta, que ganha sentido quando se funde à criação de cada aluno."),
-                  ("Composição", "Composição é a organização das partes de uma obra em relação ao todo, como um sistema de tensões, proporções e direções: a construção de uma unidade que dá corpo visível a um sentido.")]
+                  ("Composição", "*Composição é a organização das partes de uma obra em relação ao todo, como um sistema de tensões, proporções e direções: a construção de uma unidade que dá corpo visível a um sentido.")]
     NO_ATELIER = [("Turma", "Até 8 pessoas por aula, cada uma no seu projeto"), ("Acompanhamento", "Individual, em cada trabalho"),
                   ("Horários", "Noites durante a semana e tardes de sábado"), ("Frequência", "Dias fixos na semana, escolhidos por você"), ("Faltas", "Reposição pelo app, avisando até 4 horas antes"),
                   ("Além das aulas", "Modelo vivo, história da arte, projetos especiais e visitas a exposições")]
@@ -383,10 +383,10 @@ def build():
   <ol class="percurso apos">{"".join(f'<li class="rev"><span class="percurso__n" aria-hidden="true">{i+1}</span><div><h3 class="t3">{t}</h3><p class="texto-cartao">{d}</p></div></li>' for i, (t, d) in enumerate(PERCURSO))}</ol>
 </section>
 <section class="bloco escuro wrap" id="formacao">
-  {duas("Formação", "Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("A formação básica segue quatro princípios, nesta ordem: a percepção visual, base de todo o trabalho; o Desenho, que estrutura o espaço; a luz, que dá plasticidade à forma; e a composição, que dá unidade ao trabalho."))}
+  {duas("Formação", "Duas disciplinas de base e, a partir delas, linguagens de aprofundamento.", corpo("*A formação básica segue quatro princípios, nesta ordem: a percepção visual, base de todo o trabalho; o Desenho, que estrutura o espaço; a luz, que dá plasticidade à forma; e a composição, que dá unidade ao trabalho."))}
   <div class="bases apos">{"".join(f'<article class="base rev"><div class="base__img"><img src="img/{img}" alt="" loading="lazy"></div><h3 class="base__tit">{t}</h3><p class="texto-cartao">{d}</p></article>' for img, t, d in BASES)}</div>
   <div class="duas cab continua">
-    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">A abordagem de materiais é extensa e voltada à expressão de cada aluno, respeitando as características próprias de cada meio. Concluído o ciclo básico, o aluno segue pelo material que mais deseja explorar.</p></div>
+    <div class="rev"><h3 class="cab__rot">Formação contínua</h3><p class="texto-cartao continua__txt">*A abordagem de materiais é extensa e voltada à expressão de cada aluno, respeitando as características próprias de cada meio. Concluído o ciclo básico, o aluno segue pelo material que mais deseja explorar.</p></div>
     <ul class="meios meios--lista lado">{"".join(f'<li class="rev">{m}</li>' for m in MEIOS)}</ul>
   </div>
 </section>
