@@ -36,8 +36,8 @@ def nav(atual, solida=False):
 </aside>'''
 
 COMECAR = '''<section class="comecar wrap" id="comecar">
-  <h2 class="t2 rev">Sua formação começa onde você está</h2>
-  <p class="corpo rev">Deixe seu WhatsApp e combinamos uma aula experimental na turma lorem ipsum dolor isum imet amet calor.</p>
+  <h2 class="t2 rev">Sua formação começa onde você está*</h2>
+  <p class="corpo rev">Entre em contato e desenvolva sua percepção, sua técnica e sua produção artística a partir de um percurso acompanhado de forma individual. Deixe seu WhatsApp e combinamos o dia da sua aula experimental.*</p>
   <form class="form-linha rev" data-form="whatsapp" novalidate>
     <label class="sr" for="wpp">Seu WhatsApp</label>
     <input class="campo" id="wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="00 00000-0000" required>
@@ -121,9 +121,9 @@ FRENTES_TXT = {
     ("frente-extensao.jpg", "Extensão", "Extensão leva a prática artística para além do espaço interno do Alma, desenvolvendo atividades abertas sazonais que ampliam o contato com as Artes Visuais e com a criação."),
   ],
   "aulas": [
-    ("frente-atelier.jpg", "Nosso atelier", "Formação em atelier, com currículo básico e desenvolvimento gradual da percepção para explorar sua própria Forma."),
-    ("frente-jovens.jpg", "Jovens Artistas", "Introdução à prática artística e à percepção visual, estimulando observação, criatividade e repertório em cada idade."),
-    ("frente-extensao.jpg", "Extensão", "Extensão leva a prática artística para além do Alma, ampliando o contato com as Artes Visuais e a criação."),
+    ("frente-atelier.jpg", "Nosso atelier", "Formação em estrutura de atelier, onde o percurso do aluno é construído a partir de um currículo básico, com desenvolvimento gradual de sua percepção para explorar sua própria Forma."),
+    ("frente-jovens.jpg", "Jovens Artistas", "Introdução da prática artística e desenvolvimento da percepção visual para crianças e adolescentes, respeitando o tempo de aprendizagem de cada idade e estimulando a observação, a criatividade e a construção do repertório."),
+    ("frente-extensao.jpg", "Extensão", "Extensão leva a prática artística para além do espaço interno do Alma, desenvolvendo atividades abertas sazonais que ampliam o contato com as Artes Visuais e com a criação."),
   ],
 }
 FRENTE_LINK = {"Nosso atelier": "nossas-aulas.html#frentes", "Jovens Artistas": "nossas-aulas.html#frentes", "Extensão": "nossas-aulas.html#frentes"}
@@ -134,13 +134,13 @@ def frentes(qual):
 <div class="txt"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div></a>''' for img, t, d in FRENTES_TXT[qual]) + '</div>'
 
 EDUCACAO = f'''<section class="secao wrap" id="educacao">
-  {intro("Educação", "<p>A formação no Alma acontece em estrutura de atelier, com acompanhamento individualizado e convivência entre estudantes de diferentes idades, repertórios e níveis de experiência. O percurso de cada aluno é construído a partir de um currículo básico, desenvolvendo o domínio técnico e abertura gradual de sua percepção para explorar sua própria Forma.</p>")}
+  {intro("Educação", "<p>A formação no Alma acontece em três segmentos: nosso Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, segmento de iniciação da percepção visual para crianças e adolescentes; e Extensão, que leva a prática visual para além do espaço interno do Atelier.</p>")}
   <div class="apos-cab">{frentes("inicio")}</div>
   <hr class="filete">
 </section>'''
 
 LOJA_SEC = f'''<section class="secao wrap" id="loja">
-  {intro("Loja", "<p>Curadoria de materiais artísticos feita a partir da prática de atelier. A loja do Alma reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.</p>",
+  {intro("Loja", "<p>Curadoria de materiais artísticos feita a partir da prática de atelier. O Alma Materiais Artísticos reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.</p>",
          f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>')}
   <a class="larga rev apos-cab" href="{LOJA}" target="_blank" rel="noopener" style="display:block" aria-label="Ir para a loja"><img src="img/loja-armarios.jpg" alt="Armários de madeira com pigmentos, tintas e pincéis numa loja tradicional de materiais artísticos" loading="lazy"></a>
   <hr class="filete">
@@ -150,11 +150,11 @@ NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "04 ago 2026", "A
          ("nota-velatura.jpg", "Técnica", "2026-07-28", "28 jul 2026", "Velatura e opacidade: dois modos de construir a cor"),
          ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta")]
 NOTAS_SEC = f'''<section class="secao wrap" id="notas">
-  {intro("Notas e Ensaios", "<p>Textos sobre percepção visual, processos de criação, técnica e história da arte. Textos sobre percepção visual, processos de criação, técnica e história da arte. Textos sobre percepção visual, processos de criação, técnica e história da arte.</p>",
+  {intro("Notas e Ensaios", "<p>Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Aqui, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>",
          '<a class="btn btn-preto" href="blog.html">Ver todos</a>')}
   <div class="tres apos-cab">''' + "".join(
     f'''<a class="cartao rev" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="meta"><span class="cat">{cat}</span><time datetime="{dt}">{data}</time></div><h3 class="t3">{t}</h3></a>''' for img, cat, dt, data, t in NOTAS) + '''</div>
+<div class="meta"><span class="cat">{cat}</span><time datetime="{dt}">{data}</time></div><h3 class="t3">{t}*</h3></a>''' for img, cat, dt, data, t in NOTAS) + '''</div>
 </section>'''
 
 def build():
@@ -171,14 +171,14 @@ def build():
       f'''<section class="hero wrap">
   <img src="img/hero-inicio.jpg" alt="Estudantes trabalhando em esculturas num atelier" fetchpriority="high">
   <div class="chamada">
-    <h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.</h1>
+    <h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.*</h1>
     <div class="botoes"><a class="btn" href="nossas-aulas.html">Nossas aulas</a><a class="btn" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a></div>
   </div>
 </section>
 <section class="faixa wrap">
   <div class="lin">
-    <div class="txt rev"><h2 class="t2">Três frentes, um pensamento.</h2>
-      <p class="corpo">Somos um Centro de Estudos Visuais dedicado à formação, pesquisa e experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo e operamos em três frentes: o Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, segmento de iniciação da percepção visual para crianças e adolescentes; e Extensão, que leva a prática visual para além do espaço interno do Atelier.</p></div>
+    <div class="txt rev"><h2 class="t2">Três frentes, um pensamento.*</h2>
+      <p class="corpo">Somos um Centro de Estudos Visuais dedicado à formação, pesquisa e experimentação em Artes Visuais. Tratamos a percepção como forma ativa de compreensão do mundo e operamos em três frentes: o <em>Atelier</em>, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, segmento de iniciação da percepção visual para crianças e adolescentes; e Extensão, que leva a prática visual para além do espaço interno do Atelier.</p></div>
     <div class="botoes rev"><a class="btn btn-claro" href="sobre.html">Saiba mais</a><a class="btn btn-linha" href="faca-parte.html">Quero começar</a></div>
   </div>
 </section>
@@ -187,11 +187,11 @@ def build():
 {NOTAS_SEC}''', atual="index.html")
 
     # ---------------- Sobre ----------------
-    LOREM1 = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>"
-    LOREM2 = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
-    pagina("sobre.html", "Sobre · Alma", "O ver tem gramática, e essa gramática se ensina. Conheça a história e o manifesto do Alma.",
-      f'''<section class="abertura escura wrap"><h1 class="t1">História</h1>
-  <p>Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes que partem da mesma convicção: o ver tem gramática, e essa gramática se ensina.</p></section>
+    LOREM1 = "<p>Acreditamos que ver se aprende. Antes da técnica, antes do estilo, existe o olhar: a capacidade de perceber relações de luz, valor, espaço e proporção, e de organizá-las numa forma que tenha sentido.*</p><p>Por isso o Alma ensina a partir da percepção e respeita o tempo de cada um. Não formamos em série nem prometemos atalhos: acompanhamos cada percurso até que a pessoa encontre a sua própria Forma.*</p>"
+    LOREM2 = "<p>O Alma nasceu em São Caetano do Sul a partir da prática de atelier de Giancarlo Avantaggiato, artista plástico, com a ideia de reunir formação, pesquisa e experimentação em Artes Visuais num mesmo espaço.*</p><p>A pedagogia do Alma se apoia na tradição da Bauhaus e no estudo da percepção visual. Hoje o Alma reúne o atelier para adultos, a loja de materiais artísticos e os programas Jovens Artistas e Extensão, em preparação.*</p>"
+    pagina("sobre.html", "Sobre · Alma", "A percepção visual como forma de compreensão do mundo. Conheça o manifesto e a história do Alma.",
+      f'''<section class="abertura escura wrap"><h1 class="t1">Sobre o Alma</h1>
+  <p>Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de espaços positivos e negativos no campo. O olho não recebe uma imagem pronta — ele a constrói. O Alma forma o domínio dessa construção e o faz por <em>três</em> frentes que partem da mesma convicção: <em>a percepção visual como forma de compreensão do mundo.</em></p></section>
 <section class="wrap sobre-topo">
   <div class="larga sobre-foto rev"><img src="img/sobre-bauhaus.jpg" alt="Fotografia do edifício da Bauhaus em Dessau, com anotações manuscritas" loading="lazy"></div>
   <div class="secao">{intro("Manifesto", LOREM1, '<a class="btn btn-preto" href="#historia">Saiba mais</a>')}</div>
@@ -204,20 +204,28 @@ def build():
 {NOTAS_SEC}''')
 
     # ---------------- Nossas aulas ----------------
-    TOD = "Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes."
-    ENSINO = [("Formação do Pensamento", "Formação em atelier, com currículo básico e desenvolvimento gradual da percepção para explorar sua própria Forma. de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes."),
-              ("Técnica e Processo", TOD), ("Meios e Materiais", TOD), ("XXXX", TOD)]
-    LOREMQ = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-    FAQ = [("Questão 1", LOREMQ), ("Questão 2", LOREMQ), ("Questão 3", LOREMQ), ("Questão 4", LOREMQ)]
+    ENSINO = [("Formação Básica e Contínua", "A formação segue princípios básicos como percepção visual, composição do espaço pictórico, e a luz à Forma."),
+              ("Percepção", "Percepção é a operação pela qual a mente organiza o mundo sensível em estruturas reconhecíveis — direções, formas, relações, tensões. A percepção, nesse sentido, opera ao nível dos sentidos o que o raciocínio realiza no nível do pensamento — ela já é, em si, uma forma de inteligência."),
+              ("Formação do Pensamento", "O ver é compreender. O pensamento se forma dentro da atividade perceptiva, desde o primeiro instante em que se organiza o que se vê, constrói repertório, e passa a orientar como a pessoa relaciona parte e todo, reconhece padrão em meio à complexidade, julga tensão e equilíbrio em qualquer experiência, visual ou não."),
+              ("Técnica e Processo", "A técnica se desenvolve de acordo com cada tipo de material, e é o meio que conduz o artista da ideia à forma."),
+              ("Composição", "Composição é a organização das partes de uma obra em relação ao todo, como um sistema de tensões, proporções e direções — a construção de uma unidade que dá corpo visível a um sentido."),
+              ("Diferentes Materiais", "A abordagem de materiais é extensa e direcionada à autoexpressão de cada aluno, ao mesmo tempo que respeita as características intrínsecas do meio. Após um ciclo teórico básico, o aluno é conduzido ao seu trabalho pelo material que mais deseja explorar."),
+              ("Diferentes Artistas", "Composto por diferentes artistas, o Alma promove um ambiente de aprendizado horizontal, no qual a mesma turma reúne alunos em materiais, meios e estágios diferentes — cada percurso seguindo sua própria lógica de desenvolvimento. Nesse espaço, a singularidade de cada um não é apagada pela comunidade — pelo contrário, se nutre dela.")]
+    FAQ = [("Preciso saber desenhar para começar?", "Não. Todos começam pelo currículo básico de Desenho e Plástica, com ou sem experiência anterior.*"),
+           ("Para quem são as aulas?", "As aulas regulares são para adultos, de qualquer idade e em qualquer momento da vida. O programa para crianças e adolescentes, Jovens Artistas, abre em breve.*"),
+           ("Quanto tempo dura o curso?", "Não há prazo de conclusão. Depois do currículo básico, cada aluno permanece o tempo que fizer sentido para o próprio percurso.*"),
+           ("Quanto custa?", "As mensalidades começam em R$ 420, conforme a frequência semanal. Os valores completos são apresentados na aula experimental.*"),
+           ("Como escolho os dias de aula?", "Você escolhe dias fixos na semana, conforme a frequência do seu plano. O dia da aula experimental é combinado pelo WhatsApp.*"),
+           ("E se eu precisar faltar?", "Basta desmarcar pelo app com pelo menos 4 horas de antecedência. A falta vira uma reposição, que pode ser usada em qualquer dia com vaga.*")]
     def acordeao(itens, abrir_primeiro=True):
         return '<div class="acordeao">' + "".join(
             f'<details class="rev"{" open" if (i == 0 and abrir_primeiro) else ""}><summary>{q}</summary><p class="resp">{r}</p></details>' for i, (q, r) in enumerate(itens)) + '</div>'
     pagina("nossas-aulas.html", "Nossas aulas · Alma", "Atelier, Jovens Artistas e Extensão: como funcionam as aulas do Alma.",
       f'''<section class="abertura escura wrap"><h1 class="t1">Nossas aulas</h1>
-  <p>Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes que partem da mesma convicção: o ver tem gramática, e essa gramática se ensina.</p></section>
+  <p>O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, através de diferentes meios e técnicas.</p></section>
 <section class="secao wrap" id="frentes">{frentes("aulas")}<hr class="filete"></section>
 <section class="secao wrap" id="ensino">
-  {intro("Sobre o ensino", f"<p>{TOD}</p><p>{TOD}</p>")}
+  {intro("Sobre o ensino", "<p>O percurso começa por uma base comum, onde os artistas abordam os fundamentos básicos — e é a partir disso que cada artista é conduzido ao aprofundamento de sua prática.</p>")}
   {acordeao(ENSINO)}
 </section>
 <section class="secao" id="trabalhos">
@@ -230,7 +238,7 @@ def build():
   <div class="wrap"><hr class="filete"></div>
 </section>
 <section class="secao wrap" id="faq">
-  {intro("FAQ", "<p>Um espaço para textos sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Nas Notas e Ensaios, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>")}
+  {intro("FAQ", "<p>O que mais nos perguntam antes da primeira aula. Outras dúvidas podem ser enviadas pelo WhatsApp ou por e-mail.*</p>")}
   {acordeao(FAQ)}
 </section>''')
 
@@ -247,7 +255,7 @@ def build():
     TAGS = ["Materiais", "Percepção Visual", "Teoria", "História da Arte", "Prática", "Pensamento", "Estética", "Fotografia", "Cinema"]
     pagina("blog.html", "Blog · Alma", "Notas e Ensaios: textos sobre percepção visual, processos de criação, técnica e história da arte.",
       f'''<section class="abertura curta wrap"><h1 class="t1">Blog</h1>
-  <p>Textos sobre percepção visual, processos de criação, técnica e história da arte. Reunimos aqui as reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>
+  <p>Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Aqui, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>
   <div class="busca">
     <label for="q">O que você procura?</label>
     <div class="barra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
@@ -256,10 +264,10 @@ def build():
   <div class="tags" role="group" aria-label="Filtrar por tema">{"".join(f'<button type="button" aria-pressed="false" data-tag="{t}">{t}</button>' for t in TAGS)}</div>
 </section>
 <section class="secao wrap">
-  <h2 class="t2 contagem" data-total="23">23 textos publicados</h2>
+  <h2 class="t2 contagem" data-total="9">9 textos publicados</h2>
   <div class="posts">''' + "".join(
         f'''<a class="post rev" href="#" data-tag="{tag}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="cab"><h3 class="t3">{t}</h3><span class="pill">{tag}</span></div><p class="corpo">{d}</p><span class="ler">Ler texto</span></a>''' for img, tag, t, d in POSTS) + f'''</div>
+<div class="cab"><h3 class="t3">{t}*</h3><span class="pill">{tag}</span></div><p class="corpo">{d}*</p><span class="ler">Ler texto</span></a>''' for img, tag, t, d in POSTS) + f'''</div>
   <p class="vazio" hidden>Nenhum texto encontrado com esses termos.</p>
   <hr class="filete">
 </section>
@@ -268,7 +276,7 @@ def build():
     # ---------------- Faça Parte ----------------
     pagina("faca-parte.html", "Faça Parte · Alma", "Candidate-se para estudar no Alma: conte quem você é e o que procura.",
       '''<section class="abertura curta wrap"><h1 class="t1">Faça Parte</h1>
-  <p>Toda forma que vemos é resultado de uma operação: distribuição de luz, organização de valores, articulação de cheios e vazios no campo. O olho não recebe a imagem pronta — ele a constrói. O Alma forma o domínio dessa construção, e o faz por quatro frentes que partem da mesma convicção: o ver tem gramática, e essa gramática se ensina.</p></section>
+  <p>O ingresso no Alma começa por uma aula experimental: um primeiro contato com o atelier, a turma e o método de trabalho. Deixe seus dados e combinamos o dia pelo WhatsApp.*</p></section>
 <section class="wrap">
   <form class="formulario" data-form="candidatura" novalidate>
     <div class="grade">
@@ -289,13 +297,13 @@ def build():
     # ---------------- Contato ----------------
     pagina("contato.html", "Contato · Alma", "Endereço, WhatsApp e e-mail do Alma Centro de Estudos Visuais, em São Caetano do Sul.",
       '''<section class="abertura curta wrap"><h1 class="t1">Contato</h1>
-  <p>O Alma fica em São Caetano do Sul, no ABC Paulista. O atendimento acontece de segunda a sábado, e a visita ao atelier pode ser agendada previamente por WhatsApp ou e-mail.</p></section>
+  <p>O Alma fica em São Caetano do Sul, no ABC Paulista. O atendimento acontece de segunda a sábado, e a visita ao atelier pode ser agendada previamente por WhatsApp ou e-mail.*</p></section>
 <section class="contatos-sec wrap">
   <div class="duas">
     <div class="lista rev">
-      <div><h2 class="t3">Endereço</h2><p class="corpo">Rua São Paulo, 864 — São Caetano do Sul, São Paulo. Entrada pelo portão lateral, sem campainha: bata na porta de vidro.</p></div>
-      <div><h2 class="t3">Whatsapp</h2><p class="corpo">11 90000-0000. Canal usado para agendamento de aula experimental, dúvidas sobre turmas e informações sobre materiais.</p></div>
-      <div><h2 class="t3">E-mail</h2><p class="corpo"><a href="mailto:contato@almaestudosvisuais.com.br">contato@almaestudosvisuais.com.br</a> para o atelier. <a href="mailto:loja@almaestudosvisuais.com.br">loja@almaestudosvisuais.com.br</a> para pedidos e materiais.</p></div>
+      <div><h2 class="t3">Endereço</h2><p class="corpo">Rua São Paulo, 864 — São Caetano do Sul, São Paulo. Entrada pelo portão lateral, sem campainha: bata na porta de vidro.*</p></div>
+      <div><h2 class="t3">Whatsapp</h2><p class="corpo"><a href="https://wa.me/5511993196228" target="_blank" rel="noopener">(11) 99319-6228</a>. Canal usado para agendamento de aula experimental, dúvidas sobre turmas e informações sobre materiais.*</p></div>
+      <div><h2 class="t3">E-mail</h2><p class="corpo"><a href="mailto:contato@almaestudosvisuais.com.br">contato@almaestudosvisuais.com.br</a> para o atelier. <a href="mailto:loja@almaestudosvisuais.com.br">loja@almaestudosvisuais.com.br</a> para pedidos e materiais.*</p></div>
     </div>
     <iframe class="mapa rev" title="Mapa: Rua São Paulo, 864, São Caetano do Sul" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=Rua%20S%C3%A3o%20Paulo%2C%20864%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP&output=embed"></iframe>
@@ -303,7 +311,7 @@ def build():
   <hr class="filete">
 </section>
 <section class="secao wrap">
-  ''' + intro("Parcerias", "<p>Trabalhamos com escolas, instituições culturais e coletivos interessados em formação visual continuada. Propostas de residência, oficina fechada, curadoria de material para turmas e projetos de extensão podem ser apresentadas por e-mail ou WhatsApp.</p>",
+  ''' + intro("Parcerias", "<p>Trabalhamos com escolas, instituições culturais e coletivos interessados em formação visual continuada. Propostas de residência, oficina fechada, curadoria de material para turmas e projetos de extensão podem ser apresentadas por e-mail ou WhatsApp.*</p>",
       '<div class="botoes"><a class="btn btn-preto" href="mailto:contato@almaestudosvisuais.com.br?subject=Parcerias">E-mail</a><a class="btn btn-preto" href="#" data-whatsapp>Whatsapp</a></div>') + '''
 </section>''', solida=True)
 
