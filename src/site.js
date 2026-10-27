@@ -90,10 +90,17 @@
       clearTimeout(volta); volta = setTimeout(reposicionar, 140);
     }, { passive: true });
     if ('onscrollend' in window) t.addEventListener('scrollend', function () { clearTimeout(volta); reposicionar(); });
-    function inicio() { if (loop) { t.style.scrollSnapType = 'none'; t.scrollLeft = alvo(itens[n]); t.offsetHeight; t.style.scrollSnapType = ''; } marcar(); }
-    window.addEventListener('resize', inicio);
-    if (document.readyState === 'complete') inicio(); else window.addEventListener('load', inicio);
-    inicio();
+    // Posiciona sem animação; ao redimensionar (girar o celular) mantém a obra atual.
+    // A barra do navegador que some ao rolar muda só a altura: isso não reposiciona nada.
+    function ir(k) { t.style.scrollSnapType = 'none'; t.style.scrollBehavior = 'auto'; t.scrollLeft = alvo(itens[k]); t.offsetHeight; t.style.scrollSnapType = ''; t.style.scrollBehavior = ''; }
+    if (loop) ir(n);
+    marcar();
+    var larg = window.innerWidth;
+    window.addEventListener('resize', function () {
+      if (window.innerWidth === larg) return;
+      larg = window.innerWidth;
+      if (loop) ir(n + (((atual() % n) + n) % n)); marcar();
+    });
   });
 
   // Visitas: página, origem e aparelho. Sem cookies e sem dados pessoais. Não conta a prévia.

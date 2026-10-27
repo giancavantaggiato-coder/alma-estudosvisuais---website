@@ -220,9 +220,9 @@ SETA_D = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 def controles(n, rotulo):
     return f'''<div class="carr-pontos" role="group" aria-label="{rotulo}">''' + "".join(f'<button type="button" class="carr-ponto" aria-label="{i+1} de {n}"{" aria-current=\"true\"" if i == 0 else ""}></button>' for i in range(n)) + '</div>'
 
-TRAB = ["trabalho-1.jpg", "trabalho-2.jpg", "trabalho-3.jpg"]
+TRAB = [("trabalho-1.jpg", 1252, 1600), ("trabalho-2.jpg", 939, 1200), ("trabalho-3.jpg", 1080, 1600)]
 TRABALHOS = (f'<div class="carr carr--trab" data-carr><div class="carr__trilho trabalhos">'
-    + "".join(f'<figure class="carr__item"><img src="img/{i}" alt="Trabalho de aluno do Alma" loading="lazy"></figure>' for i in TRAB)
+    + "".join(f'<figure class="carr__item"><img src="img/{i}" width="{w}" height="{h}" alt="Trabalho de aluno do Alma" decoding="async"></figure>' for i, w, h in TRAB)
     + '</div>' + controles(len(TRAB), "Trabalhos de alunos") + '</div>')
 
 NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "4 ago 2026", "A construção do valor tonal na pintura a óleo"),
