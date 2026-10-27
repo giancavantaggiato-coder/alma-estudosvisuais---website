@@ -356,8 +356,8 @@ def build():
     MEIOS = ["Aquarela", "Guache", "Acrílica", "Óleo", "Escultura", "Gravura"]
     PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada."),
                 ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência."),
-                ("O seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar."),
-                ("A própria luz", "Sem prazo de conclusão. O trabalho segue até encontrar a sua linguagem.")]
+                ("Seu meio", "Concluído o currículo básico, você escolhe o meio em que quer se aprofundar."),
+                ("Própria luz", "Sem prazo de conclusão. O trabalho segue até encontrar a sua linguagem.")]
     PRINCIPIOS = [("Percepção", "*Percepção é a operação pela qual a mente organiza o mundo sensível em estruturas reconhecíveis: direções, formas, relações, tensões. Ela realiza no nível dos sentidos o que o raciocínio realiza no nível do pensamento, e já é, em si, uma forma de inteligência."),
                   ("Formação do pensamento", "Ver é compreender. O pensamento se forma dentro da atividade perceptiva: ao organizar o que se vê, constrói repertório e passa a orientar como a pessoa relaciona parte e todo, reconhece padrão em meio à complexidade e julga tensão e equilíbrio em qualquer experiência, visual ou não."),
                   ("Técnica e processo", "A técnica se desenvolve de acordo com cada material e é o meio que conduz o artista da ideia à forma. Ela se ensina como caminho de descoberta, que ganha sentido quando se funde à criação de cada aluno."),
