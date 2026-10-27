@@ -311,8 +311,7 @@ def build():
       f'''<section class="hero wrap">
   <img src="img/hero-inicio.jpg" alt="Estudantes trabalhando em esculturas num atelier" fetchpriority="high">
   <div class="chamada">
-    <div class="chamada__txt"><h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.</h1>
-    <p class="hero__sub">*Atelier de Desenho, pintura e escultura para adultos em São Caetano do Sul, com turmas pequenas e acompanhamento individual.</p></div>
+    <div class="chamada__txt"><h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.</h1></div>
     <div class="botoes"><a class="btn btn-claro" href="faca-parte.html">Aula experimental</a><a class="btn btn-linha" href="nossas-aulas.html">Nossas aulas</a></div>
   </div>
 </section>
