@@ -139,6 +139,14 @@ INGRESSO = [("Agendamento", "Respondemos pelo WhatsApp com os horários que têm
             ("Aula no atelier", "Você participa de uma aula regular, junto à turma e com orientação individual. Conversamos sobre seu repertório e sobre o que pretende estudar.*"),
             ("Matrícula", "Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.*")]
 
+# Vídeo "Como são nossas aulas": basta colocar o arquivo em img/percurso.mp4.
+# Enquanto não existir, aparece a foto escurecida com "Em breve", no mesmo padrão dos cartões.
+def video_percurso():
+    capa = "img/hero-inicio.jpg"
+    if os.path.exists(os.path.join(RAIZ, "img", "percurso.mp4")):
+        return f'''<div class="larga video apos-cab rev"><video src="img/percurso.mp4" poster="{capa}" controls playsinline preload="metadata"></video></div>'''
+    return f'''<div class="larga video video--breve apos-cab rev"><img src="{capa}" alt="" loading="lazy"><span class="selo-foto">Em breve</span></div>'''
+
 def frentes(qual):
     def cartao(img, t, d):
         chave = "jovens" if t == "Jovens Artistas" else "extensao"
@@ -251,7 +259,8 @@ def build():
   <p>O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, através de diferentes meios e técnicas.</p></section>
 <section class="secao wrap" id="frentes">{frentes("aulas")}<hr class="filete"></section>
 <section class="secao wrap" id="percurso">
-  {intro("O percurso", "<p>Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a própria luz.*</p>" + lista(PERCURSO))}
+  {intro("O percurso", "<p>Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a própria luz.*</p>")}
+  {video_percurso()}
   <hr class="filete">
 </section>
 <section class="secao wrap">
