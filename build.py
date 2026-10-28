@@ -143,7 +143,7 @@ def frentes(qual):
             return f'''<div class="frente rev"><a class="foto" href="{FRENTE_LINK[t]}" aria-label="{t}"><img src="img/{img}" alt="" loading="lazy"></a>
 <div class="txt"><h3 class="t3"><a href="{FRENTE_LINK[t]}">{t}</a></h3><p class="corpo">{d}</p></div>
 <div class="acao"><a class="btn btn-preto" href="faca-parte.html">Tenho interesse</a></div></div>'''
-        return f'''<div class="frente frente--breve rev"><div class="foto"><img src="img/{img}" alt="" loading="lazy"><span class="selo-foto">Em breve*</span></div>
+        return f'''<div class="frente frente--breve rev"><div class="foto"><img src="img/{img}" alt="" loading="lazy"><span class="selo-foto">Em breve</span></div>
 <div class="txt"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div>
 <div class="acao"><form class="avise" data-form="aviso" novalidate><input type="hidden" name="interesse" value="{t}">
 <label class="sr" for="avise-{qual}-{chave}">Seu e-mail para saber quando {t} abrir</label>
