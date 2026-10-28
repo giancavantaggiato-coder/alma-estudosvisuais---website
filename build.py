@@ -15,7 +15,7 @@ def e(t): return html.escape(t, quote=False)
 def _v(f): return hashlib.md5(open(os.path.join(RAIZ, "src", f), "rb").read()).hexdigest()[:8]
 
 MENU = [("sobre.html", "Sobre"), ("nossas-aulas.html", "Nossas Aulas"), ("blog.html", "Blog"),
-        ("nossas-aulas.html#faq", "FAQ"), ("contato.html", "Contato")]
+        ("contato.html", "Contato")]
 
 def nav(atual, solida=False):
     itens = "".join(
