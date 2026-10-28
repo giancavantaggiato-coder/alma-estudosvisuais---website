@@ -139,12 +139,12 @@ INGRESSO = [("Agendamento", "Respondemos pelo WhatsApp com os horários que têm
             ("Aula no atelier", "Você participa de uma aula regular, junto à turma e com orientação individual. Conversamos sobre seu repertório e sobre o que pretende estudar.*"),
             ("Matrícula", "Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.*")]
 
-# Vídeo "Como são nossas aulas": basta colocar o arquivo em img/percurso.mp4.
+# Vídeo "Como são nossas aulas": img/percurso.mp4 (hoje um vídeo vazio, só para ocupar o lugar; troque pelo vídeo final).
 # Enquanto não existir, aparece a foto escurecida com "Em breve", no mesmo padrão dos cartões.
 def video_percurso():
     capa = "img/hero-inicio.jpg"
     if os.path.exists(os.path.join(RAIZ, "img", "percurso.mp4")):
-        return f'''<div class="larga video apos-cab rev"><video src="img/percurso.mp4" poster="{capa}" controls playsinline preload="metadata"></video></div>'''
+        return f'''<div class="larga video apos-cab rev"><video src="img/percurso.mp4" controls playsinline preload="metadata"></video></div>'''
     return f'''<div class="larga video video--breve apos-cab rev"><img src="{capa}" alt="" loading="lazy"><span class="selo-foto">Em breve</span></div>'''
 
 def frentes(qual):
