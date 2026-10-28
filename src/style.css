@@ -186,6 +186,8 @@ button,input,textarea{font:inherit;color:inherit}
 
 /* ---------- Trabalhos de alunos ---------- */
 .trabalhos{margin-top:32px}
+.pilares .t3{margin:0 0 8px}
+.pilares .corpo{margin:0}
 .trabalhos figure{margin:0;aspect-ratio:3/4;overflow:hidden;background:var(--claro2)}
 .trabalhos img{width:100%;height:100%;object-fit:cover}
 
@@ -247,6 +249,7 @@ button,input,textarea{font:inherit;color:inherit}
   .duas{row-gap:16px}
   .hero .botoes,.faixa .botoes{justify-content:flex-start}
   .tres,.posts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tres.pilares{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:860px){
   .nav{height:56px}
@@ -256,7 +259,7 @@ button,input,textarea{font:inherit;color:inherit}
   .abertura{padding-top:calc(56px + var(--r))}
 }
 @media (max-width:749px){
-  .tres,.posts{grid-template-columns:1fr}
+  .tres,.posts,.tres.pilares{grid-template-columns:1fr}
   .larga{aspect-ratio:4/3}
   .larga.video{aspect-ratio:16/9}
   .form-linha .btn{justify-self:stretch}
