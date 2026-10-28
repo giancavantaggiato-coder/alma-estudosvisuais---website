@@ -259,9 +259,20 @@ def build():
   <p>O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, através de diferentes meios e técnicas.</p></section>
 <section class="secao wrap" id="frentes">{frentes("aulas")}<hr class="filete"></section>
 <section class="secao wrap" id="percurso">
-  <h2 class="t2 rev">O percurso</h2>
+  {intro("O percurso", "<p>Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a própria luz.*</p>")}
   {video_percurso()}
-  <div class="tres pilares apos-cab">{"".join(f'<div class="rev"><h3 class="t3">{t}</h3><p class="corpo">{x}</p></div>' for t, x in FORMACAO)}</div>
+  <hr class="filete">
+</section>
+<section class="secao wrap">
+  {intro(FORMACAO[0][0], "<p>" + FORMACAO[0][1] + "</p>")}
+  <hr class="filete">
+</section>
+<section class="secao wrap">
+  {intro(FORMACAO[1][0], "<p>" + FORMACAO[1][1] + "</p>")}
+  <hr class="filete">
+</section>
+<section class="secao wrap">
+  {intro(FORMACAO[2][0], "<p>" + FORMACAO[2][1] + "</p>")}
 </section>
 <section class="secao wrap escuro" id="ensino">
   {intro("Sobre o ensino", "<p>O percurso começa por uma base comum, onde os artistas abordam os fundamentos básicos — e é a partir disso que cada artista é conduzido ao aprofundamento de sua prática.</p>")}
