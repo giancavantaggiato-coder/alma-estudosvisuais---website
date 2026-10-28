@@ -27,7 +27,7 @@
   // WhatsApp do atelier
   document.querySelectorAll('[data-whatsapp]').forEach(function (a) {
     if (C.whatsapp) { a.href = 'https://wa.me/' + C.whatsapp; a.target = '_blank'; a.rel = 'noopener'; }
-    else a.href = 'contato.html';
+    else a.href = 'contato';
   });
 
   // Formulários → Supabase (tabela site_contatos, só inserção)

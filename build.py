@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gera o site estático do Alma a partir de modelos simples (sem dependências).
 Saída em ./site — é essa pasta que vai para a hospedagem."""
-import os, shutil, html, json, hashlib
+import os, re, shutil, html, json, hashlib
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 SAIDA = os.path.join(RAIZ, "site")
@@ -107,6 +107,9 @@ def pagina(arquivo, titulo, descricao, corpo, atual=None, solida=False, comecar=
 </body>
 </html>
 '''
+    # Endereços limpos, sem ".html" (o GitHub Pages serve /sobre a partir de sobre.html)
+    doc = re.sub(r'href="index\.html(#[^"]*)?"', lambda m: f'href="./{m.group(1) or ""}"', doc)
+    doc = re.sub(r'href="([a-z0-9-]+)\.html', r'href="\1', doc)
     open(os.path.join(SAIDA, arquivo), "w").write(doc)
 
 def intro(titulo, texto_html, extra="", tag="h2"):
