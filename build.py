@@ -251,9 +251,8 @@ def build():
 </section>
 <section class="secao wrap">
   {intro(FORMACAO[2][0], "<p>" + FORMACAO[2][1] + "</p>")}
-  <hr class="filete">
 </section>
-<section class="secao wrap" id="ensino">
+<section class="secao wrap escuro" id="ensino">
   {intro("Sobre o ensino", "<p>O percurso começa por uma base comum, onde os artistas abordam os fundamentos básicos — e é a partir disso que cada artista é conduzido ao aprofundamento de sua prática.</p>")}
   {acordeao(ENSINO)}
 </section>

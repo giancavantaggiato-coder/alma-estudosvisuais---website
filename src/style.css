@@ -266,3 +266,8 @@ button,input,textarea{font:inherit;color:inherit}
 .selo{font-size:.75rem;line-height:1.4;font-weight:500}
 .rodape .novidades__txt{color:var(--claro3);margin:12px 0 24px}
 .corpo strong{font-weight:500;color:var(--preto)}
+
+/* ---------- Seção escura (quebra) ---------- */
+.secao.escuro{background:var(--preto);color:var(--claro)}
+.escuro .corpo,.escuro .acordeao .resp{color:var(--texto-claro)}
+.escuro .acordeao,.escuro .acordeao details{border-color:var(--linha-escura)}
