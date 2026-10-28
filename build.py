@@ -137,9 +137,19 @@ INGRESSO = [("Agendamento", "Respondemos pelo WhatsApp com os horários que têm
             ("Matrícula", "Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.*")]
 
 def frentes(qual):
-    return '<div class="tres">' + "".join(
-        f'''<a class="frente rev" href="{FRENTE_LINK[t]}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="txt">{'<span class="selo">Em breve*</span>' if t != "Nosso atelier" else ''}<h3 class="t3">{t}</h3><p class="corpo">{d}</p></div></a>''' for img, t, d in FRENTES_TXT[qual]) + '</div>'
+    def cartao(img, t, d):
+        chave = "jovens" if t == "Jovens Artistas" else "extensao"
+        if t == "Nosso atelier":
+            return f'''<div class="frente rev"><a class="foto" href="{FRENTE_LINK[t]}" aria-label="{t}"><img src="img/{img}" alt="" loading="lazy"></a>
+<div class="txt"><h3 class="t3"><a href="{FRENTE_LINK[t]}">{t}</a></h3><p class="corpo">{d}</p></div>
+<div class="acao"><a class="btn btn-preto" href="faca-parte.html">Tenho interesse</a></div></div>'''
+        return f'''<div class="frente frente--breve rev"><div class="foto"><img src="img/{img}" alt="" loading="lazy"><span class="selo-foto">Em breve*</span></div>
+<div class="txt"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div>
+<div class="acao"><form class="avise" data-form="aviso" novalidate><input type="hidden" name="interesse" value="{t}">
+<label class="sr" for="avise-{qual}-{chave}">Seu e-mail para saber quando {t} abrir</label>
+<input class="campo" id="avise-{qual}-{chave}" name="email" type="email" autocomplete="email" placeholder="Seu e-mail" required>
+<button class="btn btn-preto" type="submit">Avise-me</button></form><p class="aviso" role="status"></p></div></div>'''
+    return '<div class="tres">' + "".join(cartao(*c) for c in FRENTES_TXT[qual]) + '</div>'
 
 EDUCACAO = f'''<section class="secao wrap" id="educacao">
   {intro("Educação", "<p>A formação no Alma acontece em três segmentos: nosso Atelier, espaço de trabalho e formação do pensamento artístico; Jovens Artistas, segmento de iniciação da percepção visual para crianças e adolescentes; e Extensão, que leva a prática visual para além do espaço interno do Atelier.</p>")}

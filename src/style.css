@@ -271,3 +271,17 @@ button,input,textarea{font:inherit;color:inherit}
 .secao.escuro{background:var(--preto);color:var(--claro)}
 .escuro .corpo,.escuro .acordeao .resp{color:var(--texto-claro)}
 .escuro .acordeao,.escuro .acordeao details{border-color:var(--linha-escura)}
+
+/* ---------- Cartões das frentes: ação e "Em breve" ---------- */
+.frente .foto{position:relative;display:block}
+.frente .t3 a{text-decoration:none}
+.frente .txt{flex:1}
+.frente .acao{margin-top:16px}
+.frente--breve .foto img{opacity:.4;filter:grayscale(1)}
+.frente--breve:hover .foto img{opacity:.4}
+.selo-foto{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--claro);color:var(--preto);padding:8px 16px;font-size:.75rem;line-height:1.4;font-weight:500;white-space:nowrap}
+.avise{display:flex;gap:8px}
+.avise .campo{flex:1;min-width:0;height:36px}
+.avise .btn{flex:none;min-width:0}
+.frente .aviso{font-size:.75rem;margin-top:8px;color:var(--texto-card)}
+.frente .aviso:empty{display:none}

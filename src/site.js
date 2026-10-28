@@ -41,17 +41,19 @@
   var OK = {
     whatsapp: 'Recebemos seu número. Vamos chamar você no WhatsApp para combinar a aula experimental.',
     novidades: 'Inscrição feita. Obrigado!',
-    candidatura: 'Recebemos sua candidatura. Responderemos em breve.'
+    candidatura: 'Recebemos sua candidatura. Responderemos em breve.',
+    aviso: 'Combinado. Avisamos você quando as inscrições abrirem.'
   };
   document.querySelectorAll('form[data-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
-      var tipo = f.dataset.form, aviso = f.parentNode.querySelector('.aviso') || f.querySelector('.aviso');
+      var tipo = f.dataset.form, aviso = f.querySelector('.aviso') || f.parentNode.querySelector('.aviso');
       var d = { tipo: tipo, pagina: location.pathname };
       new FormData(f).forEach(function (v, k) { d[k] = String(v).trim(); });
       if (d.whatsapp !== undefined && d.whatsapp.replace(/\D/g, '').length < 10) return dizer(aviso, 'Confira o número com DDD.');
       if (d.email !== undefined && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) return dizer(aviso, 'Confira o e-mail.');
-      if (tipo === 'candidatura' && (!d.nome || !d.mensagem)) return dizer(aviso, 'Preencha nome e carta de motivação.');
+      if (tipo === 'candidatura' && (!d.nome || !d.mensagem)) return dizer(aviso, 'Preencha nome e conte um pouco sobre você.');
+      if (d.interesse !== undefined) { d.mensagem = 'Interesse: ' + d.interesse + (d.mensagem ? '\n' + d.mensagem : ''); delete d.interesse; }
       var b = f.querySelector('button[type=submit]'); b.disabled = true;
       enviar(d).then(function () { f.reset(); dizer(aviso, OK[tipo]); })
         .catch(function () { dizer(aviso, 'Não foi possível enviar agora. Escreva para contato@almaestudosvisuais.com.br.'); })
