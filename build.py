@@ -131,9 +131,7 @@ FRENTES_TXT = {
 }
 FRENTE_LINK = {"Nosso atelier": "nossas-aulas.html#frentes", "Jovens Artistas": "nossas-aulas.html#frentes", "Extensão": "nossas-aulas.html#frentes"}
 
-def passos(itens, classe="quatro"):
-    return f'<ol class="{classe} passos apos-cab">' + "".join(
-        f'<li class="passo rev"><span class="n" aria-hidden="true">{i+1}</span><h3 class="t3">{t}</h3><p class="corpo">{d}</p></li>' for i, (t, d) in enumerate(itens)) + '</ol>'
+def lista(itens): return "".join(f"<p><strong>{t}.</strong> {d}</p>" for t, d in itens)
 
 PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primeira aula orientada.*"),
             ("Currículo básico", "Desenho e Plástica. O mesmo começo para todos, com ou sem experiência.*"),
@@ -142,10 +140,6 @@ PERCURSO = [("Aula experimental", "Você conhece o atelier e a turma numa primei
 INGRESSO = [("Agendamento", "Respondemos pelo WhatsApp com os horários que têm vaga e combinamos a data da sua aula.*"),
             ("Aula no atelier", "Você participa de uma aula regular, junto à turma e com orientação individual. Conversamos sobre seu repertório e sobre o que pretende estudar.*"),
             ("Matrícula", "Se decidir continuar, definimos a frequência semanal, os dias fixos e o início do currículo básico de Desenho e Plástica.*")]
-
-def topicos(itens, classe):
-    return f'<div class="{classe} topicos apos-cab">' + "".join(
-        f'<div class="topico rev"><h3 class="t3">{t}</h3><p class="corpo">{d}</p></div>' for t, d in itens) + '</div>'
 
 def frentes(qual):
     return '<div class="tres">' + "".join(
@@ -249,18 +243,24 @@ def build():
   <p>O atelier é, ao mesmo tempo, espaço de trabalho, de estudo e de convivência. O desenvolvimento de cada aluno acontece de forma individualizada, em aulas coletivas: as atividades partem do repertório do aluno, constroem o currículo básico a partir dele e, progressivamente, abrem espaço para a investigação visual própria, através de diferentes meios e técnicas.</p></section>
 <section class="secao wrap" id="frentes">{frentes("aulas")}<hr class="filete"></section>
 <section class="secao wrap" id="percurso">
-  {intro("O percurso", "<p>Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a própria luz.*</p>")}
-  {passos(PERCURSO)}
+  {intro("O percurso", "<p>Todo aluno começa pelo Desenho e pela Plástica. A partir deles, cada um encontra o seu meio e, com o tempo, a própria luz.*</p>" + lista(PERCURSO))}
   <hr class="filete">
 </section>
-<section class="secao wrap" id="formacao">
-  {intro("Formação", "<p>Uma base comum para todos e, a partir dela, um percurso próprio, num ambiente que reúne artistas em momentos diferentes.*</p>")}
-  {topicos(FORMACAO, "tres")}
+<section class="secao wrap">
+  {intro(FORMACAO[0][0], "<p>" + FORMACAO[0][1] + "</p>")}
+  <hr class="filete">
+</section>
+<section class="secao wrap">
+  {intro(FORMACAO[1][0], "<p>" + FORMACAO[1][1] + "</p>")}
+  <hr class="filete">
+</section>
+<section class="secao wrap">
+  {intro(FORMACAO[2][0], "<p>" + FORMACAO[2][1] + "</p>")}
   <hr class="filete">
 </section>
 <section class="secao wrap" id="ensino">
   {intro("Sobre o ensino", "<p>O percurso começa por uma base comum, onde os artistas abordam os fundamentos básicos — e é a partir disso que cada artista é conduzido ao aprofundamento de sua prática.</p>")}
-  {topicos(ENSINO, "duas-col")}
+  {acordeao(ENSINO)}
 </section>
 <section class="secao" id="trabalhos">
   <h2 class="t2 wrap rev">Trabalhos de Alunos</h2>
@@ -312,8 +312,7 @@ def build():
       '''<section class="abertura curta wrap"><h1 class="t1">Faça Parte</h1>
   <p>O ingresso no Alma começa por uma aula experimental: um primeiro contato com o atelier, a turma e o método de trabalho. Deixe seus dados e combinamos o dia pelo WhatsApp.*</p></section>
 <section class="secao wrap" id="ingresso">
-  ''' + intro("Como ingressar", "<p>Três passos, da primeira conversa à matrícula.*</p>") + passos(INGRESSO, "tres") + '''
-  <hr class="filete">
+  ''' + intro("Como ingressar", lista(INGRESSO)) + '''
 </section>
 <section class="wrap">
   <form class="formulario" data-form="candidatura" novalidate>
