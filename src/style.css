@@ -137,6 +137,7 @@ button,input,textarea{font:inherit;color:inherit}
 /* ---------- Como começar ---------- */
 .comecar{background:var(--claro2);padding-top:calc(var(--r) * .75);padding-bottom:var(--r)}
 .comecar p.corpo{color:var(--texto);max-width:65ch;margin-top:16px}
+.comecar .botoes{margin-top:32px}
 .form-linha{margin-top:32px;align-items:center;row-gap:12px}
 .form-linha .campo{grid-column:1 / span 6}
 .form-linha .btn{grid-column:7 / span 3;justify-self:start;min-height:44px}

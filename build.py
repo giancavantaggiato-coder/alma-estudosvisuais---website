@@ -19,14 +19,14 @@ MENU = [("sobre.html", "Sobre"), ("nossas-aulas.html", "Nossas Aulas"), ("blog.h
 
 def nav(atual, solida=False):
     itens = "".join(
-        f'<a href="{h}"{" aria-current=\"page\"" if h == atual else ""}>{t}</a>' for h, t in MENU)
-    gav = "".join(f'<a href="{h}">{t}</a>' for h, t in MENU)
+        f'<a href="{h}"{" aria-current=\"page\"" if h == atual else ""}>{t}</a>' for h, t in MENU) + f'<a href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>'
+    gav = "".join(f'<a href="{h}">{t}</a>' for h, t in MENU) + f'<a href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>'
     return f'''<header class="nav wrap{' solida' if solida else ''}">
   <div class="esq">
     <a class="marca" href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
     <nav class="menu" aria-label="Principal">{itens}</nav>
   </div>
-  <a class="btn loja" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>
+  <a class="btn loja" href="faca-parte.html">Faça Parte</a>
   <button class="abrir" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
 </header>
 <div class="veu" data-fechar></div>
@@ -34,18 +34,13 @@ def nav(atual, solida=False):
   <div class="topo"><a href="index.html" aria-label="Alma, página inicial">{LOGO.replace('class="logo"','class="logo"')}</a>
     <button class="fechar" data-fechar aria-label="Fechar menu"><svg width="17" height="12" viewBox="0 0 17 12" fill="currentColor"><path fill-rule="evenodd" d="M14.85 6.525 10.16 11.21l.75.75L16.87 6 10.91.04l-.75.75 4.69 4.69H0v1.05h14.85z"/></svg></button></div>
   <nav>{gav}</nav>
-  <a class="btn btn-claro loja-m" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>
+  <a class="btn btn-claro loja-m" href="faca-parte.html">Faça Parte</a>
 </aside>'''
 
 COMECAR = '''<section class="comecar wrap" id="comecar">
   <h2 class="t2 rev">Sua formação começa onde você está*</h2>
-  <p class="corpo rev">Entre em contato e desenvolva sua percepção, sua técnica e sua produção artística a partir de um percurso acompanhado de forma individual. Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir. Deixe seu WhatsApp e combinamos o dia.*</p>
-  <form class="form-linha rev" data-form="whatsapp" novalidate>
-    <label class="sr" for="wpp">Seu WhatsApp</label>
-    <input class="campo" id="wpp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="00 00000-0000" required>
-    <button class="btn" type="submit">Quero agendar</button>
-  </form>
-  <p class="aviso" role="status"></p>
+  <p class="corpo rev">Entre em contato e desenvolva sua percepção, sua técnica e sua produção artística a partir de um percurso acompanhado de forma individual. Na aula experimental, você conhece o atelier, a turma e o modo de trabalho antes de decidir. Preencha o formulário de entrada e combinamos o dia pelo WhatsApp.*</p>
+  <div class="botoes rev"><a class="btn btn-preto" href="faca-parte.html">Faça Parte</a></div>
 </section>'''
 
 RODAPE = f'''<footer class="rodape wrap">
@@ -329,7 +324,7 @@ def build():
     <div class="enviar"><button class="btn btn-preto" type="submit">Enviar</button></div>
     <p class="aviso" role="status" style="text-align:right"></p>
   </form>
-</section>''', solida=True)
+</section>''', solida=True, comecar=False)
 
     # ---------------- Contato ----------------
     pagina("contato.html", "Contato · Alma", "Endereço, WhatsApp e e-mail do Alma Centro de Estudos Visuais, em São Caetano do Sul.",
