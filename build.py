@@ -19,8 +19,8 @@ MENU = [("sobre.html", "Sobre"), ("nossas-aulas.html", "Nossas Aulas"), ("blog.h
 
 def nav(atual, solida=False):
     itens = "".join(
-        f'<a href="{h}"{" aria-current=\"page\"" if h == atual else ""}>{t}</a>' for h, t in MENU) + f'<a href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>'
-    gav = "".join(f'<a href="{h}">{t}</a>' for h, t in MENU) + f'<a href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>'
+        f'<a href="{h}"{" aria-current=\"page\"" if h == atual else ""}>{t}</a>' for h, t in MENU) + f'<a href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗︎</span></a>'
+    gav = "".join(f'<a href="{h}">{t}</a>' for h, t in MENU) + f'<a href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗︎</span></a>'
     return f'''<header class="nav wrap{' solida' if solida else ''}">
   <div class="esq">
     <a class="marca" href="index.html" aria-label="Alma, página inicial">{LOGO}</a>
@@ -170,7 +170,7 @@ EDUCACAO = f'''<section class="secao wrap" id="educacao">
 
 LOJA_SEC = f'''<section class="secao wrap" id="loja">
   {intro("Loja", "<p>Curadoria de materiais artísticos feita a partir da prática de atelier. O Alma Materiais Artísticos reúne uma seleção de meios abrasivos e fluidos, papéis, pincéis e instrumentos escolhidos criteriosamente por sua qualidade técnica, consistência de uso e adequação ao trabalho de artistas, estudantes e processos manuais.</p>",
-         f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a>')}
+         f'<a class="btn btn-preto" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗︎</span></a>')}
   <a class="larga rev apos-cab" href="{LOJA}" target="_blank" rel="noopener" style="display:block" aria-label="Ir para a loja"><img src="img/loja-armarios.jpg" alt="Armários de madeira com pigmentos, tintas e pincéis numa loja tradicional de materiais artísticos" loading="lazy"></a>
   <hr class="filete">
 </section>'''
@@ -201,7 +201,7 @@ def build():
   <img src="img/hero-inicio.jpg" alt="Estudantes trabalhando em esculturas num atelier" fetchpriority="high">
   <div class="chamada">
     <h1 class="t1">Da Ideia à Forma.<br>No seu Ritmo.*</h1>
-    <div class="botoes"><a class="btn" href="nossas-aulas.html">Nossas aulas</a><a class="btn" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗</span></a></div>
+    <div class="botoes"><a class="btn" href="nossas-aulas.html">Nossas aulas</a><a class="btn" href="{LOJA}" target="_blank" rel="noopener">Loja <span class="seta">↗︎</span></a></div>
   </div>
 </section>
 <section class="faixa wrap">

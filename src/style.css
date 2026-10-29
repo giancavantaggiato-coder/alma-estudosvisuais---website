@@ -51,7 +51,7 @@ button,input,textarea{font:inherit;color:inherit}
 .btn-preto{background:var(--preto);border-color:var(--preto);color:var(--claro)}
 .btn-claro{background:var(--claro);border-color:var(--claro);color:var(--preto)}
 .btn-linha{background:transparent;border-color:currentColor;color:var(--claro)}
-.seta{font-size:.75rem;line-height:1}
+.seta{font-size:.75rem;line-height:1;font-variant-emoji:text}
 .botoes{display:flex;flex-wrap:wrap;gap:20px}
 
 /* ---------- Navegação ---------- */
