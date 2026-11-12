@@ -21,7 +21,7 @@ A visão é uma chave do poder criador do homem, mesmo em seu nível mais rudime
 
 ## Comentário
 
-### O problema que a percepção resolve
+### A ambiguidade do estímulo
 
 Kepes parte de uma constatação que a ciência da visão desenvolveria nas décadas seguintes. A luz que alcança o olhar não traz pronta a organização do mundo visível. O que chega à retina é um conjunto de estímulos luminosos distribuídos sobre uma superfície curva, e esses estímulos admitem mais de uma leitura. O problema é conhecido como problema inverso, e a ambiguidade desses estímulos se apresenta em dois aspectos.
 
