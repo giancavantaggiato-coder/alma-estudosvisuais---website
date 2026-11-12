@@ -66,7 +66,7 @@ Ainda assim, observa Arnheim, os pintores sustentaram com boa razão que a fotog
 <p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
 </div>
 
-O equilíbrio é parte dessa síntese. No *São Jerônimo* de El Greco, o leve desvio da barba para a direita compensa as mãos e o livro, que estão à esquerda. Se cobrirmos a parte de baixo do quadro, a barba passa a parecer soprada pelo vento, querendo voltar à vertical, e a figura perde a vida. Quando o equilíbrio falha, a tensão se converte em paralisia.
+O equilíbrio é parte dessa síntese. No *São Jerônimo* de El Greco, o leve desvio da barba para a direita compensa o peso das mãos e do livro, que estão à esquerda. Se cobrirmos a parte de baixo do quadro, esse contrapeso desaparece, e a barba passa a parecer deslocada por uma força externa, com tendência a retornar à vertical. Arnheim observa que, numa composição desequilibrada, as Formas não estabilizam suas posições umas em relação às outras e parecem fixadas em lugares arbitrários. A tensão dirigida deixa de ser lida como dinâmica e passa a ser lida como instabilidade.
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/TitiaanElGeromeFrick.jpg?width=1000" alt="Retrato de São Jerônimo, idoso, de barba branca longa, vestido de vermelho, com as mãos sobre um livro aberto" loading="lazy"><figcaption>El Greco, São Jerônimo, c. 1590–1600. The Frick Collection, Nova York. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
