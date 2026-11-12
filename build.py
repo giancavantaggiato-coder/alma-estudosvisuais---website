@@ -180,8 +180,8 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 TEXTOS = [
   {"slug": "disegno", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Studies_for_the_Libyan_Sibyl_(recto);_Studies_for_the_Libyan_Sibyl_and_a_small_Sketch_for_a_Seated_Figure_(verso)_MET_DP826907.jpg?width=1600", "capa": "capa-sibila", "tag": "História da Arte",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
-   "titulo": "Disegno", "subtitulo": "O Desenho como ideia e como traço no Renascimento",
-   "resumo": "De Cennini a Zuccaro, como o Renascimento fez do Desenho o fundamento comum da pintura, da escultura e da arquitetura.*"},
+   "titulo": "Disegno", "subtitulo": "O Desenho enquanto pensamento no Renascimento",
+   "resumo": "De Cennini a Zuccaro, como o Renascimento fez do Desenho o fundamento comum da pintura, da escultura e da arquitetura."},
   {"slug": "curso-preliminar", "img": "capa-bauhaus-dessau.jpg", "tag": "História da Arte",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "O curso preliminar", "subtitulo": "Itten, Moholy-Nagy, Albers e o começo de uma formação",
