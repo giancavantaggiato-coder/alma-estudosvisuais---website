@@ -334,3 +334,5 @@ button,input,textarea{font:inherit;color:inherit}
 .capa-muybridge img{position:absolute;max-width:none;object-fit:fill}
 .larga.capa-muybridge img{width:102.98%;height:auto;left:-1.29%;top:50%;transform:translateY(-41.44%);clip-path:inset(2.4% 1.25% 19.5% 1.25%)}
 .foto.capa-muybridge img{height:128.08%;width:auto;top:-3.08%;left:50%;transform:translateX(-50%)}
+.recorte-muybridge{position:relative;aspect-ratio:1243/616;overflow:hidden;background:#0d0d0d}
+.figura .recorte-muybridge img{position:absolute;max-width:none;width:102.98%;height:auto;left:-1.29%;top:-3.08%}

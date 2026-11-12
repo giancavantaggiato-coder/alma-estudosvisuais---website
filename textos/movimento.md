@@ -53,7 +53,7 @@ Seria natural supor que, para representar o movimento, basta fixar um instante d
 
 O cavalo a galope é o caso mais conhecido. Durante séculos foi pintado com as pernas estendidas para a frente e para trás, como no *Derby de Epsom* de Géricault, de 1821. Em 1878, Eadweard Muybridge fotografou em sequência a égua Sallie Gardner em plena corrida e mostrou que o cavalo nunca assume essa posição. Quando as quatro patas deixam o chão, estão recolhidas sob o corpo, e não estendidas.
 
-<figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Horse_in_Motion.jpg?width=1200" alt="Sequência de fotografias de um cavalo a galope, com o cavaleiro, sobre fundo listrado" loading="lazy"><figcaption>Eadweard Muybridge, O cavalo em movimento, 1878. Domínio público, via Wikimedia Commons.</figcaption></figure>
+<figure class="figura"><div class="recorte-muybridge"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Horse_in_Motion_high_res.jpg?width=1280" alt="Sequência de fotografias de um cavalo a galope, com o cavaleiro, sobre fundo listrado" loading="lazy"></div><figcaption>Eadweard Muybridge, O cavalo em movimento, 1878. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Louis_Th%C3%A9odore_G%C3%A9ricault_001.jpg?width=1200" alt="Pintura de quatro cavalos de corrida com jóqueis, as pernas estendidas, sobre uma paisagem de céu nublado" loading="lazy"><figcaption>Théodore Géricault, O Derby de Epsom, 1821. Museu do Louvre, Paris. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
