@@ -181,7 +181,7 @@ TEXTOS = [
   {"slug": "o-objeto-feito-a-mao", "img": "capa-objeto-feito-a-mao.jpg", "tag": "Teoria da Arte", "serie": "Leituras de atelier",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "O objeto feito à mão", "subtitulo": "Gillo Dorfles e a margem de acaso",
-   "resumo": "Tradução comentada de um trecho de Gillo Dorfles sobre a dupla face do objeto e o que distingue o fazer manual da produção em série.*"},
+   "resumo": "Texto em preparação."},
   {"slug": "kathe-kollwitz", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathe_Kollwitz_-_Self-portrait_NGA_1943.3.5217.jpg?width=1600", "capa": "capa-topo", "tag": "História da Arte",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Käthe Kollwitz", "subtitulo": "O Desenho como ofício e testemunho",
