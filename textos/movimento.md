@@ -36,7 +36,7 @@ Na pintura, no Desenho e na escultura, tal como foram praticados durante século
 
 Ele retoma Kandinsky, que preferia falar em tensão, uma força própria do elemento, à qual se soma uma direção. Essa tensão dirigida, diz Arnheim, é uma propriedade das Formas tão real quanto a dimensão e a cor. Não é o observador que a imagina a partir de movimentos que já viu. Ela está na própria Configuração.
 
-Boa parte dessa tensão nasce de desvios. Um paralelogramo é visto como um retângulo inclinado, algo que se afastou de uma posição mais simples e parece querer voltar a ela. Nos experimentos de Edwin Rausch, citados por Arnheim, as pessoas achavam natural endireitar a figura, como quem devolve algo ao seu lugar. É o mesmo impulso que nos faz acertar um quadro torto na parede. Daí o papel decisivo da inclinação.
+Boa parte dessa tensão nasce de desvios. Um paralelogramo é visto como um retângulo inclinado, algo que se afastou de uma posição mais simples e parece querer voltar a ela. Nos experimentos de Edwin Rausch, citados por Arnheim, as pessoas achavam natural endireitar a figura, como quem encontra estabilidade. É o mesmo impulso que nos faz acertar um quadro torto na parede.
 
 <div class="citacao">
 
