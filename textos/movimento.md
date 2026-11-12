@@ -1,7 +1,8 @@
-<div class="trecho traducao">
-<p class="rotulo">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 378</p>
+<div class="citacao">
 
 “O movimento é a atração visual mais intensa da atenção.”
+
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 378</p>
 </div>
 
 Um gato pode descansar indiferente a tudo o que está à sua volta, mas basta que algo se agite para que seus olhos se voltem para o ponto e passem a segui-lo. Conosco acontece o mesmo. Arnheim explica esse reflexo pela história da espécie. Para nossos ancestrais, o que se movia no campo de visão podia ser um predador, um companheiro ou uma presa, e exigia resposta imediata. Os olhos se desenvolveram como instrumentos de sobrevivência e se adaptaram a essa tarefa.
@@ -26,20 +27,22 @@ Para quem compõe, isso significa que decidir o que será moldura e o que será 
 
 Na pintura, no Desenho e na escultura, nada se desloca de fato. Por isso Arnheim recomenda cautela com a própria palavra.
 
-<div class="trecho traducao">
-<p class="rotulo">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 422</p>
+<div class="citacao">
 
 “Se quisermos fazer justiça à dinâmica visual, seria melhor falarmos do "movimento" o menos possível.”
+
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 422</p>
 </div>
 
 Ele retoma Kandinsky, que preferia falar em tensão, uma força própria do elemento, à qual se soma uma direção. Essa tensão dirigida, diz Arnheim, é uma propriedade das Formas tão real quanto o tamanho e a cor. Não é o observador que a imagina a partir de movimentos que já viu. Ela está na própria Configuração.
 
 Sua origem é o desvio. Um paralelogramo é visto como um retângulo inclinado, algo que se afastou de uma posição mais simples e parece querer voltar a ela. Daí o papel decisivo da inclinação.
 
-<div class="trecho traducao">
-<p class="rotulo">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
+<div class="citacao">
 
 “A orientação oblíqua é provavelmente o recurso mais elementar e efetivo para se obter tensão dirigida.”
+
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
 </div>
 
 É com ela que a criança aprende a distinguir, no papel, a figura que caminha da figura que está parada. E era assim que Rodin dava vida a seus bustos, com uma leve inclinação da cabeça.
@@ -50,10 +53,11 @@ Seria natural supor que, para representar o movimento, basta fixar um instante d
 
 O cavalo a galope é o caso mais conhecido. Durante séculos foi pintado com as quatro patas estendidas, como no Derby de Epsom de Géricault. A fotografia revelou que nenhum cavalo assume essa posição ao galopar. Ainda assim, observa Arnheim, os artistas tinham razão, porque só a extensão máxima das pernas traduz em imagem a intensidade da corrida. A obra bem-sucedida não registra um instante. Ela sintetiza a ação inteira.
 
-<div class="trecho traducao">
-<p class="rotulo">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
+<div class="citacao">
 
 “A imagem imóvel não é momentânea, mas fora da dimensão do tempo.”
+
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
 </div>
 
 O equilíbrio é parte dessa síntese. No São Jerônimo de El Greco, o leve desvio da barba para a direita compensa as mãos e o livro, que estão à esquerda. Se cobrirmos a parte de baixo do quadro, a barba passa a parecer soprada pelo vento, querendo voltar à vertical, e a figura perde a vida. Quando o equilíbrio falha, a tensão se converte em paralisia.

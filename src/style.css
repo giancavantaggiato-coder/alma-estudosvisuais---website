@@ -312,6 +312,11 @@ button,input,textarea{font:inherit;color:inherit}
 .trecho p{margin-top:.8em}
 .trecho .rotulo{margin-top:0;font-size:.75rem;line-height:1.4;font-weight:500;color:var(--preto)}
 .trecho:not(.traducao){color:var(--texto-card);font-size:.9375rem}
+.citacao{margin:48px 0;padding:6px 0 6px 24px;border-left:2px solid var(--preto)}
+.artigo-corpo > .citacao:first-child{margin-top:0}
+.citacao p{margin:0;font-size:1.375rem;line-height:1.4;letter-spacing:-.01em;color:var(--preto)}
+.citacao .fonte{margin-top:14px;font-size:.75rem;line-height:1.4;letter-spacing:0;color:var(--texto-card)}
+@media (max-width:749px){ .citacao{margin:40px 0;padding-left:18px} .citacao p{font-size:1.1875rem} }
 .figura{margin:32px 0}
 .figura img{width:100%;height:auto;display:block}
 .figura figcaption{font-size:.75rem;line-height:1.5;color:var(--texto-card);margin-top:10px}
