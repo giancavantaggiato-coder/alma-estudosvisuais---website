@@ -4,11 +4,11 @@ Quando falamos em Desenho, não falamos apenas do traço que a mão deixa sobre 
 
 *Disegno* vem do latim *designare*, que os dicionários do século XVI definiam como indicar por meio de sinais. Nos documentos da construção da catedral de Florença, ainda no século XIV, a palavra já aparecia ligada a projeto, e um registro de 1367 manda desfazer todos os outros *disegnamenti* — os modelos e projetos da obra —, fossem de tijolo, de madeira ou de papel. Desenho, ali, era uma ideia que se tornava visível, qualquer que fosse o material.
 
-Na mesma época, Cennino Cennini escreveu um dos primeiros manuais de pintura, o *Libro dell'arte*. Para ele, o fundamento da arte estava no desenho e na cor, mas o estudo devia começar pelo desenho. E o exercício diário com a pena tinha um efeito que ia além da habilidade da mão.
+Pouco depois, por volta de 1400, Cennino Cennini escreveu um dos primeiros manuais de pintura, o *Libro dell'arte*. Para ele, o fundamento da arte estava no desenho e na cor, mas o estudo devia começar pelo desenho. E o exercício diário com a pena tinha um efeito que ia além da habilidade da mão.
 
 <div class="citacao">
 
-“Sabes o que te acontecerá praticando o desenho com a pena? Ele te fará experiente, hábil e capaz de muito desenho dentro da tua cabeça.”
+“Sabes o que te acontecerá praticando o desenho com a pena? Ele te fará experiente, prático e capaz de muito desenho dentro da tua cabeça.”
 
 <p class="fonte">Cennino Cennini, <em>Il libro dell'arte</em>, cap. XIII. Tradução livre</p>
 </div>
@@ -17,7 +17,7 @@ Desenho dentro da cabeça. A frase antecipa o que os teóricos do século seguin
 
 ### Vasari e as três artes
 
-Quem deu ao conceito sua forma mais conhecida foi Giorgio Vasari, pintor e arquiteto, considerado o fundador da História da Arte por suas *Vidas* dos artistas. Já em uma carta de 1546 ele chamava o Desenho de pai da pintura, da escultura e da arquitetura. Na segunda edição das *Vidas*, de 1568, desenvolveu a ideia. Segundo ele, o Desenho nasce do intelecto, que extrai de muitas coisas particulares um juízo geral, e por isso conhece a proporção do todo com as partes e das partes entre si, seja num corpo, numa planta ou num edifício.
+Quem deu ao conceito sua forma mais conhecida foi Giorgio Vasari, pintor e arquiteto, considerado o fundador da História da Arte por suas *Vidas* dos artistas. Já em uma carta de 1546 ele apontava o Desenho como origem comum da pintura, da escultura e da arquitetura. Na segunda edição das *Vidas*, de 1568, chamou-o de pai das três artes e desenvolveu a ideia. Segundo ele, o Desenho nasce do intelecto, que extrai de muitas coisas particulares um juízo geral, e por isso conhece a proporção do todo com as partes e das partes entre si, seja num corpo, numa planta ou num edifício.
 
 <div class="citacao">
 
@@ -41,17 +41,23 @@ O *disegno interno* é o conceito formado na mente, que permite reconhecer qualq
 <p class="fonte">Federico Zuccaro, <em>L'idea de' pittori, scultori et architetti</em>, 1607, citado por Moshe Barasch, <em>Theories of Art</em>, p. 299. Tradução livre</p>
 </div>
 
-Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem. O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente ao traço no papel.
+Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem.<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup> O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente ao traço no papel.
 
 ### Desenho e cor
 
-A primazia do Desenho não foi aceita por todos. Em Veneza, pintores como Ticiano construíam a obra sobretudo pela cor, e a disputa entre *disegno* e *colorito* atravessou o século XVI. Vasari conta que, ao ver a *Danaë* de Ticiano em Roma, Michelangelo elogiou a cor e o estilo, mas lamentou que em Veneza não se aprendesse a desenhar bem desde o início. Sem o estudo do Desenho, dizia, o artista não consegue ir além do que copia da natureza.
+A primazia do Desenho não foi aceita por todos. Em Veneza, pintores como Ticiano construíam a obra sobretudo pela cor, e a disputa entre *disegno* e *colorito* atravessou o século XVI. Vasari conta que, ao visitar Ticiano em Roma e ver a *Danaë* recém-terminada, Michelangelo elogiou a cor e o estilo, mas lamentou que em Veneza não se aprendesse a desenhar bem desde o início. Sem desenhar muito e estudar as obras antigas e modernas, dizia, o artista não consegue trabalhar bem de memória nem elevar o que copia do natural.
+
+<figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Danae_by_Titian_(Naples).jpg?width=1280" alt="Pintura de uma mulher nua reclinada sobre um leito branco, olhando para o alto, com um cupido à direita e uma nuvem dourada no céu" loading="lazy"><figcaption>Ticiano, Danaë, 1544–1546. Museo di Capodimonte, Nápoles. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
 Do lado veneziano, Lodovico Dolce respondia que invenção, desenho e cor tinham o mesmo valor, e que o pintor completo devia dominar os três. O debate sobreviveu ao Renascimento e voltou nos séculos seguintes, com Poussin e Rubens, Ingres e Delacroix. Para os florentinos, a cor sozinha era imitação. O Desenho era conhecimento.
 
 ### No atelier
 
 No Alma, o Desenho é a base de todos os cursos, da pintura à escultura. Não pela tradição, e sim porque nele se forma o que Cennini chamava de desenho dentro da cabeça — a capacidade de ver a proporção do todo com as partes, de organizar a Configuração antes de executá-la, de saber o que se quer antes de tocar o material. A técnica de cada meio vem depois e se apoia nessa base. Escrever Desenho com maiúscula é um modo de lembrar que ele é, ao mesmo tempo, ideia e traço.
+
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. Zuccaro separa a palavra em três partes. As letras das pontas, <em>di</em> e <em>o</em>, juntas formam <em>Dio</em>, que em italiano quer dizer Deus. O que fica no meio, <em>segn</em>, remete a <em>segno</em>, sinal. Lida assim, a palavra <em>disegno</em> conteria a expressão <em>segno di Dio</em> — sinal de Deus —, que para Zuccaro indicava a presença do divino no homem.</p>
+</div>
 
 ## Referências
 
