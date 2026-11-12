@@ -360,7 +360,6 @@ def build():
 <div class="wrap artigo-capa"><div class="larga"><img src="img/{x["img"]}" alt="" fetchpriority="high"></div></div>
 <header class="wrap artigo-cab">
   <div class="artigo-linha"><time datetime="{x["data"]}">{x["data_txt"]}</time><span class="pill">{x["tag"]}</span></div>
-  <p class="artigo-rotulo">{x.get("serie", "")}</p>
   <h1 class="t1">{x["titulo"]}</h1>
   <p class="artigo-sub">{x["subtitulo"]}</p>
 </header>
