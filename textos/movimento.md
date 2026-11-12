@@ -57,7 +57,7 @@ O cavalo a galope é o caso mais conhecido. Durante séculos foi pintado com as 
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Louis_Th%C3%A9odore_G%C3%A9ricault_001.jpg?width=1200" alt="Pintura de quatro cavalos de corrida com jóqueis, as pernas estendidas, sobre uma paisagem de céu nublado" loading="lazy"><figcaption>Théodore Géricault, O Derby de Epsom, 1821. Museu do Louvre, Paris. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
-Ainda assim, observa Arnheim, os pintores sustentaram com boa razão que a fotografia estava errada e os artistas certos, porque só a extensão máxima das pernas traduz em imagem a intensidade da corrida. Comparadas lado a lado, as fotografias de Muybridge são exatas, e o cavalo de Géricault é o que corre. A obra bem-sucedida não registra um instante. Ela sintetiza a ação inteira.
+Ainda assim, observa Arnheim, os pintores sustentaram com boa razão que a fotografia estava errada e os artistas certos, porque só a extensão máxima das pernas traduz em imagem a intensidade da corrida. Comparadas lado a lado, as fotografias de Muybridge são exatas, e o cavalo de Géricault é o que corre. Uma obra bem-sucedida não se dá pelo registro fiel de um instante, e sim pela sua totalidade.
 
 <div class="citacao">
 

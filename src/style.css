@@ -328,3 +328,9 @@ button,input,textarea{font:inherit;color:inherit}
 .notas li{position:relative;padding-left:1.4em}
 .notas .nota-num{position:absolute;left:0;top:.55em}
 [id^="nota-"],[id^="ref-"]{scroll-margin-top:96px}
+
+/* Capa do texto Movimento: mostra só a grade de fotografias de Muybridge, sem as legendas da prancha */
+.capa-muybridge{position:relative;background:#0d0d0d}
+.capa-muybridge img{position:absolute;max-width:none;object-fit:fill}
+.larga.capa-muybridge img{width:102.98%;height:auto;left:-1.29%;top:50%;transform:translateY(-41.44%)}
+.foto.capa-muybridge img{height:128.08%;width:auto;top:-3.08%;left:50%;transform:translateX(-50%)}

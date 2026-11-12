@@ -178,11 +178,11 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
-  {"slug": "movimento", "img": "trabalho-3.jpg", "tag": "Percepção Visual",
+  {"slug": "movimento", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Horse_in_Motion_high_res.jpg?width=1280", "capa": "capa-muybridge", "tag": "Percepção Visual",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Movimento", "subtitulo": "O que se move numa imagem que não se move",
    "resumo": "Movimento físico e movimento óptico, tensão dirigida e o percurso do olhar. O que Arnheim ensina sobre a dinâmica das imagens imóveis.*"},
-  {"slug": "perceber-e-formar", "img": "blog-2.jpg", "tag": "Percepção Visual", "serie": "Leituras de atelier",
+  {"slug": "perceber-e-formar", "img": "capa-figura-fundo.svg", "tag": "Percepção Visual", "serie": "Leituras de atelier",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Perceber é formar", "subtitulo": "Gyorgy Kepes e a Educação da Visão",
    "resumo": "Tradução comentada de um trecho de Gyorgy Kepes sobre a visão como processo formativo, e o que ele ensina sobre o Desenho."},
@@ -215,8 +215,11 @@ def markdown(txt):
     fecha()
     return '\n'.join(out)
 
+def src_img(x): return x["img"] if x["img"].startswith("http") else "img/" + x["img"]
+def cls_capa(x): return (" " + x["capa"]) if x.get("capa") else ""
+
 def cartao_nota(x):
-    return f'''<a class="cartao rev" href="{x["slug"]}.html"><div class="foto"><img src="img/{x["img"]}" alt="" loading="lazy"></div>
+    return f'''<a class="cartao rev" href="{x["slug"]}.html"><div class="foto{cls_capa(x)}"><img src="{src_img(x)}" alt="" loading="lazy"></div>
 <div class="meta"><span class="cat">{x["tag"]}</span><time datetime="{x["data"]}">{x["data_txt"]}</time></div><h3 class="t3">{x["titulo"]}</h3></a>'''
 
 NOTAS_SEC = f'''<section class="secao wrap" id="notas">
@@ -348,7 +351,7 @@ def build():
 <section class="secao wrap">
   <h2 class="t2 contagem" data-total="{N}">{CONT}</h2>
   <div class="posts">''' + "".join(
-        f'''<a class="post rev" href="{x["slug"]}.html" data-tag="{x["tag"]}"><div class="foto"><img src="img/{x["img"]}" alt="" loading="lazy"></div>
+        f'''<a class="post rev" href="{x["slug"]}.html" data-tag="{x["tag"]}"><div class="foto{cls_capa(x)}"><img src="{src_img(x)}" alt="" loading="lazy"></div>
 <div class="cab"><h3 class="t3">{x["titulo"]}</h3><span class="pill">{x["tag"]}</span></div><p class="corpo">{x["resumo"]}</p><span class="ler">Ler texto</span></a>''' for x in TEXTOS) + f'''</div>
   <p class="vazio" hidden>Nenhum texto encontrado com esses termos.</p>
   <hr class="filete">
@@ -361,7 +364,7 @@ def build():
         nota = f'<p class="artigo-serie">{SERIE_TXT[x["serie"]]}</p>' if x.get("serie") in SERIE_TXT else ""
         pagina(x["slug"] + ".html", f'{x["titulo"]} | Blog do Alma', x["resumo"],
           f'''<article>
-<div class="wrap artigo-capa"><div class="larga"><img src="img/{x["img"]}" alt="" fetchpriority="high"></div></div>
+<div class="wrap artigo-capa"><div class="larga{cls_capa(x)}"><img src="{src_img(x)}" alt="" fetchpriority="high"></div></div>
 <header class="wrap artigo-cab">
   <div class="artigo-linha"><span class="pill">{x["tag"]}</span><time datetime="{x["data"]}">{x["data_txt"]}</time></div>
   <h1 class="t1">{x["titulo"]}</h1>
