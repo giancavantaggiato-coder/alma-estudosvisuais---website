@@ -355,11 +355,11 @@ def build():
     for x in TEXTOS:
         corpo_md = markdown(open(os.path.join(RAIZ, "textos", x["slug"] + ".md"), encoding="utf-8").read())
         nota = f'<p class="artigo-serie">{SERIE_TXT[x["serie"]]}</p>' if x.get("serie") in SERIE_TXT else ""
-        rotulo = " | ".join(t for t in (x.get("serie"), x["tag"]) if t)
         pagina(x["slug"] + ".html", f'{x["titulo"]} | Blog do Alma', x["resumo"],
           f'''<article>
-<header class="abertura curta wrap artigo-cab">
-  <p class="artigo-rotulo">{rotulo}</p>
+<div class="wrap artigo-capa"><div class="larga"><img src="img/{x["img"]}" alt="" fetchpriority="high"></div></div>
+<header class="wrap artigo-cab">
+  <p class="artigo-rotulo">{x.get("serie", "")}<span class="pill">{x["tag"]}</span></p>
   <h1 class="t1">{x["titulo"]}</h1>
   <p class="artigo-sub">{x["subtitulo"]}</p>
   <p class="artigo-data"><time datetime="{x["data"]}">{x["data_txt"]}</time></p>

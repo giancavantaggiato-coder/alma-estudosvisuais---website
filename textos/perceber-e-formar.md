@@ -1,4 +1,4 @@
-## O trecho
+## Texto original e tradução
 
 <div class="trecho">
 <p class="rotulo">Original</p>
