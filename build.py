@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "curso-preliminar", "img": "sobre-bauhaus.jpg", "tag": "História da Arte",
+   "data": "2026-11-12", "data_txt": "12 nov 2026",
+   "titulo": "O curso preliminar", "subtitulo": "Itten, Moholy-Nagy, Albers e o começo de uma formação",
+   "resumo": "Como a Bauhaus começava a formar seus alunos pelos sentidos, pelos materiais e pelas relações entre as Formas, e não pela cópia.*"},
   {"slug": "movimento", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Horse_in_Motion_high_res.jpg?width=1280", "capa": "capa-muybridge", "tag": "Percepção Visual",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Movimento", "subtitulo": "O que se move numa imagem que não se move",
