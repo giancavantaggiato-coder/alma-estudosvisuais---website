@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-label="Bandas de Mach: campo de valor alto, gradação e campo de valor baixo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#d4d4d4"/>
+      <stop offset="1" stop-color="#3a3a3a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="420" height="400" fill="#d4d4d4"/>
+  <rect x="420" y="0" width="360" height="400" fill="url(#g)"/>
+  <rect x="780" y="0" width="420" height="400" fill="#3a3a3a"/>
+</svg>

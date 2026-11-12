@@ -74,7 +74,7 @@
         p.hidden = !ok; if (ok) { n++; p.classList.add('on'); }
       });
       var filtrando = tag || termo;
-      cont.textContent = filtrando ? n + (n === 1 ? ' texto encontrado' : ' textos encontrados') : cont.dataset.total + ' textos publicados';
+      cont.textContent = filtrando ? n + (n === 1 ? ' texto encontrado' : ' textos encontrados') : cont.dataset.total + (cont.dataset.total === '1' ? ' texto publicado' : ' textos publicados');
       vazio.hidden = n > 0;
     }
     document.querySelectorAll('.tags button').forEach(function (b) {

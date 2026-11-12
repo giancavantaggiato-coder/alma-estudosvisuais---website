@@ -175,15 +175,50 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
   <hr class="filete">
 </section>'''
 
-NOTAS = [("nota-valor-tonal.jpg", "Percepção", "2026-08-04", "04 ago 2026", "A construção do valor tonal na pintura a óleo"),
-         ("nota-velatura.jpg", "Técnica", "2026-07-28", "28 jul 2026", "Velatura e opacidade: dois modos de construir a cor"),
-         ("nota-desenho.jpg", "Processo", "2026-07-15", "15 jul 2026", "O que o Desenho ensina antes da tinta")]
+# ---------------- Textos do blog ----------------
+# Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
+TEXTOS = [
+  {"slug": "perceber-e-formar", "img": "blog-2.jpg", "tag": "Percepção Visual", "serie": "Leituras de atelier",
+   "data": "2026-11-12", "data_txt": "12 nov 2026",
+   "titulo": "Perceber é formar", "subtitulo": "Gyorgy Kepes e a educação da visão",
+   "resumo": "Tradução comentada de um trecho de Gyorgy Kepes sobre a visão como processo formativo, e o que ele ensina sobre o Desenho."},
+]
+SERIE_TXT = {"Leituras de atelier": "Leituras de atelier reúne trechos de textos teóricos e técnicos que orientam o trabalho no Alma. Cada leitura apresenta o trecho no original, sua tradução e um comentário. A referência completa e uma nota sobre o autor estão ao final."}
+
+def _inline(t):
+    t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+    t = re.sub(r'(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])', r'<em>\1</em>', t)
+    return t
+
+def markdown(txt):
+    """Markdown mínimo: ## / ### títulos, listas com '- ', parágrafos, **negrito**, *itálico*.
+    Linhas que começam com '<' passam como HTML."""
+    out, par, lst = [], [], []
+    def fecha():
+        if par: out.append('<p>' + _inline(' '.join(par)) + '</p>'); par.clear()
+        if lst: out.append('<ul>' + ''.join(f'<li>{_inline(i)}</li>' for i in lst) + '</ul>'); lst.clear()
+    for linha in txt.splitlines():
+        l = linha.strip()
+        if not l: fecha(); continue
+        if l.startswith('<'): fecha(); out.append(l); continue
+        if l.startswith('### '): fecha(); out.append(f'<h3>{_inline(l[4:])}</h3>'); continue
+        if l.startswith('## '): fecha(); out.append(f'<h2>{_inline(l[3:])}</h2>'); continue
+        if l.startswith('- '):
+            if par: fecha()
+            lst.append(l[2:]); continue
+        if lst: fecha()
+        par.append(l)
+    fecha()
+    return '\n'.join(out)
+
+def cartao_nota(x):
+    return f'''<a class="cartao rev" href="{x["slug"]}.html"><div class="foto"><img src="img/{x["img"]}" alt="" loading="lazy"></div>
+<div class="meta"><span class="cat">{x["tag"]}</span><time datetime="{x["data"]}">{x["data_txt"]}</time></div><h3 class="t3">{x["titulo"]}</h3></a>'''
+
 NOTAS_SEC = f'''<section class="secao wrap" id="notas">
   {intro("Notas e Ensaios", "<p>Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Aqui, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>",
          '<a class="btn btn-preto" href="blog.html">Ver todos</a>')}
-  <div class="tres apos-cab">''' + "".join(
-    f'''<a class="cartao rev" href="blog.html"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="meta"><span class="cat">{cat}</span><time datetime="{dt}">{data}</time></div><h3 class="t3">{t}*</h3></a>''' for img, cat, dt, data, t in NOTAS) + '''</div>
+  <div class="tres apos-cab">''' + "".join(cartao_nota(x) for x in TEXTOS[:3]) + '''</div>
 </section>'''
 
 def build():
@@ -293,16 +328,9 @@ def build():
 </section>''')
 
     # ---------------- Blog ----------------
-    POSTS = [("blog-1.jpg", "Materiais", "História dos pigmentos e do meio que os carrega", "Pigmento é matéria seca e inerte. O meio que o carrega decide o brilho, a secagem e a permanência da cor."),
-             ("blog-2.jpg", "Percepção Visual", "Movimento e ritmo na percepção da forma", "A mesa permanece retangular enquanto você caminha ao redor dela. A forma resiste à mudança de aparência."),
-             ("blog-3.jpg", "Teoria", "Grisaille e a construção do valor tonal", "A chave tonal se estabelece antes da primeira mistura: o valor decide de onde vem a luz e o que fica na sombra."),
-             ("blog-4.jpg", "História da Arte", "Chiaroscuro e o peso construtivo da sombra", "Em Caravaggio a sombra ganha peso construtivo e passa a sustentar a figura com a força do claro."),
-             ("blog-5.jpg", "Prática", "Velatura e a cor que nasce da luz refletida", "Camada transparente sobre camada seca. A cor não nasce da mistura: nasce da luz que atravessa e volta refletida."),
-             ("blog-6.jpg", "Pensamento", "Pentimento e a memória do próprio processo", "O traço que a decisão anterior deixa visível na superfície. A obra guarda a memória do próprio processo."),
-             ("blog-7.jpg", "Estética", "Albers e a interação entre cores vizinhas", "Nenhuma cor é vista isolada. O tom muda conforme a vizinhança, e é essa comparação que a prática exercita."),
-             ("blog-8.jpg", "Fotografia", "Frontalidade e obliquidade no enquadramento", "A posição da câmera diante do plano decide antes da luz: frontalidade organiza, obliquidade abre profundidade."),
-             ("blog-9.jpg", "Cinema", "Kepes e a composição em movimento", "Movimento como condição da vida moderna, e a disciplina formal — ritmo, sequência, unidade — acima da novidade.")]
-    TAGS = ["Materiais", "Percepção Visual", "Teoria", "História da Arte", "Prática", "Pensamento", "Estética", "Fotografia", "Cinema"]
+    TAGS = sorted({x["tag"] for x in TEXTOS})
+    N = len(TEXTOS)
+    CONT = f"{N} texto publicado" if N == 1 else f"{N} textos publicados"
     pagina("blog.html", "Blog · Alma", "Notas e Ensaios: textos sobre percepção visual, processos de criação, técnica e história da arte.",
       f'''<section class="abertura curta wrap"><h1 class="t1">Blog</h1>
   <p>Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Aqui, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>
@@ -314,14 +342,36 @@ def build():
   <div class="tags" role="group" aria-label="Filtrar por tema">{"".join(f'<button type="button" aria-pressed="false" data-tag="{t}">{t}</button>' for t in TAGS)}</div>
 </section>
 <section class="secao wrap">
-  <h2 class="t2 contagem" data-total="9">9 textos publicados</h2>
+  <h2 class="t2 contagem" data-total="{N}">{CONT}</h2>
   <div class="posts">''' + "".join(
-        f'''<a class="post rev" href="#" data-tag="{tag}"><div class="foto"><img src="img/{img}" alt="" loading="lazy"></div>
-<div class="cab"><h3 class="t3">{t}*</h3><span class="pill">{tag}</span></div><p class="corpo">{d}*</p><span class="ler">Ler texto</span></a>''' for img, tag, t, d in POSTS) + f'''</div>
+        f'''<a class="post rev" href="{x["slug"]}.html" data-tag="{x["tag"]}"><div class="foto"><img src="img/{x["img"]}" alt="" loading="lazy"></div>
+<div class="cab"><h3 class="t3">{x["titulo"]}</h3><span class="pill">{x["tag"]}</span></div><p class="corpo">{x["resumo"]}</p><span class="ler">Ler texto</span></a>''' for x in TEXTOS) + f'''</div>
   <p class="vazio" hidden>Nenhum texto encontrado com esses termos.</p>
   <hr class="filete">
 </section>
 {LOJA_SEC}''', solida=True)
+
+    # ---------------- Textos do blog (uma página por texto) ----------------
+    for x in TEXTOS:
+        corpo_md = markdown(open(os.path.join(RAIZ, "textos", x["slug"] + ".md"), encoding="utf-8").read())
+        nota = f'<p class="artigo-serie">{SERIE_TXT[x["serie"]]}</p>' if x.get("serie") in SERIE_TXT else ""
+        rotulo = " | ".join(t for t in (x.get("serie"), x["tag"]) if t)
+        pagina(x["slug"] + ".html", f'{x["titulo"]} | Blog do Alma', x["resumo"],
+          f'''<article>
+<header class="abertura curta wrap artigo-cab">
+  <p class="artigo-rotulo">{rotulo}</p>
+  <h1 class="t1">{x["titulo"]}</h1>
+  <p class="artigo-sub">{x["subtitulo"]}</p>
+  <p class="artigo-data"><time datetime="{x["data"]}">{x["data_txt"]}</time></p>
+</header>
+<div class="wrap artigo">
+  <div class="artigo-corpo">
+    {nota}
+    {corpo_md}
+    <p class="artigo-volta"><a class="btn btn-preto" href="blog.html">Ver todos os textos</a></p>
+  </div>
+</div>
+</article>''', atual="blog.html", solida=True)
 
     # ---------------- Faça Parte ----------------
     pagina("faca-parte.html", "Faça Parte · Alma", "Candidate-se para estudar no Alma: conte quem você é e o que procura.",
