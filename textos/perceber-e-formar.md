@@ -9,15 +9,19 @@ Vision is a key to man's creative power, even on the most rudimentary level. Our
 <div class="trecho traducao">
 <p class="rotulo">Tradução</p>
 
-A visão é uma chave do poder criador do homem, mesmo em seu nível mais rudimentar. Nosso olho recebe apenas o fluxo aleatório dos estímulos luminosos; os raios de luz que incidem sobre a retina não têm ordem em si. Mas nossa tendência dinâmica a criar ordem transforma as impressões sensoriais elementares dos sinais luminosos em formas dotadas de sentido. Da profusão de sensações que atinge as nossas retinas, articulamos estruturas, imagens; e do fluxo de imagens ópticas, entremeadas, interligadas e cambiantes, destacamos padrões, coisas e acontecimentos persistentes. Assim, perceber uma imagem é participar de um processo formativo; é um ato criador. Na forma mais simples de orientação visual e na unidade mais abrangente de uma obra de arte há uma base comum significativa: a seleção e a organização das impressões sensoriais do campo visual.
+A visão é uma chave do poder criador do homem<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup>, mesmo em seu nível mais rudimentar. Nosso olho recebe apenas o fluxo aleatório dos estímulos luminosos; os raios de luz que incidem sobre a retina não têm ordem em si. Mas nossa tendência dinâmica a criar ordem transforma as impressões sensoriais elementares dos sinais luminosos em formas dotadas de sentido. Da profusão<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup> de sensações que atinge as nossas retinas, articulamos estruturas, imagens; e do fluxo de imagens ópticas, entremeadas, interligadas e cambiantes, destacamos padrões, coisas e acontecimentos persistentes. Assim, perceber uma imagem é participar de um processo formativo<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup>; é um ato criador. Na forma mais simples de orientação visual e na unidade mais abrangente de uma obra de arte há uma base comum significativa: a seleção<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup> e a organização das impressões sensoriais do campo visual.
 </div>
 
 ### Notas de tradução
 
-- **Forming process.** Traduzido como "processo formativo". A expressão vem da tradição em que Kepes se formou, a da Bauhaus, na qual *Gestaltung* designava ao mesmo tempo o ato de dar forma e a forma resultante. O adjetivo "formativo" preserva essa dupla face e aproxima o texto da noção de formatividade de Luigi Pareyson, para quem a Forma se estrutura no próprio ato formativo.
-- **Welter.** Designa uma massa agitada e indistinta. "Profusão" conserva a ideia de excesso e mantém o registro do original.
-- **Sorting.** Traduzido como "seleção", no sentido de discriminar e classificar, primeira operação de qualquer organização.
-- **Man.** Traduzido como "homem", conforme o original de 1965, no sentido de humanidade.
+<div class="notas">
+
+- <sup class="nota-num" id="nota-1"><a href="#ref-1">1</a></sup> **Man.** Traduzido como "homem", conforme o original de 1965, no sentido de humanidade.
+- <sup class="nota-num" id="nota-2"><a href="#ref-2">2</a></sup> **Welter.** Designa uma massa agitada e indistinta. "Profusão" conserva a ideia de excesso e mantém o registro do original.
+- <sup class="nota-num" id="nota-3"><a href="#ref-3">3</a></sup> **Forming process.** Traduzido como "processo formativo". A expressão vem da tradição em que Kepes se formou, a da Bauhaus, na qual *Gestaltung* designava ao mesmo tempo o ato de dar forma e a forma resultante. O adjetivo "formativo" preserva essa dupla face e aproxima o texto da noção de formatividade de Luigi Pareyson, para quem a Forma se estrutura no próprio ato formativo.
+- <sup class="nota-num" id="nota-4"><a href="#ref-4">4</a></sup> **Sorting.** Traduzido como "seleção", no sentido de discriminar e classificar, primeira operação de qualquer organização.
+
+</div>
 
 ## Comentário
 

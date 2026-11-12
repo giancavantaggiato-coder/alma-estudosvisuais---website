@@ -317,3 +317,9 @@ button,input,textarea{font:inherit;color:inherit}
 .figura figcaption{font-size:.75rem;line-height:1.5;color:var(--texto-card);margin-top:10px}
 .artigo-volta{margin-top:48px}
 @media (max-width:749px){ .artigo-corpo h2{margin-top:44px} .artigo-capa{padding-top:16px} .artigo-cab{padding-top:12px} .artigo-capa .larga{aspect-ratio:16/10} }
+.nota-ref,.nota-num{font-size:.7em;line-height:0;vertical-align:super}
+.nota-ref a,.nota-num a{text-decoration:none;color:var(--preto);font-weight:500;padding:0 1px}
+.notas ul{list-style:none;padding-left:0}
+.notas li{position:relative;padding-left:1.4em}
+.notas .nota-num{position:absolute;left:0;top:.55em}
+[id^="nota-"],[id^="ref-"]{scroll-margin-top:96px}
