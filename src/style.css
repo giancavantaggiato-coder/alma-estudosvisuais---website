@@ -349,3 +349,5 @@ button,input,textarea{font:inherit;color:inherit}
 .post,.cartao{min-width:0}
 .uma-linha{max-width:100%}
 .capa-topo img{object-position:50% 12%}
+.figura.vertical img{max-width:460px;margin:0 auto}
+.figura.vertical figcaption{text-align:center}
