@@ -359,10 +359,10 @@ def build():
           f'''<article>
 <div class="wrap artigo-capa"><div class="larga"><img src="img/{x["img"]}" alt="" fetchpriority="high"></div></div>
 <header class="wrap artigo-cab">
-  <p class="artigo-rotulo">{x.get("serie", "")}<span class="pill">{x["tag"]}</span></p>
+  <div class="artigo-linha"><time datetime="{x["data"]}">{x["data_txt"]}</time><span class="pill">{x["tag"]}</span></div>
+  <p class="artigo-rotulo">{x.get("serie", "")}</p>
   <h1 class="t1">{x["titulo"]}</h1>
   <p class="artigo-sub">{x["subtitulo"]}</p>
-  <p class="artigo-data"><time datetime="{x["data"]}">{x["data_txt"]}</time></p>
 </header>
 <div class="wrap artigo">
   <div class="artigo-corpo">
