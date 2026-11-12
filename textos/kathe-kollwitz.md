@@ -1,4 +1,4 @@
-Käthe Kollwitz nasceu em Königsberg, em 1867, e morreu em Moritzburg, perto de Dresden, em 1945. Viveu a maior parte da vida em Berlim, num bairro operário onde o marido, Karl, mantinha um consultório médico. Sua obra costuma ser lembrada pelos temas — a fome, o trabalho, a guerra, a perda dos filhos. Mas, como observa Elizabeth Prelinger, isso acabou encobrindo o que seu filho Hans considerava essencial. Kollwitz era, antes de tudo, uma mestra do ofício. Por trás de cada imagem há dezenas de estudos, provas recusadas e experiências técnicas, e a força que parece brotar espontaneamente de suas folhas é resultado de um trabalho longo sobre os meios do Desenho e da gravura.
+Käthe Kollwitz nasceu em Königsberg, em 1867, e morreu em Moritzburg, perto de Dresden, em 1945. Viveu a maior parte da vida em Berlim, num bairro operário onde o marido, Karl, mantinha um consultório médico. Sua obra costuma ser lembrada pelos temas — a fome, o trabalho, a guerra, a perda dos filhos. Mas, como observa Elizabeth Prelinger, isso acabou encobrindo o que seu filho Hans considerava essencial. Kollwitz era, antes de tudo, uma mestra do ofício. Por trás de cada obra há dezenas de estudos, provas recusadas e experiências técnicas, e a força que parece brotar espontaneamente de suas folhas é resultado de um trabalho longo sobre os meios do Desenho e da gravura.
 
 ### Pintar com os olhos
 
@@ -17,7 +17,7 @@ A escolha encontrou apoio em Max Klinger, cujos ciclos de gravuras ela conheceu 
 
 ### Os ciclos
 
-Em 1893, assistiu à estreia de *Os tecelões*, peça de Gerhart Hauptmann sobre a revolta dos tecelões da Silésia em 1844. Levou cinco anos para transformar a experiência em seis gravuras, publicadas em 1897 como *Uma revolta dos tecelões*. O título já diz muito. Não era a ilustração de uma peça nem de um episódio histórico, e sim uma sequência de imagens que se sustentava sozinha, sobre uma condição que se repetia. Quando a série foi indicada para uma medalha de ouro no Salão de Berlim, em 1898, o próprio imperador Guilherme II vetou o prêmio.
+Em 1893, assistiu à estreia de *Os tecelões*, peça de Gerhart Hauptmann sobre a revolta dos tecelões da Silésia em 1844. Levou cinco anos para transformar a experiência em seis gravuras, publicadas em 1897 como *Uma revolta dos tecelões*. O título já diz muito. Não era a ilustração de uma peça nem de um episódio histórico, e sim uma sequência de gravuras que se sustentava sozinha, sobre uma condição que se repetia. Quando a série foi indicada para uma medalha de ouro no Salão de Berlim, em 1898, o próprio imperador Guilherme II vetou o prêmio.
 
 O ciclo seguinte, *Guerra dos camponeses*, concluído em 1908, foi o mais ambicioso do ponto de vista técnico. Para construir os tons, Kollwitz transferia para a chapa a trama do papel e até a textura de um tecido, usando o verniz mole, e acrescentava retículas de pontos com processos fotomecânicos. Na terceira folha, *Afiando a foice*, uma camponesa aparece de perto, iluminada de baixo, com os olhos reduzidos a fendas. Um gesto comum da vida no campo se torna o preparo de uma arma.
 
@@ -25,7 +25,7 @@ O ciclo seguinte, *Guerra dos camponeses*, concluído em 1908, foi o mais ambici
 
 ### A Forma inteira
 
-Em 1903, Kollwitz gravou *Mulher com criança morta*, talvez a imagem mais forte que fez. Usou como modelo o filho mais novo, Peter, então com sete anos. Prelinger chama atenção para o modo como a dor é construída. Kollwitz não confia a emoção ao rosto. Ela exagera a curvatura do corpo e desfaz a ligação natural entre as partes, de modo que a própria Configuração da figura comunica a desagregação. Nos estudos preparatórios, cada região pede um tratamento diferente — traços longos e decididos numa parte, modelado delicado em outra, o carvão esfumado para a sombra e o branco para a Luz. A Forma cresceu tanto que ela precisou colar outra folha de papel para continuar o desenho da cabeça e do ombro.
+Em 1903, Kollwitz gravou *Mulher com criança morta*, talvez a gravura mais forte que fez. Usou como modelo o filho mais novo, Peter, então com sete anos. Prelinger chama atenção para o modo como a dor é construída. Kollwitz não confia a emoção ao rosto. Ela exagera a curvatura do corpo e desfaz a ligação natural entre as partes, de modo que a própria Configuração da figura comunica a desagregação. Nos estudos preparatórios, cada região pede um tratamento diferente — traços longos e decididos numa parte, modelado delicado em outra, o carvão esfumado para a sombra e o branco para a Luz. A Forma cresceu tanto que ela precisou colar outra folha de papel para continuar o desenho da cabeça e do ombro.
 
 ### A perda
 
@@ -48,7 +48,7 @@ Sob o nazismo, foi impedida na prática de expor. Em 1937, a mostra planejada pa
 
 ### No atelier
 
-Kollwitz mostra que expressão e ofício não se opõem. A emoção de suas folhas depende de decisões de Desenho — o Valor escolhido para a dor, a Luz que vem de baixo, a curvatura de um corpo, a redução ao essencial — e essas decisões foram testadas em estudo após estudo. É esse o caminho que buscamos no Alma. A sensibilidade se educa pelo exercício, e a força de uma imagem nasce do domínio dos meios que a constroem.*
+Kollwitz mostra que expressão e ofício não se opõem. A emoção de suas folhas depende de decisões de Desenho — o Valor escolhido para a dor, a Luz que vem de baixo, a curvatura de um corpo, a redução ao essencial — e essas decisões foram testadas em estudo após estudo. É esse o caminho que buscamos no Alma. A sensibilidade se educa pelo exercício, e a força de uma obra nasce do domínio dos meios que a constroem.*
 
 ## Referências
 

@@ -192,7 +192,7 @@ TEXTOS = [
    "resumo": "Como a Bauhaus começava a formar seus alunos pelos sentidos, pelos materiais e pelas relações entre as Formas, e não pela cópia."},
   {"slug": "movimento", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Horse_in_Motion_high_res.jpg?width=1280", "capa": "capa-muybridge", "tag": "Percepção Visual",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
-   "titulo": "Movimento", "subtitulo": "O que se move numa imagem que não se move",
+   "titulo": "Movimento", "subtitulo": "Como a obra imóvel conduz o olhar",
    "resumo": "Movimento físico e movimento óptico, tensão dirigida e o percurso do olhar. O que Arnheim ensina sobre a dinâmica das imagens imóveis.*"},
   {"slug": "perceber-e-formar", "img": "capa-figura-fundo.svg", "tag": "Percepção Visual", "serie": "Leituras de atelier",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
