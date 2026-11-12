@@ -27,7 +27,7 @@ A visão é uma chave do poder criador do homem<sup class="nota-ref"><a href="#n
 
 ### A ambiguidade do estímulo
 
-Kepes parte de uma constatação que a ciência da visão desenvolveria nas décadas seguintes. A luz que alcança o olhar não traz pronta a organização do mundo visível. O que chega à retina é um conjunto de estímulos luminosos distribuídos sobre uma superfície curva, e esses estímulos admitem mais de uma leitura. Na ciência da visão, essa situação recebe o nome de *problema inverso*, termo vindo da matemática e aplicado à percepção a partir dos estudos de visão computacional dos anos 1980. A ambiguidade desses estímulos se apresenta em dois aspectos.
+Kepes parte de uma constatação que a ciência da visão desenvolveria nas décadas seguintes: a luz que alcança o olhar não traz pronta a organização do mundo visível. O que chega à retina é um conjunto de estímulos luminosos distribuídos sobre uma superfície curva, e esses estímulos admitem mais de uma leitura. Na ciência da visão, essa situação recebe o nome de *problema inverso*, termo vindo da matemática e aplicado à percepção a partir dos estudos de visão computacional dos anos 1980. A ambiguidade desses estímulos se apresenta em dois aspectos.
 
 O primeiro diz respeito ao Desenho — ou Configuração — do que se vê. A imagem retiniana é uma projeção bidimensional de um espaço tridimensional. Uma mesma projeção pode corresponder a infinitas configurações no espaço. Um trapézio projetado na retina pode ser um retângulo inclinado, um trapézio visto de frente ou um conjunto de pontos em profundidades diferentes que, daquele ângulo, se alinham.
 
@@ -61,7 +61,7 @@ A capacidade de organizar o campo visual depende do repertório de formas, rela�
 
 Em *Education of Vision*, o psicólogo Wolfgang Metzger relata estudos segundo os quais crianças expostas com frequência a imagens do que chama de *elevada ordem estética* — obras de organização visual mais congruente — desenvolvem suas faculdades visuais de modo mais livre do que aquelas expostas a imagens de baixo rigor de organização.
 
-É esse repertório que o atelier procura ampliar. O estudo de obras, as visitas a exposições, os encontros de história da arte e a convivência com trabalhos em estágios diferentes alimentam o repertório a partir do qual o olhar ordena. A Educação da Visão que dá nome ao volume de Kepes se faz no convívio prolongado com aquilo que se quer aprender a ver.
+O estudo de obras, as visitas a exposições, os encontros de História da Arte e a convivência com trabalhos em estágios diferentes alimentam o repertório a partir do qual o olhar percebe. É esse repertório que buscamos ampliar. A Educação da Visão que dá nome ao volume de Kepes se faz no convívio prolongado com aquilo que se quer aprender a ver.
 
 ## Sobre o autor e o livro
 
