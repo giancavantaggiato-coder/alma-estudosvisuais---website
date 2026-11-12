@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "movimento", "img": "trabalho-3.jpg", "tag": "Percepção Visual",
+   "data": "2026-11-12", "data_txt": "12 nov 2026",
+   "titulo": "Movimento", "subtitulo": "O que se move numa imagem que não se move",
+   "resumo": "Movimento físico e movimento óptico, tensão dirigida e o percurso do olhar. O que Arnheim ensina sobre a dinâmica das imagens imóveis.*"},
   {"slug": "perceber-e-formar", "img": "blog-2.jpg", "tag": "Percepção Visual", "serie": "Leituras de atelier",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Perceber é formar", "subtitulo": "Gyorgy Kepes e a Educação da Visão",
