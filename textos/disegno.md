@@ -1,0 +1,64 @@
+Quando escrevemos Desenho com maiúscula, não falamos apenas do traço sobre o papel. Falamos de uma ideia que tem origem no Renascimento italiano e que os florentinos chamavam de *disegno*. A palavra reunia dois sentidos que hoje costumamos separar — o desenho feito à mão e o projeto que a mente concebe antes da obra. Entender essa dupla natureza ajuda a entender por que, ainda hoje, toda formação em Artes Visuais começa por ele.
+
+### Uma palavra com dois sentidos
+
+*Disegno* vem do latim *designare*, que os dicionários do século XVI definiam como indicar por meio de sinais. Nos documentos da construção da catedral de Florença, ainda no século XIV, a palavra já aparecia ligada a projeto, e um registro de 1367 fala em desfazer todos os outros *disegnamenti*, fossem de tijolo, de madeira ou de papel. Desenho, ali, era a intenção que se tornava visível, qualquer que fosse o material.
+
+Na mesma época, Cennino Cennini escreveu um dos primeiros manuais de pintura, o *Libro dell'arte*. Para ele, o fundamento da arte estava no desenho e na cor, mas o estudo devia começar pelo desenho. E o exercício diário com a pena tinha um efeito que ia além da habilidade da mão.
+
+<div class="citacao">
+
+“Sabes o que te acontecerá praticando o desenho com a pena? Ele te fará experiente, hábil e capaz de muito desenho dentro da tua cabeça.”
+
+<p class="fonte">Cennino Cennini, <em>Il libro dell'arte</em>, cap. XIII. Tradução livre</p>
+</div>
+
+Desenho dentro da cabeça. A frase antecipa o que os teóricos do século seguinte iriam desenvolver. Leon Battista Alberti recomendava que o pintor nunca tomasse o pincel sem antes ter resolvido na mente o que faria e como faria, porque é melhor corrigir o erro no pensamento do que na pintura. O Desenho passava a ser o lugar onde o artista encontra pela primeira vez a própria obra.
+
+### Vasari e as três artes
+
+Quem deu ao conceito sua forma mais conhecida foi Giorgio Vasari, pintor, arquiteto e autor das *Vidas* dos artistas. Já em uma carta de 1546 ele chamava o Desenho de pai da pintura, da escultura e da arquitetura. Na segunda edição das *Vidas*, de 1568, desenvolveu a ideia. O Desenho nasce do intelecto, que extrai de muitas coisas particulares um juízo geral, e por isso conhece a proporção do todo com as partes e das partes entre si, seja num corpo, numa planta ou num edifício.
+
+<div class="citacao">
+
+“O Desenho não é outra coisa senão uma expressão visível e a declaração do conceito que se tem na mente.”
+
+<p class="fonte">Giorgio Vasari, <em>Le Vite</em>, 2ª ed., 1568, introdução. Tradução livre</p>
+</div>
+
+A consequência foi decisiva. Segundo Panofsky, Vasari foi o primeiro a afirmar a unidade interna do que hoje chamamos de artes visuais e a tratá-las num só livro. Pintura, escultura e arquitetura deixavam de ser ofícios separados, cada um com sua corporação, e passavam a ter uma origem comum. Em 1563, Vasari esteve entre os fundadores da Accademia del Disegno, em Florença, a primeira academia oficial de arte. O nome dizia tudo.
+
+### Desenho interno e Desenho externo
+
+No fim do século XVI, a ambiguidade da palavra virou matéria de teoria. Benvenuto Cellini escreveu num projeto de emblema para a Academia que o Desenho é de dois tipos, o primeiro feito na imaginação e o segundo, derivado dele, demonstrado com linhas. Federico Zuccaro deu nome a essa distinção — *disegno interno* e *disegno esterno*.
+
+O *disegno interno* é o conceito formado na mente, que permite reconhecer qualquer coisa e agir de acordo com o que se pretende. Zuccaro observa que ele não pertence só aos artistas e independe de qualquer meio. Já o *disegno esterno* é a ideia que se torna visível. Para Zuccaro, ele é a Forma sem corpo, sem a cor da pintura nem o peso da pedra. Por isso a linha pura era, para ele, o que mais se aproximava da própria Forma.
+
+<div class="citacao">
+
+“O Desenho não é matéria, nem corpo, nem acidente, nem substância. É forma, ideia, ordem, regra.”
+
+<p class="fonte">Federico Zuccaro, <em>L'idea de' pittori, scultori et architetti</em>, 1607, citado por Moshe Barasch, <em>Theories of Art</em>, p. 299. Tradução livre</p>
+</div>
+
+Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem. O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente ao traço no papel.
+
+### Desenho e cor
+
+A primazia do Desenho não foi aceita por todos. Em Veneza, pintores como Ticiano construíam a obra sobretudo pela cor, e a disputa entre *disegno* e *colorito* atravessou o século XVI. Vasari conta que, ao ver a *Danaë* de Ticiano em Roma, Michelangelo elogiou a cor e o estilo, mas lamentou que em Veneza não se aprendesse a desenhar bem desde o início. Sem o estudo do Desenho, dizia, o artista não consegue ir além do que copia da natureza.
+
+Do lado veneziano, Lodovico Dolce respondia que invenção, desenho e cor tinham o mesmo valor, e que o pintor completo devia dominar os três. O debate sobreviveu ao Renascimento e voltou nos séculos seguintes, com Poussin e Rubens, Ingres e Delacroix. Para os florentinos, a cor sozinha era imitação. O Desenho era conhecimento.
+
+### No atelier
+
+No Alma, o Desenho é a base de todos os cursos, da pintura à escultura. Não pela tradição, e sim porque nele se forma o que Cennini chamava de desenho dentro da cabeça — a capacidade de ver a proporção do todo com as partes, de organizar a Configuração antes de executá-la, de saber o que se quer antes de tocar o material. A técnica de cada meio vem depois e se apoia nessa base. Escrever Desenho com maiúscula é um modo de lembrar que ele é, ao mesmo tempo, ideia e traço.*
+
+## Referências
+
+- BARASCH, Moshe. *Theories of Art: From Plato to Winckelmann*. New York: Routledge.
+- CENNINI, Cennino. *Il libro dell'arte*.
+- PANOFSKY, Erwin. *Meaning in the Visual Arts*. Garden City: Doubleday, 1955.
+- ROSAND, David. *Drawing Acts: Studies in Graphic Expression and Representation*. Cambridge: Cambridge University Press, 2002.
+- SCOLARI, Massimo. *Oblique Drawing: A History of Anti-Perspective*. Cambridge: MIT Press, 2012.
+- JERNYEI-KISS, János. *Disegno and Colore*. Em *Botticelli to Titian: Two Centuries of Italian Painting*. Budapest: Szépművészeti Múzeum, 2009.
+- *A Companion to Art Theory*. Org. Paul Smith e Carolyn Wilde. Oxford: Blackwell, 2002.
