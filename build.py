@@ -359,7 +359,7 @@ def build():
           f'''<article>
 <div class="wrap artigo-capa"><div class="larga"><img src="img/{x["img"]}" alt="" fetchpriority="high"></div></div>
 <header class="wrap artigo-cab">
-  <div class="artigo-linha"><time datetime="{x["data"]}">{x["data_txt"]}</time><span class="pill">{x["tag"]}</span></div>
+  <div class="artigo-linha"><span class="pill">{x["tag"]}</span><time datetime="{x["data"]}">{x["data_txt"]}</time></div>
   <h1 class="t1">{x["titulo"]}</h1>
   <p class="artigo-sub">{x["subtitulo"]}</p>
 </header>
