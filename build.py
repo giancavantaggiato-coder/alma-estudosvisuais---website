@@ -226,9 +226,11 @@ def markdown(txt):
 def src_img(x): return x["img"] if x["img"].startswith("http") else "img/" + x["img"]
 def cls_capa(x): return (" " + x["capa"]) if x.get("capa") else ""
 
+def tit_completo(x): return x["titulo"] + (": " + x["subtitulo"] if x.get("subtitulo") else "")
+
 def cartao_nota(x):
     return f'''<a class="cartao rev" href="{x["slug"]}.html"><div class="foto{cls_capa(x)}"><img src="{src_img(x)}" alt="" loading="lazy"></div>
-<div class="meta"><span class="cat">{x["tag"]}</span><time datetime="{x["data"]}">{x["data_txt"]}</time></div><h3 class="t3">{x["titulo"]}</h3></a>'''
+<div class="meta"><span class="cat">{x["tag"]}</span><time datetime="{x["data"]}">{x["data_txt"]}</time></div><h3 class="t3 uma-linha" title="{tit_completo(x)}">{tit_completo(x)}</h3></a>'''
 
 NOTAS_SEC = f'''<section class="secao wrap" id="notas">
   {intro("Notas e Ensaios", "<p>Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Aqui, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>",
@@ -360,7 +362,7 @@ def build():
   <h2 class="t2 contagem" data-total="{N}">{CONT}</h2>
   <div class="posts">''' + "".join(
         f'''<a class="post rev" href="{x["slug"]}.html" data-tag="{x["tag"]}"><div class="foto{cls_capa(x)}"><img src="{src_img(x)}" alt="" loading="lazy"></div>
-<div class="cab"><h3 class="t3">{x["titulo"]}</h3><span class="pill">{x["tag"]}</span></div><p class="corpo">{x["resumo"]}</p><span class="ler">Ler texto</span></a>''' for x in TEXTOS) + f'''</div>
+<div class="cab"><h3 class="t3 uma-linha" title="{tit_completo(x)}">{tit_completo(x)}</h3><span class="pill">{x["tag"]}</span></div><p class="corpo">{x["resumo"]}</p><span class="ler">Ler texto</span></a>''' for x in TEXTOS) + f'''</div>
   <p class="vazio" hidden>Nenhum texto encontrado com esses termos.</p>
   <hr class="filete">
 </section>

@@ -343,3 +343,8 @@ button,input,textarea{font:inherit;color:inherit}
 .notas{margin-top:40px}
 .notas p{font-size:.8125rem;line-height:1.55;color:var(--texto-card);margin:0 0 8px}
 .notas a{color:inherit;text-decoration:none}
+.uma-linha{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post .cab .uma-linha{flex:1}
+.post .cab .pill{flex-shrink:0}
+.post,.cartao{min-width:0}
+.uma-linha{max-width:100%}
