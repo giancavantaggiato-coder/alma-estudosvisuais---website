@@ -23,7 +23,7 @@ A visão é uma chave do poder criador do homem, mesmo em seu nível mais rudime
 
 ### A ambiguidade do estímulo
 
-Kepes parte de uma constatação que a ciência da visão desenvolveria nas décadas seguintes. A luz que alcança o olhar não traz pronta a organização do mundo visível. O que chega à retina é um conjunto de estímulos luminosos distribuídos sobre uma superfície curva, e esses estímulos admitem mais de uma leitura. O problema é conhecido como *problema inverso*, e a ambiguidade desses estímulos se apresenta em dois aspectos.
+Kepes parte de uma constatação que a ciência da visão desenvolveria nas décadas seguintes. A luz que alcança o olhar não traz pronta a organização do mundo visível. O que chega à retina é um conjunto de estímulos luminosos distribuídos sobre uma superfície curva, e esses estímulos admitem mais de uma leitura. Na ciência da visão, essa situação recebe o nome de *problema inverso*, termo vindo da matemática e aplicado à percepção a partir dos estudos de visão computacional dos anos 1980. A ambiguidade desses estímulos se apresenta em dois aspectos.
 
 O primeiro diz respeito ao Desenho — ou Configuração — do que se vê. A imagem retiniana é uma projeção bidimensional de um espaço tridimensional. Uma mesma projeção pode corresponder a infinitas configurações no espaço. Um trapézio projetado na retina pode ser um retângulo inclinado, um trapézio visto de frente ou um conjunto de pontos em profundidades diferentes que, daquele ângulo, se alinham.
 
