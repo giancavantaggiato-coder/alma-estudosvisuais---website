@@ -44,49 +44,39 @@ Algumas obras sobreviveram melhor porque foram enterradas cedo. As *korai* da Ac
 
 ### Ver o que o olho não vê
 
-A ciência recente tornou visível o que o olho já não alcança. Em 2007, o cientista da conservação Giovanni Verri desenvolveu uma técnica de imagem por luminescência para detectar o azul egípcio, um pigmento sintético de cálcio, cobre e silício, praticamente o único azul usado na Grécia e em Roma. Iluminado com luz vermelha ou verde, o pigmento emite radiação infravermelha, que uma câmera digital registra mesmo onde nada é visível a olho nu.<sup class="nota-ref"><a href="#nota-8" id="ref-8">8</a></sup>
+A ciência recente tornou visível o que o olho já não alcança. Em 2007, o cientista da conservação Giovanni Verri desenvolveu uma técnica de imagem por luminescência para detectar o azul egípcio, um pigmento sintético de cálcio, cobre e silício, praticamente o único azul usado na Grécia e em Roma. Iluminado com luz vermelha ou verde, o pigmento emite radiação infravermelha, que uma câmera digital registra mesmo onde nada é visível a olho nu.<sup class="nota-ref"><a href="#nota-4" id="ref-4-2">4</a></sup>
 
-Em 2023, a técnica foi aplicada às esculturas do Partenon no Museu Britânico, o exemplo máximo do mármore branco. A equipe de Verri encontrou azul egípcio em onze esculturas dos frontões e em uma figura do friso. O azul aparecia nas ondas do mar de onde surge Hélio, no espaço entre as pernas dos bancos de Deméter e Perséfone e, sobretudo, em padrões tecidos nas roupas das deusas. Havia também traços de branco e de um roxo que não era feito de moluscos, ao contrário da púrpura habitual da Antiguidade. Os pesquisadores observaram ainda que os escultores entalhavam texturas diferentes no mármore conforme o que seria pintado por cima.<sup class="nota-ref"><a href="#nota-8" id="ref-8">8</a></sup> Talha e pintura eram pensadas juntas desde o início.
+Em 2023, a técnica foi aplicada às esculturas do Partenon no Museu Britânico, o exemplo máximo do mármore branco. A equipe de Verri encontrou azul egípcio em onze esculturas dos frontões e em uma figura do friso. O azul aparecia nas ondas do mar de onde surge Hélio, no espaço entre as pernas dos bancos de Deméter e Perséfone e, sobretudo, em padrões tecidos nas roupas das deusas. Havia também traços de branco e de um roxo que não era feito de moluscos, ao contrário da púrpura habitual da Antiguidade. Os pesquisadores observaram ainda que os escultores entalhavam texturas diferentes no mármore conforme o que seria pintado por cima.<sup class="nota-ref"><a href="#nota-4" id="ref-4-3">4</a></sup> Talha e pintura eram pensadas juntas desde o início.
 
 ### As reconstruções
 
-Há mais de quarenta anos, os arqueólogos Vinzenz Brinkmann e Ulrike Koch-Brinkmann reconstroem esculturas antigas com as cores identificadas nos originais. A exposição *Bunte Götter* — Deuses coloridos —, aberta em Munique em 2003, percorreu o mundo e chegou ao Metropolitan de Nova York em 2022, na mostra *Chroma*. Em Atenas, o público fez fila e saiu chocado. Em Hamburgo, houve quem declarasse que a arte clássica estava morta.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup>
+Há mais de quarenta anos, os arqueólogos Vinzenz Brinkmann e Ulrike Koch-Brinkmann reconstroem esculturas antigas com as cores identificadas nos originais. A exposição *Bunte Götter* — Deuses coloridos —, aberta em Munique em 2003<sup class="nota-ref"><a href="#nota-11" id="ref-11">11</a></sup>, percorreu o mundo e chegou ao Metropolitan de Nova York em 2022, na mostra *Chroma*. Em Atenas, o público fez fila e saiu chocado. Em Hamburgo, houve quem declarasse que a arte clássica estava morta.<sup class="nota-ref"><a href="#nota-8" id="ref-8">8</a></sup>
 
 
 Uma das reconstruções mais conhecidas é a da chamada *Kore de Quios*, da Acrópole de Atenas. Sobre o mármore claro da pele e dos cabelos, as vestes recebem azul intenso e vermelho, com meandros, rosetas e barras ornamentais — o mesmo tipo de padrão tecido que a equipe de Verri encontrou nas roupas das deusas do Partenon.
 
 <figure class="figura vertical"><img src="img/kore-quios-reconstrucao.jpg" alt="Reconstrução colorida de uma estátua arcaica de jovem, com pele e cabelos claros e vestes em azul e vermelho cobertas de meandros e rosetas, sobre fundo preto" loading="lazy"><figcaption>Reconstrução colorida da chamada Kore de Quios, original de c. 510 a.C., Museu da Acrópole, Atenas. Reconstrução de Vinzenz Brinkmann e Ulrike Koch-Brinkmann. Liebieghaus Skulpturensammlung, Frankfurt.</figcaption></figure>
 
-As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
+As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
 
 ### A paleta sobre o mármore
 
-As análises das últimas duas décadas permitem descrever com alguma precisão o que havia sobre a pedra. Na *Kore de Phrasikleia* foram identificados ocre vermelho e marrom, hematita, cinábrio, ouro-pigmento, branco de chumbo e laca de garança, além de folhas de ouro e de uma lâmina de chumbo e estanho que brilhava como prata.<sup class="nota-ref"><a href="#nota-11" id="ref-11">11</a></sup> No Partenon, o azul egípcio aparece combinado a dois brancos, o gesso e, provavelmente, o branco de osso.<sup class="nota-ref"><a href="#nota-12" id="ref-12">12</a></sup> São pigmentos minerais e orgânicos, aplicados em camadas finas sobre uma superfície que o próprio escultor preparava para recebê-los — mais lisa onde seria pele, com texturas distintas onde seria tecido.
+As análises das últimas duas décadas permitem descrever com alguma precisão o que havia sobre a pedra. Na *Kore de Phrasikleia* foram identificados ocre vermelho e marrom, hematita, cinábrio, ouro-pigmento, branco de chumbo e laca de garança, além de folhas de ouro e de uma lâmina de chumbo e estanho que brilhava como prata.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> No Partenon, o azul egípcio aparece combinado a dois brancos, o gesso e, provavelmente, o branco de osso.<sup class="nota-ref"><a href="#nota-4" id="ref-4-4">4</a></sup> São pigmentos minerais e orgânicos, aplicados em camadas finas sobre uma superfície que o próprio escultor preparava para recebê-los — mais lisa onde seria pele, com texturas distintas onde seria tecido.
 
 A escultura grega, portanto, só se completava com a pintura. Talha e Cor eram etapas de um mesmo projeto. O branco que hoje associamos ao clássico se deve, em parte, ao tempo, que apagou a pintura, e, em parte, a uma teoria, que fez dessa perda um ideal.
 
-<div class="notas">
-<p id="nota-1"><a href="#ref-1">1</a>. Eurípides, <em>Helena</em>, v. 262–263. As traduções variam entre estátua e pintura.</p>
-<p id="nota-2"><a href="#ref-2">2</a>. Plínio, o Velho, <em>História natural</em>, XXXV, 133.</p>
-<p id="nota-3"><a href="#ref-3">3</a>. Lorenzo Ghiberti, <em>Commentarii</em>.</p>
-<p id="nota-4"><a href="#ref-4">4</a>. Verri et al., <em>Antiquity</em>, 2023.</p>
-<p id="nota-5"><a href="#ref-5">5</a>. Winckelmann, <em>História da arte da Antiguidade</em>, 1764.</p>
-<p id="nota-6"><a href="#ref-6">6</a>. Painter, <em>The History of White People</em>, 2010.</p>
-<p id="nota-7"><a href="#ref-7">7</a>. Brinkmann, Koch-Brinkmann e Dreyfus, <em>Gods in Color</em>, 2017.</p>
-<p id="nota-8"><a href="#ref-8">8</a>. Verri et al., <em>Antiquity</em>, 2023.</p>
-<p id="nota-9"><a href="#ref-9">9</a>. Susanne Ebbinghaus, em <em>Harvard Magazine</em>, nov. 2007.</p>
-<p id="nota-10"><a href="#ref-10">10</a>. Giovanni Verri, em entrevista à CNN, out. 2023.</p>
-<p id="nota-11"><a href="#ref-11">11</a>. The Metropolitan Museum of Art, <em>Chroma</em>, ficha da reconstrução da estela funerária de Phrasikleia, 2022.</p>
-<p id="nota-12"><a href="#ref-12">12</a>. Verri et al., <em>Antiquity</em>, 2023.</p>
-</div>
-
 ## Referências
 
-- BRINKMANN, Vinzenz; KOCH-BRINKMANN, Ulrike; DREYFUS, Renée. *Gods in Color: Polychromy in the Ancient World*. New York: Prestel, 2017.
-- BRINKMANN, Vinzenz; WÜNSCHE, Raimund (org.). *Bunte Götter: Die Farbigkeit antiker Skulptur*. München: Staatliche Antikensammlungen und Glyptothek, 2003.
-- EURÍPIDES. *Helena*.
-- HEMINGWAY, Seán; LEPINSKI, Sarah (cur.). *Chroma: Ancient Sculpture in Color*. New York: The Metropolitan Museum of Art, 2022.
-- PAINTER, Nell Irvin. *The History of White People*. New York: W. W. Norton, 2010.
-- PLÍNIO, o Velho. *História natural*.
-- VERRI, Giovanni et al. The goddess' new clothes: the carving and polychromy of the Parthenon Sculptures. *Antiquity*, 2023.
-- WINCKELMANN, Johann Joachim. *Geschichte der Kunst des Alterthums*. Dresden, 1764.
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. EURÍPIDES. <em>Helena</em>, v. 262–263. As traduções variam entre estátua e pintura.</p>
+<p id="nota-2"><a href="#ref-2">2</a>. PLÍNIO, o Velho. <em>História natural</em>, XXXV, 133.</p>
+<p id="nota-3"><a href="#ref-3">3</a>. GHIBERTI, Lorenzo. <em>Commentarii</em>.</p>
+<p id="nota-4"><a href="#ref-4">4</a>. VERRI, Giovanni et al. The goddess' new clothes: the carving and polychromy of the Parthenon Sculptures. <em>Antiquity</em>, 2023.</p>
+<p id="nota-5"><a href="#ref-5">5</a>. WINCKELMANN, Johann Joachim. <em>Geschichte der Kunst des Alterthums</em>. Dresden, 1764.</p>
+<p id="nota-6"><a href="#ref-6">6</a>. PAINTER, Nell Irvin. <em>The History of White People</em>. New York: W. W. Norton, 2010.</p>
+<p id="nota-7"><a href="#ref-7">7</a>. BRINKMANN, Vinzenz; KOCH-BRINKMANN, Ulrike; DREYFUS, Renée. <em>Gods in Color: Polychromy in the Ancient World</em>. New York: Prestel, 2017.</p>
+<p id="nota-8"><a href="#ref-8">8</a>. EBBINGHAUS, Susanne. Em <em>Harvard Magazine</em>, nov. 2007.</p>
+<p id="nota-9"><a href="#ref-9">9</a>. VERRI, Giovanni. Entrevista à CNN, out. 2023.</p>
+<p id="nota-10"><a href="#ref-10">10</a>. THE METROPOLITAN MUSEUM OF ART. <em>Chroma: Ancient Sculpture in Color</em>. Ficha da reconstrução da estela funerária de Phrasikleia. New York, 2022.</p>
+<p id="nota-11"><a href="#ref-11">11</a>. BRINKMANN, Vinzenz; WÜNSCHE, Raimund (org.). <em>Bunte Götter: Die Farbigkeit antiker Skulptur</em>. München: Staatliche Antikensammlungen und Glyptothek, 2003.</p>
+</div>
