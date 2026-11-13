@@ -178,7 +178,7 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
-  {"slug": "historia-da-tinta-a-oleo", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Westminster_Retable.jpg?width=1600", "tag": "História da Arte",
+  {"slug": "historia-da-tinta-a-oleo", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Federico_Barocci,_Madonna_di_San_Simone_01.jpg?width=1600", "capa": "capa-barocci", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "A história da tinta a óleo", "subtitulo": "Do aglutinante medieval à tinta industrial",
    "resumo": "Da têmpera a ovo ao tubo de Van Gogh, como o óleo mudou a maneira de construir a Luz, o suporte e a superfície da pintura."},
