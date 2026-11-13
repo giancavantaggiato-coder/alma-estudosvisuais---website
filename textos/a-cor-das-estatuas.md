@@ -40,7 +40,7 @@ As provas, porém, nunca deixaram de aparecer. As escavações de Pompeia e Herc
 
 Algumas obras sobreviveram melhor porque foram enterradas cedo. As *korai* da Acrópole de Atenas, estátuas de jovens derrubadas pelos persas em 480 a.C. e depois soterradas, conservam restos de vermelho, verde e azul nas roupas e nos cabelos. A *Kore de Phrasikleia*, do século VI a.C., guarda vestígios suficientes para que se identificassem cerca de onze pigmentos, entre vermelhos, amarelos, preto e branco, além de aplicações em ouro.<sup class="nota-ref"><a href="#nota-7" id="ref-7">7</a></sup>
 
-<figure class="figura vertical"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/ACMA_679_Kore_2.JPG?width=1000" alt="Estátua arcaica de mármore de uma jovem de pé, com os braços junto ao corpo, cabelos longos e sorriso discreto, com leves vestígios de cor" loading="lazy"><figcaption>Peplos Kore, c. 530 a.C., mármore de Paros. Museu da Acrópole, Atenas. Foto Marsyas, CC BY-SA 2.5, via Wikimedia Commons.</figcaption></figure>
+<figure class="figura vertical"><img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/248500/2069725/main-image" alt="Estela funerária alta e estreita de mármore com um jovem e uma menina em relevo, com vestígios de pintura vermelha no fundo" loading="lazy"><figcaption>Estela funerária de um jovem e de uma menina, c. 530 a.C., mármore, Grécia, Ática. The Metropolitan Museum of Art, Nova York. Open Access.</figcaption></figure>
 
 ### Ver o que o olho não vê
 
@@ -52,7 +52,7 @@ Em 2023, a técnica foi aplicada às esculturas do Partenon no Museu Britânico,
 
 Há mais de quarenta anos, os arqueólogos Vinzenz Brinkmann e Ulrike Koch-Brinkmann reconstroem esculturas antigas com as cores identificadas nos originais. A exposição *Bunte Götter* — Deuses coloridos —, aberta em Munique em 2003, percorreu o mundo e chegou ao Metropolitan de Nova York em 2022, na mostra *Chroma*. Em Atenas, o público fez fila e saiu chocado. Em Hamburgo, houve quem declarasse que a arte clássica estava morta.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup>
 
-<figure class="figura vertical"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/NAMABG-Peplos_kore_as_Athena-Artemis.JPG?width=1200" alt="Duas reconstruções coloridas da mesma estátua arcaica, com vestes vermelhas, verdes e azuis cobertas de padrões, lado a lado numa sala de exposição" loading="lazy"><figcaption>Duas versões da reconstrução colorida da Peplos Kore por Vinzenz Brinkmann e Ulrike Koch-Brinkmann, exposição Bunte Götter, Museu Arqueológico Nacional, Atenas. Via Wikimedia Commons.</figcaption></figure>
+<figure class="figura vertical"><img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/254504/2070960/main-image" alt="Esfinge grega de calcário sentada, com asas e restos de pintura na superfície" loading="lazy"><figcaption>Estátua de uma esfinge, calcário, Grécia, Ática, exposta em Chroma com seus vestígios de cor. The Metropolitan Museum of Art, Nova York. Open Access.</figcaption></figure>
 
 As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
 
