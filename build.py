@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "a-cor-das-estatuas", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Peplos_Kore%2C_cast_and_reconstruction%2C_Cambridge_Museum_of_Classical_Archaeology%2C_154248.jpg?width=1600", "capa": "capa-topo", "tag": "História da Arte",
+   "data": "2026-11-13", "data_txt": "13 nov 2026",
+   "titulo": "A cor das estátuas", "subtitulo": "O mito do mármore branco na escultura grega",
+   "resumo": "O mármore branco que associamos ao clássico é um engano. Como as estátuas gregas perderam suas cores, de onde veio o ideal branco e o que a ciência revelou."},
   {"slug": "ma", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hasegawa_Tohaku_-_Pine_Trees_%28Sh%C5%8Drin-zu_by%C5%8Dbu%29_-_right_hand_screen.jpg?width=1600", "tag": "Teoria da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "Ma", "subtitulo": "O intervalo na pintura da China e do Japão",
