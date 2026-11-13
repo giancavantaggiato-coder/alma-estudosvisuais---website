@@ -10,7 +10,7 @@ O óleo já estava presente nesse período, só que em papel secundário. A part
 
 Vasari atribuiu a invenção da pintura a óleo a Jan van Eyck, e a história comumente se repete até hoje. Os documentos e o exame técnico das obras contam outra coisa. Os pintores do Norte usavam óleo havia séculos, e um painel como o Retábulo de Westminster, de cerca de 1270, já mostra o meio empregado com grande refinamento.<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup> Para Jill Dunkerton, o que mudou no início do século XV, com Van Eyck, Robert Campin e Rogier van der Weyden, foi a maneira de usar o material.
 
-<figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Detail_of_Christs_Globe_from_the_Westminster_Retable.jpg?width=798" alt="Detalhe de pintura medieval em que uma mão segura um globo com uma paisagem com pássaros e animais em miniatura" loading="lazy"><figcaption>Retábulo de Westminster, detalhe do globo na mão de Cristo, c. 1270, pintura sobre madeira. Westminster Abbey, Londres. Domínio público, via Wikimedia Commons.</figcaption></figure>
+<figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Westminster_400.jpg" alt="Painel medieval comprido e horizontal, dividido em compartimentos com figuras de pé e pequenos medalhões, bastante desgastado" loading="lazy"><figcaption>Retábulo de Westminster, c. 1270, pintura sobre madeira. Westminster Abbey, Londres. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
 <div class="citacao">
 
