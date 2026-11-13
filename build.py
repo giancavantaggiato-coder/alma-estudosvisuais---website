@@ -178,7 +178,7 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
-  {"slug": "a-cor-das-estatuas", "img": "capa-olhos-met.jpg", "tag": "História da Arte",
+  {"slug": "a-cor-das-estatuas", "img": "capa-olhos-met-v2.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "A cor das estátuas", "subtitulo": "O mito do mármore branco na escultura grega",
    "resumo": "O mármore branco que associamos ao clássico é um engano. Como as estátuas gregas perderam suas cores, de onde veio o ideal branco e o que a ciência revelou."},
