@@ -1,4 +1,4 @@
-### A pintura como objeto, não como modelo
+### A pintura como parte do todo
 
 Andrei Tarkovsky dirigiu sete longas-metragens entre 1962 e 1986. Em quase todos há uma pintura central, que o filme mostra e examina. Mikhail Romadin, diretor de arte de *Solaris*, enumerou essa presença — as gravuras do *Apocalipse* de Dürer em *A infância de Ivan*, os ícones em *Andrei Rublev*, Bruegel em *Solaris*, a *Madonna del Parto* de Piero della Francesca em *Nostalgia*, Leonardo e os ícones russos em *O sacrifício*.<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup>
 
