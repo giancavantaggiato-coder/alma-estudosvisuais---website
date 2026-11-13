@@ -4,7 +4,7 @@ Imagine abrir um livro de leis da Igreja copiado à mão e decorado em Londres p
 
 <figure class="figura"><img src="https://www.bl.uk/images/v5dwkion/production/bc2f351acad9a14b6e2e71070bc5b6a4efe89075-500x228.jpg/royal-ms-10-e-iv,-f.-107r-knight-v-snail.jpg?auto=format" alt="Cavaleiro de clava erguida diante de um caracol gigante, no pé de uma página manuscrita" loading="lazy"><figcaption>O cavaleiro e o caracol no pé da página das <em>Decretais de Smithfield</em>, coletânea de leis da Igreja, c. 1300–1340. British Library, Londres</figcaption></figure>
 
-Não é uma piada isolada de um pintor distraído. Nas décadas em torno de 1300, cavaleiros brigando com caracóis aparecem em livros de oração, em coletâneas de leis e até numa enciclopédia. A historiadora americana Lilian Randall resolveu contá-los e chegou a setenta combates espalhados por vinte e nove manuscritos.<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup> O cavaleiro, aliás, quase sempre leva a pior.
+Não é uma piada isolada de um pintor distraído. Nas décadas em torno de 1300, cavaleiros brigando com caracóis aparecem em livros de oração, em coletâneas de leis e até numa enciclopédia. A historiadora americana Lilian Randall resolveu contá-los e chegou a setenta combates espalhados por vinte e nove manuscritos.<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup> O cavaleiro, aliás, quase sempre leva a pior. Num livro de salmos inglês, o Saltério de Gorleston, ele nem chega a lutar. Deixa a espada fincada no chão e se ajoelha diante do caracol, de mãos postas, como quem pede clemência.
 
 ### Livros sérios, margens nem tanto
 

@@ -178,7 +178,7 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
-  {"slug": "caracois-e-cavaleiros", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_MS_10_E_IV_fol_49v_Reynard_the_Fox_preaching_to_geese.png?width=1400", "tag": "História da Arte",
+  {"slug": "caracois-e-cavaleiros", "img": "capa-caracol-gorleston.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "Os caracóis que lutam contra cavaleiros", "subtitulo": "O riso nas margens dos manuscritos medievais",
    "resumo": "Cavaleiros brigando com caracóis gigantes, raposas pregando a gansos. O que essas brincadeiras faziam nas margens de livros caros e sagrados, e o que revelam sobre o Desenho medieval."},
