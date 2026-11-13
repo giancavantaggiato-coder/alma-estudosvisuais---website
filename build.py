@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "historia-da-tinta-a-oleo", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van_Eyck_-_Arnolfini_Portrait.jpg?width=1600", "capa": "capa-arnolfini", "tag": "História da Arte",
+   "data": "2026-11-13", "data_txt": "13 nov 2026",
+   "titulo": "A história da tinta a óleo", "subtitulo": "Do aglutinante medieval à tinta industrial",
+   "resumo": "Da têmpera a ovo ao tubo de Van Gogh, como o óleo mudou a maneira de construir a Luz, o suporte e a superfície da pintura."},
   {"slug": "objetos-feitos-pela-humanidade", "img": "capa-objeto-feito-a-mao.jpg", "tag": "Teoria da Arte", "serie": "Leituras de atelier",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Objetos feitos pela humanidade", "subtitulo": "Gillo Dorfles e o impulso de criar objetos",
