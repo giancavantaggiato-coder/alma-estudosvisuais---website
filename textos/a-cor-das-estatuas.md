@@ -53,6 +53,10 @@ Em 2023, a técnica foi aplicada às esculturas do Partenon no Museu Britânico,
 Há mais de quarenta anos, os arqueólogos Vinzenz Brinkmann e Ulrike Koch-Brinkmann reconstroem esculturas antigas com as cores identificadas nos originais. A exposição *Bunte Götter* — Deuses coloridos —, aberta em Munique em 2003, percorreu o mundo e chegou ao Metropolitan de Nova York em 2022, na mostra *Chroma*. Em Atenas, o público fez fila e saiu chocado. Em Hamburgo, houve quem declarasse que a arte clássica estava morta.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup>
 
 
+Uma das reconstruções mais conhecidas é a da chamada *Kore de Quios*, da Acrópole de Atenas. Sobre o mármore claro da pele e dos cabelos, as vestes recebem azul intenso e vermelho, com meandros, rosetas e barras ornamentais — o mesmo tipo de padrão tecido que a equipe de Verri encontrou nas roupas das deusas do Partenon.
+
+<figure class="figura vertical"><img src="img/kore-quios-reconstrucao.jpg" alt="Reconstrução colorida de uma estátua arcaica de jovem, com pele e cabelos claros e vestes em azul e vermelho cobertas de meandros e rosetas, sobre fundo preto" loading="lazy"><figcaption>Reconstrução colorida da chamada Kore de Quios, original de c. 510 a.C., Museu da Acrópole, Atenas. Reconstrução de Vinzenz Brinkmann e Ulrike Koch-Brinkmann. Liebieghaus Skulpturensammlung, Frankfurt.</figcaption></figure>
+
 As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
 
 ### O que muda para quem olha
