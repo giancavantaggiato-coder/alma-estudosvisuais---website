@@ -52,7 +52,6 @@ Em 2023, a técnica foi aplicada às esculturas do Partenon no Museu Britânico,
 
 Há mais de quarenta anos, os arqueólogos Vinzenz Brinkmann e Ulrike Koch-Brinkmann reconstroem esculturas antigas com as cores identificadas nos originais. A exposição *Bunte Götter* — Deuses coloridos —, aberta em Munique em 2003, percorreu o mundo e chegou ao Metropolitan de Nova York em 2022, na mostra *Chroma*. Em Atenas, o público fez fila e saiu chocado. Em Hamburgo, houve quem declarasse que a arte clássica estava morta.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup>
 
-<figure class="figura vertical"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/NAMABG_MA599_Cuirassed_torso_1.JPG?width=1000" alt="Reconstrução colorida de um torso de guerreiro com couraça ornamentada em azul, vermelho e dourado" loading="lazy"><figcaption>Reconstrução colorida do chamado Torso com couraça da Acrópole de Atenas, original de c. 470 a.C., por Vinzenz Brinkmann e Ulrike Koch-Brinkmann, exposição Bunte Götter, Atenas. Foto Marsyas, CC BY-SA 2.5, via Wikimedia Commons.</figcaption></figure>
 
 As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
 
