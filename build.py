@@ -377,12 +377,12 @@ def build():
     N = len(TEXTOS)
     CONT = f"{N} texto publicado" if N == 1 else f"{N} textos publicados"
     pagina("blog.html", "Blog · Alma", "Notas e Ensaios: textos sobre percepção visual, processos de criação, técnica e história da arte.",
-      f'''<section class="abertura curta wrap"><h1 class="t1">Blog</h1>
+      f'''<section class="abertura escura wrap"><h1 class="t1">Blog</h1>
   <p>Notas e ensaios sobre percepção visual, processos de criação, técnica, história da arte e pensamento artístico. Aqui, reunimos reflexões que atravessam a prática do atelier e ampliam o olhar sobre a Arte.</p>
   <div class="busca">
     <label for="q">O que você procura?</label>
     <div class="barra"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
-      <input id="q" type="search" placeholder="Cores complementares" autocomplete="off"></div>
+      <input id="q" type="search" placeholder="Buscar por título ou tema" autocomplete="off"></div>
   </div>
   <div class="tags" role="group" aria-label="Filtrar por tema">{"".join(f'<button type="button" aria-pressed="false" data-tag="{t}">{t}</button>' for t in TAGS)}</div>
 </section>
@@ -394,7 +394,7 @@ def build():
   <p class="vazio" hidden>Nenhum texto encontrado com esses termos.</p>
   <hr class="filete">
 </section>
-{LOJA_SEC}''', solida=True)
+{LOJA_SEC}''')
 
     # ---------------- Textos do blog (uma página por texto) ----------------
     for x in TEXTOS:
@@ -419,7 +419,7 @@ def build():
 
     # ---------------- Faça Parte ----------------
     pagina("faca-parte.html", "Faça Parte · Alma", "Candidate-se para estudar no Alma: conte quem você é e o que procura.",
-      '''<section class="abertura curta wrap"><h1 class="t1">Faça Parte</h1>
+      '''<section class="abertura escura wrap"><h1 class="t1">Faça Parte</h1>
   <p>O ingresso no Alma começa por uma aula experimental: um primeiro contato com o atelier, a turma e o método de trabalho. Deixe seus dados e combinamos o dia pelo WhatsApp.*</p></section>
 <section class="secao wrap" id="ingresso">
   ''' + intro("Como ingressar", lista(INGRESSO)) + '''
@@ -439,11 +439,11 @@ def build():
     <div class="enviar"><button class="btn btn-preto" type="submit">Enviar</button></div>
     <p class="aviso" role="status" style="text-align:right"></p>
   </form>
-</section>''', solida=True, comecar=False)
+</section>''', comecar=False)
 
     # ---------------- Contato ----------------
     pagina("contato.html", "Contato · Alma", "Endereço, WhatsApp e e-mail do Alma Centro de Estudos Visuais, em São Caetano do Sul.",
-      '''<section class="abertura curta wrap"><h1 class="t1">Contato</h1>
+      '''<section class="abertura escura wrap"><h1 class="t1">Contato</h1>
   <p>O Alma fica em São Caetano do Sul, no ABC Paulista. O atendimento acontece de segunda a sábado, e a visita ao atelier pode ser agendada previamente por WhatsApp ou e-mail.*</p></section>
 <section class="contatos-sec wrap">
   <div class="duas">
@@ -460,7 +460,7 @@ def build():
 <section class="secao wrap">
   ''' + intro("Parcerias", "<p>Trabalhamos com escolas, instituições culturais e coletivos interessados em formação visual continuada. Propostas de residência, oficina fechada, curadoria de material para turmas e projetos de extensão podem ser apresentadas por e-mail ou WhatsApp.*</p>",
       '<div class="botoes"><a class="btn btn-preto" href="mailto:contato@almaestudosvisuais.com.br?subject=Parcerias">E-mail</a><a class="btn btn-preto" href="#" data-whatsapp>Whatsapp</a></div>') + '''
-</section>''', solida=True)
+</section>''')
 
     # Endereços antigos que mudaram: redireciona para o novo
     for velho, novo in {"a-cor-das-estatuas": "a-cor-das-esculturas"}.items():
