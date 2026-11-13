@@ -40,7 +40,7 @@ As provas, porém, nunca deixaram de aparecer. As escavações de Pompeia e Herc
 
 Algumas obras sobreviveram melhor porque foram enterradas cedo. As *korai* da Acrópole de Atenas, estátuas de jovens derrubadas pelos persas em 480 a.C. e depois soterradas, conservam restos de vermelho, verde e azul nas roupas e nos cabelos. A *Kore de Phrasikleia*, do século VI a.C., guarda vestígios suficientes para que se identificassem cerca de onze pigmentos, entre vermelhos, amarelos, preto e branco, além de aplicações em ouro.<sup class="nota-ref"><a href="#nota-7" id="ref-7">7</a></sup>
 
-<figure class="figura vertical"><img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/248500/2069725/main-image" alt="Estela funerária alta e estreita de mármore com um jovem e uma menina em relevo, com vestígios de pintura vermelha no fundo" loading="lazy"><figcaption>Estela funerária de um jovem e de uma menina, c. 530 a.C., mármore, Grécia, Ática. The Metropolitan Museum of Art, Nova York. Open Access.</figcaption></figure>
+<figure class="figura vertical"><img src="img/vaso-centuripe-met.png" alt="Vaso de terracota com tampa, pintado com figuras femininas em vestes claras sobre fundo rosa-avermelhado" loading="lazy"><figcaption>Vaso de terracota pintado, Centuripe, Sicília, período helenístico. The Metropolitan Museum of Art, Nova York. Open Access.</figcaption></figure>
 
 ### Ver o que o olho não vê
 
@@ -52,7 +52,7 @@ Em 2023, a técnica foi aplicada às esculturas do Partenon no Museu Britânico,
 
 Há mais de quarenta anos, os arqueólogos Vinzenz Brinkmann e Ulrike Koch-Brinkmann reconstroem esculturas antigas com as cores identificadas nos originais. A exposição *Bunte Götter* — Deuses coloridos —, aberta em Munique em 2003, percorreu o mundo e chegou ao Metropolitan de Nova York em 2022, na mostra *Chroma*. Em Atenas, o público fez fila e saiu chocado. Em Hamburgo, houve quem declarasse que a arte clássica estava morta.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup>
 
-<figure class="figura vertical"><img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/254504/2070960/main-image" alt="Esfinge grega de calcário sentada, com asas e restos de pintura na superfície" loading="lazy"><figcaption>Estátua de uma esfinge, calcário, Grécia, Ática, exposta em Chroma com seus vestígios de cor. The Metropolitan Museum of Art, Nova York. Open Access.</figcaption></figure>
+<figure class="figura vertical"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/NAMABG_MA599_Cuirassed_torso_1.JPG?width=1000" alt="Reconstrução colorida de um torso de guerreiro com couraça ornamentada em azul, vermelho e dourado" loading="lazy"><figcaption>Reconstrução colorida do chamado Torso com couraça da Acrópole de Atenas, original de c. 470 a.C., por Vinzenz Brinkmann e Ulrike Koch-Brinkmann, exposição Bunte Götter, Atenas. Foto Marsyas, CC BY-SA 2.5, via Wikimedia Commons.</figcaption></figure>
 
 As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
 
