@@ -341,7 +341,7 @@ button,input,textarea{font:inherit;color:inherit}
 .nota-ref{font-size:.7em;line-height:0;margin-left:1px}
 .nota-ref a{color:inherit;text-decoration:none}
 .notas{margin-top:40px}
-.notas p{font-size:.8125rem;line-height:1.55;color:var(--texto-card);margin:0 0 8px}
+.notas p{font-size:1rem;line-height:1.65;color:var(--texto);margin:0 0 .6em}
 .notas a{color:inherit;text-decoration:none}
 .uma-linha{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .post .cab .uma-linha{flex:1}

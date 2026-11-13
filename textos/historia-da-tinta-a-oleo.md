@@ -19,7 +19,7 @@ Vasari atribuiu a invenção da pintura a óleo a Jan van Eyck, e a história co
 <p class="fonte">Jill Dunkerton, <em>Botticelli to Titian</em>. Tradução livre</p>
 </div>
 
-Gombrich chega a uma conclusão parecida por outro caminho. Para ele, a inovação de Van Eyck não se compara à da perspectiva, que foi uma invenção inteiramente nova.
+Gombrich chega a uma conclusão parecida por outro caminho.<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup> Para ele, a inovação de Van Eyck não se compara à da perspectiva, que foi uma invenção inteiramente nova.
 
 <div class="citacao">
 
@@ -32,7 +32,7 @@ O ovo não permitia passagens suaves, em que um tom se funde gradualmente ao out
 
 <figure class="figura vertical"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Van_Eyck_-_Arnolfini_Portrait.jpg?width=1000" alt="Pintura de um casal de pé num quarto, o homem de chapéu largo e a mulher de vestido verde, com um espelho convexo na parede do fundo" loading="lazy"><figcaption>Jan van Eyck, Retrato de Giovanni Arnolfini e sua esposa, 1434, óleo sobre madeira. National Gallery, Londres. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
-Resta saber qual era a receita, e Van Eyck nunca pintou em público nem ensinou o processo. A restauradora Lenora Rosenfield retoma uma hipótese defendida por Alexandre Ziloty.<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup> Van Eyck teria acrescentado um óleo essencial — provavelmente de lavanda — à mistura de óleo de linhaça e resina do verniz. Esse óleo volátil acelerava a secagem, dispensava a longa exposição ao sol e, ao mesmo tempo, funcionava como diluente. Controlando as quantidades de essência e de resina, o pintor podia regular a fluidez da tinta. O próprio Vasari conta que as pinturas recém-acabadas de Van Eyck exalavam um cheiro forte, sinal de que algo evaporava da tinta fresca.<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup>
+Resta saber qual era a receita, e Van Eyck nunca pintou em público nem ensinou o processo. A restauradora Lenora Rosenfield retoma uma hipótese defendida por Alexandre Ziloty.<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup> Van Eyck teria acrescentado um óleo essencial — provavelmente de lavanda — à mistura de óleo de linhaça e resina do verniz. Esse óleo volátil acelerava a secagem, dispensava a longa exposição ao sol e, ao mesmo tempo, funcionava como diluente. Controlando as quantidades de essência e de resina, o pintor podia regular a fluidez da tinta. O próprio Vasari conta que as pinturas recém-acabadas de Van Eyck exalavam um cheiro forte, sinal de que algo evaporava da tinta fresca.<sup class="nota-ref"><a href="#nota-5" id="ref-5">5</a></sup>
 
 Rosenfield apresenta essa leitura como conjectura, porque nenhuma receita de Van Eyck chegou até nós. O que a sustenta é a coerência. Ela reúne materiais que comprovadamente existiam na época, explica em que poderia consistir a “invenção” de que fala Vasari e concorda com o relato do odor. O alcance da hipótese, porém, vai além da receita. Se foi a essência que deu à tinta a sua untuosidade, foi ela que tornou possível tudo o que veio depois — a pincelada visível, a pintura sobre tela e o empasto. Daí a conclusão de Rosenfield.
 
@@ -63,7 +63,7 @@ A terceira mudança foi o abandono do fundo branco. Parmigianino pintava sobre u
 
 Rosenfield descreve o restante do percurso como um deslocamento gradual da transparência para a pintura matérica. No século XVI, a sombra continuava sendo construída com veladuras, mas a Luz já podia vir de uma camada espessa de branco. Foi somente no século XIX que os pintores abandonaram de vez as transparências. A tinta pastosa passou a cobrir toda a superfície, seja para criar a Luz, a sombra, o volume ou a profundidade.
 
-Nessa altura, o pintor já não moía as próprias cores. A tinta chegava pronta, em tubos, e podia ser levada ao ar livre e aplicada diretamente. Numa carta ao irmão, Van Gogh conta que, para dar à terra o seu peso, levava a tinta do tubo direto à tela e só depois a modelava no lugar com o pincel.
+Nessa altura, o pintor já não moía as próprias cores. A tinta chegava pronta, em tubos, e podia ser levada ao ar livre e aplicada diretamente. Numa carta ao irmão, Van Gogh conta que, para dar à terra o seu peso, levava a tinta do tubo direto à tela e só depois a modelava no lugar com o pincel.<sup class="nota-ref"><a href="#nota-6" id="ref-6">6</a></sup>
 
 <div class="citacao">
 
@@ -74,18 +74,13 @@ Nessa altura, o pintor já não moía as próprias cores. A tinta chegava pronta
 
 Entre o painel de Van Eyck e o campo de trigo de Arles, o aglutinante continua sendo o óleo de linhaça. O que mudou foi o papel da tinta na obra. Nos flamengos, ela era um filtro transparente sobre a Luz do fundo branco. Em Van Gogh, ela é a própria matéria com que a Luz e a Forma são construídas.
 
-<div class="notas">
-<p id="nota-1"><a href="#ref-1">1</a>. Rosenfield, p. 38–39. A autora distingue três etapas, a têmpera com emulsão de óleo, a técnica de transição e a técnica a óleo consolidada com Van Eyck.</p>
-<p id="nota-2"><a href="#ref-2">2</a>. Dunkerton, que se apoia em fontes documentais e no exame científico das obras do Norte da Europa que sobreviveram à iconoclastia.</p>
-<p id="nota-3"><a href="#ref-3">3</a>. Ziloty, p. 14 e 147, citado por Rosenfield, p. 40–41.</p>
-<p id="nota-4"><a href="#ref-4">4</a>. O relato está na vida de Antonello da Messina, nas <em>Vidas</em> de Vasari, e é discutido por Rosenfield, p. 41.</p>
-</div>
-
 ## Referências
 
-- DUNKERTON, Jill. Developments in painting technique in fifteenth- and sixteenth-century Italy. Em *Botticelli to Titian: Two Centuries of Italian Painting*. Budapest: Szépművészeti Múzeum, 2009.
-- GOMBRICH, E. H. *A História da Arte*. Rio de Janeiro: LTC.
-- KEPES, Gyorgy (org.). *Sign, Image, Symbol*. New York: George Braziller, 1966.
-- ROSENFIELD, Lenora Lerrer. A pintura a óleo e a questão Van Eyck. *Porto Arte*, Porto Alegre, v. 1, n. 2, nov. 1990.
-- VASARI, Giorgio. *Le vite de' più eccellenti pittori, scultori e architettori*.
-- ZILOTY, Alexandre. *La découverte de Jean van Eyck et l'évolution du procédé de la peinture à l'huile du Moyen Âge à nos jours*. Paris: Floury, 1947.
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. ROSENFIELD, Lenora Lerrer. A pintura a óleo e a questão Van Eyck. <em>Porto Arte</em>, Porto Alegre, v. 1, n. 2, nov. 1990, p. 38–43. A autora distingue três etapas, a têmpera com emulsão de óleo, a técnica de transição e a técnica a óleo consolidada com Van Eyck.</p>
+<p id="nota-2"><a href="#ref-2">2</a>. DUNKERTON, Jill. Developments in painting technique in fifteenth- and sixteenth-century Italy. Em <em>Botticelli to Titian: Two Centuries of Italian Painting</em>. Budapest: Szépművészeti Múzeum, 2009. A autora se apoia em fontes documentais e no exame científico das obras do Norte da Europa que sobreviveram à iconoclastia.</p>
+<p id="nota-3"><a href="#ref-3">3</a>. GOMBRICH, E. H. <em>A História da Arte</em>. Rio de Janeiro: LTC.</p>
+<p id="nota-4"><a href="#ref-4">4</a>. ZILOTY, Alexandre. <em>La découverte de Jean van Eyck et l'évolution du procédé de la peinture à l'huile du Moyen Âge à nos jours</em>. Paris: Floury, 1947, p. 14 e 147, citado por Rosenfield, p. 40–41.</p>
+<p id="nota-5"><a href="#ref-5">5</a>. VASARI, Giorgio. <em>Le vite de' più eccellenti pittori, scultori e architettori</em>. O relato está na vida de Antonello da Messina e é discutido por Rosenfield, p. 41.</p>
+<p id="nota-6"><a href="#ref-6">6</a>. KEPES, Gyorgy (org.). <em>Sign, Image, Symbol</em>. New York: George Braziller, 1966.</p>
+</div>
