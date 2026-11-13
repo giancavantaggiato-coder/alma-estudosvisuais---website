@@ -2,7 +2,7 @@
 
 “O movimento é a atração visual mais intensa da atenção.”
 
-<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 378</p>
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 378<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup></p>
 </div>
 
 Um gato pode descansar indiferente a tudo o que está à sua volta, mas basta que algo se agite para que seus olhos se voltem para o ponto e passem a segui-lo. Conosco acontece o mesmo. Arnheim explica esse reflexo pela história da espécie. Para nossos ancestrais, o que se movia no campo de visão podia ser um predador, um companheiro ou uma presa, e exigia resposta imediata. Os olhos se desenvolveram como instrumentos de sobrevivência e se adaptaram a essa tarefa.
@@ -25,13 +25,13 @@ Para quem compõe, portanto, a escolha dessa moldura orienta o fluxo da ação e
 
 ### Tensão dirigida
 
-Na pintura, no Desenho e na escultura, tal como foram praticados durante séculos, nada se desloca de fato. A arte do século XX mudou parte disso. Os móbiles de Calder, movidos pelo ar, e a máquina de luz de Moholy-Nagy trouxeram o movimento real para dentro da obra. Ainda assim, na imensa maioria das imagens que vemos e fazemos, o movimento continua sendo uma construção da percepção. Por isso Arnheim recomenda cautela com a própria palavra.
+Na pintura, no Desenho e na escultura, tal como foram praticados durante séculos, nada se desloca de fato. A arte do século XX mudou parte disso. Os móbiles de Calder<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup>, movidos pelo ar, e a máquina de luz de Moholy-Nagy<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup> trouxeram o movimento real para dentro da obra. Ainda assim, na imensa maioria das imagens que vemos e fazemos, o movimento continua sendo uma construção da percepção. Por isso Arnheim recomenda cautela com a própria palavra.
 
 <div class="citacao">
 
 “Se quisermos fazer justiça à dinâmica visual, seria melhor falarmos do ‘movimento’ o menos possível.”
 
-<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 422</p>
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 422<sup class="nota-ref"><a href="#nota-1" id="ref-1-2">1</a></sup></p>
 </div>
 
 Ele retoma Kandinsky, que preferia falar em tensão, uma força própria do elemento, à qual se soma uma direção. Essa tensão dirigida, diz Arnheim, é uma propriedade das Formas tão real quanto a dimensão e a cor. Não é o observador que a imagina a partir de movimentos que já viu. Ela está na própria Configuração.
@@ -42,10 +42,10 @@ Boa parte dessa tensão nasce de desvios. Um paralelogramo é visto como um ret�
 
 “A orientação oblíqua é provavelmente o recurso mais elementar e efetivo para se obter tensão dirigida.”
 
-<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430<sup class="nota-ref"><a href="#nota-1" id="ref-1-3">1</a></sup></p>
 </div>
 
-É com ela que a criança aprende a distinguir, no papel, a figura que caminha da figura que está parada. E muitos artistas se valeram do mesmo recurso. Rodin contava que inclinava levemente seus bustos para lhes dar movimento. A própria história da escultura pode ser lida por esse caminho. Para Gombrich, Míron, com o *Discóbolo*, “conquistou o movimento”. No período helenístico, o grupo do *Laocoonte* leva a torção dos corpos ao extremo, e toda aquela agitação fica imobilizada num conjunto permanente de mármore. Séculos depois, na passagem do Renascimento ao Barroco, Arnheim observa que a preferência se desloca do círculo para a oval e do quadrado para o retângulo, criando tensão nas próprias proporções.
+É com ela que a criança aprende a distinguir, no papel, a figura que caminha da figura que está parada. E muitos artistas se valeram do mesmo recurso. Rodin contava que inclinava levemente seus bustos para lhes dar movimento. A própria história da escultura pode ser lida por esse caminho. Para Gombrich,<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup> Míron, com o *Discóbolo*, “conquistou o movimento”. No período helenístico, o grupo do *Laocoonte* leva a torção dos corpos ao extremo, e toda aquela agitação fica imobilizada num conjunto permanente de mármore. Séculos depois, na passagem do Renascimento ao Barroco, Arnheim observa que a preferência se desloca do círculo para a oval e do quadrado para o retângulo, criando tensão nas próprias proporções.
 
 ### O instante e a síntese
 
@@ -63,7 +63,7 @@ Ainda assim, observa Arnheim, os pintores sustentaram com boa razão que a fotog
 
 “A imagem imóvel não é momentânea, mas fora da dimensão do tempo.”
 
-<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430</p>
+<p class="fonte">Rudolf Arnheim, <em>Arte e percepção visual</em>, p. 429–430<sup class="nota-ref"><a href="#nota-1" id="ref-1-4">1</a></sup></p>
 </div>
 
 O equilíbrio é parte dessa síntese. No *São Jerônimo* de El Greco, o leve desvio da barba para a direita compensa o peso das mãos e do livro, que estão à esquerda. Se cobrirmos a parte de baixo do quadro, esse contrapeso desaparece, e a barba passa a parecer deslocada por uma força externa, com tendência a retornar à vertical. Arnheim observa que, numa composição desequilibrada, as Formas não estabilizam suas posições umas em relação às outras e parecem fixadas em lugares arbitrários. A tensão dirigida deixa de ser lida como dinâmica e passa a ser lida como instabilidade.
@@ -76,7 +76,9 @@ Para nós, compreender o movimento é compreender a relação entre forças no E
 
 ## Referências
 
-- ARNHEIM, Rudolf. *Arte e percepção visual: uma psicologia da visão criadora*. Capítulos VIII, Movimento, e IX, Dinâmica.
-- GOMBRICH, Ernst H. *A história da arte*. Capítulos sobre a arte grega e o período helenístico.
-- MOHOLY-NAGY, László. *Vision in Motion*. Chicago: Paul Theobald, 1947.
-- POPPER, Frank. *Origins and Development of Kinetic Art*. Sobre os móbiles de Calder.
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. ARNHEIM, Rudolf. <em>Arte e percepção visual: uma psicologia da visão criadora</em>. Capítulos VIII, Movimento, e IX, Dinâmica.</p>
+<p id="nota-2"><a href="#ref-2">2</a>. POPPER, Frank. <em>Origins and Development of Kinetic Art</em>. Sobre os móbiles de Calder.</p>
+<p id="nota-3"><a href="#ref-3">3</a>. MOHOLY-NAGY, László. <em>Vision in Motion</em>. Chicago: Paul Theobald, 1947.</p>
+<p id="nota-4"><a href="#ref-4">4</a>. GOMBRICH, Ernst H. <em>A história da arte</em>. Capítulos sobre a arte grega e o período helenístico.</p>
+</div>

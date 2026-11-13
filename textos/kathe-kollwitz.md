@@ -1,4 +1,4 @@
-Käthe Kollwitz nasceu em Königsberg, em 1867, e morreu em Moritzburg, perto de Dresden, em 1945. Viveu a maior parte da vida em Berlim, num bairro operário onde o marido, Karl, mantinha um consultório médico. Sua obra costuma ser lembrada pelos temas — a fome, o trabalho, a guerra, a perda dos filhos. Mas, como observa Elizabeth Prelinger, isso acabou encobrindo o que seu filho Hans considerava essencial. Kollwitz era, antes de tudo, uma mestra do ofício. Por trás de cada obra há dezenas de estudos, provas recusadas e experiências técnicas, e a força que parece brotar espontaneamente em seus papéis é resultado de um trabalho longo sobre os processos do Desenho e da gravura.
+Käthe Kollwitz nasceu em Königsberg, em 1867, e morreu em Moritzburg, perto de Dresden, em 1945. Viveu a maior parte da vida em Berlim, num bairro operário onde o marido, Karl, mantinha um consultório médico. Sua obra costuma ser lembrada pelos temas — a fome, o trabalho, a guerra, a perda dos filhos. Mas, como observa Elizabeth Prelinger<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup>, isso acabou encobrindo o que seu filho Hans considerava essencial. Kollwitz era, antes de tudo, uma mestra do ofício. Por trás de cada obra há dezenas de estudos, provas recusadas e experiências técnicas, e a força que parece brotar espontaneamente em seus papéis é resultado de um trabalho longo sobre os processos do Desenho e da gravura.
 
 ### Pintar com os olhos
 
@@ -8,7 +8,7 @@ Kollwitz deixou a casa dos pais aos dezessete anos para estudar em Berlim, numa 
 
 “Eu queria pintar, mas ele sempre me apontava de volta para o desenho.”
 
-<p class="fonte">Käthe Kollwitz, citada por Elizabeth Prelinger, <em>Käthe Kollwitz</em>. Tradução livre</p>
+<p class="fonte">Käthe Kollwitz, citada por Elizabeth Prelinger, <em>Käthe Kollwitz</em>. Tradução livre<sup class="nota-ref"><a href="#nota-1" id="ref-1-2">1</a></sup></p>
 </div>
 
 Ela ainda insistiu na pintura, estudando cor em Munique entre 1888 e 1889. Numa carta a um colega dessa época, admitiu que com os olhos pintava muito bem, mas que com as mãos ficava devendo. Em 1890 começou a gravar em metal e abandonou de vez a tinta a óleo.
@@ -39,7 +39,7 @@ A guerra também mudou seus meios expressivos. Depois de anos de tentativas frus
 
 “A dor é totalmente escura.”
 
-<p class="fonte">Käthe Kollwitz, diário, 13 de dezembro de 1922, citada por Elizabeth Prelinger, <em>Käthe Kollwitz</em>. Tradução livre</p>
+<p class="fonte">Käthe Kollwitz, diário, 13 de dezembro de 1922, citada por Elizabeth Prelinger, <em>Käthe Kollwitz</em>. Tradução livre<sup class="nota-ref"><a href="#nota-1" id="ref-1-3">1</a></sup></p>
 </div>
 
 Na mesma época, escreveu que se contentava em que sua arte tivesse um propósito. Queria agir no seu tempo, num momento em que as pessoas estavam perdidas e precisando de ajuda. Daí também os cartazes, como *Nunca mais guerra!*, de 1924, desenhados em litografia, técnica que ela, em 1919, definiu como quase não parecendo uma técnica, por ser tão simples e por reter apenas o essencial.
@@ -52,4 +52,6 @@ Sob o nazismo, foi impedida na prática de expor. Em 1937, a mostra planejada pa
 
 ## Referências
 
-- PRELINGER, Elizabeth. *Käthe Kollwitz*. Com ensaios de Alessandra Comini e Hildegard Bachert. Washington: National Gallery of Art; New Haven: Yale University Press, 1992.
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. PRELINGER, Elizabeth. <em>Käthe Kollwitz</em>. Com ensaios de Alessandra Comini e Hildegard Bachert. Washington: National Gallery of Art; New Haven: Yale University Press, 1992.</p>
+</div>

@@ -14,7 +14,7 @@ Em seguida vinham os contrastes. Grande e pequeno, Valor alto e baixo, liso e á
 
 “Todos os efeitos artísticos se baseiam na criação de contrastes.”
 
-<p class="fonte">Johannes Itten, em Gyorgy Kepes, org., <em>Education of Vision</em>, p. 105. Tradução livre</p>
+<p class="fonte">Johannes Itten, em Gyorgy Kepes, org., <em>Education of Vision</em>, p. 105. Tradução livre<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup></p>
 </div>
 
 As texturas eram estudadas com os olhos e com a ponta dos dedos. Itten conta que os alunos ordenavam diferentes materiais em longas escalas, do mesmo modo como se gradua uma cor, e que, depois de algumas horas, o tato se refinava de modo surpreendente. Em seguida desenhavam essas texturas até conhecê-las de cor e poder reproduzi-las de memória. A análise dos grandes mestres também fazia parte do curso, mas em outro sentido. Em vez de copiar a obra, o aluno buscava compreender a estrutura que a sustenta.
@@ -31,7 +31,7 @@ Para Moholy-Nagy, esse começo pelos sentidos não era um exercício gratuito. E
 
 “A maioria das pessoas constrói seu mundo de segunda mão, longe da própria experiência.”
 
-<p class="fonte">László Moholy-Nagy, <em>The New Vision</em>, p. 13. Tradução livre</p>
+<p class="fonte">László Moholy-Nagy, <em>The New Vision</em>, p. 13. Tradução livre<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup></p>
 </div>
 
 Viver de segunda mão, aqui, é conhecer as coisas pelo que se lê e se ouve sobre elas, e não pelo contato direto. O conhecimento dos materiais, escreve ele, nunca é alcançado pelos livros nem pela instrução verbal. Por isso nenhuma etapa da experiência pode ser pulada, e a expressão própria se forma pouco a pouco, a partir das experiências mais elementares. Moholy-Nagy recusava também as regras de composição prontas. Para ele, nenhuma fórmula podia servir de base à criação.
@@ -46,7 +46,7 @@ Nos seus exercícios as ferramentas eram restritas, e o aluno não podia recorre
 
 “Não é nossa intenção encher museus. Estamos reunindo experiências.”
 
-<p class="fonte">Josef Albers, conferência de 1928, citada por Ellen Lupton e J. Abbott Miller, <em>The ABCs of Triangle, Square, Circle</em>, p. 15. Tradução livre</p>
+<p class="fonte">Josef Albers, conferência de 1928, citada por Ellen Lupton e J. Abbott Miller, <em>The ABCs of Triangle, Square, Circle</em>, p. 15. Tradução livre<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup></p>
 </div>
 
 Albers sabia que esse caminho era mais lento. A aprendizagem por experimentação, dizia, toma mais tempo e envolve desvios, assim como o andar começa pelo engatinhar.
@@ -63,9 +63,14 @@ No Alma, todo aluno começa por um ciclo básico de Desenho e Plástica, com ou 
 
 ## Referências
 
-- KEPES, Gyorgy (org.). *Education of Vision*. New York: George Braziller, 1965. Ensaio de Johannes Itten sobre o curso preliminar.
-- MOHOLY-NAGY, László. *The New Vision and Abstract of an Artist*. New York: Wittenborn, 1947.
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. KEPES, Gyorgy (org.). <em>Education of Vision</em>. New York: George Braziller, 1965. Ensaio de Johannes Itten sobre o curso preliminar, p. 105.</p>
+<p id="nota-2"><a href="#ref-2">2</a>. MOHOLY-NAGY, László. <em>The New Vision and Abstract of an Artist</em>. New York: Wittenborn, 1947, p. 13.</p>
+<p id="nota-3"><a href="#ref-3">3</a>. LUPTON, Ellen; MILLER, J. Abbott (org.). <em>The ABCs of Triangle, Square, Circle: The Bauhaus and Design Theory</em>. New York: Princeton Architectural Press, 1991, p. 15.</p>
+</div>
+
+## Bibliografia complementar
+
 - MOHOLY-NAGY, László. *Vision in Motion*. Chicago: Paul Theobald, 1947.
-- LUPTON, Ellen; MILLER, J. Abbott (org.). *The ABCs of Triangle, Square, Circle: The Bauhaus and Design Theory*. New York: Princeton Architectural Press, 1991.
 - BAUHAUS IMAGINISTA. *Three Preliminary Courses: Itten, Moholy-Nagy, Albers*. Disponível em bauhaus-imaginista.org.
 - BAUHAUS IMAGINISTA. *Towards a Tangible Pedagogy: Dimensions of Tactility at the Bauhaus*. Disponível em bauhaus-imaginista.org.

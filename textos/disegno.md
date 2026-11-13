@@ -10,7 +10,7 @@ Pouco depois, por volta de 1400, Cennino Cennini escreveu um dos primeiros manua
 
 “Sabes o que te acontecerá praticando o desenho com a pena? Ele te fará experiente, prático e capaz de muito desenho dentro da tua cabeça.”
 
-<p class="fonte">Cennino Cennini, <em>Il libro dell'arte</em>, cap. XIII. Tradução livre</p>
+<p class="fonte">Cennino Cennini, <em>Il libro dell'arte</em>, cap. XIII. Tradução livre<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup></p>
 </div>
 
 Desenho dentro da cabeça. A frase antecipa o que os teóricos do século seguinte iriam desenvolver. Leon Battista Alberti recomendava que o pintor nunca tomasse o pincel sem antes ter resolvido na mente o que faria e como faria. O Desenho passava a ser o lugar onde o artista encontra pela primeira vez a própria obra — o momento de transposição, em que a ideia deixa a mente e ganha existência visível antes de chegar ao material definitivo. E essa passagem não corre num só sentido. Alberti observa que a mente, posta em movimento pelo exercício, se volta com mais facilidade ao trabalho, e que a mão avança mais rápido quando guiada pela regra segura da mente. A ideia orienta o traço, e o traço, por sua vez, corrige e amadurece a ideia.
@@ -25,10 +25,10 @@ Quem deu ao conceito sua forma mais conhecida foi Giorgio Vasari, pintor e arqui
 
 “O Desenho não é outra coisa senão uma expressão visível e a declaração do conceito que se tem na mente.”
 
-<p class="fonte">Giorgio Vasari, <em>Le Vite</em>, 2ª ed., 1568, introdução. Tradução livre</p>
+<p class="fonte">Giorgio Vasari, <em>Le Vite</em>, 2ª ed., 1568, introdução. Tradução livre<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup></p>
 </div>
 
-A consequência foi decisiva. Segundo Panofsky, Vasari foi o primeiro a afirmar a unidade interna do que hoje chamamos de artes visuais e a tratá-las num só livro. Pintura, escultura e arquitetura deixavam de ser ofícios separados, cada um com sua corporação, e passavam a ter uma origem comum. Em 1563, Vasari esteve entre os fundadores da Accademia del Disegno, em Florença, a primeira academia oficial de arte. O nome diz tudo.
+A consequência foi decisiva. Segundo Panofsky,<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup> Vasari foi o primeiro a afirmar a unidade interna do que hoje chamamos de artes visuais e a tratá-las num só livro. Pintura, escultura e arquitetura deixavam de ser ofícios separados, cada um com sua corporação, e passavam a ter uma origem comum. Em 1563, Vasari esteve entre os fundadores da Accademia del Disegno, em Florença, a primeira academia oficial de arte. O nome diz tudo.
 
 ### Desenho interno e Desenho externo
 
@@ -40,10 +40,10 @@ O *disegno interno* é o conceito formado na mente, que permite reconhecer qualq
 
 “O Desenho não é matéria, nem corpo, nem acidente, nem substância. É forma, ideia, ordem, regra.”
 
-<p class="fonte">Federico Zuccaro, <em>L'idea de' pittori, scultori et architetti</em>, 1607, citado por Moshe Barasch, <em>Theories of Art</em>, p. 299. Tradução livre</p>
+<p class="fonte">Federico Zuccaro, <em>L'idea de' pittori, scultori et architetti</em>, 1607, citado por Moshe Barasch, <em>Theories of Art</em>, p. 299. Tradução livre<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup></p>
 </div>
 
-Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem.<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup> O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente ao traço no papel.
+Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem.<sup class="nota-ref"><a href="#nota-5" id="ref-5">5</a></sup> O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente ao traço no papel.
 
 ### Desenho e cor
 
@@ -57,16 +57,19 @@ Do lado veneziano, Lodovico Dolce respondia que invenção, desenho e cor tinham
 
 No Alma, o Desenho é a base de todos os cursos, da pintura à escultura. Não pela tradição, e sim porque nele se forma o que Cennini chamava de desenho dentro da cabeça — a capacidade de ver a proporção do todo com as partes, de organizar a Configuração antes de executá-la, de saber o que se quer antes de tocar o material. A técnica de cada meio vem depois e se apoia nessa base. Escrever Desenho com maiúscula é um modo de lembrar que ele é, ao mesmo tempo, ideia e traço.
 
-<div class="notas">
-<p id="nota-1"><a href="#ref-1">1</a>. Zuccaro separa a palavra em três partes. As letras das pontas, <em>di</em> e <em>o</em>, juntas formam <em>Dio</em>, que em italiano quer dizer Deus. O que fica no meio, <em>segn</em>, remete a <em>segno</em>, sinal. Lida assim, a palavra <em>disegno</em> conteria a expressão <em>segno di Dio</em> — sinal de Deus —, que para Zuccaro indicava a presença do divino no homem.</p>
-</div>
-
 ## Referências
 
-- BARASCH, Moshe. *Theories of Art: From Plato to Winckelmann*. New York: Routledge.
-- CENNINI, Cennino. *Il libro dell'arte*.
-- PANOFSKY, Erwin. *Meaning in the Visual Arts*. Garden City: Doubleday, 1955.
+<div class="notas">
+<p id="nota-1"><a href="#ref-1">1</a>. CENNINI, Cennino. <em>Il libro dell'arte</em>, cap. XIII.</p>
+<p id="nota-2"><a href="#ref-2">2</a>. VASARI, Giorgio. <em>Le vite de' più eccellenti pittori, scultori e architettori</em>. 2. ed. Firenze: Giunti, 1568. Introdução.</p>
+<p id="nota-3"><a href="#ref-3">3</a>. PANOFSKY, Erwin. <em>Meaning in the Visual Arts</em>. Garden City: Doubleday, 1955.</p>
+<p id="nota-4"><a href="#ref-4">4</a>. ZUCCARO, Federico. <em>L'idea de' pittori, scultori et architetti</em>, 1607, citado por BARASCH, Moshe. <em>Theories of Art: From Plato to Winckelmann</em>. New York: Routledge, p. 299.</p>
+<p id="nota-5"><a href="#ref-5">5</a>. Zuccaro separa a palavra em três partes. As letras das pontas, <em>di</em> e <em>o</em>, juntas formam <em>Dio</em>, que em italiano quer dizer Deus. O que fica no meio, <em>segn</em>, remete a <em>segno</em>, sinal. Lida assim, a palavra <em>disegno</em> conteria a expressão <em>segno di Dio</em> — sinal de Deus —, que para Zuccaro indicava a presença do divino no homem.</p>
+</div>
+
+## Bibliografia complementar
+
 - ROSAND, David. *Drawing Acts: Studies in Graphic Expression and Representation*. Cambridge: Cambridge University Press, 2002.
 - SCOLARI, Massimo. *Oblique Drawing: A History of Anti-Perspective*. Cambridge: MIT Press, 2012.
 - JERNYEI-KISS, János. *Disegno and Colore*. Em *Botticelli to Titian: Two Centuries of Italian Painting*. Budapest: Szépművészeti Múzeum, 2009.
-- *A Companion to Art Theory*. Org. Paul Smith e Carolyn Wilde. Oxford: Blackwell, 2002.
+- SMITH, Paul; WILDE, Carolyn (org.). *A Companion to Art Theory*. Oxford: Blackwell, 2002.
