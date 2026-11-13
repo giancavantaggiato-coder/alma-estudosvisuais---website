@@ -181,7 +181,7 @@ TEXTOS = [
   {"slug": "pinturas-nos-filmes-de-tarkovsky", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg?width=1600", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "As pinturas nos filmes de Tarkovsky", "subtitulo": "Bruegel, Leonardo e os ícones de Rublev no cinema de Andrei Tarkovsky",
-   "resumo": "Um cineasta que desconfiava da pintura e a colocou em quase todos os seus filmes. Como Tarkovsky usou Bruegel, Leonardo e os ícones de Rublev para fazer o tempo passar dentro do quadro."},
+   "resumo": "Bruegel em Solaris, Leonardo em O espelho e em O sacrifício, os ícones em Andrei Rublev. O que Tarkovsky buscava ao inserir pinturas em seus filmes e como a câmera as devolve ao tempo."},
   {"slug": "caracois-e-cavaleiros", "img": "capa-caracol-gorleston.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "Os caracóis que lutam contra cavaleiros", "subtitulo": "O humor nas margens dos manuscritos medievais",
