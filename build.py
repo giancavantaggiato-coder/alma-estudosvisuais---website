@@ -178,7 +178,7 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
-  {"slug": "pinturas-nos-filmes-de-tarkovsky", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_Hunters_in_the_Snow_(Winter)_-_Google_Art_Project.jpg?width=1600", "tag": "História da Arte",
+  {"slug": "pinturas-nos-filmes-de-tarkovsky", "img": "capa-tarkovsky-rublev.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "As pinturas nos filmes de Tarkovsky", "subtitulo": "Bruegel, Leonardo e os ícones de Rublev no cinema de Andrei Tarkovsky",
    "resumo": "Bruegel em Solaris, Leonardo em O espelho e em O sacrifício, os ícones em Andrei Rublev. O que Tarkovsky buscava ao inserir pinturas em seus filmes e como a câmera as devolve ao tempo."},
