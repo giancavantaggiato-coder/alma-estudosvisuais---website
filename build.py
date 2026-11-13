@@ -178,10 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
-  {"slug": "o-objeto-feito-a-mao", "img": "capa-objeto-feito-a-mao.jpg", "tag": "Teoria da Arte", "serie": "Leituras de atelier",
+  {"slug": "objetos-feitos-pela-humanidade", "img": "capa-objeto-feito-a-mao.jpg", "tag": "Teoria da Arte", "serie": "Leituras de atelier",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
-   "titulo": "O objeto feito à mão", "subtitulo": "Gillo Dorfles e a margem de acaso",
-   "resumo": "Texto em preparação."},
+   "titulo": "Objetos feitos pela humanidade", "subtitulo": "Gillo Dorfles e o impulso de criar objetos",
+   "resumo": "Tradução comentada da abertura de The Man-Made Object, em que Gillo Dorfles trata o objeto como extensão humana, entre a função e o aspecto que a resume."},
   {"slug": "kathe-kollwitz", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathe_Kollwitz_-_Self-portrait_NGA_1943.3.5217.jpg?width=1600", "capa": "capa-topo", "tag": "História da Arte",
    "data": "2026-11-12", "data_txt": "12 nov 2026",
    "titulo": "Käthe Kollwitz", "subtitulo": "O Desenho como ofício e testemunho",
