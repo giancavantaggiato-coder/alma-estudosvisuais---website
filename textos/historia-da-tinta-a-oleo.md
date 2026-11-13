@@ -73,10 +73,10 @@ Nessa altura, o pintor já não moía as próprias cores. A tinta chegava pronta
 Entre o painel de Van Eyck e o campo de trigo de Arles, o aglutinante continua sendo o óleo de linhaça. O que mudou foi o papel da tinta na obra. Nos flamengos, ela era um filtro transparente sobre a Luz do fundo branco. Em Van Gogh, ela é a própria matéria com que a Luz e a Forma são construídas.
 
 <div class="notas">
-<p id="nota-1"><a href="#ref-1">1</a>. ROSENFIELD, Lenora Lerrer. A pintura a óleo e a questão Van Eyck. <em>Porto Arte</em>, Porto Alegre, v. 1, n. 2, nov. 1990, p. 38–39. A autora distingue três etapas, a têmpera com emulsão de óleo, a técnica de transição e a técnica a óleo consolidada com Van Eyck.</p>
-<p id="nota-2"><a href="#ref-2">2</a>. DUNKERTON, Jill. Developments in painting technique in fifteenth- and sixteenth-century Italy. Em <em>Botticelli to Titian</em>. Budapest: Szépművészeti Múzeum, 2009. Dunkerton se apoia em fontes documentais e no exame científico das obras do Norte da Europa que sobreviveram à iconoclastia.</p>
-<p id="nota-3"><a href="#ref-3">3</a>. ZILOTY, Alexandre. <em>La découverte de Jean van Eyck et l'évolution du procédé de la peinture à l'huile du Moyen Âge à nos jours</em>. Paris: Floury, 1947, p. 14 e 147, citado por Rosenfield, op. cit., p. 40–41.</p>
-<p id="nota-4"><a href="#ref-4">4</a>. O relato está na vida de Antonello da Messina, nas <em>Vidas</em> de Vasari, e é discutido por Rosenfield, op. cit., p. 41.</p>
+<p id="nota-1"><a href="#ref-1">1</a>. Rosenfield, p. 38–39. A autora distingue três etapas, a têmpera com emulsão de óleo, a técnica de transição e a técnica a óleo consolidada com Van Eyck.</p>
+<p id="nota-2"><a href="#ref-2">2</a>. Dunkerton, que se apoia em fontes documentais e no exame científico das obras do Norte da Europa que sobreviveram à iconoclastia.</p>
+<p id="nota-3"><a href="#ref-3">3</a>. Ziloty, p. 14 e 147, citado por Rosenfield, p. 40–41.</p>
+<p id="nota-4"><a href="#ref-4">4</a>. O relato está na vida de Antonello da Messina, nas <em>Vidas</em> de Vasari, e é discutido por Rosenfield, p. 41.</p>
 </div>
 
 ## Referências
