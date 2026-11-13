@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "ma", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hasegawa_Tohaku_-_Pine_Trees_%28Sh%C5%8Drin-zu_by%C5%8Dbu%29_-_right_hand_screen.jpg?width=1600", "tag": "Teoria da Arte",
+   "data": "2026-11-13", "data_txt": "13 nov 2026",
+   "titulo": "Ma", "subtitulo": "O intervalo na pintura da China e do Japão",
+   "resumo": "Do vazio nas paisagens chinesas ao ma japonês e ao yohaku de Lee Ufan, como o intervalo deixa de ser sobra e passa a construir a obra."},
   {"slug": "historia-da-tinta-a-oleo", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Detail_of_Christs_Globe_from_the_Westminster_Retable.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "A história da tinta a óleo", "subtitulo": "Do aglutinante medieval à tinta industrial",
