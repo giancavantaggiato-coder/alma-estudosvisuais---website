@@ -61,11 +61,9 @@ Em *Nostalgia*, de 1983, a *Madonna del Parto* de Piero della Francesca cumpre p
 
 ### O que a pintura faz no filme
 
-O arquiteto Juhani Pallasmaa observa que as composições de Tarkovsky derivam da construção frontal do espaço na pintura do Renascimento, em que o espaço se apresenta estável diante do observador. Pallasmaa menciona Giotto, Fra Angelico, Leonardo, Van Eyck, Bruegel e Holbein, e aproxima a natureza-morta de copos que encerra *Stalker* das naturezas-mortas de Giorgio Morandi.<sup class="nota-ref"><a href="#nota-12" id="ref-12">12</a></sup>
-
 Em *Esculpir o tempo*, Tarkovsky recorre ao conceito japonês de *saba*, a beleza dos objetos marcados pelo uso e pela passagem do tempo — a madeira escurecida, a pedra áspera, a pátina — e afirma que o cinema seria a manifestação ideal desse conceito.<sup class="nota-ref"><a href="#nota-2" id="ref-2-2">2</a></sup> Nos filmes, as pinturas raramente aparecem como originais. São reproduções impressas em livros, cópias montadas no cenário, ícones com a superfície fissurada. O que a câmera registra é a obra já atravessada por sua história material e por sua circulação, e não um objeto intocado.
 
-O que Tarkovsky buscava ao inserir uma pintura não era um modelo de enquadramento, mas o confronto entre duas formas de tempo. A pintura condensa numa única superfície o que só pode ser visto em percurso, e o cinema, ao percorrê-la com a câmera, a devolve à duração. É nesse confronto com a obra que, por natureza, está fora do tempo que Tarkovsky define o que considera próprio do cinema.
+O que Tarkovsky buscava ao inserir uma pintura não era um modelo de enquadramento, mas o confronto entre duas formas de tempo.
 
 ## Referências
 
@@ -81,5 +79,4 @@ O que Tarkovsky buscava ao inserir uma pintura não era um modelo de enquadramen
 <p id="nota-9"><a href="#ref-9">9</a>. GOMBRICH, Ernst H. <em>The Heritage of Apelles: Studies in the Art of the Renaissance</em>. Londres: Phaidon, 1976, p. 62.</p>
 <p id="nota-10"><a href="#ref-10">10</a>. Zarathustra’s gift in Tarkovsky’s The Sacrifice. <em>Screening the Past</em>, mar. 2001.</p>
 <p id="nota-11"><a href="#ref-11">11</a>. DULGHERU, Elena. A Conjunction of Mysteries: Tarkovskij’s Offret and da Vinci’s Adorazione dei Magi. In: <em>Andrej Tarkovskij. Klassiker</em>. Potsdam: Universitätsverlag Potsdam, 2016, p. 201–214.</p>
-<p id="nota-12"><a href="#ref-12">12</a>. PALLASMAA, Juhani. <em>The Architecture of Image: Existential Space in Cinema</em>. Helsinki: Rakennustieto, 2001.</p>
 </div>
