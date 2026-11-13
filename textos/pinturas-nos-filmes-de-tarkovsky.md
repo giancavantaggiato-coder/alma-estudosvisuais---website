@@ -63,7 +63,7 @@ Em *Nostalgia*, de 1983, a *Madonna del Parto* de Piero della Francesca cumpre p
 
 Em *Esculpir o tempo*, Tarkovsky recorre ao conceito japonês de *saba*, a beleza dos objetos marcados pelo uso e pela passagem do tempo — a madeira escurecida, a pedra áspera, a pátina — e afirma que o cinema seria a manifestação ideal desse conceito.<sup class="nota-ref"><a href="#nota-2" id="ref-2-2">2</a></sup> Nos filmes, as pinturas raramente aparecem como originais. São reproduções impressas em livros, cópias montadas no cenário, ícones com a superfície fissurada. O que a câmera registra é a obra já atravessada por sua história material e por sua circulação, e não um objeto intocado.
 
-O que Tarkovsky buscava ao inserir uma pintura não era um modelo de enquadramento, mas o confronto entre duas formas de tempo.
+O que Tarkovsky buscava ao inserir uma pintura não era um modelo de enquadramento, mas o contraste entre duas formas de tempo.
 
 ## Referências
 
