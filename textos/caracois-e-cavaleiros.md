@@ -10,7 +10,7 @@ A cena não é um caso isolado. Nas décadas em torno de 1300, combates entre ca
 
 Para entender o lugar dessas figuras, é preciso entender como o livro era produzido. A página começava como pergaminho, pele de bezerro ou de carneiro raspada, esticada e lixada até ficar lisa e clara. O copista escrevia primeiro, seguindo linhas traçadas a régua, e deixava em branco os espaços das letras iniciais, das cenas e das margens. Só depois o livro passava às mãos do pintor, muitas vezes em outra oficina. No caso das *Decretais de Smithfield*, o texto foi copiado no sul da França por volta de 1300, e as cenas das margens só foram acrescentadas em Londres cerca de quarenta anos mais tarde.<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup>
 
-O trabalho do pintor seguia uma ordem rigorosa. Primeiro vinha o Desenho, traçado com leveza sobre o pergaminho. Depois o ouro, aplicado antes de qualquer cor. O monge Teófilo, que escreveu um tratado sobre as técnicas artísticas no século XII, descreve o procedimento. A folha de ouro, batida até ficar mais fina que um papel de seda, era assentada sobre clara de ovo batida, e o pintor devia prender a respiração enquanto a posicionava, porque um sopro bastava para levá-la embora. Seca, era polida com um dente de animal ou uma pedra dura até brilhar. Em seguida vinham os pigmentos, misturados à clara de ovo ou a gomas vegetais, e por fim as linhas finas a pena, que definiam as figuras e as folhagens.<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup>
+O trabalho do pintor seguia uma ordem rigorosa. Primeiro vinha o esboço da ilustração, traçado com leveza sobre o pergaminho. Depois o ouro, aplicado antes de qualquer cor. O monge Teófilo, que escreveu um tratado sobre as técnicas artísticas no século XII, descreve o procedimento. A folha de ouro, batida até ficar mais fina que um papel de seda, era assentada sobre clara de ovo batida, e o pintor devia prender a respiração enquanto a posicionava, porque um sopro bastava para levá-la embora. Seca, era polida com um dente de animal ou uma pedra dura até brilhar. Em seguida vinham os pigmentos, misturados à clara de ovo ou a gomas vegetais, e por fim as linhas finas a pena, que definiam as figuras e as folhagens.<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup>
 
 Era um processo lento e caro. Os livros mais elaborados eram encomendados por reis, nobres e bispos, e as margens recebiam o mesmo ouro e os mesmos pigmentos das cenas sagradas.
 
@@ -53,15 +53,15 @@ Camille, setenta anos depois, defendeu que a margem dialoga com o centro da pág
 
 O cavaleiro ajoelhado do Saltério de Gorleston, na abertura deste texto, também pode ser lido nessa chave. Ele está logo abaixo do versículo que diz, em latim, “meus olhos desfaleceram à espera da tua salvação”. Pode ser coincidência, mas a súplica do salmo e a do cavaleiro diante do caracol estão a poucos centímetros uma da outra.
 
-As duas posições não se anulam. Ainda que haja comentário, ele depende antes de uma invenção de Desenho.
+As duas posições não se anulam. Ainda que haja comentário, ele depende antes da invenção do ilustrador.
 
-### A margem e o Desenho
+### A margem e a ilustração
 
 O historiador Terisio Pignatti lembra que os desenhos medievais mais antigos que sobreviveram são justamente os das margens dos códices, os livros manuscritos. Quase todo o resto se perdeu, porque o desenho era visto como instrumento de trabalho, não como obra a ser conservada, e o pergaminho era caro demais para estudos e rascunhos. Só no fim do século XIV, com a difusão do papel, isso começou a mudar.<sup class="nota-ref"><a href="#nota-9" id="ref-9">9</a></sup>
 
 Na margem, o pintor estava livre das convenções que regiam a representação dos santos e das cenas bíblicas. Uma haste termina em cabeça de rato, um ornamento se converte no pescoço de um pássaro, a Linha que emoldura o texto ganha corpo e movimento. O espaço estreito e irregular exigia Configurações ajustadas ao canto, à borda, ao intervalo entre duas colunas.
 
-O cavaleiro e o caracol chegaram até nós porque estavam presos a livros valiosos demais para ser descartados. Com eles se conservou também o lugar onde o artista medieval podia, por alguns centímetros, desenhar com liberdade.
+O cavaleiro e o caracol chegaram até nós porque estavam presos a livros valiosos demais para ser descartados. Com eles se conservou também o lugar onde o artista medieval podia, por alguns centímetros, ilustrar com liberdade.
 
 ## Referências
 

@@ -181,7 +181,7 @@ TEXTOS = [
   {"slug": "caracois-e-cavaleiros", "img": "capa-caracol-gorleston.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "Os caracóis que lutam contra cavaleiros", "subtitulo": "O humor nas margens dos manuscritos medievais",
-   "resumo": "Cavaleiros diante de caracóis gigantes, raposas pregando a gansos. Como eram feitas as margens dos manuscritos medievais, o que essas figuras podem significar e o que revelam sobre o Desenho."},
+   "resumo": "Cavaleiros diante de caracóis gigantes, raposas pregando a gansos. Como eram feitas as margens dos manuscritos medievais, o que essas figuras podem significar e o que revelam sobre a ilustração medieval."},
   {"slug": "a-cor-das-estatuas", "img": "capa-olhos-met-v2.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "A cor das estátuas", "subtitulo": "O mito do mármore branco na escultura grega",
