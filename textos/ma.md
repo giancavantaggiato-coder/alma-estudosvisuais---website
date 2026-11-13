@@ -1,12 +1,12 @@
 ### Uma palavra para o intervalo
 
-Em japonês, *ma* designa o intervalo, a distância entre duas coisas. Vale para o espaço entre dois objetos, para a pausa entre dois sons e para o tempo entre dois gestos. Não é um vazio à espera de ser preenchido, mas um intervalo com função e dimensão, e dá sentido ao que está à sua volta. No vocabulário de Artes Visuais, é o que chamamos de *Espaço Negativo*.
+Em japonês, *ma* designa o intervalo, a distância entre duas coisas. Vale para o espaço entre dois objetos, para a pausa entre dois sons e para o tempo entre dois gestos. Não é um vazio à espera de ser preenchido, mas um intervalo com dimensão e função próprias, que dá sentido ao que está à sua volta. No vocabulário de Artes Visuais, é o que chamamos de *Espaço Negativo*.
 
 O ideograma 間 une dois sinais, o do portão e o da lua. Segundo o ator e estudioso de Nō Kunio Komparu, ele mostra a luz da lua passando pelas frestas de um portão. A palavra veio da China, onde designava apenas o espaço, e no Japão passou a nomear também o tempo.<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup> Em 1978, o arquiteto Arata Isozaki levou essa ideia a Paris na exposição *Ma: espaço-tempo no Japão*. No catálogo, ele afirma que no Japão espaço e tempo nunca foram inteiramente separados, mas pensados como correlatos — o espaço só era percebido em relação ao fluxo do tempo.<sup class="nota-ref"><a href="#nota-2" id="ref-2">2</a></sup>
 
 ### Onde não há pintura
 
-Os pintores chineses deram nome a esse princípio muito antes. Chamavam de *xu* e *shi* o vazio e o cheio, e diziam que um gera o outro. No século XVII, o pintor e teórico Da Chongguang escreveu, no tratado *Huaquan*, que o vazio é difícil de pintar e só aparece quando o que está pintado é claro. Quando vazio e cheio se geram mutuamente, todo lugar onde não há pintura se torna um lugar admirável.<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup> Seu contemporâneo Yun Shouping, pintor de flores, foi ainda mais direto.
+Muito antes disso, os pintores chineses já tinham nomeado a ideia. Chamavam de *xu* e *shi* o vazio e o cheio, e diziam que um gera o outro. No século XVII, o pintor e teórico Da Chongguang escreveu, no tratado *Huaquan*, que o vazio é difícil de pintar e só aparece quando o que está pintado é claro. Quando vazio e cheio se geram mutuamente, todo lugar onde não há pintura se torna um lugar admirável.<sup class="nota-ref"><a href="#nota-3" id="ref-3">3</a></sup> Seu contemporâneo Yun Shouping, pintor de flores, foi ainda mais direto.
 
 <div class="citacao">
 
@@ -15,11 +15,11 @@ Os pintores chineses deram nome a esse princípio muito antes. Chamavam de *xu* 
 <p class="fonte">Yun Shouping. Tradução livre</p>
 </div>
 
-Daí a regra de ateliê que os pintores chineses repetem até hoje — *ji bai dang hei*, contar o branco como se fosse preto. O papel deixado sem tinta entra na composição com o mesmo peso das manchas.
+Daí a regra de atelier que os pintores chineses repetem até hoje — *ji bai dang hei*, contar o branco como se fosse preto. O papel deixado sem tinta entra na composição com o mesmo peso das manchas.
 
 ### O vaso e o vazio
 
-A raiz desse pensamento está no *Tao Te Ching*. Lao-Tsé observa que a utilidade de um vaso está no seu vazio, e a de uma casa, nas aberturas de portas e janelas. Em 1906, Okakura Kakuzō retomou a passagem para explicar a estética japonesa em *O livro do chá*. Para ele, a realidade de uma sala não está no teto nem nas paredes, mas no espaço vazio que eles cercam.
+A raiz desse pensamento está no *Tao Te Ching*, de Lao-Tsé. Ali se lê que a utilidade de um vaso está no seu vazio, e a de uma casa, nas aberturas de portas e janelas. Em 1906, Okakura Kakuzō retomou a passagem para explicar a estética japonesa em *O livro do chá*. Para ele, a realidade de uma sala não está no teto nem nas paredes, mas no espaço vazio que eles cercam.
 
 <div class="citacao">
 
@@ -30,13 +30,13 @@ A raiz desse pensamento está no *Tao Te Ching*. Lao-Tsé observa que a utilidad
 
 A sala de chá leva isso ao limite. Ela se chama *sukiya*, que Okakura traduz como morada do vazio, e fica inteiramente vazia, exceto pelo que se coloca ali por um momento. O mesmo vale para a arte. Ao deixar algo por dizer, a obra dá a quem olha a chance de completar a ideia.
 
-No século XX, os teóricos ocidentais do Desenho reconheceram esse princípio e o levaram para o ensino. Gyorgy Kepes cita a mesma passagem de Lao-Tsé em *Language of Vision* e observa que os pintores chineses e japoneses dividem a superfície em intervalos desiguais, que obrigam o olho a se mover em velocidades diferentes de uma relação a outra. A caligrafia segue o mesmo princípio. Cada caractere é escrito dentro de um quadrado imaginário, e as áreas brancas desse quadrado recebem tanta atenção quanto as linhas.
+No século XX, os teóricos ocidentais da Percepção reconheceram essa ideia e a levaram para o ensino. Gyorgy Kepes cita a mesma passagem de Lao-Tsé em *Language of Vision* e observa que os pintores chineses e japoneses dividem a superfície em intervalos desiguais, que obrigam o olho a se mover em velocidades diferentes de uma relação a outra. A caligrafia obedece à mesma lógica. Cada caractere é escrito dentro de um quadrado imaginário, e as áreas brancas desse quadrado recebem tanta atenção quanto as linhas.
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E5%8D%97%E5%AE%8B_%E7%B1%B3%E5%8F%8B%E4%BB%81_%E9%9B%B2%E5%B1%B1%E5%9C%96_%E5%8D%B7-Cloudy_Mountains_MET_DP212993_4_CRD.jpg?width=1600" alt="Rolo horizontal com montanhas arredondadas feitas de manchas de tinta úmida, envoltas em névoa" loading="lazy"><figcaption>Mi Youren, Montanhas nubladas, século XII, rolo horizontal, tinta sobre papel. The Metropolitan Museum of Art, Nova York. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
 ### Nada é Negativo
 
-Maurice de Sausmarez parte da percepção para chegar ao mesmo ponto. Quando o olho alterna entre a figura e o fundo — Positivo e Negativo —, ora vendo o preto sobre o branco, ora o branco sobre o preto, fica claro que o Espaço em torno de uma Figura não é ausência.
+Maurice de Sausmarez parte da percepção para chegar ao mesmo ponto. Quando o olho alterna entre a figura e o fundo — Positivo e Negativo —, ora vendo o preto sobre o branco, ora o branco sobre o preto, fica claro que o Espaço em torno de uma Figura não é a falta de algo a ser preenchido.
 
 <div class="citacao">
 
@@ -45,11 +45,11 @@ Maurice de Sausmarez parte da percepção para chegar ao mesmo ponto. Quando o o
 <p class="fonte">Maurice de Sausmarez, <em>Basic Design</em>. Tradução livre</p>
 </div>
 
-Para ele, o Espaço que envolve a Figura, e também o que ela encerra, é tão ativo quanto a própria Figura. Os pintores da China e do Japão têm um senso agudo disso, e a caligrafia, com a atenção constante aos intervalos entre as pinceladas, só reforça esse cuidado. De Sausmarez chega a supor que, se a escrita ocidental tivesse mantido as linhas grossas e finas da pena de junco — próximas da modulação do pincel na pintura a tinta, o *sumi-e* —, também teríamos mais sensibilidade para ver Positivo e Negativo na escrita.
+Para ele, o Espaço que envolve a Figura, assim como o que se abre entre seus elementos internos, é tão ativo quanto a própria Figura. Os pintores da China e do Japão têm um senso agudo disso, e a caligrafia, com a atenção constante aos intervalos entre as pinceladas, só reforça esse cuidado. De Sausmarez chega a supor que, se a escrita ocidental tivesse mantido as linhas grossas e finas da pena de junco, também teríamos mais sensibilidade para ver Positivo e Negativo na escrita.
 
 ### A névoa
 
-Na pintura de paisagem chinesa, o *shanshui* — montanha e água —, o intervalo mais frequente é dado pela névoa. Guo Xi, pintor da corte no século XI, explica por quê no tratado *Linquan gaozhi*, reunido por seu filho a partir de suas anotações. Uma montanha pode ser vista de três distâncias. Olhar do pé até o cume é a distância alta. Olhar da frente da montanha até o que há por trás é a distância profunda. Olhar das montanhas próximas para as distantes é a distância plana.<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup> Numa mesma pintura essas três distâncias convivem, sem uma perspectiva única que as una, e é a névoa que faz a passagem de uma à outra.
+Na pintura de paisagem chinesa, o *shanshui* — montanha e água —, o intervalo mais frequente é dado pela névoa. Guo Xi, pintor da corte no século XI, ajuda a entender por quê. No tratado *Linquan gaozhi*, que seu filho reuniu a partir das anotações do pai, ele descreve três maneiras de ver uma montanha. Olhar do pé até o cume é a distância alta. Olhar da frente da montanha até o que há por trás é a distância profunda. Olhar das montanhas próximas para as distantes é a distância plana.<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup> Numa mesma pintura essas três distâncias convivem sem uma perspectiva única que as una, e é a névoa que faz a passagem de uma à outra.
 
 Na *Solitary Temple amid Clearing Peaks*, atribuída a Li Cheng, do século X, a névoa se adensa aos poucos entre as montanhas e esconde o horizonte. Como observa David Summers, a moldura corta as montanhas e o rio nas bordas, e o espaço parece continuar em todas as direções. Com a cor quase eliminada, a pintura fica reduzida ao claro e ao escuro, e cada um deles pode ser lido de mais de uma maneira. O claro pode ser céu ou névoa, e o escuro pode ser aresta, matéria ou sombra.
 
@@ -57,7 +57,7 @@ Na *Solitary Temple amid Clearing Peaks*, atribuída a Li Cheng, do século X, a
 
 ### A escala da atenção
 
-Philip Rawson descreve com precisão como a tinta conduz o olhar até o vazio. Desde cerca do ano 900, a pintura chinesa e japonesa trabalhava com uma escala de Valores baseada na atenção, e não propriamente no volume. O que é central na obra recebe linhas firmes e acentuadas. Em seguida vêm as massas de escuro intenso, feitas a partir da expansão da tinta, como em Sesshū, ou de camadas sobrepostas, como em Mi Fu. Depois os Valores vão se atenuando até se dissolver na superfície vazia. Por isso as áreas abertas não são sentidas como buracos.
+Philip Rawson mostra como a tinta conduz o olhar até o vazio. Desde cerca do ano 900, a pintura chinesa e japonesa trabalhava com uma escala de Valores baseada na atenção, e não propriamente no volume. O que é central na obra recebe linhas firmes e acentuadas. Em seguida vêm as massas de escuro intenso, feitas a partir da expansão da tinta, como em Sesshū, ou de camadas sobrepostas, como em Mi Fu. Depois os Valores se atenuam até se dissolver na superfície vazia. Por isso as áreas abertas não são sentidas como buracos.
 
 <div class="citacao">
 
@@ -72,15 +72,15 @@ Nesse sistema, o Valor não marca a direção da Luz nem a sombra projetada. A d
 
 No Japão, o *ma* sempre foi também uma questão de ritmo. Zeami, o grande teórico do teatro Nō, registrou no início do século XV que os espectadores costumavam apontar os momentos em que o ator não faz nada como os melhores da peça. Para ele, esses intervalos não são vazios, porque a concentração interior do ator os sustenta e os liga ao que vem antes e depois.<sup class="nota-ref"><a href="#nota-5" id="ref-5">5</a></sup> Séculos depois, Komparu resumiu a ideia ao dizer que o *ma* é o núcleo da expressão, onde está o verdadeiro interesse.
 
-Os rolos horizontais da pintura chinesa e japonesa funcionam do mesmo modo. Eles não são vistos de uma vez, mas desenrolados trecho a trecho, da direita para a esquerda. Cada cena aparece depois da anterior e muda o sentido do que já foi visto, como numa música. Os trechos de seda ou papel sem pintura entre uma cena e outra são as pausas dessa música.
+Os rolos horizontais da pintura chinesa e japonesa operam com o mesmo ritmo. Eles não são vistos de uma vez, mas desenrolados trecho a trecho, da direita para a esquerda. Cada cena surge depois da anterior e altera o sentido do que já foi visto, como numa frase musical. Os trechos de seda ou papel sem pintura entre uma cena e outra são as pausas dessa música.
 
-A estética japonesa estendeu esse princípio para além da pintura. Ela prefere a sugestão à explicitação, e isso aparece na brevidade do haicai, no interior despojado da casa de chá e no movimento mínimo dos atores do Nō. Nos *Pinheiros na névoa*, de Hasegawa Tōhaku, do fim do século XVI, os pinheiros surgem e somem em manchas de tinta diluída, e a maior parte dos dois biombos fica em branco. O papel sem tinta não é fundo. É o ar, a umidade e a distância entre as árvores.
+A estética japonesa levou essa lógica para além da pintura. Ela prefere a sugestão à explicitação, e isso aparece na brevidade do haicai, no interior despojado da casa de chá e no movimento mínimo dos atores do Nō. Nos *Pinheiros na névoa*, de Hasegawa Tōhaku, do fim do século XVI, os pinheiros surgem e somem em manchas de tinta diluída, e a maior parte dos dois biombos fica em branco. O papel sem tinta não é fundo. É o ar, a umidade e a distância entre as árvores.
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hasegawa_Tohaku_-_Pine_Trees_%28Sh%C5%8Drin-zu_by%C5%8Dbu%29_-_left_hand_screen.jpg?width=1600" alt="Biombo com pinheiros em manchas de tinta diluída que surgem e somem num fundo de papel quase vazio" loading="lazy"><figcaption>Hasegawa Tōhaku, Pinheiros na névoa, biombo esquerdo, fim do século XVI, tinta sobre papel. Museu Nacional de Tóquio. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
-### O intervalo que ressoa
+### O *yohaku* de Lee Ufan
 
-A ideia continua viva na arte contemporânea. O artista Lee Ufan, nascido na Coreia e radicado no Japão, chama de *yohaku* o espaço não feito de suas pinturas e instalações, e insiste que não se trata de uma simples área deixada vazia. Ele compara o *yohaku* ao som de um tambor. Quando o tambor é tocado, o som vibra no espaço, e é esse espaço de vibração, com o tambor incluído, que ele chama de *yohaku*.<sup class="nota-ref"><a href="#nota-6" id="ref-6">6</a></sup> Em suas telas, poucas pinceladas de tinta cinza sobre o branco bastam para pôr todo o campo em tensão.
+A ideia segue viva na arte contemporânea. Lee Ufan, artista nascido na Coreia e radicado no Japão, chama de *yohaku* o espaço não feito de suas pinturas e instalações, e insiste que não se trata de uma área simplesmente deixada vazia. Ele compara o *yohaku* ao som de um tambor. Quando o tambor é tocado, o som vibra no espaço, e é esse espaço de vibração, com o tambor incluído, que ele chama de *yohaku*.<sup class="nota-ref"><a href="#nota-6" id="ref-6">6</a></sup> Em suas telas, poucas pinceladas de tinta cinza sobre o branco bastam para pôr todo o campo em tensão.
 
 <div class="citacao">
 
