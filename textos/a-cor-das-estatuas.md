@@ -59,9 +59,11 @@ Uma das reconstruções mais conhecidas é a da chamada *Kore de Quios*, da Acr�
 
 As reconstruções são hipóteses. Mostram as cores comprovadas, mas não as gradações, as camadas e os acabamentos que se perderam, e por isso tendem a parecer mais chapadas do que os originais deviam ser. O próprio Verri considera que, por ora, não é possível reconstituir o Partenon.<sup class="nota-ref"><a href="#nota-10" id="ref-10">10</a></sup> Ainda assim, elas permitem ver uma estátua mais próxima de como os gregos a viam do que de como os museus a expõem hoje.
 
-### O que muda para quem olha
+### A paleta sobre o mármore
 
-A estátua grega não era uma Forma isolada à espera de ser admirada. Era um objeto completo, em que a Cor descrevia a pele, separava o tecido do corpo, desenhava padrões e dava presença aos olhos. O branco que hoje associamos ao clássico se deve, em parte, ao tempo, que apagou a pintura, e, em parte, a uma teoria, que fez dessa perda um ideal.
+As análises das últimas duas décadas permitem descrever com alguma precisão o que havia sobre a pedra. Na *Kore de Phrasikleia* foram identificados ocre vermelho e marrom, hematita, cinábrio, ouro-pigmento, branco de chumbo e laca de garança, além de folhas de ouro e de uma lâmina de chumbo e estanho que brilhava como prata.<sup class="nota-ref"><a href="#nota-11" id="ref-11">11</a></sup> No Partenon, o azul egípcio aparece combinado a dois brancos, o gesso e, provavelmente, o branco de osso.<sup class="nota-ref"><a href="#nota-12" id="ref-12">12</a></sup> São pigmentos minerais e orgânicos, aplicados em camadas finas sobre uma superfície que o próprio escultor preparava para recebê-los — mais lisa onde seria pele, com texturas distintas onde seria tecido.
+
+A escultura grega, portanto, só se completava com a pintura. Talha e Cor eram etapas de um mesmo projeto. O branco que hoje associamos ao clássico se deve, em parte, ao tempo, que apagou a pintura, e, em parte, a uma teoria, que fez dessa perda um ideal.
 
 <div class="notas">
 <p id="nota-1"><a href="#ref-1">1</a>. Eurípides, <em>Helena</em>, v. 262–263. As traduções variam entre estátua e pintura.</p>
@@ -74,6 +76,8 @@ A estátua grega não era uma Forma isolada à espera de ser admirada. Era um ob
 <p id="nota-8"><a href="#ref-8">8</a>. Verri et al., <em>Antiquity</em>, 2023.</p>
 <p id="nota-9"><a href="#ref-9">9</a>. Susanne Ebbinghaus, em <em>Harvard Magazine</em>, nov. 2007.</p>
 <p id="nota-10"><a href="#ref-10">10</a>. Giovanni Verri, em entrevista à CNN, out. 2023.</p>
+<p id="nota-11"><a href="#ref-11">11</a>. The Metropolitan Museum of Art, <em>Chroma</em>, ficha da reconstrução da estela funerária de Phrasikleia, 2022.</p>
+<p id="nota-12"><a href="#ref-12">12</a>. Verri et al., <em>Antiquity</em>, 2023.</p>
 </div>
 
 ## Referências
