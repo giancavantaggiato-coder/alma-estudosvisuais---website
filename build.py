@@ -182,7 +182,7 @@ TEXTOS = [
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "Os caracóis que lutam contra cavaleiros", "subtitulo": "O humor nas margens dos manuscritos medievais",
    "resumo": "Cavaleiros diante de caracóis gigantes, raposas pregando a gansos. Como eram feitas as margens dos manuscritos medievais, o que essas figuras podem significar e o que revelam sobre a ilustração medieval."},
-  {"slug": "a-cor-das-estatuas", "img": "capa-olhos-met-v2.jpg", "tag": "História da Arte",
+  {"slug": "a-cor-das-esculturas", "img": "capa-olhos-met-v2.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "A cor das esculturas", "subtitulo": "O mito do mármore branco na escultura grega",
    "resumo": "O mármore branco que associamos ao clássico é um engano. Como as esculturas gregas perderam suas cores, de onde veio o ideal branco e o que a ciência revelou."},
@@ -457,6 +457,14 @@ def build():
   ''' + intro("Parcerias", "<p>Trabalhamos com escolas, instituições culturais e coletivos interessados em formação visual continuada. Propostas de residência, oficina fechada, curadoria de material para turmas e projetos de extensão podem ser apresentadas por e-mail ou WhatsApp.*</p>",
       '<div class="botoes"><a class="btn btn-preto" href="mailto:contato@almaestudosvisuais.com.br?subject=Parcerias">E-mail</a><a class="btn btn-preto" href="#" data-whatsapp>Whatsapp</a></div>') + '''
 </section>''', solida=True)
+
+    # Endereços antigos que mudaram: redireciona para o novo
+    for velho, novo in {"a-cor-das-estatuas": "a-cor-das-esculturas"}.items():
+        with open(os.path.join(SAIDA, velho + ".html"), "w", encoding="utf-8") as f:
+            f.write(f'<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><title>Redirecionando</title>'
+                    f'<link rel="canonical" href="https://almaestudosvisuais.com.br/{novo}">'
+                    f'<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/{novo}">'
+                    f'</head><body><a href="/{novo}">Continuar</a></body></html>')
 
     print("ok:", sorted(os.listdir(SAIDA)))
 
