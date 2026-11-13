@@ -61,7 +61,7 @@ Em *Nostalgia*, de 1983, a *Madonna del Parto* de Piero della Francesca cumpre p
 
 ### O que a pintura faz no filme
 
-O arquiteto Juhani Pallasmaa observa que o espaço nos filmes de Tarkovsky deriva do enfrentamento frontal do espaço na pintura do Renascimento. Nele, o espaço não se move, permanece. Pallasmaa menciona Giotto, Fra Angelico, Leonardo, Van Eyck, Bruegel e Holbein, e aproxima a natureza-morta de copos que encerra *Stalker* das naturezas-mortas de Giorgio Morandi.<sup class="nota-ref"><a href="#nota-12" id="ref-12">12</a></sup>
+O arquiteto Juhani Pallasmaa observa que as composições de Tarkovsky derivam da construção frontal do espaço na pintura do Renascimento, em que o espaço se apresenta estável diante do observador. Pallasmaa menciona Giotto, Fra Angelico, Leonardo, Van Eyck, Bruegel e Holbein, e aproxima a natureza-morta de copos que encerra *Stalker* das naturezas-mortas de Giorgio Morandi.<sup class="nota-ref"><a href="#nota-12" id="ref-12">12</a></sup>
 
 Em *Esculpir o tempo*, Tarkovsky recorre ao conceito japonês de *saba*, a beleza dos objetos marcados pelo uso e pela passagem do tempo — a madeira escurecida, a pedra áspera, a pátina — e afirma que o cinema seria a manifestação ideal desse conceito.<sup class="nota-ref"><a href="#nota-2" id="ref-2-2">2</a></sup> Nos filmes, as pinturas raramente aparecem como originais. São reproduções impressas em livros, cópias montadas no cenário, ícones com a superfície fissurada. O que a câmera registra é a obra já atravessada por sua história material e por sua circulação, e não um objeto intocado.
 
