@@ -6,7 +6,7 @@ Três professores deram ao curso suas feições principais — Johannes Itten, L
 
 ### Itten e os contrastes
 
-Itten chegou a Weimar no outono de 1919 e ficou até 1923. Sua ambição era formar um ser integral, mais do que um especialista. Suas aulas começavam com exercícios de relaxamento, respiração e concentração, porque, para ele, a qualidade do traço depende do estado do corpo que o produz. Com o braço tenso, a mão não chega a uma linha expressiva.
+Itten chegou a Weimar no outono de 1919 e ficou até 1923. Sua ambição era formar um ser integral, mais do que um especialista. Suas aulas começavam com exercícios de relaxamento, respiração e concentração, porque, para ele, a qualidade da linha depende do estado do corpo que a produz. Com o braço tenso, a mão não chega a uma linha expressiva.
 
 Em seguida vinham os contrastes. Grande e pequeno, Valor alto e baixo, liso e áspero, rígido e maleável, leve e pesado, transparente e opaco. Os alunos precisavam apresentar cada par de modo que os sentidos o percebessem com clareza, primeiro isoladamente, depois em relação.
 

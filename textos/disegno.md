@@ -1,4 +1,4 @@
-Quando falamos em Desenho, não falamos apenas do traço que a mão deixa sobre o papel. Falamos de uma ideia, com origem no Renascimento italiano, que os florentinos chamavam de *disegno*. A palavra reunia dois sentidos que hoje costumamos separar — o desenho feito à mão e o projeto que a mente concebe antes da obra. O inglês acabou dividindo esses sentidos em duas palavras, *drawing* e *design*. No *disegno* eles ainda eram uma coisa só. Entender essa dupla natureza ajuda a entender por que o Desenho permanece, ainda hoje, a base da formação em Artes Visuais.
+Quando falamos em Desenho, não falamos apenas da linha que a mão deixa sobre o papel. Falamos de uma ideia, com origem no Renascimento italiano, que os florentinos chamavam de *disegno*. A palavra reunia dois sentidos que hoje costumamos separar — o desenho feito à mão e o projeto que a mente concebe antes da obra. O inglês acabou dividindo esses sentidos em duas palavras, *drawing* e *design*. No *disegno* eles ainda eram uma coisa só. Entender essa dupla natureza ajuda a entender por que o Desenho permanece, ainda hoje, a base da formação em Artes Visuais.
 
 ### Uma palavra com dois sentidos
 
@@ -13,7 +13,7 @@ Pouco depois, por volta de 1400, Cennino Cennini escreveu um dos primeiros manua
 <p class="fonte">Cennino Cennini, <em>Il libro dell'arte</em>, cap. XIII. Tradução livre<sup class="nota-ref"><a href="#nota-1" id="ref-1">1</a></sup></p>
 </div>
 
-Desenho dentro da cabeça. A frase antecipa o que os teóricos do século seguinte iriam desenvolver. Leon Battista Alberti recomendava que o pintor nunca tomasse o pincel sem antes ter resolvido na mente o que faria e como faria. O Desenho passava a ser o lugar onde o artista encontra pela primeira vez a própria obra — o momento de transposição, em que a ideia deixa a mente e ganha existência visível antes de chegar ao material definitivo. E essa passagem não corre num só sentido. Alberti observa que a mente, posta em movimento pelo exercício, se volta com mais facilidade ao trabalho, e que a mão avança mais rápido quando guiada pela regra segura da mente. A ideia orienta o traço, e o traço, por sua vez, corrige e amadurece a ideia.
+Desenho dentro da cabeça. A frase antecipa o que os teóricos do século seguinte iriam desenvolver. Leon Battista Alberti recomendava que o pintor nunca tomasse o pincel sem antes ter resolvido na mente o que faria e como faria. O Desenho passava a ser o lugar onde o artista encontra pela primeira vez a própria obra — o momento de transposição, em que a ideia deixa a mente e ganha existência visível antes de chegar ao material definitivo. E essa passagem não corre num só sentido. Alberti observa que a mente, posta em movimento pelo exercício, se volta com mais facilidade ao trabalho, e que a mão avança mais rápido quando guiada pela regra segura da mente. A ideia orienta a linha, e a linha, por sua vez, corrige e amadurece a ideia.
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo,_Studio_per_l%27Adorazione_dei_Magi,_Uffizi.jpg?width=1280" alt="Desenho a pena de uma arquitetura em ruínas com escadarias e arcos, traçada sobre uma malha de linhas de perspectiva, com figuras e cavalos esboçados" loading="lazy"><figcaption>Leonardo da Vinci, estudo de perspectiva para a Adoração dos Magos, c. 1481. Galleria degli Uffizi, Florença. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
@@ -43,7 +43,7 @@ O *disegno interno* é o conceito formado na mente, que permite reconhecer qualq
 <p class="fonte">Federico Zuccaro, <em>L'idea de' pittori, scultori et architetti</em>, 1607, citado por Moshe Barasch, <em>Theories of Art</em>, p. 299. Tradução livre<sup class="nota-ref"><a href="#nota-4" id="ref-4">4</a></sup></p>
 </div>
 
-Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem.<sup class="nota-ref"><a href="#nota-5" id="ref-5">5</a></sup> O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente ao traço no papel.
+Zuccaro levou a ideia longe. Num jogo de palavras típico da época, decompôs *disegno* em *di-segn-o* e leu ali o sinal de Deus no homem.<sup class="nota-ref"><a href="#nota-5" id="ref-5">5</a></sup> O exagero, porém, não apaga o essencial. O Desenho abrange tudo o que vai da imagem na mente à linha no papel.
 
 ### Desenho e cor
 
@@ -55,7 +55,7 @@ Do lado veneziano, Lodovico Dolce respondia que invenção, desenho e cor tinham
 
 ### No atelier
 
-No Alma, o Desenho é a base de todos os cursos, da pintura à escultura. Não pela tradição, e sim porque nele se forma o que Cennini chamava de desenho dentro da cabeça — a capacidade de ver a proporção do todo com as partes, de organizar a Configuração antes de executá-la, de saber o que se quer antes de tocar o material. A técnica de cada meio vem depois e se apoia nessa base. Escrever Desenho com maiúscula é um modo de lembrar que ele é, ao mesmo tempo, ideia e traço.
+No Alma, o Desenho é a base de todos os cursos, da pintura à escultura. Não pela tradição, e sim porque nele se forma o que Cennini chamava de desenho dentro da cabeça — a capacidade de ver a proporção do todo com as partes, de organizar a Configuração antes de executá-la, de saber o que se quer antes de tocar o material. A técnica de cada meio vem depois e se apoia nessa base. Escrever Desenho com maiúscula é um modo de lembrar que ele é, ao mesmo tempo, ideia e linha.
 
 ## Referências
 

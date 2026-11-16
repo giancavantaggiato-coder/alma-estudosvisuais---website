@@ -27,7 +27,7 @@ O ciclo seguinte, *Guerra dos camponeses*, concluído em 1908, foi o mais ambici
 
 ### A Forma inteira
 
-Em 1903, Kollwitz gravou *Mulher com criança morta*, talvez a gravura mais forte que fez. Usou como modelo o filho mais novo, Peter, então com sete anos. Prelinger chama atenção para o modo como a dor é construída. Kollwitz não confia a emoção ao rosto. Ela exagera a curvatura do corpo e desfaz a ligação natural entre as partes, de modo que a própria Configuração da figura comunica a desagregação. Nos estudos preparatórios, cada região pede um tratamento diferente — traços longos e firmes numa parte, modelado delicado em outra, o carvão esfumado para a sombra e o branco para a Luz. A Forma cresceu tanto que ela precisou colar outra folha de papel para continuar o desenho da cabeça e do ombro.
+Em 1903, Kollwitz gravou *Mulher com criança morta*, talvez a gravura mais forte que fez. Usou como modelo o filho mais novo, Peter, então com sete anos. Prelinger chama atenção para o modo como a dor é construída. Kollwitz não confia a emoção ao rosto. Ela exagera a curvatura do corpo e desfaz a ligação natural entre as partes, de modo que a própria Configuração da figura comunica a desagregação. Nos estudos preparatórios, cada região pede um tratamento diferente — linhas longas e firmes numa parte, modelado delicado em outra, o carvão esfumado para a sombra e o branco para a Luz. A Forma cresceu tanto que ela precisou colar outra folha de papel para continuar o desenho da cabeça e do ombro.
 
 ### A perda
 
