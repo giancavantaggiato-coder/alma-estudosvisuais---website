@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "grisalha", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo_da_Vinci_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg?width=1600", "tag": "História da Arte",
+   "data": "2026-11-16", "data_txt": "16 nov 2026",
+   "titulo": "Primeiro o Valor, depois a cor", "subtitulo": "Grisalha, verdaccio e cor morta na pintura antiga",
+   "resumo": "Das Virtudes de Giotto à cor morta de Rembrandt, como os pintores construíam a obra em claro e escuro antes da cor, e o que era de fato o verdaccio."},
   {"slug": "pinturas-nos-filmes-de-tarkovsky", "img": "capa-tarkovsky-rublev.jpg", "tag": "História da Arte",
    "data": "2026-11-13", "data_txt": "13 nov 2026",
    "titulo": "As pinturas nos filmes de Tarkovsky", "subtitulo": "Bruegel, Leonardo e os ícones de Rublev no cinema de Andrei Tarkovsky",
