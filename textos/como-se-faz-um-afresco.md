@@ -53,9 +53,13 @@ A *Última ceia* de Leonardo, pintada entre 1495 e 1498 no refeitório de Santa 
 
 <figure class="figura"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo_da_Vinci_(1452-1519)_-_The_Last_Supper_(1495-1498).jpg?width=1600" alt="A Última ceia de Leonardo, Cristo ao centro de uma longa mesa com os doze apóstolos" loading="lazy"><figcaption>Leonardo da Vinci, A última ceia, 1495–1498. Santa Maria delle Grazie, Milão. Domínio público, via Wikimedia Commons.</figcaption></figure>
 
-## Desenho antes da cor
+## Desenho e Pintura
 
-No afresco, cada dia de trabalho começa com decisões já tomadas. A Configuração da figura, a distribuição dos Valores, a cor de cada área e o ponto onde termina a jornada precisam estar definidos antes que o reboco seja aplicado, porque não haverá tempo para hesitar nem como corrigir depois. Na pintura a óleo, muito disso se resolve sobre a própria tela. No afresco, se resolve no Desenho e no cartão. Não por acaso, Florença, que fez do *disegno* o fundamento das Artes, foi também o grande centro da pintura a fresco.
+No afresco, cada dia de trabalho começa com as decisões já tomadas. A Configuração da figura, a distribuição dos Valores, a cor de cada área e o ponto onde termina a jornada precisam estar definidos antes que o reboco seja aplicado. Durante a pintura não há tempo para hesitar, e depois não há como corrigir. Quando a argamassa endurece, a cor passa a fazer parte da parede e não aceita nova camada a fresco. Se uma área ficou ruim, o único recurso é raspar o reboco daquele dia, aplicar outro e pintar tudo de novo. Thompson observa que algumas emendas encontradas em pinturas murais existem justamente por isso, porque partes insatisfatórias foram cortadas, rebocadas e refeitas<sup class="nota-ref"><a href="#nota-6">6</a></sup>.
+
+Na pintura a óleo, a situação é a oposta. O óleo seca devagar, ao longo de dias, e a tinta pode ser movida, raspada e retrabalhada enquanto ainda está mole. Depois de seca, aceita novas camadas, que cobrem ou modificam as anteriores, e o pintor pode mudar a posição de um braço ou o tom de um fundo semanas depois. Carmen Bambach lembra que, por isso, o óleo dispensava o Desenho preparatório completo e rápido que o afresco exigia, e permitia ao pintor resolver a forma sobre a própria tela, em sucessivas correções<sup class="nota-ref"><a href="#nota-4">4</a></sup>. No afresco, tudo isso precisa ser resolvido antes, no Desenho e no cartão.
+
+Essa dependência ajuda a entender a teoria artística florentina. Para Vasari e seus contemporâneos, o *disegno* era o pai das três Artes, pintura, escultura e arquitetura, porque nele se concebia a obra antes de qualquer execução. Em Florença, essa ideia não era apenas teoria. Era a condição prática de uma tradição que, de Giotto a Michelangelo, teve no afresco sua técnica mais importante.
 
 ## Referências
 
