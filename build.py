@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "como-se-faz-um-afresco", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Triumph-Death-Buffalmacco-Pisa-after-restoration.jpg?width=1600", "tag": "História da Arte",
+   "data": "2026-11-17", "data_txt": "17 nov 2026",
+   "titulo": "Como se faz um afresco", "subtitulo": "Cal, jornadas, cartões e os Desenhos escondidos sob a pintura",
+   "resumo": "A química da cal, o trabalho de um dia, o spolvero e as sinopias de Pisa. E por que a Última ceia de Leonardo não é um afresco."},
   {"slug": "zizek-arte-contemporanea", "img": "capa-embaixadores-caveira.jpg", "capa": "capa-caveira", "tag": "Teoria da Arte",
    "data": "2026-11-16", "data_txt": "16 nov 2026",
    "titulo": "Žižek e o lugar vazio da Arte", "subtitulo": "O que o filósofo esloveno vê, e critica, na Arte contemporânea",
