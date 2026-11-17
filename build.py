@@ -178,6 +178,10 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 # ---------------- Textos do blog ----------------
 # Cada texto: um arquivo em textos/<slug>.md (markdown simples) e uma entrada aqui. O mais recente primeiro.
 TEXTOS = [
+  {"slug": "zizek-arte-contemporanea", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg?width=1600", "tag": "Teoria da Arte",
+   "data": "2026-11-16", "data_txt": "16 nov 2026",
+   "titulo": "Žižek e o lugar vazio da Arte", "subtitulo": "O que o filósofo esloveno vê, e critica, na Arte contemporânea",
+   "resumo": "Do mictório de Duchamp à caveira de Holbein, a leitura de Žižek sobre por que a Arte contemporânea perdeu o lugar que a sustentava."},
   {"slug": "grisalha", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo_da_Vinci_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg?width=1600", "capa": "capa-magos", "tag": "História da Arte",
    "data": "2026-11-16", "data_txt": "16 nov 2026",
    "titulo": "Primeiro como Valor, depois como Cor", "subtitulo": "Grisalha, verdaccio e cor morta na pintura clássica",
