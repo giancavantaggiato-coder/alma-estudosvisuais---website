@@ -180,8 +180,8 @@ LOJA_SEC = f'''<section class="secao wrap" id="loja">
 TEXTOS = [
   {"slug": "como-se-faz-um-afresco", "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Triumph-Death-Buffalmacco-Pisa-after-restoration.jpg?width=1600", "tag": "História da Arte",
    "data": "2026-11-17", "data_txt": "17 nov 2026",
-   "titulo": "Como se pinta um afresco", "subtitulo": "A cal, as jornadas de trabalho, os cartões e os Desenhos escondidos sob a pintura",
-   "resumo": "A química da cal, o trabalho de um dia, o spolvero e as sinopias de Pisa. E por que a Última ceia de Leonardo não é um afresco."},
+   "titulo": "Como se pinta um afresco", "subtitulo": "Da preparação da parede ao Desenho escondido sob a cor",
+   "resumo": "Como a cal fixa a cor, por que o trabalho era dividido em jornadas e o que os restauradores encontraram sob os afrescos de Pisa."},
   {"slug": "zizek-arte-contemporanea", "img": "capa-embaixadores-caveira.jpg", "capa": "capa-caveira", "tag": "Teoria da Arte",
    "data": "2026-11-16", "data_txt": "16 nov 2026",
    "titulo": "Žižek e o lugar vazio da Arte", "subtitulo": "O que o filósofo esloveno vê, e critica, na Arte contemporânea",
